@@ -16,9 +16,8 @@ To put it in plain words, for example, when you write down “:qq” it will be 
 
 If you are a casual Windows user, I have put the installable version available to download [HERE](https://jeansenvaars.itch.io/play-by-the-writing)
 
-To use it, you will have to install [Espanso](https://espanso.org/) (free) and learn where Espanso's user folder 
-is located. In such folder you will be extracting the zipped download and execute Espanso so this plugin is loaded. 
-Step by step instructions included.
+To use it, you will have to install [Espanso](https://espanso.org/) (free) and then run the installer available here, 
+which will automatically point to your Espanso user folder, and run immediately.
 
 ## Open Source Version
 
