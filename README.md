@@ -15,6 +15,7 @@ To put it in plain words, for example, when you write down “:qq” it will be 
 ## Installable Version
 
 If you are a casual Windows user, I have put the installable version available to download [HERE](https://jeansenvaars.itch.io/play-by-the-writing)
+There's a price tag on it to justify the compilation, building and installer effort, but even if you can on your own, your support is appreciated.
 
 To use it, you will have to install [Espanso](https://espanso.org/) (free) and then run the installer available here, 
 which will automatically point to your Espanso user folder, and run immediately.
