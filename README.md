@@ -31,7 +31,7 @@ files inside Espanso user directory (not the install directory!).
 # What is included?
 
 - **Example kit**: Test before you buy. Once installed, by writing `:example` you should see a happy output.
-- **Core kit**: Includes dice rolling, random tables, weighted tables, [Mythic GM Emulator](https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator) (tables not included, user to upload them), [Plot Unfolding Machine (PUM)](https://jeansenvaars.itch.io/plot-unfolding-machine), [Scene Unfolding Machine (PUM)](https://jeansenvaars.itch.io/scene-unfolding-machine) and [One Page Solo Engine (OPSE)]((https://inflatablestudios.itch.io/one-page-solo-engine)) keywords
+- **Core kit**: Includes dice rolling, random tables, weighted tables, [Mythic GM Emulator](https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator), [Plot Unfolding Machine (PUM)](https://jeansenvaars.itch.io/plot-unfolding-machine), [Scene Unfolding Machine (PUM)](https://jeansenvaars.itch.io/scene-unfolding-machine) and [One Page Solo Engine (OPSE)]((https://inflatablestudios.itch.io/one-page-solo-engine)) keywords
 - **AI kit (Paying 5+ EUR)**: Includes Core kit + [OpenAI integration](https://beta.openai.com/playground) 
 - auto-completes text for you based on context, using artificial intelligence/
 
@@ -102,13 +102,6 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 ## Mythic GM Emulator Keywords
 
 Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator
-
-**IMPORTANT!** Tables are not included. After installation, go to Espanso user directory
-(default `C:\Users\username\AppData\Roaming\espanso\tables`) and replace the content of the tables
-`mythic_action_1.txt` `mythic_action_2.txt` `mythic_description_1.txt` `mythic_description_2.txt` and `mythic_focus.psv`
-on top of that you can add your own focus tables with format `.psv` following the same format as `mythic_focus.psv`.
-
-Find the tables here: [https://github.com/rpg-tips/obsidian_goodies/blob/main/GM%20Emulation/Mythic_GME.md](https://github.com/rpg-tips/obsidian_goodies/blob/main/GM%20Emulation/Mythic_GME.md)
 
 | Name                  | keyword                                                                   |
 |-----------------------|---------------------------------------------------------------------------|
