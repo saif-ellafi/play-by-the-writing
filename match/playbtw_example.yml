@@ -1,0 +1,16 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  - regex: ":example"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_example"
+            - example

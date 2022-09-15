@@ -1,0 +1,10 @@
+Enemies
+Allies
+Cause
+Situation
+Object
+Location
+Information
+Plans
+Resources
+Power

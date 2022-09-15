@@ -1,0 +1,10 @@
+Business
+Authority
+Place
+Faction
+Someone
+Defense
+Knowledge
+Words
+Resources
+Settlement

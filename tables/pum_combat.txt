@@ -1,0 +1,20 @@
+More enemies than expected
+Enemy has unexpected weapons or skills
+Hazard or Traps on the Field or Target
+Help or information required
+Elevation in Terrain
+Difficult Terrain
+Unexpected Help arrives
+Unexpected Enemy arrives
+Distracting Force or Multitasking is Needed
+Time Limit
+Bystanders or Innocents
+Moving or Unstable Ground
+Atmospheric or Environment difficulties
+Tactical Technology or Mechanical Device in the Field
+Vehicle or Machine for use
+Secret Passage or Shortcut may be discovered
+Stealth Enemies
+Mental effort Required
+Physical effort Required
+Enemy is getting healed

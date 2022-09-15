@@ -1,0 +1,31 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  # Roll FU attempt.
+  - regex: ":fu(?P<fuadv>\\w)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_fu"
+            - fu_oracle
+            - --fuadv
+            - "{{fuadv}}"
+  # Roll FU quality.
+  - regex: ":fq(?P<fuadv>\\w)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_fu"
+            - fu_quality
+            - --fuadv
+            - "{{fuadv}}"

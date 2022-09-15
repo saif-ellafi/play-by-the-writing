@@ -1,0 +1,10 @@
+Attack
+Explode
+Support
+Heal
+Move
+Enhance
+Delay
+Hinder
+Defend
+Control

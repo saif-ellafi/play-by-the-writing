@@ -1,0 +1,10 @@
+Fighter
+Medical
+Civilian
+Scoundrel
+Intelligent
+Faithful
+Powerful
+Technician
+Resourceful
+Enforcing

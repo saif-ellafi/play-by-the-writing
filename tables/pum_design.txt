@@ -1,0 +1,10 @@
+{ Subject } turns out... { Revelation }
+Interrupted by... { Event}
+An enemy is... { Activity } to... { Reason }
+A chance to... { Goal } with... { Skill }
+Employ... { Skill } to avoid... { Risk }
+{ Who } wants to... { Intent }
+Find a... { Subject } that leads to... { Goal }
+An opportunity to... { Risk }, in order to... { Goal }
+An enemy is preventing you from... { Goal }
+A combat with... { Combat } to avoid... { Risk }

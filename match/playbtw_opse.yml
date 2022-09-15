@@ -1,0 +1,199 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  # opse
+  - trigger: ":qa"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_qa_even,opse_qa_mod
+  # opse
+  - trigger: ":+qa"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_qa_likely,opse_qa_mod
+  # opse
+  - trigger: ":-qa"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_qa_unlikely,opse_qa_mod
+  # Next Scene design - opse
+  - trigger: ":setscene"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_setscene
+  # Next Scene design
+  - trigger: ":setalt"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_setalt
+  # opse
+  - trigger: ":opsehow"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_how
+  # opse
+  - trigger: ":pacemove"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_pacemove
+  # opse
+  - trigger: ":failmove"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_failmove
+  # opse action focus
+  - trigger: ":afocus"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_afocus
+  # opse detail focus
+  - trigger: ":dfocus"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_dfocus
+  # opse topic focus
+  - trigger: ":tfocus"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_tfocus
+  # opse random event
+  - trigger: ":opsere"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_afocus,opse_tfocus
+  # opse plot hook
+  - trigger: ":opsehook"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_objective,opse_adversaries,opse_rewards
+  # opse NPC
+  - trigger: ":opsenpc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_identity,opse_goal,opse_notable
+  # opse dungeon
+  - trigger: ":opsedungeon"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_dfocus,opse_afocus,opse_location,opse_encounter,opse_object,opse_exits
+  # opse hex crawler
+  - trigger: ":opsehex"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - opse_terrain,opse_content,opse_feature,opse_event

@@ -1,0 +1,5 @@
+pyinstaller
+md2pdf # with https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases
+openai
+pyperclip
+dice

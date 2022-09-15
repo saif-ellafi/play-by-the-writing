@@ -1,0 +1,10 @@
+Enemy
+Faction
+Plot element
+Problem
+Location
+Object
+Ally
+Person
+Knowledge
+Strategy

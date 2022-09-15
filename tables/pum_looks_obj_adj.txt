@@ -1,0 +1,10 @@
+Broken
+Antique
+Forbidden
+Dangerous
+Mundane
+Rare
+Harmless
+Legendary
+Valuable
+Reinforced

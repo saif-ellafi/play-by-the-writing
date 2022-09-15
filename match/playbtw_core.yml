@@ -1,0 +1,93 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  - triggers: [":dd"]
+    replace: "🎲"
+  - triggers: [":arr"]
+    replace: "→"
+  # Roll simple dice - :r1d6
+  - regex: ":r(?P<quantity>\\d+)d(?P<size>\\d+)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - roll_dice
+            - --quantity
+            - "{{quantity}}"
+            - --size
+            - "{{size}}"
+  # Roll dice - PRO mode (Read the docs)
+  - regex: ":rr(?P<formula>.*)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - roll_advanced
+            - --formula
+            - "{{formula}}"
+  # Roll fudge.
+  - trigger: ":df."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - roll_fudge
+  # Roll fudge with bonus.
+  - regex: ":df(?P<mods>[+-]?\\d+)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - roll_fudge
+            - --mods
+            - "{{mods}}"
+  # Roll from weighted random table of two columns. Without .txt
+  - regex: ":tt\\.(?P<table>.*)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - "{{table}}"
+  # Roll from weighted random table of two columns. Pipe | Separated. Without .psv
+  - regex: ":wt\\.(?P<table>.*)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - "{{table}}"
+  # Search available tables
+  - trigger: ":list"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - search

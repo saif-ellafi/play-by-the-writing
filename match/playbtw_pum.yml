@@ -1,0 +1,467 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  # PUM
+  - trigger: ":qq"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_question_even,pum_question_caveat
+  # PUM
+  - trigger: ":+qq"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_question_likely,pum_question_caveat
+  # PUM
+  - trigger: ":-qq"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_question_unlikely,pum_question_caveat
+  # Next Scene design - PUM
+  - trigger: ":scene"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_design
+  # Next Scene skill
+  - trigger: ":skill"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_ch_skill
+  # Next Scene High Stakes
+  - trigger: ":stakes"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_pum"
+            - stakes
+  # Next Scene High Stakes
+  - trigger: ":goal"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_ch_success
+  # Next Scene High Stakes
+  - trigger: ":risk"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_ch_fail
+  # Scene Filler
+  - trigger: ":filler"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_fill
+  # PUM Scene Checker
+  - trigger: ":check"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_alteration
+  # PUM
+  - trigger: ":item"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_kindo
+  # PUM
+  - trigger: ":ability"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_kinda
+  # PUM
+  - trigger: ":person"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_kindp
+  # PUM
+  - trigger: ":enemy"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_kinde
+  # PUM
+  - trigger: ":area"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_looks_adv,pum_looks_area_adj
+  # PUM
+  - trigger: ":someone"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_looks_adv,pum_looks_npc_adj
+  # PUM
+  - trigger: ":object"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_looks_adv,pum_looks_obj_adj
+  # PUM
+  - trigger: ":event"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_eva,pum_evb
+  # PUM
+  - trigger: ":subject"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_subject
+  # PUM
+  - trigger: ":who"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_whoa,pum_whob
+  # PUM
+  - trigger: ":intent"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_pum"
+            - intent
+  # PUM
+  - trigger: ":activity"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_pum"
+            - activity
+  # PUM
+  - trigger: ":reason"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_reasona,pum_reasonb
+  # PUM
+  - trigger: ":property"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_pum"
+            - property
+  # Twist or Complication
+  - trigger: ":revelation"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_revelation
+  # Combat circumstances.
+  - trigger: ":combat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_combat
+  # SUM
+  - trigger: ":gma"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm0
+  # SUM
+  - trigger: ":+gma"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm1
+  # SUM
+  - trigger: ":++gma"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm2
+  # SUM
+  - trigger: ":+++gma"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm3
+  # SUM
+  - trigger: ":npca"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc0
+  # SUM
+  - trigger: ":+npca"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc1
+  # SUM
+  - trigger: ":++npca"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc2
+  # SUM
+  - trigger: ":+++npca"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc3
+  # SUM (NPC Good)
+  - trigger: ":npcg"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npcg
+  # SUM (NPC Bad)
+  - trigger: ":npcb"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npcb
+  # SUM (Action)
+  - trigger: ":sumac"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_action
+  # SUM (Subject)
+  - trigger: ":sumsu"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_subject
+  # SUM (Adjective)
+  - trigger: ":sumad"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_adjective

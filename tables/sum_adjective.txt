@@ -1,0 +1,100 @@
+Abundant, plentiful, loaded, rich
+Active, latent, lively, occupied, busy, crowded
+Adventurous, large, dangerous, risky
+Afraid, scared, paralyzed, macabre
+Chemical, alchemical, biological, elemental
+Alien, outsider, unfitting, foreign, different
+Aquatic, liquid, watery, oceanic, wet
+Attacked, damaged, pillaged, hit, bullied
+Barbaric, native, primitive, untouched, savage
+Beautiful, charming, exotic, marvelous
+Blank, empty, inhabited, clear, void
+Broken, damaged, dead, non-functional, useless
+Careful, tidy, clean, delicate, maintained
+Cautious, defensive, paranoid, watched
+Chaotic, messy, disastrous, unattended
+Divine, celestial, godly, sacred, holy, religious
+Characteristic, local to this place, belonging
+Clouded, foggy, hard to see, fuzzy, invisible
+Corrupted, manipulated, utilized, misused
+Crazy, unpredictable, nonsensical, strange
+Complicated, complex, difficult, cursed, impossible
+Dark, unlit, black, obscure, dim, gloomy
+Deadly, dangerous, toxic, decadent, sick, poisonous
+Armed, protected, defended, fortified, ready
+Deep, buried, stashed, underground, underwater
+Hot, dry, red, sunny, flat, drained
+Developed, detailed, carefully built, well-presented
+Diplomatic, stylish, well-suited, elegant, presented
+Distinctive, different, exotic, unique, special, remarkable
+Rocky, mountainous, solid, large, huge, gigantic
+Dynamic, moving, agile, unstable
+Reachable, welcoming, inviting, accessible
+Empowered, enhanced, fortified, improved, upgraded
+Encouraging, inspiring, leading, exemplary
+Enigmatic, confusing, curious, distinctive
+Entertaining, fun, humorous, joyful, cheerful
+Essential, important, key, relevant, strategic
+Environmental, surrounding, weather, adapted, survived
+Expensive, rich, majestic, rare, valuable
+Fatal, deadly, fearsome, invincible
+Foolish, dumb, unprepared, unprotected, vulnerable
+Healthy, repaired, fixed, recovered, constructed
+Disguised, concealed, secretive, camouflaged, hidden
+Historic, memorable, legendary, old, ancient
+Hungry, lacking, needing, depending, thirsty
+Idle, inactive, never used, turned off, disconnected
+Impassable, impenetrable, inaccessible, impermeable
+Inhospitable, inhuman, infested, cursed
+Irresistible, tempting, seductive, addictive
+Isolated, lonely, separated, introvert, alone
+Known, familiar, renowned, predictable, stable
+Limited, insufficient, lacking, incomplete, missing
+Little, small, minimal, reduced, shrunk
+Loud, sound, talkative, noisy, distracting, musical
+Loyal, respectful, legal, honorable, proud
+Magical, mystical, wondrous, strange, wizardry
+Mighty, powerful, strong, forceful, fierce, vicious
+Monstrous, aberration, horrible, disastrous, twisted
+Necessary, critical, crucial, required, needed
+Negative, harmful, unwanted, undesired, avoided
+Numerous, filled, quantity, together, grouped
+Clever, intelligent, ingenious, smart, professional
+Original, native, cultural, traditional, conventional
+Pathetic, ridiculous, unfitting, weird, strange
+Political, strategic, wealthy, designed, planned
+Precarious, poor, lacking, poverty, unwanted
+Quick, fast, agile, moving, nimble, sneaky
+Ruin, forgotten, abandoned, destroyed, extinct
+Safe, secure, silent, calm, quiet, trustworthy
+Scattered, spread out, distracted, flattened
+Selected, chosen, elected, voted, decided
+Shady, illegal, immoral, uncomfortable, wrong
+Eliminated, killed, destroyed, annihilated, executed
+Snowy, frozen, still, shattered, cold
+Abnormal, supernatural, different, atypical
+Timed, temporary, time-consuming, demanding
+Undead, revived, brought-back, recovered, restored
+Undiscovered, new, untouched, born, virgin
+Wonderful, amazing, incredible, brilliant, flashy
+Useful, handy, active, convenient, fortunate
+Valuable, rich, promoted, commercial
+Vast, extended, powerful, huge, broad
+Visited, concurred, popular, famous, remarkable
+Weak, helpless, vulnerable, exposed, endangered
+Plastic, artificial, composite, fictional
+Confined, reserved, obscured, forbidden, protected
+Open, airy, flowed, accessible, reachable, elevated
+Expansive, enlarging, growing, spreading
+Wooden, strong, resistant, metallic
+Written, recorded, remembered, archived, translated
+Mechanical, complex, built, functional, synthetic
+Explosive, delicate, reactive, inflammable
+Civilized, urbanized, elegant, decorative, organized
+Captured, taken, stolen, missing, kidnapped
+Expelled, banished, forbidden, rejected, prohibited
+Owned, private, personal, treasured, enslaved, hired
+Violent, enraged, angry, unstable, hysteric
+Friendly, allied, cooperative, helpful, supportive
+Modern, technological, advance, revolutionary
+Depleted, used, utilized, tired, exhausted

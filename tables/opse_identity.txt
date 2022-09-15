@@ -1,0 +1,13 @@
+Outlaw
+Drifter
+Tradesman
+Commoner
+Soldier
+Merchant
+Specialist
+Entertainer
+Adherent
+Leader
+Mystic
+Adventurer
+Lord

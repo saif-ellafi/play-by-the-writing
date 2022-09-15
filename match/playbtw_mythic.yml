@@ -1,0 +1,216 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  # Mythic Fate check. Based on Variations 2, e.g. :fatecheck - https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator
+  - trigger: ":mmfc"
+    replace: "{{output}}"
+    vars:
+      - name: fcparams
+        type: form
+        params:
+          layout: |
+            Odds [[odd]] Chaos [[cf]] Yes Favorable? [[fy]]
+          fields:
+            odd:
+              type: list
+              values:
+                - "-8"
+                - "-6"
+                - "-4"
+                - "-2"
+                - "0"
+                - "2"
+                - "4"
+                - "6"
+                - "8"
+            cf:
+              type: list
+              values:
+                - "3"
+                - "4"
+                - "5"
+                - "6"
+            fy:
+              type: list
+              values:
+                - "0"
+                - "1"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "{{fcparams.odd}}"
+            - --chaos
+            - "{{fcparams.cf}}"
+            - --favorable
+            - "{{fcparams.fy}}"
+  # Mythic FAST fate check. Based on Variations 2, e.g. :fc - https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator
+  # Use with weights with :+fc :++fc :+++fc or :-fc :--fc :---fc
+  - regex: ":mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":\\+mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "2"
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":\\+\\+mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "4"
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":\\+\\+\\+mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "6"
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":-mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "-2"
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":--mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "-4"
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":---mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "-6"
+            - --chaos
+            - "{{chaos}}"
+  # Mythic Scene Alteration Check
+  - regex: ":malt(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - scene_check
+            - --chaos
+            - "{{chaos}}"
+  # Mythic default event Focus
+  - trigger: ":mfoc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - mythic_focus
+  # Mythic Focus with custom table. Table name between dots. Without .psv
+  - regex: ":mfo\\.(?P<table>.*)\\."
+    replace: "({{table}}): {{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - "{{table}}"
+  # Mythic Random Event
+  - trigger: ":mre"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_focus,mythic_action_1,mythic_action_2
+  # Mythic Action descriptor. Without Focus.
+  - trigger: ":mac"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_action_1,mythic_action_2
+  # Mythic Description descriptor.
+  - trigger: ":mde"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_description_1,mythic_description_2

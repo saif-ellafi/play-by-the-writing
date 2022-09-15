@@ -1,0 +1,7 @@
+/.idea/
+*.iml
+/dist*/
+/build/
+*.zip
+*.exe
+*.pdf

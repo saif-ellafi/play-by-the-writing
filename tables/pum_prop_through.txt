@@ -1,0 +1,10 @@
+Electricity
+Fire
+Cold
+Liquid
+Nature
+Force
+Knowledge
+Wisdom
+Tools
+Vision
