@@ -1,11 +1,11 @@
-7|Mythic tables not included: replace me in (mythic_focus.txt)
-28|Mythic tables not included: replace me in (mythic_focus.txt)
-35|Mythic tables not included: replace me in (mythic_focus.txt)
-45|Mythic tables not included: replace me in (mythic_focus.txt)
-52|Mythic tables not included: replace me in (mythic_focus.txt)
-55|Mythic tables not included: replace me in (mythic_focus.txt)
-67|Mythic tables not included: replace me in (mythic_focus.txt)
-75|Mythic tables not included: replace me in (mythic_focus.txt)
-83|Mythic tables not included: replace me in (mythic_focus.txt)
-92|Mythic tables not included: replace me in (mythic_focus.txt)
-100|Mythic tables not included: replace me in (mythic_focus.txt)
+7|Remote event
+28|NPC Action
+35|New NPC
+45|Toward Thread
+52|Away from Thread
+55|Close Thread
+67|PC Negative
+75|PC Positive
+83|Ambiguous Event
+92|NPC Negative
+100|NPC Positive
