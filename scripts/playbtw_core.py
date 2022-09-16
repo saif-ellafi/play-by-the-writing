@@ -23,13 +23,13 @@ if action == 'table':
     tables = map(str.strip, args['table'].split(','))
     result = []
     for t in tables:
-        result.append(choice_table(t))
+        result.append(choice_table(t.strip()))
     print(' '.join(result))
 elif action == 'wtable':
     tables = map(str.strip, args['table'].split(','))
     result = []
     for t in tables:
-        result.append(choice_wtable(t))
+        result.append(choice_wtable(t.strip()))
     print(' '.join(result))
 elif action == 'roll_dice':
     result = roll_dice(args['quantity'], args['size'])
