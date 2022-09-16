@@ -1,10 +1,10 @@
-{ Subject } turns out... { Revelation }
-Interrupted by... { Event}
-An enemy is... { Activity } to... { Reason }
-A chance to... { Goal } with... { Skill }
-Employ... { Skill } to avoid... { Risk }
-{ Who } wants to... { Intent }
-Find a... { Subject } that leads to... { Goal }
-An opportunity to... { Risk }, in order to... { Goal }
-An enemy is preventing you from... { Goal }
-A combat with... { Combat } to avoid... { Risk }
+{{pum_subject}} turns out... {{pum_revelation}}
+Interrupted by... {{pum_eva}} {{pum_evb}}
+An enemy is... {{pum_acta}} {{pum_actb}} to... {{pum_reasona}} {{pum_reasonb}}
+A chance to... {{pum_ch_success}} with... {{pum_ch_skill}}
+Employ... {{pum_ch_skill}} to avoid... {{pum_ch_fail}}
+{{pum_whoa}} {{pum_whob}} wants to... {{pum_inta}} {{pum_intb}}
+Find a... {{pum_subject}} that leads to... {{pum_ch_success}}
+A risk to... {{pum_ch_fail}}, in order to... {{pum_ch_success}}
+An enemy is preventing you from... {{pum_ch_success}}
+A combat with... {{pum_combat}} to avoid... {{pum_ch_fail}}

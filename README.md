@@ -80,6 +80,29 @@ Install `xclip` or learn more about it here: https://pyperclip.readthedocs.io/en
 
 That’s it. See the keywords list below in this document.
 
+# Customization
+
+## Match files
+
+There are many files with `.yml` extension inside the `match` folder. Open with a text editor and change the lines 
+that start with `:` in order to change their command keyword.
+
+Some entries point to `table` (or `wtable` for weighted tables) which follow with a table name. This table name 
+is the file name within the folder `tables`, and you can append with comma more than one, i.e. `table1,table2`
+
+Understanding this, will allow you to copy these segments to create your own commands with your own tables!
+
+## Table customization
+
+There are two types of tables. Ones ending in `.txt` (simple tables) and others in `.psv` (weighted tables). Check
+the ones available in the folder `tables` for examples of each.
+
+## Nested tables
+
+You can nest table rolls within others, by utilizing the format `{{table_simple_name}}` or `w{{weighted_table_name}}`
+where the table name refers to the file name. You can use these however you like, and even build sentences with more
+than one of them, i.e. `Hello {{table_1}}, I hope you had a great {{table_2}}!`
+
 # Keywords List
 
 The keyword column is what you simply write in your keyboard, to get it replaced with an output (usually, at random).

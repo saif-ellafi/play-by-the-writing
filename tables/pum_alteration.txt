@@ -1,10 +1,10 @@
-It is interrupted by... { Event }
-But { Subject } is... { Revelation }
-But the area is... { Describe }
-{ Who } shows up and... { Intent }
+It is interrupted by... {{pum_eva}} {{pum_evb}}
+But { Subject } is... {{pum_revelation}}
+But the area is... {{pum_looks_adv}} {{pum_looks_area_adj}}
+{{pum_whoa}} {{pum_whob}} shows up and... {{pum_inta}} {{pum_intb}}
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
-And also... { Goal }
+And also... {{pum_ch_success}}

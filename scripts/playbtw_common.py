@@ -8,9 +8,21 @@ import random
 import csv
 import dice
 
+import regex as re
+
 
 if 'CONFIG' not in os.environ:
     raise Exception("CONFIG key not found. Espanso is not installed?")
+
+
+# List CSV tables
+def list_tables():
+    files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))
+    names = []
+    for file in files:
+        names.append(file)
+    names.sort()
+    return '\n'.join(names)
 
 
 # Reads CSV table with exactly one column.
@@ -24,16 +36,6 @@ def read_table(table):
     return rows
 
 
-# List CSV tables
-def list_tables():
-    files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))
-    names = []
-    for file in files:
-        names.append(file)
-    names.sort()
-    return '\n'.join(names)
-
-
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
 def read_wtable(table):
     rows = []
@@ -44,10 +46,17 @@ def read_wtable(table):
     return rows
 
 
+def unwrap(result):
+    nested = re.sub("w{{(\\w+)}}", lambda x: choice_wtable(x[1]), result)
+    nested = re.sub("{{(\\w+)}}", lambda x: choice_table(x[1]), nested)
+    return nested
+
+
 # Rolls random from a table once
 def choice_table(table):
     values = read_table(table)
-    return random.choice(values)
+    result = unwrap(random.choice(values))
+    return result
 
 
 # Rolls random from a weighted table once, based on the max values provided on first column
@@ -57,7 +66,7 @@ def choice_wtable(table):
     rolled = random.randint(1, max_value)
     for e in values:
         if rolled <= int(e[0]):
-            return e[1]
+            return unwrap(e[1])
 
 
 def roll_dice(q, s):
