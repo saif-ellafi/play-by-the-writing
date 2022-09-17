@@ -1,10 +1,10 @@
 Enemy
 Faction
-Plot element
+Method
 Problem
 Location
 Object
 Ally
-Person
+Being
 Knowledge
-Strategy
+Instrument

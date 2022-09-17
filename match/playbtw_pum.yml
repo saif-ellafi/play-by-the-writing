@@ -112,7 +112,7 @@ matches:
             - --table
             - pum_fill
   # PUM Scene Checker
-  - trigger: ":check"
+  - triggers: [":check", ":alteration"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -208,7 +208,7 @@ matches:
             - --table
             - pum_looks_adv,pum_looks_obj_adj
   # PUM
-  - trigger: ":event"
+  - trigger: ":what"
     replace: "{{output}}"
     vars:
       - name: output
@@ -218,7 +218,19 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_eva,pum_evb
+            - pum_whata,pum_whatb,pum_whatc
+  # PUM
+  - trigger: ":discovery"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_discovery
   # PUM
   - trigger: ":subject"
     replace: "{{output}}"
@@ -297,8 +309,8 @@ matches:
             - table
             - --table
             - pum_revelation
-  # Combat circumstances.
-  - trigger: ":combat"
+  # Circumstances.
+  - trigger: ":circumstance"
     replace: "{{output}}"
     vars:
       - name: output
@@ -308,7 +320,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_combat
+            - pum_circumstance
   # SUM
   - trigger: ":gma"
     replace: "{{output}}"
