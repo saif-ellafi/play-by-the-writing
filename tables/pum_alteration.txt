@@ -1,5 +1,5 @@
 It is interrupted by... {{pum_eva}} {{pum_evb}}
-But { Subject } is... {{pum_revelation}}
+But {{Subject}} is... {{pum_revelation}}
 But the area is... {{pum_looks_adv}} {{pum_looks_area_adj}}
 {{pum_whoa}} {{pum_whob}} shows up and... {{pum_inta}} {{pum_intb}}
 Happens as expected
