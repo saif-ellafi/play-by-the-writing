@@ -121,7 +121,9 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 | Roll fudge dice with bons | `:df+3.`         | ( ) ( ) (-) (-) + (3) = 1 | Fudge dice for FATE with a bonus                                                                                            |
 | Roll Random Table | `:tt.example.`   |  [Third result] | Roll from a table in .txt format placed in the tables folder. See the example table.                                                    |
 | Roll Weighted Table | `:wt.example_w.` | [Next quarter] | Roll from a weighted table in .psv format. There is an example file in the tables folder. It is to roll from tables with dice ranges. |
-| List all available tables | `:list`          | … | This will print all your available random tables to roll from. Usually just for checking.                                                            |
+| Shuffle Poker Deck | `:shuffle` |
+| Draw from Poker Deck | `:draw` |
+| List all available tables | `:list`          | ... | This will print all your available random tables to roll from. Usually just for checking.                                                            |
 
 ## Mythic GM Emulator Keywords
 
@@ -142,45 +144,43 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/2079
 
 These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-machine
 
-| Name                 | keyword             |
-|----------------------|---------------------|
-| Yes or No Question   | `:qq` `:+qq` `:-qq` |
-| Scene Prompt         | `:scene`            |
-| Skill                | `:skill`            |
-| High Stakes          | `:stakes`           |
-| Goal                 | `:goal`             |
-| Risk                 | `:risk`             |
-| Expectation Checker  | `:check`            |
-| Subject              | `:subject`          |
-| Revelation           | `:revelation`       |
-| Combat               | `:combat`           |
-| Kind of item         | `:item`             |
-| Kind of ability      | `:ability`          |
-| Kind of person       | `:person`           |
-| Kind of enemy        | `:enemy`            |
-| Event                | `:event`            |
-| Who?                 | `:who`              |
-| Intent               | `:intent`           |
-| Activity             | `:activity`         |
-| Reason               | `:reason`           |
-| Property             | `:property`         |
-| Describe Area        | `:area`             |
-| Describe NPC         | `:someone`          |
-| Describe Object      | `:object`           |
+| Name                | keyword             |
+|---------------------|---------------------|
+| Yes or No Question  | `:qq` `:+qq` `:-qq` |
+| Scene Prompt        | `:scene`            |
+| Interaction         | `:interaction`      |
+| Goal                | `:goal`             |
+| Risk                | `:risk`             |
+| Expectation Checker | `:check`            |
+| Subject             | `:subject`          |
+| Discovery           | `:discovery`        |
+| Revelation          | `:revelation`       |
+| Circumstance        | `:circumstance`     |
+| Kind of item        | `:item`             |
+| Kind of ability     | `:ability`          |
+| Kind of person      | `:person`           |
+| Kind of enemy       | `:enemy`            |
+| Event               | `:event`            |
+| Who?                | `:who`              |
+| Intent              | `:intent`           |
+| Activity            | `:activity`         |
+| Reason              | `:reason`           |
+| Describe Area       | `:area`             |
+| Describe NPC        | `:someone`          |
+| Describe Object     | `:object`           |
 
 ## SUM Keywords
 
 These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-machine
 
-| Name                   | keyword                               |
-|------------------------|---------------------------------------|
-| GM Action (Score)      | `:gma` `:+gma` `:++gma` `:+++gma`     |
-| NPC Action (Score)     | `:npca` `:+npca` `:++npca` `:+++npca` |
-| NPC Disposition (Good) | `:npcg`                               |
-| NPC Disposition (Bad)     | `:npcb`                               |
-| Action Prompt          | `:sumac`                              |
-| Subject Prompt         | `:sumsu`                              |
-| Adjective Prompt       | `:sumad`                              |
+| Name               | keyword                               |
+|--------------------|---------------------------------------|
+| GM Action (Score)  | `:gma` `:+gma` `:++gma` `:+++gma`     |
+| NPC Action (Score) | `:npca` `:+npca` `:++npca` `:+++npca` |
+| NPC Disposition    | `:npcd` `:+npcd` `:++npcd` `:+++npcd` |
+| Action Prompt      | `:sumac`                              |
+| Subject Prompt     | `:sumsu`                              |
+| Adjective Prompt   | `:sumad`                              |
 
 ## OPSE Keywords
 

@@ -27,13 +27,9 @@ def list_tables():
 
 # Reads CSV table with exactly one column.
 def read_table(table):
-    rows = []
     with open(os.path.join(os.environ['CONFIG'], 'tables', table+'.txt'), encoding='utf-8') as file:
-        line = file.readline()
-        while line:
-            rows.append(line.strip())
-            line = file.readline()
-    return rows
+        lines = file.readlines()
+    return list(map(lambda x: x.strip(), lines))
 
 
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
@@ -89,7 +85,7 @@ def shuffle_deck(table):
     random.shuffle(cards)
     with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards))
-    return "Shuffled!"
+    return cards
 
 
 def draw_card(table):
@@ -97,11 +93,11 @@ def draw_card(table):
     if not os.path.exists(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt')):
         shuffle_deck(table)
     with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
-        cards = play_deck.readlines()
-        if not cards:
-            cards = read_table(table)
-            drawn += '(Shuffled!) '
-        drawn += cards[0].strip()
+        cards = list(map(lambda x: x.strip(), play_deck.readlines()))
+    if not cards:
+        cards = shuffle_deck(table)
+        drawn += '(Shuffled!) '
+    drawn += cards[0].strip()
     with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
-        play_deck.writelines(cards[1:])
+        play_deck.write('\n'.join(cards[1:]))
     return drawn

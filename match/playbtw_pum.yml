@@ -54,7 +54,7 @@ matches:
             - --table
             - pum_design
   # Next Scene skill
-  - trigger: ":interaction"
+  - triggers: [":interaction", ":skill"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -65,16 +65,6 @@ matches:
             - table
             - --table
             - pum_ch_skill
-  # Next Scene High Stakes
-  - trigger: ":stakes"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_pum"
-            - stakes
   # Next Scene High Stakes
   - trigger: ":goal"
     replace: "{{output}}"
@@ -99,18 +89,6 @@ matches:
             - table
             - --table
             - pum_ch_fail
-  # Scene Filler
-  - trigger: ":filler"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - pum_fill
   # PUM Scene Checker
   - triggers: [":check", ":alteration"]
     replace: "{{output}}"
@@ -263,8 +241,10 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_pum"
-            - intent
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_inta,pum_intb
   # PUM
   - trigger: ":activity"
     replace: "{{output}}"
@@ -273,8 +253,10 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_pum"
-            - activity
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_acta,pum_actb
   # PUM
   - trigger: ":reason"
     replace: "{{output}}"
@@ -287,16 +269,6 @@ matches:
             - table
             - --table
             - pum_reasona,pum_reasonb
-  # PUM
-  - trigger: ":property"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_pum"
-            - property
   # Twist or Complication
   - trigger: ":revelation"
     replace: "{{output}}"
