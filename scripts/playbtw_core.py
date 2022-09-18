@@ -4,11 +4,13 @@
 # Use at your OWN RISK
 
 import argparse
+import sys
 from playbtw_common import *
 
+sys.stdout.reconfigure(encoding="utf-8")
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|pum_scene|pum_challenge|pum_stakes|pum_question|pum_combat|pum_complication|npc|search|')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--table', type=str, help='Random Table Key')
 parser.add_argument('--formula', type=str, help='Dice formula')
@@ -55,7 +57,17 @@ elif action == 'roll_fudge':
         fudges.append(map_fudge(roll))
     total = fudges.count('(+)') - fudges.count('(-)') + bonus
     print((' '.join(fudges) + ' + (' + str(bonus) + ') = ') + str(total))
-elif action == 'search':
+elif action == 'shuffle':
+    print(shuffle_deck('deck_poker'))
+elif action == 'draw':
+    print(draw_card('deck_poker')
+          .replace('Spades', '♠')
+          .replace('Hearts', '♥')
+          .replace('Diamonds', '♦')
+          .replace('Clubs', '♣')
+          .replace('Joker', '🃏')
+          )
+elif action == 'list':
     print(list_tables())
 else:
     raise Exception("Wrong Function argument!")

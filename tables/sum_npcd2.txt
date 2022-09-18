@@ -11,10 +11,10 @@ Remains silent, looking at you with indifference
 Immediately leaves and avoids any engagement
 Looks at you disrespectfully or in a rude manner
 Approaches in a taunting manner, with strength
+Triggers an alarm, gives notice to others
 Draws weapons, stands ready to fight
-Assaults verbally or physically, non-lethally
-Assaults verbally or physically, non-lethally
-Assaults verbally or physically, non-lethally
-Assaults verbally or physically, non-lethally
-Assaults verbally or physically, non-lethally
-Assaults verbally or physically, non-lethally
+Draws weapons, stands ready to fight
+Draws weapons, stands ready to fight
+Draws weapons, stands ready to fight
+Draws weapons, stands ready to fight
+Draws weapons, stands ready to fight

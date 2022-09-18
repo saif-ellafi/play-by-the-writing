@@ -81,6 +81,26 @@ matches:
             - wtable
             - --table
             - "{{table}}"
+  # Draw from card deck (no replacement)
+  - triggers: [":draw", ":card"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - draw
+  # Draw from card deck (no replacement)
+  - trigger: ":shuffle"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - shuffle
   # Search available tables
   - trigger: ":list"
     replace: "{{output}}"
@@ -90,4 +110,4 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - search
+            - list

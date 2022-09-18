@@ -4,12 +4,12 @@
 # Use at your OWN RISK
 
 import os
+import tempfile
 import random
 import csv
 import dice
 
 import regex as re
-
 
 if 'CONFIG' not in os.environ:
     raise Exception("CONFIG key not found. Espanso is not installed?")
@@ -39,7 +39,7 @@ def read_table(table):
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
 def read_wtable(table):
     rows = []
-    with open(os.environ['CONFIG']+'/tables/'+table+'.psv', encoding='utf-8') as csvfile:
+    with open(os.path.join(os.environ['CONFIG'], 'tables', table+'.psv'), encoding='utf-8') as csvfile:
         spamreader = csv.reader(csvfile, delimiter='|', quotechar='"')
         for row in spamreader:
             rows.append(row)
@@ -82,3 +82,26 @@ def roll_advanced(formula):
 
 def rolls_advanced(formula):
     return sum(dice.roll(formula))
+
+
+def shuffle_deck(table):
+    cards = read_table(table)
+    random.shuffle(cards)
+    with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+        play_deck.write('\n'.join(cards))
+    return "Shuffled!"
+
+
+def draw_card(table):
+    drawn = ''
+    if not os.path.exists(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt')):
+        shuffle_deck(table)
+    with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
+        cards = play_deck.readlines()
+        if not cards:
+            cards = read_table(table)
+            drawn += '(Shuffled!) '
+        drawn += cards[0].strip()
+    with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+        play_deck.writelines(cards[1:])
+    return drawn
