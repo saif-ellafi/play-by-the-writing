@@ -4,7 +4,7 @@ A risk to... {{pum_ch_fail}}, in order to... {{pum_ch_success}}
 An enemy is... {{pum_acta}} {{pum_actb}} to... {{pum_reasona}} {{pum_reasonb}}
 An enemy is preventing you from... {{pum_ch_success}}
 {{pum_ch_skill}} to avoid... {{pum_ch_fail}}
-{{pum_ch_skill}} considering... {{pum_circumstance}}
+{{pum_ch_skill}}, considering... {{pum_circumstance}}
 A chance to... {{pum_ch_success}} with... {{pum_ch_skill}}
 {{pum_whoa}} {{pum_whob}} wants to... {{pum_inta}} {{pum_intb}}
 Find... {{pum_subject}} that leads to... {{pum_ch_success}}

@@ -417,8 +417,8 @@ matches:
             - table
             - --table
             - sum_npc3
-  # SUM (NPC Good)
-  - trigger: ":npcg"
+  # SUM
+  - trigger: ":npcd"
     replace: "{{output}}"
     vars:
       - name: output
@@ -428,9 +428,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcg
-  # SUM (NPC Bad)
-  - trigger: ":npcb"
+            - sum_npcd0
+  # SUM
+  - trigger: ":+npcd"
     replace: "{{output}}"
     vars:
       - name: output
@@ -440,7 +440,31 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcb
+            - sum_npcd1
+  # SUM
+  - trigger: ":++npcd"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npcd2
+  # SUM
+  - trigger: ":+++npcd"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npcd3
   # SUM (Action)
   - trigger: ":sumac"
     replace: "{{output}}"

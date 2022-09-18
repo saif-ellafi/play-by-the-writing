@@ -1,20 +1,20 @@
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Passively waits to know what characters want
-Asks more about the characters and their goals
-Share about their own desires or wishes
-Talk about their personal needs or problems
-Show you their skill or profession they practice
-Has useful information but reluctant to share it
-Know valuable facts but want something in return
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Asks about your concerns, ready to be of help
+Opens to introductions, asking about you too
+Connect you or present you someone they know
+Talks about personal needs or problems
+Reveals own skills, or profession practiced
+Shares details about the current area or location
+Shares about an upcoming event or situation
 Talks about a useful, dangerous or wonderful place
 Shares about an important object or resource
-Talk about the people or faction they belong to
-Shares details about the current area or location
+Proposes a mutual agreement, a trade or deal
+Someone else joins or the topic changes

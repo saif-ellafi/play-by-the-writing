@@ -1,20 +1,20 @@
-More trouble than expected
-Unexpected equipment or features
-Hazard or traps on the field or target
-Information or knowledge missing
-Elevation and vertical terrain
-Difficult, complex or broken area
-Unexpected help arrives
-Unexpected enemy arrives
+There is more trouble than expected
+Enemy has special equipment or features
+Hazard or traps are laid out
+Information or knowledge is missing
+There is elevation or vertical terrain
+The location is dangerous or problematic
+Unexpected help arrives to support
+Unexpected enemy is arriving
 Something needs to be done parallely
-Time Limit or pressure
-Presence of bystanders
-Moving or unstable ground
-Atmospheric difficulties
-Tactical device available
-Vehicle or machine for use
-Secret passage somewhere
-Stealth enemies or watchers
-Enemy supporting or healing
-Physical effort required
-Mental effort required
+Time limit or pressure
+There is presence of bystanders
+The location is moving or unstable
+There are atmospheric difficulties
+Tactical devices are available nearby
+Vehicle or machine is ready to be used
+There may be a secret passage somewhere
+Stealth enemies sneaking or watching
+An enemy is supporting from a distance
+Physical effort is required
+Mental effort is required

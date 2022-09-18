@@ -12,9 +12,9 @@ Further explains sensorial elements to characters
 Describes an additional location element or detail
 Gives a single character a chance to shine
 Places a thread element behind a challenge
-Brings a new or existing NPC to an interaction
+Introduces a complication or thickens the plot
 Introduces a random encounter or event
-Puts characters in danger, tension or risk
+Refers to an object that can be interacted with
 Shows a clue or lead that indirectly helps a thread
 Reveals something not seen or present earlier
-Resolve significant progress towards a thread
+Provide characters their scene expectation goals

@@ -3,15 +3,15 @@ Remains silent, what do characters do?
 Remains silent, what do characters do?
 Remains silent, what do characters do?
 Remains silent, what do characters do?
-Interrupts whatever the characters were doing
-Alters weather, mood or circumstances of scene
-Something terrible happens or an enemy appears
-Refers to an object that can be interacted with
-Presents a decision to be made with consequences
-Last action or decision was a bad idea because,
 Last action or decision was a good idea because,
+Brings a new or existing NPC to an interaction
 Whatever characters were expecting is not here
-Introduces a complication or thickens the plot
+Presents a decision to be made with consequences
+Conclude the scene, make characters move on
+Something terrible happens or an enemy appears
+Interrupts whatever the characters were doing
+Puts characters in danger, tension or risk
+Last action or decision was a bad idea because,
 Conclude the scene, make characters move on
 Conclude the scene, make characters move on
 Conclude the scene, make characters move on
