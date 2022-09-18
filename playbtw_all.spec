@@ -26,11 +26,9 @@ shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
 if os.path.exists('dist_core/scripts/playbtw_core.exe'):
     shutil.copy('dist_core/scripts/playbtw_core.exe', '{0}/../scripts/'.format(DISTPATH))
     shutil.copy('dist_mythic/scripts/playbtw_mythic.exe', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_pum/scripts/playbtw_pum.exe', '{0}/../scripts/'.format(DISTPATH))
 else:
     shutil.copy('dist_core/scripts/playbtw_core', '{0}/../scripts/'.format(DISTPATH))
     shutil.copy('dist_mythic/scripts/playbtw_mythic', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_pum/scripts/playbtw_pum', '{0}/../scripts/'.format(DISTPATH))
 
 for f in glob.glob('tables/*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))

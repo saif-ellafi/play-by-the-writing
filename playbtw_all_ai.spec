@@ -31,12 +31,10 @@ shutil.copy('config/openai.txt', '{0}/../config/'.format(DISTPATH))
 if os.path.exists('dist_core/scripts/playbtw_core.exe'):
     shutil.copy('dist_core/scripts/playbtw_core.exe', '{0}/../scripts/'.format(DISTPATH))
     shutil.copy('dist_mythic/scripts/playbtw_mythic.exe', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_pum/scripts/playbtw_pum.exe', '{0}/../scripts/'.format(DISTPATH))
     shutil.copy('dist_ai/scripts/playbtw_ai.exe', '{0}/../scripts/'.format(DISTPATH))
 else:
     shutil.copy('dist_core/scripts/playbtw_core', '{0}/../scripts/'.format(DISTPATH))
     shutil.copy('dist_mythic/scripts/playbtw_mythic', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_pum/scripts/playbtw_pum', '{0}/../scripts/'.format(DISTPATH))
     shutil.copy('dist_ai/scripts/playbtw_ai', '{0}/../scripts/'.format(DISTPATH))
 
 for f in glob.glob('tables/*'):

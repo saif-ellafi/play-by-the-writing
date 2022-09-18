@@ -2,8 +2,6 @@
 
 pyinstaller playbtw_core.spec --clean --distpath dist_core/scripts;
 
-pyinstaller playbtw_example.spec --clean --distpath dist_example/scripts;
-
 pyinstaller playbtw_mythic.spec --clean --distpath dist_mythic/scripts;
 
 pyinstaller playbtw_pum.spec --clean --distpath dist_pum/scripts;
