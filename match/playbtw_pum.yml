@@ -54,7 +54,7 @@ matches:
             - --table
             - pum_design
   # Next Scene skill
-  - trigger: ":skill"
+  - trigger: ":interaction"
     replace: "{{output}}"
     vars:
       - name: output
