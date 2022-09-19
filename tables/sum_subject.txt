@@ -3,7 +3,7 @@ Protection, defense, preservation, sanctuary
 Ability, quality, power, edge, implant, skill
 Advisor, counselling, chancellor, ambassador
 Entertainment, joy, happiness, festivity, holiday, music
-Promise, an oath, destiny, fate, Freason, belief
+Promise, an oath, destiny, fate, a vow, pledge, belief
 Aftermath of an event, the consequences, leftovers
 Agreement, a contract, an alliance, arrangement, deal
 Archers, rifles, ammunition, long range, artillery, guns
@@ -38,7 +38,7 @@ Claim, rightfulness, possession, belongings
 Cloud, visibility, fog, clear thoughts, ideas
 Commands, mandate, orders, chain of duty, execution
 Companions, allies, supporters, henchmen, assistants
-Concealment, hiding, invisibility, transparent, disappear
+Concealment, privacy, invisibility, transparency
 Conflict, invasion, war, battle, large scale skirmish
 Construction, building, structure, ruins, pillars, statues
 Consumables, potions, drugs, toxins, alchemy
@@ -46,14 +46,14 @@ Conversation, dialogue, discussion, arguments, reasons
 Corpses, death, mortality, undead, necromancy, ghosts
 Countryside, farms, field, surroundings, nature
 Couple, love, partner, passion, sex, jealousy
-Crew, team, band, group, gang, family, squad, cult
+Crew, brotherhood, fraternity, faction, family, cult, sect
 Kings, rulers, dictators, aristocrats, nobles, ministers
 Curse, damnation, sickness, insanity, crazy
 Army, troops, soldiers, mercenaries, recruits
 Politics, secrets, rumours, scheming, betrayal
-Danger, threat, extreme situations, act fast
+Danger, threat, hazard, emergency, jeopardy
 Dark, darkness, dark side, evil, malevolence
-Debris, devastation, destruction, death
+Devastation, ravage, destruction, ruin, wreckage
 Decision, choices, costs, consequences
 Declaration, announcement, statement
 Defeat, loss, failure, not enough, frustration
@@ -80,7 +80,7 @@ Fear, scare, horror, terror, paranoia
 Research, information, lore, knowledge, data
 Fire, flame, heat, red, burning, summer
 Roads, rivers, routes, bottlenecks, shortcut
-Forest, Jungle, trees, green, plants, bushes
+Forest, Jungle, trees, green, plants, growth, life
 Fortress, castle, outpost, keep, bunker
 Water, rain, swamp, cold, ice, snow
 Plan, strategy, goal, objective, mission
