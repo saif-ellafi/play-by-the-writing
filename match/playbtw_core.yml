@@ -5,6 +5,24 @@
 # USE AT YOUR OWN RISK
 
 matches:
+  - trigger: ":help"
+    replace: "{{form.nothing}}"
+    vars:
+      - name: "form"
+        type: form
+        params:
+          layout: |
+            Dice icon → :dd
+            Arrow icon → :arr
+            Dice roll → :r1d6.
+            Dice roll+ → :rr1d6x+4.
+            Fudge roll → :df.
+            Fudge roll+ → :df+4.
+            Poker shuffle → :shuffle
+            Poker draw → :draw
+            Roll table → :list
+            Roll w. tables → :wlist
+            Complete AI → :aicomplete
   - triggers: [":dd"]
     replace: "🎲"
   - triggers: [":arr"]
@@ -57,30 +75,6 @@ matches:
             - roll_fudge
             - --mods
             - "{{mods}}"
-  # Roll from weighted random table of two columns. Without .txt
-  - regex: ":tt\\.(?P<table>.*)\\."
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - "{{table}}"
-  # Roll from weighted random table of two columns. Pipe | Separated. Without .psv
-  - regex: ":wt\\.(?P<table>.*)\\."
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - wtable
-            - --table
-            - "{{table}}"
   # Draw from card deck (no replacement)
   - triggers: [":draw", ":card"]
     replace: "{{output}}"
@@ -195,5 +189,102 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - table
+            - --table
+            - "{{form1.file1}},{{form1.file2}},{{form1.file3}}"
+
+  # Search available tables
+  - trigger: ":wlist"
+    replace: "{{output}}"
+    vars:
+      - name: files
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wlist
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select random table:
+            [[file1]]
+          fields:
+            file1:
+              type: list
+              values: "{{files}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - "{{form1.file1}}"
+  # Search available tables
+  - trigger: ":+wlist"
+    replace: "{{output}}"
+    vars:
+      - name: files
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wlist
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select random table:
+            [[file1]]
+            [[file2]]
+          fields:
+            file1:
+              type: list
+              values: "{{files}}"
+            file2:
+              type: list
+              values: "{{files}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - "{{form1.file1}},{{form1.file2}}"
+  # Search available tables
+  - trigger: ":++wlist"
+    replace: "{{output}}"
+    vars:
+      - name: files
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wlist
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select random table:
+            [[file1]]
+            [[file2]]
+            [[file3]]
+          fields:
+            file1:
+              type: list
+              values: "{{files}}"
+            file2:
+              type: list
+              values: "{{files}}"
+            file3:
+              type: list
+              values: "{{files}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
             - --table
             - "{{form1.file1}},{{form1.file2}},{{form1.file3}}"

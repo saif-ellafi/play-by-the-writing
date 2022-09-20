@@ -111,19 +111,20 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 
 ## Core Keywords
 
-| Name                                                                                                                                                                                   | keyword          | Output | Information| 
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|--------|------------|
-| Dice | `:dd`            | 🎲 | Just fancy dice                                                                                                                                                            |
-| Arrow | `:arr`           | → | Just an arrow                                                                                                                                                             |
-| Roll simple dice | `:r1d6.`         | 1d6: 6 | Replace the red part with your own. Only works with this type of expression.                                                                            |
-| Roll complex dice | `:rr3d6x.`       | 3d6x: [1, 3, 1] | Replace the red part with your own formula. Example has exploding dice. Find more here: https://github.com/borntyping/python-dice           |
-| Roll fudge dice | `:df.`           | ( ) (+) (-) (-) + (0) = -1 | Fudge dice for FATE                                                                                                                    |
-| Roll fudge dice with bons | `:df+3.`         | ( ) ( ) (-) (-) + (3) = 1 | Fudge dice for FATE with a bonus                                                                                            |
-| Roll Random Table | `:tt.example.`   |  [Third result] | Roll from a table in .txt format placed in the tables folder. See the example table.                                                    |
-| Roll Weighted Table | `:wt.example_w.` | [Next quarter] | Roll from a weighted table in .psv format. There is an example file in the tables folder. It is to roll from tables with dice ranges. |
-| Shuffle Poker Deck | `:shuffle` |
-| Draw from Poker Deck | `:draw` |
-| List all available tables | `:list`          | ... | This will print all your available random tables to roll from. Usually just for checking.                                                            |
+| Name                      | keyword                       | Output | Information                                                                                                                           | 
+|---------------------------|-------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Dice                      | `:dd`                         | 🎲 | Just fancy dice                                                                                                                       |
+| Arrow                     | `:arr`                        | → | Just an arrow                                                                                                                         |
+| Roll simple dice          | `:r1d6.`                      | 1d6: 6 | Replace the red part with your own. Only works with this type of expression.                                                          |
+| Roll complex dice         | `:rr3d6x.`                    | 3d6x: [1, 3, 1] | Replace the red part with your own formula. Example has exploding dice. Find more here: https://github.com/borntyping/python-dice     |
+| Roll fudge dice           | `:df.`                        | ( ) (+) (-) (-) + (0) = -1 | Fudge dice for FATE                                                                                                                   |
+| Roll fudge dice with bons | `:df+3.`                      | ( ) ( ) (-) (-) + (3) = 1 | Fudge dice for FATE with a bonus                                                                                                      |
+| Roll Random Table         | `:tt.example.`                |  [Third result] | Roll from a table in .txt format placed in the tables folder. See the example table.                                                  |
+| Roll Weighted Table       | `:wt.example_w.`              | [Next quarter] | Roll from a weighted table in .psv format. There is an example file in the tables folder. It is to roll from tables with dice ranges. |
+| Shuffle Poker Deck        | `:shuffle`                    |
+| Draw from Poker Deck      | `:draw`                       |
+| Roll from random list     | `:list` `:+list` `:++list`    | ... | Display all available tables in the directory, and roll from there                                                                    |
+| Roll from weighted list   | `:wlist` `:+wlist` `:++wlist` | ... | Display all available w-tables in the directory, and roll from there                                                                  |
 
 ## Mythic GM Emulator Keywords
 

@@ -15,12 +15,14 @@ if 'CONFIG' not in os.environ:
     raise Exception("CONFIG key not found. Espanso is not installed?")
 
 
-# List CSV tables
-def list_tables():
+# List TXT tables
+def list_tables(tp):
     files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))
     names = []
     for file in files:
-        names.append(os.path.splitext(file)[0])
+        split = os.path.splitext(file)
+        if split[1] == tp:
+            names.append(split[0])
     names.sort()
     return '\n'.join(names)
 

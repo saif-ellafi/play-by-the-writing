@@ -10,7 +10,7 @@ from playbtw_common import *
 sys.stdout.reconfigure(encoding="utf-8")
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--table', type=str, help='Random Table Key')
 parser.add_argument('--formula', type=str, help='Dice formula')
@@ -69,6 +69,8 @@ elif action == 'draw':
           .replace('Joker', '🃏')
           )
 elif action == 'list':
-    print(list_tables())
+    print(list_tables('.txt'))
+elif action == 'wlist':
+    print(list_tables('.psv'))
 else:
     raise Exception("Wrong Function argument!")
