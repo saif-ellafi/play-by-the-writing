@@ -20,7 +20,7 @@ def list_tables():
     files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))
     names = []
     for file in files:
-        names.append(file)
+        names.append(os.path.splitext(file)[0])
     names.sort()
     return '\n'.join(names)
 

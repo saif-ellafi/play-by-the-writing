@@ -22,7 +22,7 @@ args = vars(parser.parse_args())
 action = args['action']
 
 if action == 'table':
-    tables = map(str.strip, args['table'].split(','))
+    tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
         result.append(choice_table(t.strip()))

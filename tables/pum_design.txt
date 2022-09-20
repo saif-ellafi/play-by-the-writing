@@ -1,6 +1,6 @@
 A combat, considering... {{pum_circumstance}}
 {{pum_subject}} turns out... {{pum_revelation}}
-A risk to... {{pum_ch_fail}}, in order to... {{pum_ch_success}}
+Possibility to... {{pum_ch_success}} with a risk to... {{pum_ch_fail}}
 An enemy is... {{pum_acta}} {{pum_actb}} to... {{pum_reasona}} {{pum_reasonb}}
 An enemy is preventing you from... {{pum_ch_success}}
 {{pum_ch_skill}} to avoid... {{pum_ch_fail}}

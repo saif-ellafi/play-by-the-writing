@@ -105,9 +105,95 @@ matches:
   - trigger: ":list"
     replace: "{{output}}"
     vars:
-      - name: output
+      - name: files
         type: script
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - list
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select random table:
+            [[file1]]
+          fields:
+            file1:
+              type: list
+              values: "{{files}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - "{{form1.file1}}"
+  # Search available tables
+  - trigger: ":+list"
+    replace: "{{output}}"
+    vars:
+      - name: files
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - list
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select random table:
+            [[file1]]
+            [[file2]]
+          fields:
+            file1:
+              type: list
+              values: "{{files}}"
+            file2:
+              type: list
+              values: "{{files}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - "{{form1.file1}},{{form1.file2}}"
+  # Search available tables
+  - trigger: ":++list"
+    replace: "{{output}}"
+    vars:
+      - name: files
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - list
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Select random table:
+            [[file1]]
+            [[file2]]
+            [[file3]]
+          fields:
+            file1:
+              type: list
+              values: "{{files}}"
+            file2:
+              type: list
+              values: "{{files}}"
+            file3:
+              type: list
+              values: "{{files}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - "{{form1.file1}},{{form1.file2}},{{form1.file3}}"
