@@ -26,7 +26,7 @@ Monsters, beasts, robot, machine, creature
 Business, trade, commerce, exchange, a deal, ports
 Campaign, a conquest, expedition, project, adventure
 Rest, recovery, a safe place, a pause, accommodation
-Carrier, courier, a messenger, a delivery
+Carrier, courier, a messenger, a bearer, a runner
 Mountains, hills, cliffs, altitude, high
 Mockery, insult, offense, disrespect
 Chance, an opportunity, advantage, a moment
