@@ -54,7 +54,7 @@ matches:
             - --table
             - pum_design
   # Next Scene skill
-  - triggers: [":interaction", ":skill"]
+  - triggers: [":challenge", ":skill"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -66,7 +66,7 @@ matches:
             - --table
             - pum_ch_skill
   # Next Scene High Stakes
-  - trigger: ":goal"
+  - trigger: ":gain"
     replace: "{{output}}"
     vars:
       - name: output
