@@ -1,3 +1,7 @@
+### 1.13
+* Updated to PUM v4
+* Updated to SUM v2.2
+
 ### 1.12
 * Added poker deck functions (persists, non-replacement)
 * Simplified and cleaned up unnecessary scripts

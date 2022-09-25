@@ -71,7 +71,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts correctly
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_12_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_13_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -145,30 +145,29 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/2079
 
 These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-machine
 
-| Name                | keyword                             |
-|---------------------|-------------------------------------|
-| Yes or No Question  | `:qq` `:+qq` `:-qq`                 |
-| Scene Prompt        | `:scene`                            |
-| Interaction         | `:interaction`                      |
-| Goal                | `:goal`                             |
-| Risk                | `:risk`                             |
-| Expectation Checker | `:check` `:expectation` |
-| Subject             | `:subject`                          |
-| Discovery           | `:discovery`                        |
-| complication          | `:complication`                       |
-| Circumstance        | `:circumstance`                     |
-| Kind of item        | `:item`                             |
-| Kind of ability     | `:ability`                          |
-| Kind of person      | `:person`                           |
-| Kind of enemy       | `:enemy`                            |
-| Event               | `:event`                            |
-| Who?                | `:who`                              |
-| Intent              | `:intent`                           |
-| Activity            | `:activity`                         |
-| Reason              | `:reason`                           |
-| Describe Area       | `:area`                             |
-| Describe NPC        | `:someone`                          |
-| Describe Object     | `:object`                           |
+| Name                | keyword                  |
+|---------------------|--------------------------|
+| Yes or No Question  | `:qq` `:+qq` `:-qq`      |
+| Scene Prompt        | `:scene`                 |
+| Expectation Checker | `:check` `:expectation`  |
+| Challenge           | `:challenge` or `:skill` |
+| Gain                | `:gain`                  |
+| Risk                | `:risk`                  |
+| Subject             | `:subject`               |
+| Context             | `:context`               |
+| Complication        | `:complication`          |
+| Circumstance        | `:circumstance`          |
+| Kind of item        | `:item`                  |
+| Kind of ability     | `:ability`               |
+| Kind of person      | `:person`                |
+| Kind of enemy       | `:enemy`                 |
+| Who?                | `:who`                   |
+| Intent              | `:intent`                |
+| Activity            | `:activity`              |
+| Reason              | `:reason`                |
+| Describe Area       | `:area`                  |
+| Describe NPC        | `:someone`               |
+| Describe Object     | `:object`                |
 
 ## SUM Keywords
 
@@ -178,7 +177,7 @@ These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-m
 |--------------------|---------------------------------------|
 | GM Action (Score)  | `:gma` `:+gma` `:++gma` `:+++gma`     |
 | NPC Action (Score) | `:npca` `:+npca` `:++npca` `:+++npca` |
-| NPC Disposition    | `:npcd` `:+npcd` `:++npcd` `:+++npcd` |
+| NPC Disposition    | `:npco` `:+npco` `:++npco` `:+++npco` |
 | Action Prompt      | `:sumac`                              |
 | Subject Prompt     | `:sumsu`                              |
 | Adjective Prompt   | `:sumad`                              |
