@@ -1,10 +1,10 @@
-People, innocents, masses, groups, population
+People, civilian, masses, groups, population
 Protection, defense, preservation, sanctuary
 Ability, quality, power, edge, implant, skill
 Advisor, counselling, chancellor, ambassador
 Entertainment, joy, happiness, festivity, holiday, music
 Promise, an oath, destiny, fate, a vow, pledge, belief
-Aftermath of an event, the consequences, leftovers
+Aftermath, consequences, leftovers, outcomes
 Agreement, a contract, an alliance, arrangement, deal
 Archers, rifles, ammunition, long range, artillery, guns
 Ambush, a strike, a coup, revolt, revolution
@@ -14,17 +14,17 @@ Armor, armory, defense, equipment, shield
 Arrival of someone, people, newcomers, immigrants
 Artwork, style, artists, culture, music
 Artifacts, objects of power, amulets, jewelry
-Assault, siege, strike, conquer, domain, acquisition
+Truth, innocence,  compassion, empathy, support
 An audience, conference, meeting, council, reunion
 Barbaric, nomads, bandits, renegades
 Religion, divine, clerics, deities, gods, wrath
 Message, omens, communication, news, changes
 Block, blockade, position, wall, barricade
 Bravery, courage, overcoming fear, valor, honor
-Weapons, melee, two-handed, swords, axe
+Weapons, melee, two-handed, sword, axe, hammer
 Monsters, beasts, robot, machine, creature
 Business, trade, commerce, exchange, a deal, ports
-Campaign, a conquest, expedition, project, adventure
+Campaign, operation, expedition, project, adventure
 Rest, recovery, a safe place, a pause, accommodation
 Carrier, courier, a messenger, a bearer, a runner
 Mountains, hills, cliffs, altitude, high
@@ -32,7 +32,7 @@ Mockery, insult, offense, disrespect
 Chance, an opportunity, advantage, a moment
 Money, supplies, resources, wealth, assets
 Machinery, engineering, infrastructure, platform
-Chronicles, history, events, past, culture
+Chronicles, history, events, past, culture, legacy
 City, village, town, settlement, housing, urbanization
 Claim, rightfulness, possession, belongings
 Cloud, visibility, fog, clear thoughts, ideas
@@ -44,13 +44,13 @@ Construction, building, structure, ruins, pillars, statues
 Consumables, potions, drugs, toxins, alchemy
 Conversation, dialogue, discussion, arguments, reasons
 Corpses, death, mortality, undead, necromancy, ghosts
-Countryside, farms, field, surroundings, nature
+Countryside, farms, agriculture, surroundings, nature
 Couple, love, partner, passion, sex, jealousy
 Crew, brotherhood, fraternity, faction, family, cult, sect
 Kings, rulers, dictators, aristocrats, nobles, ministers
 Curse, damnation, sickness, insanity, crazy
 Army, troops, soldiers, mercenaries, recruits
-Politics, secrets, rumours, scheming, betrayal
+Politics, secrets, rumors, scheming, betrayal
 Danger, threat, hazard, emergency, jeopardy
 Dark, darkness, dark side, evil, malevolence
 Devastation, ravage, destruction, ruin, wreckage
@@ -88,7 +88,7 @@ Friend, colleague, relationship, intimate, confidant
 Person, contact, relative, someone, entity
 Glory, victory, triumph, success, gains, benefits
 Bacteria, virus, insects, vermin, drones, parasites
-Ground, field, territory, land, province, region
+Domain, field, territory, land, province, region
 Superiority, perfection, majesty, achievement
 Harm, damage, blood, injuries, pain, suffering
 Hatred, anger, vengeance, resentment, envy
@@ -96,5 +96,5 @@ Healing, heart, health, recovery, rest
 Commander, mercenary, captain, general, soldier
 Vehicles, transport, rides, mounts, aircraft, ships
 Hunger, thirst, starvation, breath, necessity, survival
-Illusions, lies, tricks, traps, thievery, theft
+Illusions, lies, tricks, traps, thievery, theft, corruption
 Peace, tranquility, nature, harmony, safety, balance

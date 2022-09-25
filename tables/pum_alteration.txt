@@ -1,10 +1,10 @@
-{{Subject}} is... {{pum_revelation}}
-Consider... {{pum_circumstance}}
-The area is... {{pum_looks_adv}} {{pum_looks_area_adj}}
-{{pum_whoa}} {{pum_whob}} shows up, and... {{pum_inta}} {{pum_intb}}
+Scene complication 🎲
+Circumstance added 🎲
+Area not what expected
+Someone shows up
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
-And also... {{pum_ch_success}}
+Better than expected

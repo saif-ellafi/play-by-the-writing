@@ -7,7 +7,7 @@ Broken, Damaged, Injured
 Flooded, Overloaded, Exceeded
 Sabotaged, Captured, Taken
 Corrupted, Twisted, Cursed
-False, Fake, Lied, Concealed
+False, Fake, Corrupt, Concealed
 Mistaken, Discarded, Wrong
 Leaked, Discovered, Revealed
 Unreliable, Erratic, Insufficient

@@ -1,20 +1,20 @@
 Further explains sensorial elements to characters
 Describes an additional location element or detail
 Gives a single character a chance to shine
-Places a thread element behind a challenge
+Places a wanted element behind a challenge
 Last action or decision was a good idea because,
 Introduces a random encounter or event
 Refers to an object that can be interacted with
 Shows a clue or lead that indirectly helps a thread
 Reveals something not seen or present earlier
-Provide characters their scene expectation goal
-Nothing else to be revealed here, concludes scene
-Nothing else to be revealed here, concludes scene
-Nothing else to be revealed here, concludes scene
-Nothing else to be revealed here, concludes scene
-Nothing else to be revealed here, concludes scene
-Scene complication or revelation thickens the plot
+Positive surprise, good news, or good luck
+Remains silent, nothing happens, or concludes
+Remains silent, nothing happens, or concludes
+Remains silent, nothing happens, or concludes
+Remains silent, nothing happens, or concludes
+Remains silent, nothing happens, or concludes
+Scene complication or complication thickens the plot
 Brings a new or existing NPC to an interaction
 Something happens, requires immediate attention
 Presents a decision to be made with consequences
-Remains silent, what do characters do?
+Something bad happens, bad news, or bad luck

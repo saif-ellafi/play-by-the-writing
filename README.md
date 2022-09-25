@@ -145,30 +145,30 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/2079
 
 These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-machine
 
-| Name                | keyword             |
-|---------------------|---------------------|
-| Yes or No Question  | `:qq` `:+qq` `:-qq` |
-| Scene Prompt        | `:scene`            |
-| Interaction         | `:interaction`      |
-| Goal                | `:goal`             |
-| Risk                | `:risk`             |
-| Expectation Checker | `:check`            |
-| Subject             | `:subject`          |
-| Discovery           | `:discovery`        |
-| Revelation          | `:revelation`       |
-| Circumstance        | `:circumstance`     |
-| Kind of item        | `:item`             |
-| Kind of ability     | `:ability`          |
-| Kind of person      | `:person`           |
-| Kind of enemy       | `:enemy`            |
-| Event               | `:event`            |
-| Who?                | `:who`              |
-| Intent              | `:intent`           |
-| Activity            | `:activity`         |
-| Reason              | `:reason`           |
-| Describe Area       | `:area`             |
-| Describe NPC        | `:someone`          |
-| Describe Object     | `:object`           |
+| Name                | keyword                             |
+|---------------------|-------------------------------------|
+| Yes or No Question  | `:qq` `:+qq` `:-qq`                 |
+| Scene Prompt        | `:scene`                            |
+| Interaction         | `:interaction`                      |
+| Goal                | `:goal`                             |
+| Risk                | `:risk`                             |
+| Expectation Checker | `:check` `:expectation` |
+| Subject             | `:subject`                          |
+| Discovery           | `:discovery`                        |
+| complication          | `:complication`                       |
+| Circumstance        | `:circumstance`                     |
+| Kind of item        | `:item`                             |
+| Kind of ability     | `:ability`                          |
+| Kind of person      | `:person`                           |
+| Kind of enemy       | `:enemy`                            |
+| Event               | `:event`                            |
+| Who?                | `:who`                              |
+| Intent              | `:intent`                           |
+| Activity            | `:activity`                         |
+| Reason              | `:reason`                           |
+| Describe Area       | `:area`                             |
+| Describe NPC        | `:someone`                          |
+| Describe Object     | `:object`                           |
 
 ## SUM Keywords
 

@@ -1,10 +1,10 @@
 Enemy
 Faction
-Method
-Problem
+Plan
+Target
 Location
-Object
 Ally
 Being
-Knowledge
-Instrument
+Object
+Information
+Ability

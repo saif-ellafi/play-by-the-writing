@@ -90,7 +90,7 @@ matches:
             - --table
             - pum_ch_fail
   # PUM Scene Checker
-  - triggers: [":check", ":alteration"]
+  - triggers: [":check", ":expectation"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -198,7 +198,7 @@ matches:
             - --table
             - pum_whata,pum_whatb,pum_whatc
   # PUM
-  - trigger: ":discovery"
+  - trigger: ":context"
     replace: "{{output}}"
     vars:
       - name: output
@@ -208,7 +208,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_discovery
+            - pum_context
   # PUM
   - trigger: ":subject"
     replace: "{{output}}"
@@ -270,7 +270,7 @@ matches:
             - --table
             - pum_reasona,pum_reasonb
   # Twist or Complication
-  - trigger: ":revelation"
+  - trigger: ":complication"
     replace: "{{output}}"
     vars:
       - name: output
@@ -280,7 +280,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_revelation
+            - pum_subject,pum_complication
   # Circumstances.
   - trigger: ":circumstance"
     replace: "{{output}}"
@@ -390,7 +390,7 @@ matches:
             - --table
             - sum_npc3
   # SUM
-  - trigger: ":npcd"
+  - trigger: ":npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -400,9 +400,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcd0
+            - sum_npco0
   # SUM
-  - trigger: ":+npcd"
+  - trigger: ":+npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -412,9 +412,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcd1
+            - sum_npco1
   # SUM
-  - trigger: ":++npcd"
+  - trigger: ":++npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -424,9 +424,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcd2
+            - sum_npco2
   # SUM
-  - trigger: ":+++npcd"
+  - trigger: ":+++npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -436,7 +436,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcd3
+            - sum_npco3
   # SUM (Action)
   - trigger: ":sumac"
     replace: "{{output}}"
