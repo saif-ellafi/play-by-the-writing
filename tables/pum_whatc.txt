@@ -1,6 +1,6 @@
-Weaknesses
+Weakness
 Event
-Results
+result
 Backstory
 Location
 Politics

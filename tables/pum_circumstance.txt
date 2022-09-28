@@ -4,7 +4,7 @@ Deception, hazards or traps are laid out
 Information or knowledge is missing
 There is elevation or vertical terrain
 Location is dangerous or problematic
-Enemy is supporting from a distance
+Someone supporting from a distance
 Unexpected help or support is arriving
 Something needs to be done in parallel
 Time limit or intense pressure
@@ -14,7 +14,7 @@ There are atmospheric difficulties
 Tactical devices may be utilized
 Vehicle or machine can be utilized
 May have secret passages or routes
-Stealth enemies sneaking or watching
+Hidden presence sneaking or watching
 Willpower, spirit or faith is needed
 Strength, power or might is needed
 Intellect, resolve or presence is needed
