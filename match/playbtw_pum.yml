@@ -42,7 +42,7 @@ matches:
             - --table
             - pum_question_unlikely,pum_question_caveat
   # Next Scene design - PUM
-  - trigger: ":scene"
+  - triggers: [":scene", ":prompt"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -150,7 +150,7 @@ matches:
             - --table
             - pum_kinde
   # PUM
-  - trigger: ":area"
+  - triggers: [":area", ":location"]
     replace: "{{output}}"
     vars:
       - name: output
