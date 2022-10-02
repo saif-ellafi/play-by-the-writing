@@ -1,0 +1,10 @@
+Healing
+Deadly
+Ingest
+Protect
+Mystic
+Tech
+Historic
+Divine
+Move
+Static

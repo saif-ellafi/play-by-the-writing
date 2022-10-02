@@ -112,7 +112,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindo
+            - pum_kindi
   # PUM
   - trigger: ":ability"
     replace: "{{output}}"
@@ -126,7 +126,7 @@ matches:
             - --table
             - pum_kinda
   # PUM
-  - trigger: ":person"
+  - trigger: ":role"
     replace: "{{output}}"
     vars:
       - name: output
@@ -136,7 +136,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindp
+            - pum_kindr
   # PUM
   - trigger: ":enemy"
     replace: "{{output}}"
@@ -149,6 +149,18 @@ matches:
             - table
             - --table
             - pum_kinde
+  # PUM
+  - trigger: ":danger"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_kindd
   # PUM
   - triggers: [":area", ":location"]
     replace: "{{output}}"

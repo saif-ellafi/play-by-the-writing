@@ -1,0 +1,10 @@
+Trap
+Explode
+Corrode
+Terrain
+Enemy
+Run
+Secret
+Sound
+Damage
+Hide

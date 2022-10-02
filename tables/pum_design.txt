@@ -1,10 +1,10 @@
 Scene complication 🎲
 Invoke context event 🎲
 Problem or challenge 🎲
-Discover enemy deeds
-Catch enemy in action
-Someone is there
-PCs presence effects
-Active opposition
 Risk about to trigger 🎲
-Gain for plot progress 🎲
+Opportunity to make a discovery 🎲
+Someone is there
+Reveal consequence of PCs presence or actions
+Location specific event
+Discover enemy actions
+Face danger or stress

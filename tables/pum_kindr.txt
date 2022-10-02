@@ -1,10 +1,10 @@
 Fighter
 Medical
 Civilian
-Scoundrel
-Intelligent
+Scavenger
+Academic
 Faithful
 Powerful
-Technician
-Resourceful
+Craftsmen
+Wealthy
 Enforcing
