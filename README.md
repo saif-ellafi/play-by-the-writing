@@ -151,7 +151,7 @@ These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-ma
 | Scene Prompt        | `:scene`                 |
 | Expectation Checker | `:check` `:expectation`  |
 | Challenge           | `:challenge` or `:skill` |
-| Gain                | `:gain`                  |
+| Discovery           | `:discovery`                  |
 | Risk                | `:risk`                  |
 | Subject             | `:subject`               |
 | Context             | `:context`               |
