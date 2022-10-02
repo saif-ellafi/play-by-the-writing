@@ -7,4 +7,4 @@ Someone is there
 Reveal consequence of PCs presence or actions
 Location specific event
 Discover enemy actions
-Face danger or stress
+Face active opposition
