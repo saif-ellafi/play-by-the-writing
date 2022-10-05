@@ -3,18 +3,18 @@ Remains silent, nothing happens, or concludes
 Remains silent, nothing happens, or concludes
 Remains silent, nothing happens, or concludes
 Remains silent, nothing happens, or concludes
-Scene complication or complication thickens the plot
+Throws a scene complication that thickens the plot
 Brings a new or existing NPC to an interaction
-Something happens, requires immediate attention
+Rolls something that requires immediate attention
 Presents a decision to be made with consequences
 Something bad happens, bad news, or bad luck
-Blocked by unrelated or someone else's problems
-Interrupts whatever the characters were doing
-Puts characters in danger, tension or risk
+Presents a problem that someone else is having
+A change in the location interrupts the characters
+Suddenly puts characters in danger, tension or risk
 Last action or decision was a bad idea because,
-Conclude with an issue that can't be solved now
-Conclude with an issue that can't be solved now
-Conclude with an issue that can't be solved now
-Conclude with an issue that can't be solved now
-Conclude with an issue that can't be solved now
-Conclude with an issue that can't be solved now
+Concludes with an issue that can't be solved now
+Concludes with an issue that can't be solved now
+Concludes with an issue that can't be solved now
+Concludes with an issue that can't be solved now
+Concludes with an issue that can't be solved now
+Concludes with an issue that can't be solved now
