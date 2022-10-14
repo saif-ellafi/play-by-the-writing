@@ -71,7 +71,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts correctly
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_14_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_15_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -173,14 +173,15 @@ These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-ma
 
 These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-machine
 
-| Name               | keyword                               |
-|--------------------|---------------------------------------|
-| GM Action (Score)  | `:gma` `:+gma` `:++gma` `:+++gma`     |
-| NPC Action (Score) | `:npca` `:+npca` `:++npca` `:+++npca` |
-| NPC Disposition    | `:npco` `:+npco` `:++npco` `:+++npco` |
-| Action Prompt      | `:sumac`                              |
-| Subject Prompt     | `:sumsu`                              |
-| Adjective Prompt   | `:sumad`                              |
+| Name                | keyword  |
+|---------------------|----------|
+| GM Action (Build)   | `:gmab`  |
+| GM Action (Tension) | `:gmat`  |
+| NPC Action (Good)   | `:npcg`  |
+| NPC Action (Bad)    | `:npcb`  |
+| Action Prompt       | `:sumac` |
+| Subject Prompt      | `:sumsu` |
+| Adjective Prompt    | `:sumad` |
 
 ## OPSE Keywords
 

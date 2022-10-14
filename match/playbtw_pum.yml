@@ -306,7 +306,7 @@ matches:
             - --table
             - pum_circumstance
   # SUM
-  - trigger: ":gma"
+  - trigger: ":gmab"
     replace: "{{output}}"
     vars:
       - name: output
@@ -316,9 +316,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_gm0
+            - sum_gmab
   # SUM
-  - trigger: ":+gma"
+  - trigger: ":gmat"
     replace: "{{output}}"
     vars:
       - name: output
@@ -328,9 +328,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_gm1
+            - sum_gmat
   # SUM
-  - trigger: ":++gma"
+  - trigger: ":npcg"
     replace: "{{output}}"
     vars:
       - name: output
@@ -340,9 +340,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_gm2
+            - sum_npcg
   # SUM
-  - trigger: ":+++gma"
+  - trigger: ":npcb"
     replace: "{{output}}"
     vars:
       - name: output
@@ -352,103 +352,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_gm3
-  # SUM
-  - trigger: ":npca"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc0
-  # SUM
-  - trigger: ":+npca"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc1
-  # SUM
-  - trigger: ":++npca"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc2
-  # SUM
-  - trigger: ":+++npca"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc3
-  # SUM
-  - trigger: ":npco"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npco0
-  # SUM
-  - trigger: ":+npco"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npco1
-  # SUM
-  - trigger: ":++npco"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npco2
-  # SUM
-  - trigger: ":+++npco"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npco3
+            - sum_npcb
   # SUM (Action)
   - trigger: ":sumac"
     replace: "{{output}}"
