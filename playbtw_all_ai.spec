@@ -40,4 +40,4 @@ else:
 for f in glob.glob('tables/*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v1_15_base_with_ai', 'zip', 'dist_all_ai')
+shutil.make_archive('PlayBTW_v1_16_base_with_ai', 'zip', 'dist_all_ai')
