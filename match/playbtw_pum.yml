@@ -448,7 +448,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_behavior.txt
+            - sum_npc_behavior
   # SUM
   - trigger: ":+npcb"
     replace: "{{output}}"
@@ -460,7 +460,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_behavior.txt
+            - sum_npc_behavior
             - --mode
             - adv
   # SUM
@@ -474,7 +474,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_behavior.txt
+            - sum_npc_behavior
             - --mode
             - dis
   # SUM
@@ -528,7 +528,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_answer.txt
+            - sum_npc_answer
   # SUM
   - trigger: ":+npca"
     replace: "{{output}}"
@@ -540,7 +540,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_answer.txt
+            - sum_npc_answer
             - --mode
             - adv
   # SUM
@@ -554,7 +554,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_answer.txt
+            - sum_npc_answer
             - --mode
             - dis
   # SUM (Action)
