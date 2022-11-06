@@ -26,7 +26,7 @@ The installable is compilable from the source code available [HERE](https://gith
 If you know some Python and want to fiddle with Espanso, you can find this program in there for **FREE**
 (The installable version is priced to justify the time it takes me to compile, build and make it installable)
 
-Follow the instructions in README.md to compile the Python scripts into an executable that you can run, then place the dist
+Follow the instructions in BUILD.md to compile the Python scripts into an executable that you can run, then place the dist
 files inside Espanso user directory (not the install directory!).
 
 # What is included?
