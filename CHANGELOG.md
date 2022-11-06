@@ -1,3 +1,12 @@
+### 1.17
+* Updated to PUM v5.3
+* Updated to SUM v4.0-Preview
+* Fixed :mre command (Mythic random event)
+* Fixed: added missing -8 variants to Mythic checks
+* Fixed: clarified meaning of 'Yes favorable'
+* Fixed: PUM :person to :people to match rules
+* Fixed: Added back :tt.<table>. and :wt.<wtable>. commands again  
+
 ### 1.13
 * Updated to PUM v4
 * Updated to SUM v2.2

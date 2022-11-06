@@ -95,6 +95,30 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - shuffle
+  # Roll from weighted random table of two columns. Without .txt
+  - regex: ":tt\\.(?P<table>.*)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - "{{table}}"
+  # Roll from weighted random table of two columns. Pipe | Separated. Without .psv
+  - regex: ":wt\\.(?P<table>.*)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - "{{table}}"
   # Search available tables
   - triggers: [":list", ":tables"]
     replace: "{{output}}"

@@ -51,17 +51,26 @@ def unwrap(result):
 
 
 # Rolls random from a table once
-def choice_table(table):
+def choice_table(table, mode=None):
     values = read_table(table)
-    result = unwrap(random.choice(values))
+    rolled = random.randint(0, len(values)-1)
+    if mode == 'adv':
+        rolled = max(rolled, random.randint(0, len(values)-1))
+    elif mode == 'dis':
+        rolled = min(rolled, random.randint(0, len(values)-1))
+    result = unwrap(values[rolled])
     return result
 
 
 # Rolls random from a weighted table once, based on the max values provided on first column
-def choice_wtable(table):
+def choice_wtable(table, mode=None):
     values = read_wtable(table)
     max_value = int(values[-1][0])
     rolled = random.randint(1, max_value)
+    if mode == 'adv':
+        rolled = max(rolled, random.randint(1, max_value))
+    elif mode == 'dis':
+        rolled = min(rolled, random.randint(1, max_value))
     for e in values:
         if rolled <= int(e[0]):
             return unwrap(e[1])

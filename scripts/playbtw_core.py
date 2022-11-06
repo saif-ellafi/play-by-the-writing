@@ -12,6 +12,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
 parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
+parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
 parser.add_argument('--formula', type=str, help='Dice formula')
 parser.add_argument('--quantity', type=int, help='Simple Roll dice quantity')
@@ -25,13 +26,13 @@ if action == 'table':
     tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
-        result.append(choice_table(t.strip()))
+        result.append(choice_table(t.strip(), args['mode']))
     print(' '.join(result))
 elif action == 'wtable':
     tables = map(str.strip, args['table'].split(','))
     result = []
     for t in tables:
-        result.append(choice_wtable(t.strip()))
+        result.append(choice_wtable(t.strip(), args['mode']))
     print(' '.join(result))
 elif action == 'roll_dice':
     result = roll_dice(args['quantity'], args['size'])

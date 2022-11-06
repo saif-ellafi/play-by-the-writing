@@ -65,4 +65,4 @@ shutil.copy('match/playbtw_mythic.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/mythic*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v1_16_mythic', 'zip', 'dist_mythic')
+shutil.make_archive('PlayBTW_v1_17_mythic', 'zip', 'dist_mythic')

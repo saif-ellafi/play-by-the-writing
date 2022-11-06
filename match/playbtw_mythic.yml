@@ -13,7 +13,8 @@ matches:
         type: form
         params:
           layout: |
-            Odds [[odd]] Chaos [[cf]] Yes Favorable? [[fy]]
+            Odds [[odd]] Chaos [[cf]] Yes Favorable?* [[fy]]
+            *When 'yes' is favorable for PCs, select 1 (Mythic Variations 2).
           fields:
             odd:
               type: list
@@ -103,6 +104,19 @@ matches:
             - "6"
             - --chaos
             - "{{chaos}}"
+  - regex: ":\\+\\+\\+\\+mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "6"
+            - --chaos
+            - "{{chaos}}"
   - regex: ":-mfc(?P<chaos>\\d)"
     replace: "{{output}}"
     vars:
@@ -140,6 +154,19 @@ matches:
             - fate_check
             - --odds
             - "-6"
+            - --chaos
+            - "{{chaos}}"
+  - regex: ":----mfc(?P<chaos>\\d)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - fate_check
+            - --odds
+            - "-8"
             - --chaos
             - "{{chaos}}"
   # Mythic Scene Alteration Check
@@ -186,10 +213,8 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - mythic_focus,mythic_action_1,mythic_action_2
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - random_event
   # Mythic Action descriptor. Without Focus.
   - trigger: ":mac"
     replace: "{{output}}"

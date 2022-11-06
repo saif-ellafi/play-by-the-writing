@@ -126,7 +126,7 @@ matches:
             - --table
             - pum_kinda
   # PUM
-  - trigger: ":role"
+  - trigger: ":people"
     replace: "{{output}}"
     vars:
       - name: output
@@ -136,7 +136,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindr
+            - pum_kindp
   # PUM
   - trigger: ":enemy"
     replace: "{{output}}"
@@ -306,7 +306,7 @@ matches:
             - --table
             - pum_circumstance
   # SUM
-  - trigger: ":gmab"
+  - trigger: ":gma"
     replace: "{{output}}"
     vars:
       - name: output
@@ -316,9 +316,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_gmab
+            - sum_gm_action
   # SUM
-  - trigger: ":gmat"
+  - trigger: ":+gma"
     replace: "{{output}}"
     vars:
       - name: output
@@ -328,9 +328,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_gmat
+            - sum_gm_action
+            - --mode
+            - adv
   # SUM
-  - trigger: ":npcg"
+  - trigger: ":-gma"
     replace: "{{output}}"
     vars:
       - name: output
@@ -340,9 +342,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcg
+            - sum_gm_action
+            - --mode
+            - dis
   # SUM
-  - trigger: ":npcb"
+  - trigger: ":feedback"
     replace: "{{output}}"
     vars:
       - name: output
@@ -352,7 +356,207 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npcb
+            - sum_gm_feedback
+  # SUM
+  - trigger: ":+feedback"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm_feedback
+            - --mode
+            - adv
+  # SUM
+  - trigger: ":-feedback"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm_feedback
+            - --mode
+            - dis
+  # SUM
+  - trigger: ":world"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_gm_world
+  # SUM
+  - trigger: ":contribution"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_contribution
+  # SUM
+  - trigger: ":+contribution"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_contribution
+            - --mode
+            - adv
+  # SUM
+  - trigger: ":-contribution"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_contribution
+            - --mode
+            - dis
+  # SUM
+  - trigger: ":behavior"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_behavior.txt
+  # SUM
+  - trigger: ":+behavior"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_behavior.txt
+            - --mode
+            - adv
+  # SUM
+  - trigger: ":-behavior"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_behavior.txt
+            - --mode
+            - dis
+  # SUM
+  - trigger: ":opinion"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_opinion
+  # SUM
+  - trigger: ":+opinion"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_opinion
+            - --mode
+            - adv
+  # SUM
+  - trigger: ":-opinion"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_opinion
+            - --mode
+            - dis
+  # SUM
+  - trigger: ":answer"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_answer.txt
+  # SUM
+  - trigger: ":+answer"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_answer.txt
+            - --mode
+            - adv
+  # SUM
+  - trigger: ":-answer"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_answer.txt
+            - --mode
+            - dis
   # SUM (Action)
   - trigger: ":sumac"
     replace: "{{output}}"

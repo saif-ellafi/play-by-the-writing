@@ -8,7 +8,7 @@ from playbtw_common import *
 import argparse
 
 parser = argparse.ArgumentParser(description='Oracle for Espanso')
-parser.add_argument('action', type=str, help='fate_check|focus|action|description|fu_oracle|fu_quality|mnpc|')
+parser.add_argument('action', type=str, help='fate_check|scene_check|random_event')
 parser.add_argument('--odds', type=int, default=0, help='Odds towards result. From -8 to +8')
 parser.add_argument('--chaos', type=int, default=4, help='Chaos Factor. From 3 to 6')
 parser.add_argument('--favorable', type=int, default=1, help='Is yes a favorable answer? 0 is no. 1 is yes.')
@@ -54,9 +54,15 @@ def scene_check(chaos=4):
         return 'Proceeds normally!'
 
 
+def random_event():
+    return '%s: %s %s' % (choice_wtable('mythic_focus'), choice_table('mythic_action_1'), choice_table('mythic_action_2'))
+
+
 if action == 'fate_check':
     print(fate_check(args['odds'], args['chaos'], args['favorable']))
 elif action == 'scene_check':
     print(scene_check(args['chaos']))
+elif action == 'random_event':
+    print(random_event())
 else:
     raise Exception("Wrong Function argument!")

@@ -71,7 +71,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts correctly
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_16_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_17_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -151,7 +151,7 @@ These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-ma
 | Scene Prompt        | `:scene`                 |
 | Expectation Checker | `:check` `:expectation`  |
 | Challenge           | `:challenge` or `:skill` |
-| Discovery           | `:discovery`                  |
+| Discovery           | `:discovery`             |
 | Risk                | `:risk`                  |
 | Subject             | `:subject`               |
 | Context             | `:context`               |
@@ -159,8 +159,9 @@ These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-ma
 | Circumstance        | `:circumstance`          |
 | Kind of item        | `:item`                  |
 | Kind of ability     | `:ability`               |
-| Kind of person      | `:person`                |
+| Kind of people      | `:people`                |
 | Kind of enemy       | `:enemy`                 |
+| Kind of danger      | `:danger`                |
 | Who?                | `:who`                   |
 | Intent              | `:intent`                |
 | Activity            | `:activity`              |
@@ -189,7 +190,7 @@ These are meant to be played with https://inflatablestudios.itch.io/one-page-sol
 
 | Name                         | keyword             |
 |------------------------------|---------------------|
-| Oacle (Yes/No)               | `:qa` `:+qa` `:-qa` |
+| Oracle (Yes/No)              | `:qa` `:+qa` `:-qa` |
 | Set the Scene (Complication) | `:setscene`         |
 | Set the Scene (Alteration)   | `:setalt`           |
 | GM Moves (Pacing)            | `:pacemove`         |
