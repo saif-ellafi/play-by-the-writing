@@ -174,15 +174,18 @@ These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-ma
 
 These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-machine
 
-| Name                | keyword  |
-|---------------------|----------|
-| GM Action (Build)   | `:gmab`  |
-| GM Action (Tension) | `:gmat`  |
-| NPC Action (Good)   | `:npcg`  |
-| NPC Action (Bad)    | `:npcb`  |
-| Action Prompt       | `:sumac` |
-| Subject Prompt      | `:sumsu` |
-| Adjective Prompt    | `:sumad` |
+| Name             | keyword                         |
+|------------------|---------------------------------|
+| GM Action        | `:gma` or `:+gma` or `:-gma`    |
+| GM Feedback      | `:gmf` or `:+gmf` or `:-gmf`    |
+| GM World         | `:gmw` or `:+gmw` or `:-gmw`    |
+| NPC Contribution | `:npcc` or `:+npcc` or `:-npcc` |
+| NPC Behavior     | `:npcb` or `:+npcb` or `:-npcb` |
+| NPC Opinion      | `:npco` or `:+npco` or `:-npco` |
+| NPC Answer       | `:npca` or `:+npca` or `:-npca` |
+| Action Prompt    | `:sumac`                        |
+| Subject Prompt   | `:sumsu`                        |
+| Adjective Prompt | `:sumad`                        |
 
 ## OPSE Keywords
 

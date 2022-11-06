@@ -346,7 +346,7 @@ matches:
             - --mode
             - dis
   # SUM
-  - trigger: ":feedback"
+  - trigger: ":gmf"
     replace: "{{output}}"
     vars:
       - name: output
@@ -358,7 +358,7 @@ matches:
             - --table
             - sum_gm_feedback
   # SUM
-  - trigger: ":+feedback"
+  - trigger: ":+gmf"
     replace: "{{output}}"
     vars:
       - name: output
@@ -372,7 +372,7 @@ matches:
             - --mode
             - adv
   # SUM
-  - trigger: ":-feedback"
+  - trigger: ":-gmf"
     replace: "{{output}}"
     vars:
       - name: output
@@ -386,7 +386,7 @@ matches:
             - --mode
             - dis
   # SUM
-  - trigger: ":world"
+  - trigger: ":gmw"
     replace: "{{output}}"
     vars:
       - name: output
@@ -398,7 +398,7 @@ matches:
             - --table
             - sum_gm_world
   # SUM
-  - trigger: ":contribution"
+  - trigger: ":npcc"
     replace: "{{output}}"
     vars:
       - name: output
@@ -410,7 +410,7 @@ matches:
             - --table
             - sum_npc_contribution
   # SUM
-  - trigger: ":+contribution"
+  - trigger: ":+npcc"
     replace: "{{output}}"
     vars:
       - name: output
@@ -424,7 +424,7 @@ matches:
             - --mode
             - adv
   # SUM
-  - trigger: ":-contribution"
+  - trigger: ":-npcc"
     replace: "{{output}}"
     vars:
       - name: output
@@ -438,7 +438,7 @@ matches:
             - --mode
             - dis
   # SUM
-  - trigger: ":behavior"
+  - trigger: ":npcb"
     replace: "{{output}}"
     vars:
       - name: output
@@ -450,7 +450,7 @@ matches:
             - --table
             - sum_npc_behavior.txt
   # SUM
-  - trigger: ":+behavior"
+  - trigger: ":+npcb"
     replace: "{{output}}"
     vars:
       - name: output
@@ -464,7 +464,7 @@ matches:
             - --mode
             - adv
   # SUM
-  - trigger: ":-behavior"
+  - trigger: ":-npcb"
     replace: "{{output}}"
     vars:
       - name: output
@@ -478,7 +478,7 @@ matches:
             - --mode
             - dis
   # SUM
-  - trigger: ":opinion"
+  - trigger: ":npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -490,7 +490,7 @@ matches:
             - --table
             - sum_npc_opinion
   # SUM
-  - trigger: ":+opinion"
+  - trigger: ":+npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -504,7 +504,7 @@ matches:
             - --mode
             - adv
   # SUM
-  - trigger: ":-opinion"
+  - trigger: ":-npco"
     replace: "{{output}}"
     vars:
       - name: output
@@ -518,7 +518,7 @@ matches:
             - --mode
             - dis
   # SUM
-  - trigger: ":answer"
+  - trigger: ":npca"
     replace: "{{output}}"
     vars:
       - name: output
@@ -530,7 +530,7 @@ matches:
             - --table
             - sum_npc_answer.txt
   # SUM
-  - trigger: ":+answer"
+  - trigger: ":+npca"
     replace: "{{output}}"
     vars:
       - name: output
@@ -544,7 +544,7 @@ matches:
             - --mode
             - adv
   # SUM
-  - trigger: ":-answer"
+  - trigger: ":-npca"
     replace: "{{output}}"
     vars:
       - name: output
