@@ -3,3 +3,4 @@ md2pdf # with https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-In
 openai
 pyperclip
 dice
+regex
