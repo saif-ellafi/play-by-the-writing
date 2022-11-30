@@ -41,7 +41,7 @@ matches:
             - table
             - --table
             - pum_question_unlikely,pum_question_caveat
-  # Next Scene design - PUM
+  # Next Scene prompt - PUM
   - triggers: [":scene", ":prompt"]
     replace: "{{output}}"
     vars:
@@ -52,7 +52,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_design
+            - pum_scenea,pum_sceneb
   # Next Scene skill
   - triggers: [":challenge", ":skill"]
     replace: "{{output}}"
@@ -64,7 +64,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_ch_skill
+            - pum_challenge
   # Next Scene High Stakes
   - trigger: ":discovery"
     replace: "{{output}}"
@@ -76,7 +76,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_ch_success
+            - pum_discovery
   # Next Scene High Stakes
   - trigger: ":risk"
     replace: "{{output}}"
@@ -88,7 +88,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_ch_fail
+            - pum_risk
   # PUM Scene Checker
   - triggers: [":check", ":expectation"]
     replace: "{{output}}"
@@ -100,7 +100,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_alteration
+            - pum_checka,pum_checkb
   # PUM
   - trigger: ":item"
     replace: "{{output}}"
@@ -126,7 +126,7 @@ matches:
             - --table
             - pum_kinda
   # PUM
-  - trigger: ":people"
+  - trigger: ":role"
     replace: "{{output}}"
     vars:
       - name: output
@@ -208,9 +208,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_whata,pum_whatb,pum_whatc
+            - pum_whata,pum_whatb
   # PUM
-  - trigger: ":context"
+  - trigger: ":catalyst"
     replace: "{{output}}"
     vars:
       - name: output
@@ -220,7 +220,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_context
+            - pum_catalyst
   # PUM
   - trigger: ":subject"
     replace: "{{output}}"
