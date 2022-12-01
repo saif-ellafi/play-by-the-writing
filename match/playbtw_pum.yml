@@ -210,7 +210,7 @@ matches:
             - --table
             - pum_whata,pum_whatb
   # PUM
-  - trigger: ":catalyst"
+  - trigger: ":context"
     replace: "{{output}}"
     vars:
       - name: output
@@ -220,7 +220,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_catalyst
+            - pum_context
   # PUM
   - trigger: ":subject"
     replace: "{{output}}"

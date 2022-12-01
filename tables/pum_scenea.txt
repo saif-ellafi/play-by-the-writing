@@ -1,9 +1,9 @@
-Problematic situation
-Consequence of PCs actions
-Consequence of enemy actions
-Location event
-Enemy action
-World event
+Dangerous situation
+Reflect on PCs choices
+Outcome of enemy actions
+Location specific event
+Enemy taking action
+Problem needs solving
 Social interaction
 Difficult obstacle
 Stressful moment
