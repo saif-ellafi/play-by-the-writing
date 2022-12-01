@@ -52,7 +52,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_scenea,pum_sceneb
+            - pum_prompt
   # Next Scene skill
   - triggers: [":challenge", ":skill"]
     replace: "{{output}}"
@@ -100,7 +100,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_checka,pum_checkb
+            - pum_check
   # PUM
   - trigger: ":item"
     replace: "{{output}}"
@@ -112,7 +112,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindi
+            - pum_kindi,pum_kindi
   # PUM
   - trigger: ":ability"
     replace: "{{output}}"
@@ -124,7 +124,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kinda
+            - pum_kinda,pum_kinda
   # PUM
   - trigger: ":role"
     replace: "{{output}}"
@@ -136,7 +136,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindp
+            - pum_kindr,pum_kindr
   # PUM
   - trigger: ":enemy"
     replace: "{{output}}"
@@ -148,7 +148,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kinde
+            - pum_kinde,pum_kinde
   # PUM
   - trigger: ":danger"
     replace: "{{output}}"
@@ -160,7 +160,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindd
+            - pum_kindd,pum_kindd
   # PUM
   - triggers: [":area", ":location"]
     replace: "{{output}}"
@@ -210,7 +210,7 @@ matches:
             - --table
             - pum_whata,pum_whatb
   # PUM
-  - trigger: ":context"
+  - trigger: ":catalyst"
     replace: "{{output}}"
     vars:
       - name: output
@@ -220,7 +220,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_context
+            - pum_catalyst
   # PUM
   - trigger: ":subject"
     replace: "{{output}}"

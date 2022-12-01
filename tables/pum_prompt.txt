@@ -1,0 +1,11 @@
+Scene complication: {{pum_complication}}
+Invoke scene catalyst: {{pum_catalyst}}
+Problem or challenge: {{pum_challenge}}
+Risk about to trigger: {{pum_risk}}
+Opportunity to make a discovery: {{pum_discovery}}
+Social related encounter
+Consequence of your actions or presence
+Location specific event
+Discover enemy actions
+Face active opposition
+Trouble circumstance: {{pum_circumstance}}
