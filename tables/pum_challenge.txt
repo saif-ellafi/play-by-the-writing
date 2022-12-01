@@ -2,7 +2,7 @@ Immediate healing or medicine required
 Have to endure, resist or withstand
 Strength, force or might can be of help
 Things here may take long time to solve
-Use of magic, divine or special abilities
+Presence of magic, divine or technology
 There may be something hiding around
 An element is hard to reach out or get
 Task for a technology or crafts expert
@@ -16,5 +16,5 @@ Charisma or a strong personality can help
 Requires keen senses or extreme intuition
 Something only for experts to understand
 Could use a soft hand, empathy or wisdom
-Something fails and needs fixing
-Confronting or fighting might be one way
+Something fails, breaks or needs repair
+Confronting or fighting might be a way out

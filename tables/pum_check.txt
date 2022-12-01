@@ -1,10 +1,10 @@
-Interrupt with a scene prompt
-There is a complication
-Happens almost as expected,
+Interrupted by a different scene prompt: {{pum_prompt}}
+There is a complication: {{pum_complication}}
+Almost as expected
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
 Happens as expected
-Better than expected
+Even better than what expected
