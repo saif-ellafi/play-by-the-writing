@@ -1,3 +1,6 @@
+### 1.19
+* Updated to SUM v5.5
+
 ### 1.18
 * Updated to SUM v4 (corrected)
 
