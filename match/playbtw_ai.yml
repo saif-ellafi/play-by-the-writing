@@ -6,12 +6,68 @@
 
 matches:
   # OpenAI Completion
-  - regex: ":aicomplete"
+  - triggers: [":aic", ":gpt"]
     replace: "{{output}}"
     vars:
+      - name: form_ai
+        type: form
+        params:
+          layout: |
+            Text prompt:
+            [[prompt]]
+            Model (ada cheapest, davinci best):
+            [[model]]
+            Temperature (randomness vs certainty):
+            [[temperature]]
+            Tokens (result length):
+            [[tokens]]
+          fields:
+            prompt:
+              type: text
+              multiline: true
+            model:
+              type: list
+              values:
+                - 'text-davinci-003'
+                - 'text-curie-001'
+                - 'text-babbage-001'
+                - 'text-ada-001'
+              default:
+                'text-davinci-003'
+            temperature:
+              type: list
+              values:
+                - '1.0'
+                - '0.9'
+                - '0.75'
+                - '0.5'
+                - '0.25'
+                - '0.1'
+                - '0'
+              default: '0.9'
+            tokens:
+              type: list
+              values:
+                - '16'
+                - '32'
+                - '64'
+                - '128'
+                - '256'
+                - '512'
+                - '1024'
+              default:
+                '64'
       - name: output
         type: script
         params:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_complete
+            - --prompt
+            - "{{form_ai.prompt}}"
+            - --model
+            - "{{form_ai.model}}"
+            - --temperature
+            - "{{form_ai.temperature}}"
+            - --tokens
+            - "{{form_ai.tokens}}"
