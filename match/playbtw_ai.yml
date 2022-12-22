@@ -6,21 +6,21 @@
 
 matches:
   # OpenAI Completion
-  - triggers: [":aic", ":gpt"]
+  - triggers: [":aitext", ":aicomplete", ":gpt"]
     replace: "{{output}}"
     vars:
       - name: form_ai
         type: form
         params:
           layout: |
-            Text prompt:
+            Prompt:
             [[prompt]]
-            Model (ada cheapest, davinci best):
-            [[model]]
-            Temperature (randomness vs certainty):
-            [[temperature]]
-            Tokens (result length):
-            [[tokens]]
+            Remember this        Include prompt       Erase AI memories
+            [[remember]]         [[include]]             [[forget]]
+            Model                                      Coherence         Answer size:
+            [[model]] [[temperature]] [[tokens]]
+
+            * NOTE: AI Memory, answer size and model affects costs.
           fields:
             prompt:
               type: text
@@ -57,6 +57,27 @@ matches:
                 - '1024'
               default:
                 '64'
+            remember:
+              type: list
+              values:
+                - 'true'
+                - 'false'
+              default:
+                'false'
+            include:
+              type: list
+              values:
+                - 'true'
+                - 'false'
+              default:
+                'true'
+            forget:
+              type: list
+              values:
+                - 'true'
+                - 'false'
+              default:
+                'false'
       - name: output
         type: script
         params:
@@ -71,3 +92,71 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
+            - --remember
+            - "{{form_ai.remember}}"
+            - --include
+            - "{{form_ai.include}}"
+            - --forget
+            - "{{form_ai.forget}}"
+  - triggers: [":aiimg", ":aiimage", ":dall-e"]
+    replace: "{{output}}"
+    vars:
+      - name: form_ai
+        type: form
+        params:
+          layout: |
+            Prompt:
+            [[prompt]]
+            Size:
+            [[img_size]]
+            Format:
+            [[img_format]]
+          fields:
+            prompt:
+              type: text
+              multiline: true
+            img_size:
+              type: list
+              values:
+                - '256x256'
+                - '512x512'
+                - '1024x1024'
+              default:
+                '512x512'
+            img_format:
+              type: list
+              values:
+                - 'url'
+                - 'markdown'
+              default:
+                'markdown'
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_image
+            - --prompt
+            - "{{form_ai.prompt}}"
+            - --img_size
+            - "{{form_ai.img_size}}"
+            - --img_format
+            - "{{form_ai.img_format}}"
+  - triggers: [":aiforget", ":aierase"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_forget
+  - triggers: [":aimemories", ":aimemory", ":aiknow"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_knowledge
