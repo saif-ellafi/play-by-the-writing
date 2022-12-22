@@ -216,11 +216,12 @@ This experimental functionality relies on OpenAI: https://openai.com for using A
 3. Go to espanso settings folder inside the config folder
 4. Paste the API Key in the file called openai.txt
 
-| Name        | keyword                       | Output                           | 
-|-------------|-------------------------------|----------------------------------|
-| AI Text GPT | `:aitext` `:aicomplete` `:gpt` | An AI response to your prompt    |
-| AI Image Dall-E | `:aiimg` `:aiimage` `:dall-e` | An AI generated image            |
-| AI Forget | `:aiforget` `:aierase` | Delete AI memories (saves costs) |
+| Name            | keyword                        | Output                              | 
+|-----------------|--------------------------------|-------------------------------------|
+| AI Text GPT     | `:aitext` `:aicomplete` `:gpt` | An AI response to your prompt       |
+| AI Image Dall-E | `:aiimg` `:aiimage` `:dall-e`  | An AI generated image               |
+| AI Memory       | `:aimemory` `:aiknow`          | Bring AI current memory |
+| AI Forget       | `:aiforget` `:aierase`         | Delete AI memories (saves costs)    |
 
 # License - Service Level Agreement of Purchased Installable version
 - This software is provided as-is, I provide support to users on good-will and listen to feedback and ideas, but cannot commit to eternal promises.
