@@ -151,7 +151,7 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_forget
-  - triggers: [":aimemory", ":aiknow"]
+  - triggers: [":aimemory", ":aiknow", ":aiclear"]
     replace: "{{output}}"
     vars:
       - name: output
