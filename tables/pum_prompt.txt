@@ -1,4 +1,4 @@
-There is a complication: {{pum_complication}}
+There is a complication: {{pum_subject}} is {{pum_complication}}
 Invoke scene catalyst: {{pum_catalyst}}
 Problem or challenge: {{pum_challenge}}
 Risk about to trigger: {{pum_risk}}
