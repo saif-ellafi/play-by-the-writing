@@ -154,7 +154,7 @@ These are meant to be played with https://jeansenvaars.itch.io/plot-unfolding-ma
 | Discovery           | `:discovery`             |
 | Risk                | `:risk`                  |
 | Subject             | `:subject`               |
-| Context             | `:context`               |
+| Catalyst            | `:catalyst`              |
 | Complication        | `:complication`          |
 | Circumstance        | `:circumstance`          |
 | Kind of item        | `:item`                  |
