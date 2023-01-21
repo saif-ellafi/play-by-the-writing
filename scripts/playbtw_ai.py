@@ -18,8 +18,8 @@ parser.add_argument('--model', type=str, default=None, help='Model to use in Ope
 parser.add_argument('--temperature', type=float, help='Determines randomness levels, where 1 is full risk and 0 certain')
 parser.add_argument('--tokens', type=int, help='Max tokens in the response')
 parser.add_argument('--remember', type=str, help='Whether to keep the answer in AI memory')
-parser.add_argument('--include', type=str, help='Whether to include the question in the response')
 parser.add_argument('--forget', type=str, help='Whether to forget all AI memories and start clean')
+parser.add_argument('--memories', type=str, help='Whether to use memories stored so far')
 parser.add_argument('--img_size', type=str, help='Image size for dall-e request')
 parser.add_argument('--img_format', type=str, help='Format of dall-e image response')
 
@@ -64,8 +64,9 @@ if action == 'ai_complete':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
+        memories = memory_read() if args['memories'] == 'true' else ''
         response = openai.Completion().create(
-            prompt=memory_read() + prompt,
+            prompt=memories + prompt,
             model=model,
             temperature=temperature,
             max_tokens=tokens
@@ -73,10 +74,7 @@ if action == 'ai_complete':
         answer = response['choices'][0]['text'].strip()
         if args['remember'] == 'true':
             memory_append(prompt, answer)
-        if args['include'] == 'true':
-            print(prompt + '\n' + answer)
-        else:
-            print(answer)
+        print(prompt + '\n' + answer)
 elif action == 'ai_knowledge':
     print(memory_read())
 elif action == 'ai_forget':

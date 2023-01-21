@@ -15,12 +15,14 @@ matches:
           layout: |
             Prompt:
             [[prompt]]
-            Remember this        Include prompt       Erase AI memories
-            [[remember]]         [[include]]             [[forget]]
+            Keep in memory       Use memories          Forget memories
+            [[remember]]             [[memories]]         [[forget]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
 
-            * NOTE: AI Memory, answer size and model affects costs.
+            * NOTE: use memories, answer size, model, affects $costs.
+            :aiclear to clear up memories when no longer needed.
+            :aimemory to check what is in AI memory.
           fields:
             prompt:
               type: text
@@ -64,13 +66,13 @@ matches:
                 - 'false'
               default:
                 'false'
-            include:
+            memories:
               type: list
               values:
                 - 'true'
                 - 'false'
               default:
-                'true'
+                'false'
             forget:
               type: list
               values:
@@ -94,8 +96,8 @@ matches:
             - "{{form_ai.tokens}}"
             - --remember
             - "{{form_ai.remember}}"
-            - --include
-            - "{{form_ai.include}}"
+            - --memories
+            - "{{form_ai.memories}}"
             - --forget
             - "{{form_ai.forget}}"
   - triggers: [":aiimg", ":aiimage", ":dall-e"]
@@ -142,7 +144,7 @@ matches:
             - "{{form_ai.img_size}}"
             - --img_format
             - "{{form_ai.img_format}}"
-  - triggers: [":aiforget", ":aierase"]
+  - triggers: [":aiforget", ":aierase", ":aiclear"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -151,7 +153,7 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_forget
-  - triggers: [":aimemory", ":aiknow", ":aiclear"]
+  - triggers: [":aimemory", ":aiknow"]
     replace: "{{output}}"
     vars:
       - name: output
