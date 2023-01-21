@@ -1,3 +1,9 @@
+### 1.22
+* OpenAI GPT Support
+* GPT with Memory
+* AI with UI Box prompt
+* Options to use AI memory
+
 ### 1.19
 * Updated to SUM v5.5
 
