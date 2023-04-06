@@ -1,0 +1,20 @@
+Fortification
+Bank, institution
+Military, barracks
+Government
+Library, study
+Industrial
+Clinic, healing
+Palace, mansion
+Workshop
+Food place
+Magic, labs
+Prison, jail
+Research, facility
+Cemetery, grave
+House, living
+School, academy
+Trading post
+Church, divine
+Entertainment
+Setting specific

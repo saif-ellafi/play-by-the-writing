@@ -1,0 +1,20 @@
+Controller, conjurer
+Warrior, soldier
+Archer, crossbow
+Rogue, hiding
+Sorcerer, hacker
+Acrobatic, fast
+Summon, drone
+Heavily armed
+Grenadier, flasks
+Melee, weapons
+Healer, cleric
+Defender, guard
+Assassin, skilled
+Techie, gadgets
+Unarmed, martial
+Large, big, slow
+Exotic, different
+Mutant, cyborg
+Grapple, disable
+Setting specific

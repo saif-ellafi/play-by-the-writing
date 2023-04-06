@@ -1,0 +1,20 @@
+Military outpost
+Outlaw hideout
+Industry, product
+Farm, crops
+Mineral extract
+Route, roads
+Settlement
+Difficult terrain
+Private property
+Ruins, abandon
+Tower, control
+Encampment
+Fishing, hunting
+Dam, canal
+Traveler’s inn
+Hazardous zone
+Moving vehicle
+Isolated building
+Silo, mill, barns
+Setting specific

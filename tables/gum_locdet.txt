@@ -1,0 +1,6 @@
+Feature: {{gum_locdet_feature}}
+Worth: {{gum_locdet_worth}}
+Purpose: {{gum_locdet_purpose}}
+Inhabitants: {{gum_locdet_inh}}
+Looks: {{gum_locdet_looks}}
+Activity: {{gum_locdet_activity}}

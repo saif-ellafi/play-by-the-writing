@@ -1,0 +1,20 @@
+Lowlife
+Beggar
+Farmer
+Innkeeper
+Trader
+Helper
+Guard
+Kid
+Mother
+Father
+Regular
+Worker
+Builder
+Cleaner
+Driver
+Maid
+Servant
+Postman
+Thief
+Setting specific

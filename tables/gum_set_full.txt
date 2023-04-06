@@ -1,0 +1,1 @@
+Location archetype: {{gum_set_loc}} - Big problem: {{gum_set_problem}} - Call hook: {{gum_set_hook}} - Mission: {{gum_set_missa}}. The catch: {{gum_set_missb}} - Consider: {{gum_set_consider}} - First lead prompt: {{gum_set_lead}}

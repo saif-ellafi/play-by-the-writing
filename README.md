@@ -187,6 +187,42 @@ These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-m
 | Subject Prompt   | `:sumsu`                        |
 | Adjective Prompt | `:sumad`                        |
 
+## GUM Keywords
+
+These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-machine
+
+| Name                         | keyword                                            |
+|------------------------------|----------------------------------------------------|
+| Oracle (GM)                  | `:gqgm` or `:+gqgm` or `:-gqgm`                    |
+| Oracle (PC)                  | `:gqpc` or `:+gqpc` or `:-gqpc`                    |
+| Oracle (NPC)                 | `:gqnpc` or `:+gqnpc` or `:-gqnpc`                 |
+| Grand Oracle (Basic)         | `:gob`                                             |
+| Grand Oracle (Rich)          | `:gor`                                             |
+| Grand Oracle (Subject)       | `:gos`                                             |
+| Grand Oracle (Description)   | `:god`                                             |
+| Unfold the scene             | `:gscene`                                          |
+| Challenge skill test         | `:gskill`                                          |
+| Combat (Random)              | `:gcombat` or `:gconflict`                         |
+| Plan check (Safe to Explode) | `:gpc` or `:+gpc` or `:++gpc` or `:+++gpc` |
+| GM Intervention              | `:gint`                                            |
+| Location identity (Random)            | `:glocid`                                          |
+| Location detail (Random)             | `:glocdet`                                         |
+| NPC identity (Random)        | `:gnpcid`                                           |
+| NPC detail (Random)          | `:gnpcdet`                                          |
+| Motive (Good)                | `:gmotivegood`                                     |
+| Motive (Evil)                | `:gmotiveevil`                                     |
+| Action (Good)                | `:gactgood`                                        |
+| Action (Evil)                | `:gactevil`                                        |
+| NPC (Who?)                   | `:gwho` or `:gnpc`                                 |
+| Game setup (Location)        | `:gsetlocation`                                    |
+| Game setup (Problem)         | `:gsetproblem`                                     |
+| Game setup (Hook)            | `:gsethook`                                        |
+| Game setup (Mission)         | `:gsetmission`                                     |
+| Game setup (Consider)        | `:gsetconsider`                                    |
+| Game setup (Lead)            | `:gsetlead`                                        |
+| Game setup (Full)            | `:gsetfull`                                        |
+
+
 ## OPSE Keywords
 
 These are meant to be played with https://inflatablestudios.itch.io/one-page-solo-engine
@@ -216,12 +252,14 @@ This experimental functionality relies on OpenAI: https://openai.com for using A
 3. Go to espanso settings folder inside the config folder
 4. Paste the API Key in the file called openai.txt
 
-| Name            | keyword                          | Output                              | 
-|-----------------|----------------------------------|-------------------------------------|
-| AI Text GPT     | `:aitext` `:aicomplete` `:gpt`   | An AI response to your prompt       |
-| AI Image Dall-E | `:aiimg` `:aiimage` `:dall-e`    | An AI generated image               |
-| AI Memory       | `:aimemory` `:aiknow`            | Bring AI current memory |
-| AI Forget       | `:aiforget` `:aierase` `:aiclear` | Delete AI memories (saves costs)    |
+| Name                               | keyword                                     | Output                                                                | 
+|------------------------------------|---------------------------------------------|-----------------------------------------------------------------------|
+| AI Text GPT-3 Completion Prompt    | `:text` `:aitext` `:aicomplete` `:aiprompt` | An AI response to your prompt                                         |
+| AI Text GPT-3 Show Memory          | `:aimemory` `:aiknow`                       | Bring AI accumulated knowledge memory                                 |
+| AI Text GPT-3 Forget Memory        | `:aiforget` `:aierase` `:aiclear`           | Delete AI memories (saves costs)                                      |
+| AI Chat GPT-4 New Instruction      | `:aisys` `:aiinit` `:aistart`                | Initialize a new AI Chat-GPT interaction with an instruction          |
+| AI Chat GPT-4 Continue Interaction | `:chat` `:aichat`                           | Chat with the AI with the given instruction (needs instruction first) |
+| AI Image Dall-E                    | `:aiimg` `:aiimage` `:dall-e`               | An AI generated image                                                 |
 
 # License - Service Level Agreement of Purchased Installable version
 - This software is provided as-is, I provide support to users on good-will and listen to feedback and ideas, but cannot commit to eternal promises.

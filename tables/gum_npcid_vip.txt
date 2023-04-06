@@ -1,0 +1,20 @@
+Faction leader
+Rich merchant
+Military leader
+Landlord, owner
+Prophet, cultist
+Holy, priest
+Mayor, sheriff
+Criminal leader
+Royalty, noble
+Field expert
+Ruler, governor
+Knight, veteran
+Ambassador
+Magician
+Valued expert
+Companion
+Unique being
+Major enemy
+Personal enemy
+Setting specific

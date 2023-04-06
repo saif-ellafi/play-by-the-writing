@@ -1,0 +1,20 @@
+Politician
+Advisor
+Smuggler
+Noble, royal
+Diplomat
+Business
+Trustee
+Journalist
+Investigator
+Activist
+Innkeeper
+Storyteller
+Renegade
+Family
+Guard
+Best friend
+Spy, agent
+Fixer, broker
+Whistleblower
+Setting specific

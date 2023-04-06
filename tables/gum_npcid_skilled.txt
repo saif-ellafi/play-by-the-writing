@@ -1,0 +1,20 @@
+Healer
+Blacksmith
+Chemist
+Academic
+Accountant
+Agent
+Engineer
+Artist
+Criminal
+Merchant
+Councilor
+Expert
+Repairman
+Activist
+Musician
+Administrator
+Writer
+Acolyte
+Craftsman
+Setting specific

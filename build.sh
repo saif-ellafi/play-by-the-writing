@@ -6,6 +6,8 @@ pyinstaller playbtw_mythic.spec --clean --distpath dist_mythic/scripts;
 
 pyinstaller playbtw_pum.spec --clean --distpath dist_pum/scripts;
 
+pyinstaller playbtw_gum.spec --clean --distpath dist_gum/scripts;
+
 pyinstaller playbtw_opse.spec --clean --distpath dist_opse/match;
 
 pyinstaller playbtw_ai.spec --clean --distpath dist_ai/scripts;

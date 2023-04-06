@@ -6,7 +6,7 @@
 
 matches:
   # OpenAI Completion
-  - triggers: [":aitext", ":aicomplete", ":gpt"]
+  - triggers: [":text", ":aitext", ":aicomplete", ":aiprompt"]
     replace: "{{output}}"
     vars:
       - name: form_ai
@@ -20,7 +20,7 @@ matches:
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
 
-            * NOTE: use memories, answer size, model, affects $costs.
+            * NOTE: use memories, answer size, model, affects pricing.
             :aiclear to clear up memories when no longer needed.
             :aimemory to check what is in AI memory.
           fields:
@@ -39,6 +39,10 @@ matches:
             temperature:
               type: list
               values:
+                - '2.0'
+                - '1.75'
+                - '1.5'
+                - '1.25'
                 - '1.0'
                 - '0.9'
                 - '0.75'
@@ -46,7 +50,7 @@ matches:
                 - '0.25'
                 - '0.1'
                 - '0'
-              default: '0.9'
+              default: '1.5'
             tokens:
               type: list
               values:
@@ -58,7 +62,7 @@ matches:
                 - '512'
                 - '1024'
               default:
-                '64'
+                '256'
             remember:
               type: list
               values:
@@ -100,6 +104,156 @@ matches:
             - "{{form_ai.memories}}"
             - --forget
             - "{{form_ai.forget}}"
+  - triggers: [":aiforget", ":aierase", ":aiclear"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_complete_forget
+  - triggers: [":aimemory", ":aiknow"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_complete_knowledge
+  - triggers: [":aisys", ":aiinit", ":aistart"]
+    replace: "{{output}}"
+    vars:
+      - name: form_ai
+        type: form
+        params:
+          layout: |
+            Instruction (System):
+            [[prompt]]
+            Model                                      Coherence         Answer size:
+            [[model]] [[temperature]] [[tokens]]
+            
+            * NOTE: answer size and model affect pricing.
+            :aichat to begin chat after this.
+          fields:
+            prompt:
+              type: text
+              multiline: true
+            model:
+              type: list
+              values:
+                - 'gpt-4'
+                - 'gpt-3.5-turbo'
+              default:
+                'gpt-3.5-turbo'
+            temperature:
+              type: list
+              values:
+                - '2.0'
+                - '1.75'
+                - '1.5'
+                - '1.25'
+                - '1.0'
+                - '0.9'
+                - '0.75'
+                - '0.5'
+                - '0.25'
+                - '0.1'
+                - '0'
+              default: '1.5'
+            tokens:
+              type: list
+              values:
+                - '16'
+                - '32'
+                - '64'
+                - '128'
+                - '256'
+                - '512'
+                - '1024'
+              default:
+                '256'
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_chat_init
+            - --prompt
+            - "{{form_ai.prompt}}"
+            - --model
+            - "{{form_ai.model}}"
+            - --temperature
+            - "{{form_ai.temperature}}"
+            - --tokens
+            - "{{form_ai.tokens}}"
+  - triggers: [":aichat", ":chat"]
+    replace: "{{output}}"
+    vars:
+      - name: form_ai
+        type: form
+        params:
+          layout: |
+            Instruction (System):
+            [[prompt]]
+            Model                                      Coherence         Answer size:
+            [[model]] [[temperature]] [[tokens]]
+            
+            * NOTE: answer size and model affect pricing.
+            :aichat to begin chat after this.
+          fields:
+            prompt:
+              type: text
+              multiline: true
+            model:
+              type: list
+              values:
+                - 'gpt-4'
+                - 'gpt-3.5-turbo'
+              default:
+                'gpt-3.5-turbo'
+            temperature:
+              type: list
+              values:
+                - '2.0'
+                - '1.75'
+                - '1.5'
+                - '1.25'
+                - '1.0'
+                - '0.9'
+                - '0.75'
+                - '0.5'
+                - '0.25'
+                - '0.1'
+                - '0'
+              default: '1.5'
+            tokens:
+              type: list
+              values:
+                - '16'
+                - '32'
+                - '64'
+                - '128'
+                - '256'
+                - '512'
+                - '1024'
+              default:
+                '256'
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_chat
+            - --prompt
+            - "{{form_ai.prompt}}"
+            - --model
+            - "{{form_ai.model}}"
+            - --temperature
+            - "{{form_ai.temperature}}"
+            - --tokens
+            - "{{form_ai.tokens}}"
   - triggers: [":aiimg", ":aiimage", ":dall-e"]
     replace: "{{output}}"
     vars:
@@ -144,21 +298,3 @@ matches:
             - "{{form_ai.img_size}}"
             - --img_format
             - "{{form_ai.img_format}}"
-  - triggers: [":aiforget", ":aierase", ":aiclear"]
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_ai"
-            - ai_forget
-  - triggers: [":aimemory", ":aiknow"]
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_ai"
-            - ai_knowledge

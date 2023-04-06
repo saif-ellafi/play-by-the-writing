@@ -1,0 +1,20 @@
+Old, obsolete
+New, modern
+Dark, foggy
+Bright, light
+Colorful, alive
+Sad, opaque
+Joyful, cheering
+Simple, minimal
+Bloated, heavy
+Active, busy
+Inactive, unused
+Noisy, sounds
+Silent, peace
+Crowded, packed
+Empty, space
+Stressful, intense
+Relaxing, peace
+Conservative
+Techy, magic
+Unique, special
