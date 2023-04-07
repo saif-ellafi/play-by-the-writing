@@ -1,3 +1,7 @@
+### 1.30
+* OpenAI GPT-4 and GPT-3.5 Support
+* Game Unfolding Machine (GUM) rules support
+
 ### 1.22
 * OpenAI GPT Support
 * GPT with Memory
