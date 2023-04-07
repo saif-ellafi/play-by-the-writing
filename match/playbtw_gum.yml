@@ -362,7 +362,7 @@ matches:
             - --table
             - gum_act_evil
   # NPC - Who?
-  - triggers: [":gwho", ":gnpc"]
+  - triggers: [":gwho", ":gnpcwho"]
     replace: "{{output}}"
     vars:
       - name: output

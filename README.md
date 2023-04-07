@@ -191,36 +191,36 @@ These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-m
 
 These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-machine
 
-| Name                         | keyword                                            |
-|------------------------------|----------------------------------------------------|
-| Oracle (GM)                  | `:gqgm` or `:+gqgm` or `:-gqgm`                    |
-| Oracle (PC)                  | `:gqpc` or `:+gqpc` or `:-gqpc`                    |
-| Oracle (NPC)                 | `:gqnpc` or `:+gqnpc` or `:-gqnpc`                 |
-| Grand Oracle (Basic)         | `:gob`                                             |
-| Grand Oracle (Rich)          | `:gor`                                             |
-| Grand Oracle (Subject)       | `:gos`                                             |
-| Grand Oracle (Description)   | `:god`                                             |
-| Unfold the scene             | `:gscene`                                          |
-| Challenge skill test         | `:gskill`                                          |
-| Combat (Random)              | `:gcombat` or `:gconflict`                         |
+| Name                         | keyword                                    |
+|------------------------------|--------------------------------------------|
+| Oracle (GM)                  | `:gqgm` or `:+gqgm` or `:-gqgm`            |
+| Oracle (PC)                  | `:gqpc` or `:+gqpc` or `:-gqpc`            |
+| Oracle (NPC)                 | `:gqnpc` or `:+gqnpc` or `:-gqnpc`         |
+| Grand Oracle (Basic)         | `:gob`                                     |
+| Grand Oracle (Rich)          | `:gor`                                     |
+| Grand Oracle (Subject)       | `:gos`                                     |
+| Grand Oracle (Description)   | `:god`                                     |
+| Unfold the scene             | `:gscene`                                  |
+| Challenge skill test         | `:gskill`                                  |
+| Combat (Random)              | `:gcombat` or `:gconflict`                 |
 | Plan check (Safe to Explode) | `:gpc` or `:+gpc` or `:++gpc` or `:+++gpc` |
-| GM Intervention              | `:gint`                                            |
-| Location identity (Random)            | `:glocid`                                          |
-| Location detail (Random)             | `:glocdet`                                         |
-| NPC identity (Random)        | `:gnpcid`                                           |
-| NPC detail (Random)          | `:gnpcdet`                                          |
-| Motive (Good)                | `:gmotivegood`                                     |
-| Motive (Evil)                | `:gmotiveevil`                                     |
-| Action (Good)                | `:gactgood`                                        |
-| Action (Evil)                | `:gactevil`                                        |
-| NPC (Who?)                   | `:gwho` or `:gnpc`                                 |
-| Game setup (Location)        | `:gsetlocation`                                    |
-| Game setup (Problem)         | `:gsetproblem`                                     |
-| Game setup (Hook)            | `:gsethook`                                        |
-| Game setup (Mission)         | `:gsetmission`                                     |
-| Game setup (Consider)        | `:gsetconsider`                                    |
-| Game setup (Lead)            | `:gsetlead`                                        |
-| Game setup (Full)            | `:gsetfull`                                        |
+| GM Intervention              | `:gint`                                    |
+| Location identity (Random)            | `:glocid`                                  |
+| Location detail (Random)             | `:glocdet`                                 |
+| NPC identity (Random)        | `:gnpcid`                                  |
+| NPC detail (Random)          | `:gnpcdet`                                 |
+| Motive (Good)                | `:gmotivegood`                             |
+| Motive (Evil)                | `:gmotiveevil`                             |
+| Action (Good)                | `:gactgood`                                |
+| Action (Evil)                | `:gactevil`                                |
+| NPC (Who?)                   | `:gwho` or `:gnpcwho`                      |
+| Game setup (Location)        | `:gsetlocation`                            |
+| Game setup (Problem)         | `:gsetproblem`                             |
+| Game setup (Hook)            | `:gsethook`                                |
+| Game setup (Mission)         | `:gsetmission`                             |
+| Game setup (Consider)        | `:gsetconsider`                            |
+| Game setup (Lead)            | `:gsetlead`                                |
+| Game setup (Full)            | `:gsetfull`                                |
 
 
 ## OPSE Keywords

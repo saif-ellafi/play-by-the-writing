@@ -129,13 +129,13 @@ matches:
         type: form
         params:
           layout: |
-            Instruction (Describe your main intention):
+            Instruction (new AI chat: describe your goal):
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
             
             * NOTE: answer size and model affect pricing.
-            :aichat to begin chat after this.
+            * NOTE: use :chat to chat with this chat afterwards.
           fields:
             prompt:
               type: text
@@ -195,13 +195,13 @@ matches:
         type: form
         params:
           layout: |
-            Instruction (System):
+            Prompt (Resume last created chat):
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
             
             * NOTE: answer size and model affect pricing.
-            :aichat to begin chat after this.
+            * NOTE: use :aistart to begin a new AI chat, erases history.
           fields:
             prompt:
               type: text
