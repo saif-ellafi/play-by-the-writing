@@ -129,7 +129,7 @@ matches:
         type: form
         params:
           layout: |
-            Instruction (System):
+            Instruction (Describe your main intention):
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]

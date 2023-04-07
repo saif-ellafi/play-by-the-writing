@@ -32,7 +32,7 @@ files inside Espanso user directory (not the install directory!).
 # What is included?
 
 - **Example kit**: Test before you buy. Once installed, by writing `:example` you should see a happy output.
-- **Core kit**: Includes dice rolling, random tables, weighted tables, [Mythic GM Emulator](https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator), [Plot Unfolding Machine (PUM)](https://jeansenvaars.itch.io/plot-unfolding-machine), [Scene Unfolding Machine (PUM)](https://jeansenvaars.itch.io/scene-unfolding-machine) and [One Page Solo Engine (OPSE)]((https://inflatablestudios.itch.io/one-page-solo-engine)) keywords
+- **Core kit**: Includes dice rolling, random tables, weighted tables, [Mythic GM Emulator](https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator), [Plot Unfolding Machine (PUM)](https://jeansenvaars.itch.io/plot-unfolding-machine), [Game Unfolding Machine (GUM)](https://jeansenvaars.itch.io/game-unfolding-machine), [Scene Unfolding Machine (PUM)](https://jeansenvaars.itch.io/scene-unfolding-machine) and [One Page Solo Engine (OPSE)]((https://inflatablestudios.itch.io/one-page-solo-engine)) keywords
 - **AI kit (Paying 5+ EUR)**: Includes Core kit + [OpenAI integration](https://beta.openai.com/playground) 
 - auto-completes text for you based on context, using artificial intelligence/
 
@@ -71,7 +71,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts correctly
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_22_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_30_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
