@@ -254,7 +254,7 @@ matches:
             - --table
             - gum_pch_exploding
   # GM Intervention
-  - trigger: ":gint"
+  - trigger: ":ginterv"
     replace: "{{output}}"
     vars:
       - name: output
@@ -457,3 +457,207 @@ matches:
             - table
             - --table
             - gum_set_full
+  # GUM-e prober world
+  - trigger: ":gprobew"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_prober_world
+  # GUM-e prober scene
+  - trigger: ":gprobes"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_prober_scene
+  # GUM-e discovery
+  - trigger: ":gdisc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_discovery
+  # GUM-e discovery past
+  - trigger: ":gpast"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_discovery_past
+  # GUM-e discovery future
+  - trigger: ":gfuture"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_discovery_future
+  # GUM-e discovery clues
+  - triggers: [":gclue", ":ginfo"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_discovery
+  # GUM-e discovery reasons
+  - trigger: ":greason"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_discovery_reason
+  # GUM-e interaction
+  - trigger: ":ginteract"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_interaction
+  # GUM-e interaction behavior
+  - trigger: ":gbehav"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_interaction_behavior
+  # GUM-e interaction contribution
+  - trigger: ":gcontrib"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_interaction_contribution
+  # GUM-e interaction response
+  - trigger: ":gresponse"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_interaction_response
+  # GUM-e interaction request
+  - trigger: ":grequest"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_interaction_request
+  # GUM-e enemy actions
+  - trigger: ":genemy"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_enemy
+  # GUM-e enemy insights
+  - triggers: [":gfeel", ":ginsight"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_enemy_feelings
+  # GUM-e enemy risk
+  - trigger: ":grisk"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_enemy_risks
+  # GUM-e enemy event
+  - trigger: ":gevent"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_enemy_events
+  # GUM-e enemy threat
+  - trigger: ":gthreat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gume_enemy_threats

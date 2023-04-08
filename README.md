@@ -71,7 +71,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts correctly
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_30_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_31_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -204,9 +204,9 @@ These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-ma
 | Challenge skill test         | `:gskill`                                  |
 | Combat (Random)              | `:gcombat` or `:gconflict`                 |
 | Plan check (Safe to Explode) | `:gpc` or `:+gpc` or `:++gpc` or `:+++gpc` |
-| GM Intervention              | `:gint`                                    |
-| Location identity (Random)            | `:glocid`                                  |
-| Location detail (Random)             | `:glocdet`                                 |
+| GM Intervention              | `:ginterv`                                 |
+| Location identity (Random)   | `:glocid`                                  |
+| Location detail (Random)     | `:glocdet`                                 |
 | NPC identity (Random)        | `:gnpcid`                                  |
 | NPC detail (Random)          | `:gnpcdet`                                 |
 | Motive (Good)                | `:gmotivegood`                             |
@@ -221,6 +221,23 @@ These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-ma
 | Game setup (Consider)        | `:gsetconsider`                            |
 | Game setup (Lead)            | `:gsetlead`                                |
 | Game setup (Full)            | `:gsetfull`                                |
+| Extended - Prober World      | `:gprobew`                                 |
+| Extended - Prober Scene      | `:gprobes`                                 |
+| Extended - Discovery         | `:gdisc`                                   |
+| Extended - Discovery Past    | `:gpast`                                   |
+| Extended - Discovery Future  | `:gfuture`                                 |
+| Extended - Discovery Clues   | `:gclue` or `:ginfo`                       |
+| Extended - Discovery Reasons | `:greason`                                 |
+| Extended - NPC Interaction   | `:ginteract`                               |
+| Extended - NPC Behavior      | `:gbehav`                                  |
+| Extended - NPC Contribution  | `:gcontrib`                                |
+| Extended - NPC Response      | `:gresponse`                               |
+| Extended - NPC Request       | `:grequest`                                |
+| Extended - Enemy Action      | `:genemy`                                  |
+| Extended - Enemy Insight     | `:gfeel` or `:ginsight`                    |
+| Extended - Enemy Risks       | `:grisk`                                   |
+| Extended - Enemy Events      | `:gevent`                                  |
+| Extended - Enemy Threat      | `:gthreat`                                 |
 
 
 ## OPSE Keywords

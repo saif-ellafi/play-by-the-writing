@@ -1,0 +1,4 @@
+Feelings & insight: {{gume_enemy_feelings}}
+Imminent risks: {{gume_enemy_risks}}
+Recent events: {{gume_enemy_events}}
+Active threats: {{gume_enemy_threats}}

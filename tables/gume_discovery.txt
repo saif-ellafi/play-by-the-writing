@@ -1,0 +1,4 @@
+About what already happened: {{gume_discovery_past}}
+About what is yet to happen: {{gume_discovery_future}}
+Clues, intel, or information: {{gume_discovery_clues}}
+Reasons or justifications: {{gume_discovery_reason}}

@@ -1,3 +1,6 @@
+### 1.31
+* Support for GUM Extended
+
 ### 1.30
 * OpenAI GPT-4 and GPT-3.5 Support
 * Game Unfolding Machine (GUM) rules support
