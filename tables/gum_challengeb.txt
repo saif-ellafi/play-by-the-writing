@@ -1,11 +1,11 @@
-Simple
-Simple
-Simple
-Average
-Average
-Average
-Difficult
-Difficult
+Someone watching
+Can hurt, must heal
+Inconveniently placed
+Easier with right tools
+Costs wealth, resources
+Annoying presence
+Easy, simple, solvable
+Hard, difficult, complex
 Can harm reputation
 Difficult terrain
 Time limit, one shot
@@ -16,5 +16,5 @@ Team effort, needs help
 Dangerous consequences
 Distracting elements
 Lengthy, phased
-Careful, may call attention
+Do silently, swiftly
 Atmospheric issues

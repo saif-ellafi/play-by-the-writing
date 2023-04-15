@@ -1,3 +1,7 @@
+### 1.32
+* Updated to GUM Rev5
+* Basic and advanced dice rolls now have the same output style
+
 ### 1.31
 * Support for GUM Extended
 

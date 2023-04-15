@@ -36,7 +36,7 @@ elif action == 'wtable':
     print(' '.join(result))
 elif action == 'roll_dice':
     result = roll_dice(args['quantity'], args['size'])
-    print(str(args['quantity']) + 'd' + str(args['size']) + ': ' + str(result))
+    print(str(args['quantity']) + 'd' + str(args['size']) + ': [' + ', '.join(result['values']) + '] = ' + str(result['total']))
 elif action == 'roll_advanced':
     result = roll_advanced(args['formula'])
     if type(result) == dice.elements.Roll:
@@ -55,7 +55,7 @@ elif action == 'roll_fudge':
             return '(+)'
     for r in range(0, 4):
         roll = roll_dice(1, 6)
-        fudges.append(map_fudge(roll))
+        fudges.append(map_fudge(roll['total']))
     total = fudges.count('(+)') - fudges.count('(-)') + bonus
     print((' '.join(fudges) + ' + (' + str(bonus) + ') = ') + str(total))
 elif action == 'shuffle':

@@ -78,9 +78,12 @@ def choice_wtable(table, mode=None):
 
 def roll_dice(q, s):
     total = 0
+    values = []
     for i in range(0, q):
-        total += random.randint(1, s)
-    return total
+        res = random.randint(1, s)
+        values.append(str(res))
+        total += res
+    return {'values': values, 'total': total}
 
 
 def roll_advanced(formula):

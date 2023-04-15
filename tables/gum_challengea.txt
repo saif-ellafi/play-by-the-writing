@@ -1,20 +1,20 @@
-Target PCs weakest, or quirks
-Fortitude, body, withstand
-Strength, force, power, might
-Intimidation, taunt, scare
-Talent, disguise, perform, deceive
-Reaction, reflexes, balance
-Athletics, endurance, running
-Specialist, magic, hacking
-Stealth, careful, sneaky
-Willpower, spirit, mind
-Skullduggery, thievery, streetwise
-Reflexes, sharp, move fast
-Search, detect, perceive, identify
-Device handling, operate, ride, control
-Charisma, personality, leadership
-Survival, tracing, hunting, exploring
-Knowledge, lore, resolve, intelligence
-Crafts, repair, vehicle, machinery
-Cure, healing, treatment
-Call PCs strongest, or edges
+Situation for what PCs do worst, vulnerability
+Resist, endure, withstand, fortitude test, hold on!
+Push, kick, smash, pull, throw, lift, move
+Get over someone, make them, the hard way
+They are too many, another way, trick them
+Move, quick, run, quickly! watch out!
+Jump, crawl, squeeze, climb, stretch, swim, air
+Only a specialist or expert can do, setting specific
+Better not to be detected, guards, sentinels
+Test of spirit, will, mentality, wits, courage
+Locked out, to steal, watched, protected
+Dodge, evade, run, act quickly, hurry up
+It’s here, must be, have you seen, heard that?
+Test of pilot, drive, handle, ride, control, manage
+Low morale, scared, uninspired, unwilling
+Trace, footstep, supplies, survive, fetch, collect
+What is that? Historic, cultural, weird, magical
+It’s broken, not working, failing, erratic, jammed
+Injured being, person, in pain, hurts, sick, poisoned
+Situation for what PCs do best or are good at

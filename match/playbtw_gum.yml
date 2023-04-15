@@ -182,7 +182,7 @@ matches:
             - --table
             - gum_scene
   # Challenge Skill Test
-  - triggers: [":gskill"]
+  - triggers: [":gchskill"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -192,7 +192,43 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum_challengea,gum_challengeb
+            - gum_challengea
+  # Challenge Situation
+  - triggers: [":gchsit"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum_challengeb
+  # Challenge Prompt
+  - triggers: [":gchpro"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum_challengec
+  # Challenge Conditions
+  - triggers: [":gchcond"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum_challenged
   # Combat conflict random
   - triggers: [":gcombat", ":gconflict"]
     replace: "{{output}}"
