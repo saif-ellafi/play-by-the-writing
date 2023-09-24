@@ -1,0 +1,20 @@
+Belongs to a faction, headquarters, base
+Legends, history, mythological, hidden
+Inhospitable, hazardous, unholy, forbidden
+Dangerous, full of traps, enemies, leaders
+Secured, defended, watched, monitored
+Secretive, hidden, camouflage, unreachable
+Unstable, crumbling, damaged, falling
+Magical, supernatural, esoteric, evil
+Sabotaged, sacked, raided, destroyed
+Disputed, in conflict, under battle
+Destroyed, ruined, difficult to traverse
+Hazardous, bad weather, or atmosphere
+Horrid, bloody, fearful, scary, terror
+Technological, special, advanced, technical
+Abandoned, left behind, worthless
+Forbidden, sacred, holy, divine, special
+Normal, regular, simple, common, clean
+Isolated, aside, lonely, empty, distant
+Different, new, unique, mysterious, elegant
+Bad reputation, bad people, illegal

@@ -1,0 +1,20 @@
+Communication, intel, radio, coordination
+Security, overwatch, visibility, vigilance
+Defense, military, weapons, protection
+Transport, vehicles, aircraft, garage, launch
+Experiments, laboratory, research, study
+Storage, warehouse, supplies, resources
+Medicine, healing, recovery, treatment
+Power supply, energy source, power plant
+Repairing, workshop, construction, facility
+Hospitality, food, sleep, drinks, socializing
+Educate, training, qualification, practice
+Primary goods, farming, animals, mining
+Popular, festivities, rituals, praying, sacrifice
+Events, meeting, planning, decision making
+Production, manufacturing, assembly, build
+Imprisonment, dungeon, torture, guarding
+Trading, business, exchange, banking
+Sports, entertainment, amusement, sexual
+Safety, security, secrecy, protection, hiding
+Home, residence, privacy, property, owner

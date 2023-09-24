@@ -1,0 +1,583 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  # GUM V2 - Yes or No (unbiased)
+  - trigger: ":ggqq"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_qq_unbiased
+  # GUM V2 - Yes or No (yes bias)
+  - trigger: ":+ggqq"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_qq_yesbias
+  # GUM V2 - Yes or No (no bias)
+  - trigger: ":-ggqq"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_qq_nobias
+  # GUM V2 - Proposal Check
+  - triggers: [":gqprop", ":ggcheck"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_proposal_check
+  # GUM V2 - Exploration location
+  - trigger: ":ggexploc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_explo_loc
+  # GUM V2 - Exploration skill
+  - trigger: ":ggexpskill"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_explo_skill
+  # GUM V2 - Exploration circumstance
+  - trigger: ":ggexpcirc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_explo_circ
+  # GUM V2 - Battle location
+  - trigger: ":ggbattloc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_batt_loc
+  # GUM V2 - Battle tactics
+  - trigger: ":ggbatttac"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_batt_tac
+  # GUM V2 - Battle Composition
+  - trigger: ":ggbattcomp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_batt_comp
+  # GUM V2 - Plot clue
+  - trigger: ":ggplotclue"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_plot_clue
+  # GUM V2 - Plot finding
+  - trigger: ":ggplotfind"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_plot_find
+  # GUM V2 - Plot activities
+  - trigger: ":ggplotact"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_plot_act
+  # GUM V2 - Plot occurrence
+  - trigger: ":ggplotocc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_plot_occ
+  # GUM V2 - NPC attitude
+  - trigger: ":ggnpcatt"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_npcg_att
+  # GUM V2 - NPC contribution
+  - trigger: ":ggnpccont"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_npcg_cont
+  # GUM V2 - NPC opinion
+  - trigger: ":ggnpcop"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_npcg_opi
+  # GUM V2 - NPC wants
+  - trigger: ":ggnpcwant"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_npcg_wants
+  # GUM V2 - Enemy attitude
+  - trigger: ":ggenatt"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_enem_att
+  # GUM V2 - Enemy impression
+  - trigger: ":ggenimp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_enem_imp
+  # GUM V2 - Enemy deeds
+  - trigger: ":ggendeed"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_enem_deed
+  # GUM V2 - Enemy intention
+  - trigger: ":ggenint"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_enem_int
+  # GUM V2 - Location feature
+  - trigger: ":gglocfeat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_loc_feat
+  # GUM V2 - Location worth
+  - trigger: ":gglocworth"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_loc_worth
+  # GUM V2 - Location purpose
+  - trigger: ":gglocpurp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_loc_purp
+  # GUM V2 - Location content
+  - trigger: ":ggloccont"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_loc_cont
+  # GUM V2 - Character by possessions
+  - trigger: ":ggcharposs"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_char_pos
+  # GUM V2 - Character by looks
+  - trigger: ":ggcharlooks"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_char_looks
+  # GUM V2 - Character by activity
+  - trigger: ":ggcharact"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_char_act
+  # GUM V2 - Object by function
+  - trigger: ":ggobjfunc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_obj_func
+  # GUM V2 - Object by form
+  - trigger: ":ggobjform"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_obj_form
+  # GUM V2 - Object by state
+  - trigger: ":ggobjstate"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_obj_state
+  # GUM V2 - Faction focus
+  - trigger: ":ggfacfoc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_fac_foc
+  # GUM V2 - Faction resources
+  - trigger: ":ggfacres"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_fac_res
+  # GUM V2 - Prompt scene
+  - trigger: ":ggpromptscene"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_prompt_scene
+  # GUM V2 - Prompt world
+  - trigger: ":ggpromptworld"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_prompt_world
+  # GUM V2 - Good motives
+  - trigger: ":ggmotgood"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_good_mot
+  # GUM V2 - Evil motives
+  - trigger: ":ggmotevil"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_evil_mot
+  # GUM V2 - Good deeds
+  - triggers: [":ggdeedsgood", ":gggoodact"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_good_deed
+  # GUM V2 - Evil deeds
+  - triggers: [":ggdeedsevil", ":ggevilact"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_evil_deed
+  # GUM V2 - World location archetype
+  - trigger: ":ggsetloc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_loc
+  # GUM V2 - World background
+  - trigger: ":ggsetback"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_back
+  # GUM V2 - Campaign goals mission
+  - trigger: ":ggsetmission"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_miss
+  # GUM V2 - Campaign goals opposition
+  - trigger: ":ggsetopp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_opp
+  # GUM V2 - Quest hook
+  - trigger: ":ggsethook"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_hook
+  # GUM V2 - Quest lead
+  - trigger: ":ggsetlead"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_lead
+  # GUM V2 - Quest caveat
+  - trigger: ":ggsetcaveat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_caveat
+  # GUM V2 Setup full guide
+  - trigger: ":ggsetfull"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_full
