@@ -71,7 +71,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts correctly
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_33_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v1_34_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -246,54 +246,58 @@ These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-ma
 
 These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-machine-v2
 
-| Name                       | keyword                        |
-|----------------------------|--------------------------------|
+| Name                       | keyword                         |
+|----------------------------|---------------------------------|
 | Yes or No                  | `:ggqq` or `:+ggqq` or `:-ggqq` |
-| Proposal check             | `:ggprop` or `:ggcheck`        |
-| Exploration Location       | `:ggexploc`                    |
-| Exploration skill test     | `:ggexpskill`                  |
-| Exploration circumstance   | `:ggexpcirc`                   |
-| Battle location            | `:ggbattloc`                   |
-| Battle tactics             | `:ggbatttac`                   |
-| Battle composition         | `:ggbattcomp`                  |
-| Plot clue type             | `:ggplotclue`                  |
-| Plot useful finding        | `:ggplotfind`                  |
-| Plot enemy activities      | `:ggplotact`                   |
-| Plot recent occurrences    | `:ggplotocc`                   |
-| NPC (general) attitude     | `:ggnpcatt`                    |
-| NPC (general) contribution | `:ggnpccont`                   |
-| NPC (general) opinion      | `:ggnpcop`                     |
-| NPC (general) wants        | `:ggnpcwant`                   |
-| NPC (enemy) attitude       | `:ggenatt`                     |
-| NPC (enemy) impression     | `:ggenimp`                     |
-| NPC (enemy) deeds          | `:ggendeed`                    |
-| NPC (enemy) intention      | `:ggenint`                     |
-| Location by feature        | `:gglocfeat`                   |
-| Location by worth          | `:gglocworth`                  |
-| Location by purpose        | `:gglocpurp`                   |
-| Location by content        | `:ggloccont`                   |
-| Character by possessions   | `:ggcharposs`                  |
-| Character by looks         | `:ggcharlooks`                 |
-| Character by activity      | `:ggcharact`                   |
-| Object by function         | `:ggobjfunc`                   |
-| Object by form             | `:ggobjform`                   |
-| Object by state            | `:ggobjstate`                  |
-| Faction driving focus      | `:ggfacfoc`                    |
-| Faction resources          | `:ggfacres`                    |
-| Prompt world building      | `:ggpromptworld`               |
-| Prompt current scene       | `:ggpromptscene`               |
-| Evil motivations           | `:ggmotevil`                   |
-| Evil deeds                 | `:ggdeedsevil` or `:ggevilact` |
-| Good motivations           | `:ggmotgood`                   |
-| Good deeds                 | `:ggdeedsgood` or `:gggoodact` |
-| Game setup (location)      | `:ggsetloc`                    |
-| Game setup (background)    | `:ggsetback`                   |
-| Game setup (mission)       | `:ggsetmission`                |
-| Game setup (opposition)    | `:ggsetopp`                    |
-| Game setup (hook)          | `:ggsethook`                   |
-| Game setup (initial lead)  | `:ggsetlead`                   |
-| Game setup (caveat)        | `:ggsetcaveat`                 |
-| Game setup (full)          | `:ggsetfull`                   |
+| Intervention roll          | `:ggint`                        |
+| Exploration Location       | `:ggexploc`                     |
+| Exploration skill test     | `:ggexpskill`                   |
+| Exploration circumstance   | `:ggexpcirc`                    |
+| Battle location            | `:ggbattloc`                    |
+| Battle tactics             | `:ggbatttac`                    |
+| Battle composition         | `:ggbattcomp`                   |
+| Plot clue type             | `:ggplotclue`                   |
+| Plot useful finding        | `:ggplotfind`                   |
+| Plot enemy activities      | `:ggplotact`                    |
+| Plot recent occurrences    | `:ggplotocc`                    |
+| NPC (general) attitude     | `:ggnpcatt`                     |
+| NPC (general) contribution | `:ggnpccont`                    |
+| NPC (general) opinion      | `:ggnpcop`                      |
+| NPC (general) wants        | `:ggnpcwant`                    |
+| NPC (enemy) attitude       | `:ggenatt`                      |
+| NPC (enemy) impression     | `:ggenimp`                      |
+| NPC (enemy) deeds          | `:ggendeed`                     |
+| NPC (enemy) intention      | `:ggenint`                      |
+| Location by feature        | `:gglocfeat`                    |
+| Location by worth          | `:gglocworth`                   |
+| Location by purpose        | `:gglocpurp`                    |
+| Location by content        | `:ggloccont`                    |
+| Character by possessions   | `:ggcharposs`                   |
+| Character by looks         | `:ggcharlooks`                  |
+| Character by activity      | `:ggcharact`                    |
+| Object by function         | `:ggobjfunc`                    |
+| Object by form             | `:ggobjform`                    |
+| Object by state            | `:ggobjstate`                   |
+| Faction driving focus      | `:ggfacfoc`                     |
+| Faction resources          | `:ggfacres`                     |
+| Prompt world building      | `:ggpromptworld`                |
+| Prompt current scene       | `:ggpromptscene`                |
+| Evil motivations           | `:ggmotevil`                    |
+| Evil deeds                 | `:ggdeedsevil` or `:ggevilact`  |
+| Good motivations           | `:ggmotgood`                    |
+| Good deeds                 | `:ggdeedsgood` or `:gggoodact`  |
+| Grand Oracle (all)         | `:ggorac`                       |
+| Grand Oracle (action)      | `:ggact`                        | 
+| Grand Oracle (adjective)   | `:ggadj`                        | 
+| Grand Oracle (subject)     | `:ggsub`                        | 
+| Game setup (location)      | `:ggsetloc`                     |
+| Game setup (background)    | `:ggsetback`                    |
+| Game setup (mission)       | `:ggsetmission`                 |
+| Game setup (opposition)    | `:ggsetopp`                     |
+| Game setup (hook)          | `:ggsethook`                    |
+| Game setup (initial lead)  | `:ggsetlead`                    |
+| Game setup (caveat)        | `:ggsetcaveat`                  |
+| Game setup (full)          | `:ggsetfull`                    |
 
 
 ## OPSE Keywords

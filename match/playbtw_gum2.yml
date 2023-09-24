@@ -42,7 +42,7 @@ matches:
             - --table
             - gum2_qq_nobias
   # GUM V2 - Proposal Check
-  - triggers: [":gqprop", ":ggcheck"]
+  - trigger: ":ggint"
     replace: "{{output}}"
     vars:
       - name: output
@@ -52,7 +52,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_proposal_check
+            - gum2_intervention
   # GUM V2 - Exploration location
   - trigger: ":ggexploc"
     replace: "{{output}}"
@@ -485,6 +485,54 @@ matches:
             - table
             - --table
             - gum2_evil_deed
+  # GUM V2 - Grand Oracle (all)
+  - trigger: ":ggorac"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_oracle
+  # GUM V2 - Grand Oracle (action)
+  - trigger: ":ggact"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_oracle
+  # GUM V2 - Grand Oracle (adjective)
+  - trigger: ":ggadj"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_oracle
+  # GUM V2 - Grand Oracle (subject)
+  - trigger: ":ggsub"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_oracle
   # GUM V2 - World location archetype
   - trigger: ":ggsetloc"
     replace: "{{output}}"
