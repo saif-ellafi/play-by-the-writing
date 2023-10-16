@@ -22,6 +22,7 @@ shutil.copy('match/playbtw_core.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_mythic.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_pum.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_gum.yml', '{0}/../match/'.format(DISTPATH))
+shutil.copy('match/playbtw_gum2.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
 
 if os.path.exists('dist_core/scripts/playbtw_core.exe'):

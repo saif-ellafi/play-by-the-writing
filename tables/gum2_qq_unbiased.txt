@@ -1,4 +1,4 @@
-Strong no, and an intervention: {{gum2_intervention}}
+Strong no
 Strong no
 No
 No
@@ -7,7 +7,7 @@ No
 No
 No
 Weak no
-Weak no, and an intervention: {{gum2_intervention}}
+An intervention: {{gum2_intervention}}
 Weak yes
 Weak yes
 Yes
@@ -17,4 +17,4 @@ Yes
 Yes
 Yes
 Strong yes
-Strong yes, and an intervention: {{gum2_intervention}}
+Strong yes
