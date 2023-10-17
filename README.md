@@ -273,11 +273,15 @@ These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-ma
 | Location by purpose        | `:gglocpurp`                    |
 | Location by content        | `:ggloccont`                    |
 | Character by possessions   | `:ggcharposs`                   |
+| Character by intention     | `:ggcharint`                    |
 | Character by looks         | `:ggcharlooks`                  |
 | Character by activity      | `:ggcharact`                    |
 | Object by function         | `:ggobjfunc`                    |
 | Object by form             | `:ggobjform`                    |
 | Object by state            | `:ggobjstate`                   |
+| Creature by type           | `:ggcretyp`                     |
+| Creature by ability        | `:ggcreab`                      |
+| Creature by behavior       | `:ggcrebeh`                     |
 | Faction driving focus      | `:ggfacfoc`                     |
 | Faction resources          | `:ggfacres`                     |
 | Prompt world building      | `:ggpromptworld`                |

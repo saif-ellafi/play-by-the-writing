@@ -353,6 +353,54 @@ matches:
             - table
             - --table
             - gum2_char_act
+  # GUM V2 - Character by intention
+  - trigger: ":ggcharint"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_char_int
+  # GUM V2 - Creature by type
+  - trigger: ":ggcretyp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_cre_type
+  # GUM V2 - Creature by ability
+  - trigger: ":ggcreab"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_cre_abi
+  # GUM V2 - Creature by behavior
+  - trigger: ":ggcrebeh"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_cre_beh
   # GUM V2 - Object by function
   - trigger: ":ggobjfunc"
     replace: "{{output}}"
