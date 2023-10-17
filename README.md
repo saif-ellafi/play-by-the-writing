@@ -187,7 +187,7 @@ These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-m
 | Subject Prompt   | `:sumsu`                        |
 | Adjective Prompt | `:sumad`                        |
 
-## GUM v2 Keywords
+## GUM v1 Keywords
 
 These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-machine
 
