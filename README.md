@@ -121,8 +121,8 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 | Roll fudge dice with bons | `:df+3.`                      | ( ) ( ) (-) (-) + (3) = 1 | Fudge dice for FATE with a bonus                                                                                                      |
 | Roll Random Table         | `:tt.example.`                |  [Third result] | Roll from a table in .txt format placed in the tables folder. See the example table.                                                  |
 | Roll Weighted Table       | `:wt.example_w.`              | [Next quarter] | Roll from a weighted table in .psv format. There is an example file in the tables folder. It is to roll from tables with dice ranges. |
-| Shuffle Poker Deck        | `:shuffle`                    |
-| Draw from Poker Deck      | `:draw`                       |
+| Shuffle Poker Deck        | `:shuffle`                    | Shuffled! | restarts the poker deck | 
+| Draw from Poker Deck      | `:draw`                       | 8♠ 7♥ 6♦ | Draws a card from poker deck |
 | Roll from random list     | `:list` `:+list` `:++list`    | ... | Display all available tables in the directory, and roll from there                                                                    |
 | Roll from weighted list   | `:wlist` `:+wlist` `:++wlist` | ... | Display all available w-tables in the directory, and roll from there                                                                  |
 
@@ -133,7 +133,7 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/2079
 | Name                  | keyword                                                                   |
 |-----------------------|---------------------------------------------------------------------------|
 | Fate Check (prompted) | `:mmfc`                                                                   |
-| Fate Check (per bias) | `:mfc4`, `:+mfc4`, `:++mfc4`, `:+++mfc4`, `:-mfc4`, `:--mfc4`, `:---mfc4` |
+| Fate Check (per bias and chaos) | `:(bias)mfc(chaos)` e.g.: `:mfc4`, `:+mfc7`, `:++mfc3`, `:+++mfc2`, `:-mfc5`, `:--mfc1`, `:---mfc7` |
 | Scene Alteration      | `:malt4`                                                                  |
 | Random Event          | `:mre`                                                                    |
 | Action Question       | `:mac`                                                                    |
@@ -187,7 +187,7 @@ These are meant to be played with https://jeansenvaars.itch.io/scene-unfolding-m
 | Subject Prompt   | `:sumsu`                        |
 | Adjective Prompt | `:sumad`                        |
 
-## GUM Keywords
+## GUM v2 Keywords
 
 These are meant to be played with https://jeansenvaars.itch.io/game-unfolding-machine
 
