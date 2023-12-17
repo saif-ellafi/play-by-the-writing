@@ -1,20 +1,20 @@
-Humid wilderness, jungle, raining, rivers, marshes, falls
-Ruins, outpost, camp, fortress, military base, castle
-Metropolis, city, lively place, traffic jams, sprawl, business
-Cave, underground, underworld, tunnels, darkness, deep
-Alien, new lands, unfamiliar, colony, discovery, exploration
-Research facility, school, laboratory, magic academy
-Dry wilderness, forest, deep woods, rivers, plains, mud
-Hot region, desert, oasis, tundra, arid, sands, dust
-Mountains, hills, snowy peaks, strong winds, rocks, cliffs
-Trade routes, roads, in a journey, travelling, moving
-Ocean, islands, sea, underwater, port, sea world, coast
-Remote town, village, ghost town, old farms, wasteland
-Manor, a mansion, hotel, residence, tavern, large building
-Snow, tundra, very cold, freezing conditions, blizzard
-Neighbor, ghetto, red alert zone, low suburbs, packed
-Guild or faction headquarters, facility, station, hideout
-Elevated, tower, flying, aircraft, spaceship, space station
-Military, barracks, fortress, carrier, submarine, warship
-Prison, captive, police station, dungeon, courts, locked
-Rough, volcanic, hazardous, earthquake, rocky, burning
+Humid: Wilderness, jungle, raining, rivers, marshes, falls
+Forgotten: Ruins, outpost, camp, fortress, military base, castle
+Urban: Metropolis, city, lively place, traffic jams, sprawl, business
+Hidden: Cave, underground, underworld, tunnels, darkness, deep
+Strange: Alien, new lands, unfamiliar, colony, discovery, exploration
+Specialized: Research facility, school, laboratory, magic academy
+Wilderness: Dry steppes, forest, deep woods, rivers, plains, mud
+Heat: Hot region, desert, oasis, tundra, arid plains, sands, dust
+Rough: Mountains, hills, snowy peaks, strong winds, rocks, cliffs
+Busy: Trade routes, roads, in a journey, traveling, moving
+Water: Ocean, islands, sea, underwater, port, sea world, coast
+Outskirts: Remote town, village, ghost town, old farms, wasteland
+Indoors: Manor, a mansion, hotel, residence, tavern, large building
+Cold: Snow, tundra, very cold, freezing conditions, blizzard
+Social: Neighbor, ghetto, red alert zone, low suburbs, packed
+Secret: Guild or faction headquarters, facility, station, hideout
+Beyond: Elevated, tower, flying, aircraft, spaceship, space station
+Army: Military, barracks, fortress, carrier, submarine, warship
+Captive: Prison, captive, police station, dungeon, courts, locked
+Dangerous: Rough, volcanic, hazardous, earthquake, rocky, burning

@@ -1,6 +1,0 @@
-Civilian: {{gum_npcid_civilian}}
-Skilled: {{gum_npcid_skilled}}
-Fighting: {{gum_npcid_fight}}
-Connected: {{gum_npcid_connect}}
-VIP: {{gum_npcid_vip}}
-Special: {{gum_npcid_special}}

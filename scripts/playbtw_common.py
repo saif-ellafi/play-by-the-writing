@@ -16,20 +16,20 @@ if 'CONFIG' not in os.environ:
 
 
 # List TXT tables
-def list_tables(tp):
+def list_tables(tp, contains=''):
     files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))
     names = []
     for file in files:
         split = os.path.splitext(file)
-        if split[1] == tp:
+        if split[1] == tp and split[0].__contains__(contains):
             names.append(split[0])
     names.sort()
     return '\n'.join(names)
 
 
 # Reads CSV table with exactly one column.
-def read_table(table):
-    with open(os.path.join(os.environ['CONFIG'], 'tables', table+'.txt'), encoding='utf-8') as file:
+def read_table(table, override_dir=None):
+    with open(os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt'), encoding='utf-8') as file:
         lines = file.readlines()
     return list(map(lambda x: x.strip(), lines))
 
@@ -51,8 +51,8 @@ def unwrap(result):
 
 
 # Rolls random from a table once
-def choice_table(table, mode=None):
-    values = read_table(table)
+def choice_table(table, mode=None, override_dir=None):
+    values = read_table(table, override_dir=override_dir)
     rolled = random.randint(0, len(values)-1)
     if mode == 'adv':
         rolled = max(rolled, random.randint(0, len(values)-1))
@@ -63,8 +63,8 @@ def choice_table(table, mode=None):
 
 
 # Rolls random from a weighted table once, based on the max values provided on first column
-def choice_wtable(table, mode=None):
-    values = read_wtable(table)
+def choice_wtable(table, mode=None, override_dir=None):
+    values = read_wtable(table, override_dir=override_dir)
     max_value = int(values[-1][0])
     rolled = random.randint(1, max_value)
     if mode == 'adv':
@@ -115,3 +115,43 @@ def draw_card(table):
     with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards[1:]))
     return drawn
+
+# Open user defined table
+def load_user_table(name):
+    path = os.path.join(tempfile.gettempdir(), name+'.txt')
+    if os.path.exists(path):
+        with open(path, 'r') as mem:
+            return mem.read()
+    else:
+        return ''
+    
+# Open user defined wtable
+def load_user_wtable(name):
+    path = os.path.join(tempfile.gettempdir(), name+'.psv')
+    if os.path.exists(path):
+        with open(path, 'r') as mem:
+            return mem.read()
+    else:
+        return ''
+    
+# Save user defined table
+def save_user_table(name, content):
+    path = os.path.join(tempfile.gettempdir(), name+'.txt')
+    with open(path, 'w') as f:
+        f.write(content)
+
+# Save user defined wtable
+def save_user_wtable(name, content):
+    path = os.path.join(tempfile.gettempdir(), name+'.psv')
+    with open(path, 'w') as f:
+        f.write(content)
+    
+# Roll user defined table
+def roll_user_table(name):
+    dir = os.path.join(tempfile.gettempdir(), name+'.txt')
+    choice_table(name, override_dir=dir)
+
+# Roll user defined wtable
+def roll_user_wtable(name):
+    dir = os.path.join(tempfile.gettempdir(), name+'.psv')
+    choice_wtable(name, override_dir=dir)

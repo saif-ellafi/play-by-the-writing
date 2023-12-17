@@ -1,100 +1,50 @@
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Further explains sensorial elements to characters
-Further explains sensorial elements to characters
-Describes an additional location element or detail
-Describes an additional location element or detail
-Gives a single character a chance to shine
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Remains silent, what do characters do? (peaceful)
+Describes an additional element or sensorial detail
+Puts a helpful item like a note, a key, or instructions
 Gives a single character a chance to shine
 Last action or decision was a good idea because...
-Last action or decision was a good idea because...
-Positive surprise, good news, or good luck
-Positive surprise, good news, or good luck
-Active opposition or enemies show up for conflict
-Active opposition or enemies show up for conflict
+Something favorable happens, good luck, a relief
 Refers to an object that can be interacted with
-Refers to an object that can be interacted with
-Shows a clue or lead that somehow helps a thread
-Shows a clue or lead that somehow helps a thread
+Lays out a very suitable or useful item for one PC
+Places a clue, lead, or proof that help a thread
 Reveals something not seen or present earlier
-Reveals something not seen or present earlier
-Places element of interest behind a challenge
-Places element of interest behind a challenge
-Brings a new or existing NPC to an interaction
-Brings a new or existing NPC to an interaction
-Someone else gets in trouble and needs help
-Someone else gets in trouble and needs help
-Presents something that reflects the game setting
-Presents something that reflects the game setting
-Shows an element that talks about the local history
-Shows an element that talks about the local history
-Active opposition or enemies show up for conflict
-Active opposition or enemies show up for conflict
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Remains silent, what do characters do?
-Throws something requiring immediate attention
-Throws something requiring immediate attention
-Brings a scene complication that thickens the plot
-Brings a scene complication that thickens the plot
-Presents a decision to be made with consequences
-Presents a decision to be made with consequences
-Something bad happens, bad news, or bad luck
-Something bad happens, bad news, or bad luck
-Change in location conditions interrupts the PCs
-Change in location conditions interrupts the PCs
+Places an element of interest behind a challenge
+Brings someone familiar or interesting to interact
+Shows an element that reflects one world aspect
+Brings someone convenient to the current scene
+Shows proof that confirms an open lead or idea
+Points to an object that tells about the past
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Remains silent, what do characters do? (tension)
+Shows someone in trouble, needs immediate help
+Throws an issue that requires immediate attention
+Forces a tough call to be made between two options
 Last action or decision was a bad idea because...
-Last action or decision was a bad idea because...
-Suddenly puts characters in danger, tension or risk
-Suddenly puts characters in danger, tension or risk
-Someone else’s problems conflicts with PCs interests
-Someone else’s problems conflicts with PCs interests
-Someone is preventing the PCs from proceeding
-Someone is preventing the PCs from proceeding
-Something breaks, fails or gets harmed around here
-Something breaks, fails or gets harmed around here
-Brings news related to a problematic distant event
-Brings news related to a problematic distant event
-Reveals enemies nearby that are not yet aware of PCs
-Reveals enemies nearby that are not yet aware of PCs
-Brings a very inconvenient NPC to the current scene
-Brings a very inconvenient NPC to the current scene
+Something bad happens, misfortune, of concern
+Change in location conditions interrupts the PCs
+Something breaks, fails, or is damaged around here
+Suddenly puts the PCs in danger, tension, or big risk
+Someone else’s deeds conflict with PCs interests
+Puts someone who prevents the PCs from advancing
+Reflects bad news triggered by a distant event
 Lays out environmental hazards or dangerous traps
-Lays out environmental hazards or dangerous traps
-Active opposition or enemies show up for conflict
+Brings an inconvenient actor to the current scene
+Reveals enemies that are yet unaware of the PCs
 Active opposition or enemies show up for conflict

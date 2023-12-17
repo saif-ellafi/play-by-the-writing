@@ -10,11 +10,12 @@ from playbtw_common import *
 sys.stdout.reconfigure(encoding="utf-8")
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
 parser.add_argument('--formula', type=str, help='Dice formula')
+parser.add_argument('--contains', type=str, default='', help='Contains sub expressions and content')
 parser.add_argument('--quantity', type=int, help='Simple Roll dice quantity')
 parser.add_argument('--size', type=int, help='Simple Roll dice size')
 
@@ -70,8 +71,27 @@ elif action == 'draw':
           .replace('Joker', '🃏')
           )
 elif action == 'list':
-    print(list_tables('.txt'))
+    print(list_tables('.txt'), contains=args['contains'].strip())
 elif action == 'wlist':
-    print(list_tables('.psv'))
+    print(list_tables('.psv'), contains=args['contains'].strip())
+elif action == 'utable':
+    tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
+    result = []
+    for t in tables:
+        result.append(roll_user_table(t.strip(), args['mode']))
+elif action == 'uwtable':
+    tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
+    result = []
+    for t in tables:
+        result.append(roll_user_wtable(t.strip(), args['mode']))
+    print(' '.join(result))
+elif action == 'load_utable':
+    print(load_user_table(args['table']))
+elif action == 'load_uwtable':
+    print(load_user_wtable(args['table']))
+elif action == 'save_utable':
+    print(save_user_table(args['table'], args['contains']))
+elif action == 'save_uwtable':
+    print(save_user_wtable(args['table'], args['contains']))
 else:
     raise Exception("Wrong Function argument!")

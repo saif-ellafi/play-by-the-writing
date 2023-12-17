@@ -1,52 +1,52 @@
-People, civilian, masses, groups, population
+People, civilian, masses, groups, population, voices
 Protection, defense, preservation, sanctuary
-Ability, quality, power, edge, implant, skill
+Ability, quality, power, edge, implant, skill, maneuver
 Advisor, counselling, chancellor, ambassador
 Entertainment, joy, happiness, festivity, holiday, music
 Promise, an oath, destiny, fate, a vow, pledge, belief
 Aftermath, consequences, leftovers, outcomes
 Agreement, a contract, an alliance, arrangement, deal
 Archers, rifles, ammunition, long range, artillery, guns
-Ambush, a strike, a coup, revolt, revolution
+Ambush, a strike, a coup, revolt, revolution, sabotage
 Magic, weird science, esotericism, occult, alien
 An appointment, a new ruler, coronation, ascension
-Armor, armory, defense, equipment, shield
+Armor, armory, defense, equipment, shield, protection
 Arrival of someone, people, newcomers, immigrants
-Artwork, style, artists, culture, music
+Artwork, style, artists, culture, music, expression
 Artifacts, objects of power, amulets, jewelry
-Truth, innocence,  compassion, empathy, support
+Truth, innocence, compassion, empathy, support
 An audience, conference, meeting, council, reunion
-Barbaric, nomads, bandits, renegades
-Religion, divine, clerics, deities, gods, wrath
+Barbaric, nomads, bandits, renegades, outlaws
+Religion, divine, clerics, deities, gods, wrath, faith
 Message, omens, communication, news, changes
-Block, blockade, position, wall, barricade
+Block, blockade, position, wall, barricade, cover
 Bravery, courage, overcoming fear, valor, honor
 Weapons, melee, two-handed, sword, axe, hammer
-Monsters, beasts, robot, machine, creature
+Monster, beasts, robot, machine, creature, being
 Business, trade, commerce, exchange, a deal, ports
 Campaign, operation, expedition, project, adventure
-Rest, recovery, a safe place, a pause, accommodation
+Rest, recovery, a safe place, a pause, hospitality
 Carrier, courier, a messenger, a bearer, a runner
-Mountains, hills, cliffs, altitude, high
-Mockery, insult, offense, disrespect
+Mountains, hills, cliffs, altitude, elevation, hard, rock
+Mockery, insult, offense, disrespect, assault, violation
 Chance, an opportunity, advantage, a moment
-Money, supplies, resources, wealth, assets
+Money, supplies, resources, wealth, assets, surplus
 Machinery, engineering, infrastructure, platform
 Chronicles, history, events, past, culture, legacy
 City, village, town, settlement, housing, urbanization
-Claim, rightfulness, possession, belongings
-Cloud, visibility, fog, clear thoughts, ideas
-Commands, mandate, orders, chain of duty, execution
-Companions, allies, supporters, henchmen, assistants
+Claim, rightfulness, possession, belongings, treasure
+Cloud, visibility, fog, clear thoughts, ideas, sight
+Command, mandate, orders, chain of duty, execution
+Companions, allies, supporters, henchmen, assistant
 Concealment, privacy, invisibility, transparency
 Conflict, invasion, war, battle, large scale skirmish
-Construction, building, structure, ruins, pillars, statues
+Construction, building, structure, ruins, pillars, statue
 Consumables, potions, drugs, toxins, alchemy
-Conversation, dialogue, discussion, arguments, reasons
-Corpses, death, mortality, undead, necromancy, ghosts
+Conversation, dialogue, discussion, argument, reason
+Corpse, death, mortality, undead, necromancy, ghost
 Countryside, farms, agriculture, surroundings, nature
-Couple, love, partner, passion, sex, jealousy
-Crew, brotherhood, fraternity, faction, family, cult, sect
+Couple, love, partner, passion, sex, jealousy, envy
+Crew, brotherhood, fraternity, faction, family, cult
 Kings, rulers, dictators, aristocrats, nobles, ministers
 Curse, damnation, sickness, insanity, crazy
 Army, troops, soldiers, mercenaries, recruits
@@ -54,36 +54,36 @@ Politics, secrets, rumors, scheming, betrayal
 Danger, threat, hazard, emergency, jeopardy
 Dark, darkness, dark side, evil, malevolence
 Devastation, ravage, destruction, ruin, wreckage
-Decision, choices, costs, consequences
-Declaration, announcement, statement
+Decision, choices, costs, consequences, matter
+Declaration, announcement, statement, saying
 Defeat, loss, failure, not enough, frustration
-Desire, power, aspiration, dreams, wishes
+Desire, power, aspiration, dreams, wishes, ambition
 Desolation, absence, loneliness, emptiness, void
 Tools, knowledge, utilities, technology, means
-Detection, perception, intuition, feelings
+Detection, perception, intuition, feeling, insight
 Development, improvement, growth, expansion
 Diplomacy, treaty, politics, influence, power
 Disease, sickness, poison, venom, pandemic
-Distraction, detour, a different way, a trap
-Door, gates, passage, bridges, portal, caves, tunnel
+Distraction, detour, a different way, lure, a trap
+Door, gate, passage, bridge, portal, caves, tunnel
 Opposition, enemies, adversities, misfortune
-Drama, loss, sadness, emotions, regret
+Drama, loss, sadness, emotions, regret, blame
 Food, water, resources, minerals, materials
 Dust, earth, sand, sandstorm, desert, mud, rocks
-Elimination, assassination, killing, dagger
+Elimination, assassination, killing, dagger, target
 Empire, kingdom, country, state, civilization, reign
-Energy, ritual, channeling, conjuration, sorcery
+Energy, ritual, catalyst, magic, conjuration, sorcery
 Enthusiasm, energy, activity, eagerness, anxiety
-Escape, break out, prison, freedom, flee
+Escape, break out, prison, freedom, flee, free-will
 Time, year, calendar, end of, period, era, age
-Fear, scare, horror, terror, paranoia
+Fear, scare, horror, terror, paranoia, sanity
 Research, information, lore, knowledge, data
-Fire, flame, heat, red, burning, summer
+Fire, flame, heat, red, burning, summer, warmth
 Roads, rivers, routes, bottlenecks, shortcut
 Forest, Jungle, trees, green, plants, growth, life
-Fortress, castle, outpost, keep, bunker
-Water, rain, swamp, cold, ice, snow
-Plan, strategy, goal, objective, mission
+Fortress, castle, outpost, keep, bunker, stand
+Water, rain, swamp, cold, ice, snow, liquid
+Plan, strategy, goal, objective, mission, idea
 Friend, colleague, relationship, intimate, confidant
 Person, contact, relative, someone, entity
 Glory, victory, triumph, success, gains, benefits
@@ -92,9 +92,9 @@ Domain, field, territory, land, province, region
 Superiority, perfection, majesty, achievement
 Harm, damage, blood, injuries, pain, suffering
 Hatred, anger, vengeance, resentment, envy
-Healing, heart, health, recovery, rest
+Healing, heart, health, recovery, rest, body
 Commander, mercenary, captain, general, soldier
 Vehicles, transport, rides, mounts, aircraft, ships
-Hunger, thirst, starvation, breath, necessity, survival
-Illusions, lies, tricks, traps, thievery, theft, corruption
-Peace, tranquility, nature, harmony, safety, balance
+Peace, tranquility, nature, harmony, balance
+Illusion, lies, tricks, traps, thievery, theft, corruption
+Hunger, thirst, starvation, breath, survival

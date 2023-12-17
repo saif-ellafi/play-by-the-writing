@@ -1,6 +1,0 @@
-Attitude: {{gum_npcdet_attitude}}
-Wants: {{gum_npcdet_wants}}
-Edge: {{gum_npcdet_edge}}
-Quirk: {{gum_npcdet_quirk}}
-Looks: {{gum_npcdet_looks}}
-Stuff: {{gum_npcdet_stuff}}

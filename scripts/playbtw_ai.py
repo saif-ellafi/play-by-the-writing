@@ -20,8 +20,10 @@ parser.add_argument('--tokens', type=int, help='Max tokens in the response')
 parser.add_argument('--remember', type=str, help='Whether to keep the answer in AI memory')
 parser.add_argument('--forget', type=str, help='Whether to forget all AI memories and start clean')
 parser.add_argument('--memories', type=str, help='Whether to use memories stored so far')
+parser.add_argument('--img_format', type=str, help='Dall-E response format. url, markdown or b64_json')
 parser.add_argument('--img_size', type=str, help='Image size for dall-e request')
-parser.add_argument('--img_format', type=str, help='Format of dall-e image response')
+parser.add_argument('--img_quality', type=str, help='Image quality for dall-e response. standard or hd')
+parser.add_argument('--img_style', type=str, help='Image style for dall-e response. vivid or natural')
 
 
 args = vars(parser.parse_args())
@@ -148,10 +150,16 @@ elif action == 'ai_image':
     prompt = args['prompt'].strip()
     img_size = args['img_size']
     img_format = args['img_format']
+    img_quality = args['img_quality']
+    img_style = args['img_style']
     response = openai.Image().create(
         prompt=prompt,
         size=img_size,
-        n=1
+        quality=img_quality,
+        style=img_style,
+        response_format='url' if img_format=='markdown' else img_format,
+        n=1,
+        model='dall-e-3'
     )
     answer = response['data'][0]['url'].strip()
     if img_format == 'markdown':

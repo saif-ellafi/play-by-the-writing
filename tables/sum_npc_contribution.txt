@@ -1,100 +1,50 @@
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Asks about your concerns, ready to be of help
-Shows a feature that sets them apart from the rest
-Shows a feature that sets them apart from the rest
-Shares about something in common with the PCs
-Shares about something in common with the PCs
+Provides plot-progressing answers to one question
+Provides plot-progressing answers to one question
+Provides plot-progressing answers to one question
+Provides plot-progressing answers to one question
+Provides plot-progressing answers to one question
+Offers to join the PCs to show a path or directly help
+Shares common cause with the PCs, faction support
+Assists with accommodation, comfort, food, water
+Make themselves useful or important for the mission
 Offers resources or materials that support PCs cause
-Offers resources or materials that support PCs cause
-Reveals a secret that significantly helps a thread
-Reveals a secret that significantly helps a thread
-Makes a request for something desperately needed
-Makes a request for something desperately needed
-Behaves differently from what was expected
-Behaves differently from what was expected
-Connect you or present you someone they know
-Connect you or present you someone they know
-Talks about personal needs or problems
-Talks about personal needs or problems
-Reveals own skills, profession, or belonged faction
-Reveals own skills, profession, or belonged faction
-Shares details about the current area or location
-Shares details about the current area or location
-Shares about an upcoming event or situation
-Shares about an upcoming event or situation
-Talks about a useful, dangerous or wonderful place
-Talks about a useful, dangerous or wonderful place
-Talks about an important resource or special object
-Talks about an important resource or special object
-Proposes a mutual agreement, a trade or deal
-Proposes a mutual agreement, a trade or deal
-Behaves strangely, sensitive to what PCs do or say
-Behaves strangely, sensitive to what PCs do or say
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Eagerly waits to know what do you want
-Brings a topic that conflicts with PCs interests
-Brings a topic that conflicts with PCs interests
-Asks for reasons about your goals and tasks
-Asks for reasons about your goals and tasks
-Refuses to continue if not convinced, or bribed
-Refuses to continue if not convinced, or bribed
+Gives directions or information of a relevant location
+Gives a meaningful blessing, relief, hope, inspiration
+Tell you about, or introduce you someone they know
+Knows an item or artifact that can make a difference
+Talks about a useful, dangerous, or wonderful place
+Explain how their story is linked to current events
+Shares about an upcoming event or important thing
+Points out a critical resource to secure or sabotage
+Proposes a mutual agreement, a trade or a deal
+Doesn’t contribute a lot; tries to be of help, though
+Doesn’t contribute a lot; tries to be of help, though
+Doesn’t contribute a lot; tries to be of help, though
+Doesn’t contribute a lot; tries to be of help, though
+Doesn’t contribute a lot; tries to be of help, though
+Doesn’t contribute a lot; tries to be of help, though
+Doesn’t help, or remain silent; unhelpful disposition
+Doesn’t help, or remain silent; unhelpful disposition
+Doesn’t help, or remain silent; unhelpful disposition
+Doesn’t help, or remain silent; unhelpful disposition
+Doesn’t help, or remain silent; unhelpful disposition
+Doesn’t help, or remain silent; unhelpful disposition
+Ask PCs a favor or a task before giving information
+Has useful information, but is reluctant to share it
+Politely invites the PCs to go away, or they leave
+Refuses to talk if not convinced, or bribed...
+Brings a matter that conflicts with PCs interests
 Has done something that the PCs won’t like
-Has done something that the PCs won’t like
-Knows something, but wants something in return
-Knows something, but wants something in return
-Shares about own desires, goals and vision
-Shares about own desires, goals and vision
-Has useful information, but reluctant to share it
-Has useful information, but reluctant to share it
-Seeks to end interaction, throws you out or leaves
-Seeks to end interaction, throws you out or leaves
-Calls for reinforcements, requests support
-Calls for reinforcements, requests support
+Reveals to belong to a conflicting or enemy faction
+Asks questions instead, demands for explanations
+Boast about their big destiny, goals, and (evil) vision
 Reveals a truth that twists or thickens the plot
-Reveals a truth that twists or thickens the plot
-Reveals to belong to a faction that conflicts the PCs
-Reveals to belong to a faction that conflicts the PCs
-Offended by your presence, or your past actions
-Offended by your presence, or your past actions
-Has a weapon or means to complicate PCs goals
-Has a weapon or means to complicate PCs goals
-Makes a threat, a promise or a hard accusation
-Makes a threat, a promise or a hard accusation
-Assaults verbally, taunts, or begins a fight
-Assaults verbally, taunts, or begins a fight
+Calls for help, reinforcement, or requests support
+Offended by your presence, or your recent actions
+Has a weapon, or means to complicate PCs goals
+Makes a threat, denounces PCs, a hard accusation
+Verbal assault, taunts, or begins a fight if needs be
+Verbal assault, taunts, or begins a fight if needs be
+Verbal assault, taunts, or begins a fight if needs be
+Verbal assault, taunts, or begins a fight if needs be
+Verbal assault, taunts, or begins a fight if needs be

@@ -1,0 +1,1 @@
+Location: {{gum2_explo_loc}}. Skill test: {{gum2_explo_skill}}. Circumstance: {{gum2_explo_circ}}.

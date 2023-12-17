@@ -1,20 +1,20 @@
-Oppression, tyranny, there’s a problematic leader, the situation is dire
-High crime, violence, murders, gangs, mobs, anarchy, there is no law
-Something extremely important, or valuable, is lost, or has been stolen
-Common enemy, global threat building up, and is going to affect us all
-There is a confrontation of two local factions for power, enemies within
-Natural disaster, a catastrophe, terrible weather, doom, damage control
-Plague, curse, damnation, sickness, disease, we are helpless, we are dying
-Secret organizations, rumors, intelligence, espionage, we’re being watched
-What used to work isn’t working anymore, failure, ignorance, powerless
-Since an object was discovered or brought here, everything is wrong
-Large scale conflict, war, lack of supplies, hardship, need to work together
-Endangered tribe, species, creature, animals, or a similar vulnerable group
-Kidnapping, disappearances, it matters; these are valuable people to us
-Corruption everywhere, tax pressure, hunger, injustice, oppression
-Trade routes troubled, lack of supplies, a siege, raiders, pirates, monsters
-Weird event happened, phenomenon, feels very strange, something not right
-Lack of good morals, segregation, hunger, poverty, the rich and the poor
-Uprising, rebellion, revolution, riots, the people, bring the powerful down
-Chaos, despair, pandemonium, outsiders, aliens, survival, the apocalypse
-Religious oppression, holy war, inquisition, extremists, prophecies, divine
+Government: Oppression, tyranny, there’s a problematic leader, the situation is dire
+Safety: High crime, violence, murders, gangs, mobs, anarchy, there is no law
+Special: Something extremely important, or valuable, is lost, or has been stolen
+Together: Common enemy, global threat building up, and is going to affect us all
+Struggle: There is a confrontation of two local factions for power, enemies within
+Unavoidable: Natural disaster, catastrophe, terrible weather, doom, damage control
+Punishment: Plague, curse, damnation, sickness, disease, we are helpless, we are dying
+Secrecy: Secret organizations, rumors, intelligence, espionage, we’re being watched
+Confusion: What used to work isn’t working anymore, failure, ignorance, powerless
+Blame: Since an object was discovered or brought here, everything is wrong
+Strength: Large scale conflict, war, lack of supplies, hardship, need to work together
+Innocence: Endangered tribe, species, creature, animals, or a similar vulnerable group
+Victims: Kidnapping, disappearances, it matters; these are valuable people to us
+Hypocrisy: Corruption everywhere, tax pressure, hunger, injustice, oppression
+Sabotage: Trade routes troubled, lack of supplies, a siege, raiders, pirates, monsters
+Cosmic: Weird event happened, phenomenon, feels very strange, something not right
+Injustice: Lack of good morals, segregation, hunger, poverty, the rich and the poor
+Voice: Uprising, rebellion, revolution, riots, the people, bring the powerful down
+Panic: Chaos, despair, pandemonium, outsiders, aliens, survival, the apocalypse
+Belief: Religious oppression, holy war, inquisition, extremists, prophecies, divine

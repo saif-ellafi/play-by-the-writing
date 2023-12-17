@@ -1,0 +1,3 @@
+Hostile
+Neutral
+Friendly

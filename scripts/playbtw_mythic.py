@@ -10,48 +10,49 @@ import argparse
 parser = argparse.ArgumentParser(description='Oracle for Espanso')
 parser.add_argument('action', type=str, help='fate_check|scene_check|random_event')
 parser.add_argument('--odds', type=int, default=0, help='Odds towards result. From -8 to +8')
-parser.add_argument('--chaos', type=int, default=4, help='Chaos Factor. From 3 to 6')
-parser.add_argument('--favorable', type=int, default=1, help='Is yes a favorable answer? 0 is no. 1 is yes.')
+parser.add_argument('--chaos', type=int, default=5, help='Chaos Factor. From 3 to 6')
 
 args = vars(parser.parse_args())
 action = args['action']
+chaos_map = {
+    1: -5,
+    2: -4,
+    3: -2,
+    4: -1,
+    5: 0,
+    6: 1,
+    7: 2,
+    8: 4,
+    9: 5
+}
 
 
-def fate_check(odds=0, chaos_rank=4, favorable=True):
+def fate_check(odds=0, chaos_rank=5):
     answer = 'Yes'
     rint1 = rolls_advanced('1d10')
     rint2 = rolls_advanced('1d10')
-    core = rint1 + rint2 + odds
-    chaos_roll = rolls_advanced('1d10')
-    if chaos_rank == 3:
-        if favorable:
-            core += 2
-        else:
-            core -= 2
-    elif chaos_rank == 6:
-        if favorable:
-            core -= 2
-        else:
-            core += 2
-    if core < 11:
+    chaos_mod = chaos_map[chaos_rank]
+    core = rint1 + rint2 + odds + chaos_mod
+    if core <= 4:
+        answer = 'Exceptional No'
+    elif core <= 10:
         answer = 'No'
-    if chaos_roll <= chaos_rank:
-        if rint1 % 2 == 1 and rint2 % 2 == 1:
-            answer = 'Exceptional ' + answer
-        elif rint1 % 2 == 0 and rint2 % 2 == 0:
-            answer += ' with Random Event!'
+    elif core >= 18:
+        answer = 'Exceptional Yes'
+    if rint1 == rint2 and rint1 <= chaos_rank:
+        answer += ', with a Random Event: ' + random_event()
     return answer
 
 
-def scene_check(chaos=4):
+def scene_check(chaos=5):
     rolled = rolls_advanced('1d10')
     if rolled <= chaos:
         if rolled % 2 == 0:
-            return 'Scene altered!'
+            return 'Interrupt Scene! ' + random_event()
         else:
-            return 'Scene interrupted!'
+            return 'Altered Scene'
     else:
-        return 'Proceeds normally!'
+        return 'Expected Scene'
 
 
 def random_event():
@@ -59,7 +60,7 @@ def random_event():
 
 
 if action == 'fate_check':
-    print(fate_check(args['odds'], args['chaos'], args['favorable']))
+    print(fate_check(args['odds'], args['chaos']))
 elif action == 'scene_check':
     print(scene_check(args['chaos']))
 elif action == 'random_event':

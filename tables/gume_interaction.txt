@@ -1,4 +1,0 @@
-Behavior: {{gume_interaction_behavior}}
-Contribution: {{gume_interaction_contribution}}
-Response: {{gume_interaction_request}}
-Request: {{gume_interaction_response}}

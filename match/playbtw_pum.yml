@@ -5,7 +5,7 @@
 # USE AT YOUR OWN RISK
 
 matches:
-  # PUM
+  # PUM Question: deterministic
   - trigger: ":qq"
     replace: "{{output}}"
     vars:
@@ -16,8 +16,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_question_even,pum_question_caveat
-  # PUM
+            - pum_question_deterministic
+  # PUM Question: deterministic
   - trigger: ":+qq"
     replace: "{{output}}"
     vars:
@@ -28,8 +28,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_question_likely,pum_question_caveat
-  # PUM
+            - pum_question_deterministic
+            - --mode
+            - adv
+  # PUM Question: deterministic
   - trigger: ":-qq"
     replace: "{{output}}"
     vars:
@@ -40,9 +42,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_question_unlikely,pum_question_caveat
-  # Next Scene prompt - PUM
-  - triggers: [":scene", ":prompt"]
+            - pum_question_deterministic
+            - --mode
+            - dis
+  # PUM Question: subjective
+  - trigger: ":qsub"
     replace: "{{output}}"
     vars:
       - name: output
@@ -52,9 +56,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_prompt
-  # Next Scene skill
-  - triggers: [":challenge", ":skill"]
+            - pum_question_subjective
+  # PUM Question: subjective
+  - trigger: ":+qsub"
     replace: "{{output}}"
     vars:
       - name: output
@@ -64,9 +68,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_challenge
-  # Next Scene High Stakes
-  - trigger: ":discovery"
+            - pum_question_subjective
+            - --mode
+            - adv
+  # PUM Question: subjective
+  - trigger: ":-qsub"
     replace: "{{output}}"
     vars:
       - name: output
@@ -76,9 +82,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_discovery
-  # Next Scene High Stakes
-  - trigger: ":risk"
+            - pum_question_subjective
+            - --mode
+            - dis
+  # PUM Question: interaction
+  - trigger: ":qint"
     replace: "{{output}}"
     vars:
       - name: output
@@ -88,9 +96,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_risk
-  # PUM Scene Checker
-  - triggers: [":check", ":expectation"]
+            - pum_question_interaction
+  # PUM Question: interaction
+  - trigger: ":+qint"
     replace: "{{output}}"
     vars:
       - name: output
@@ -100,9 +108,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_check
-  # PUM
-  - trigger: ":item"
+            - pum_question_interaction
+            - --mode
+            - adv
+  # PUM Question: interaction
+  - trigger: ":-qint"
     replace: "{{output}}"
     vars:
       - name: output
@@ -112,9 +122,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindi,pum_kindi
-  # PUM
-  - trigger: ":ability"
+            - pum_question_interaction
+            - --mode
+            - dis
+  # PUM - Who
+  - trigger: ":who"
     replace: "{{output}}"
     vars:
       - name: output
@@ -124,9 +136,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kinda,pum_kinda
-  # PUM
-  - trigger: ":role"
+            - pum_who
+  # PUM - Intent
+  - trigger: ":intent"
     replace: "{{output}}"
     vars:
       - name: output
@@ -136,9 +148,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindr,pum_kindr
-  # PUM
-  - trigger: ":enemy"
+            - pum_intent
+  # PUM - Activity
+  - trigger: ":activity"
     replace: "{{output}}"
     vars:
       - name: output
@@ -148,9 +160,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kinde,pum_kinde
-  # PUM
-  - trigger: ":danger"
+            - pum_activity
+  # PUM - Place
+  - triggers: [":area", ":location", ":place"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -160,32 +172,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_kindd,pum_kindd
-  # PUM
-  - triggers: [":area", ":location"]
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - pum_looks_adv,pum_looks_area_adj
-  # PUM
-  - trigger: ":someone"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - pum_looks_adv,pum_looks_npc_adj
-  # PUM
+            - pum_place
+  # PUM - Object
   - trigger: ":object"
     replace: "{{output}}"
     vars:
@@ -196,9 +184,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_looks_adv,pum_looks_obj_adj
-  # PUM
-  - trigger: ":what"
+            - pum_object
+  # PUM - Ability
+  - trigger: ":ability"
     replace: "{{output}}"
     vars:
       - name: output
@@ -208,20 +196,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_whata,pum_whatb
-  # PUM
-  - trigger: ":catalyst"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - pum_catalyst
-  # PUM
+            - pum_ability
+  # PUM - Subject
   - trigger: ":subject"
     replace: "{{output}}"
     vars:
@@ -233,8 +209,8 @@ matches:
             - table
             - --table
             - pum_subject
-  # PUM
-  - trigger: ":who"
+  # PUM - Scene Random Prompt
+  - triggers: [":scene", ":prompt"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -244,9 +220,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_whoa,pum_whob
-  # PUM
-  - trigger: ":intent"
+            - pum_prompt
+  # PUM - Scene Modified Proposal
+  - triggers: [":check", ":expectation", ":proposal"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -256,32 +232,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_inta,pum_intb
-  # PUM
-  - trigger: ":activity"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - pum_acta,pum_actb
-  # PUM
-  - trigger: ":reason"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - pum_reasona,pum_reasonb
-  # Twist or Complication
+            - pum_proposal
+  # PUM - Complication
   - trigger: ":complication"
     replace: "{{output}}"
     vars:
@@ -292,9 +244,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_subject,pum_complication
-  # Circumstances.
-  - trigger: ":circumstance"
+            - pum_complication
+  # PUM - Catalyst
+  - trigger: ":catalyst"
     replace: "{{output}}"
     vars:
       - name: output
@@ -304,8 +256,32 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_circumstance
-  # SUM
+            - pum_catalyst
+  # PUM - Challenge
+  - triggers: [":challenge", ":skill"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_challenge
+  # PUM - Situation
+  - trigger: ":situation"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_situation
+  # SUM (GM action, intervention)
   - trigger: ":gma"
     replace: "{{output}}"
     vars:
@@ -317,7 +293,7 @@ matches:
             - table
             - --table
             - sum_gm_action
-  # SUM
+  # SUM (GM action, intervention)
   - trigger: ":+gma"
     replace: "{{output}}"
     vars:
@@ -331,7 +307,7 @@ matches:
             - sum_gm_action
             - --mode
             - adv
-  # SUM
+  # SUM (GM action, intervention)
   - trigger: ":-gma"
     replace: "{{output}}"
     vars:
@@ -345,7 +321,7 @@ matches:
             - sum_gm_action
             - --mode
             - dis
-  # SUM
+  # SUM (GM feedback, reaction)
   - trigger: ":gmf"
     replace: "{{output}}"
     vars:
@@ -357,7 +333,7 @@ matches:
             - table
             - --table
             - sum_gm_feedback
-  # SUM
+  # SUM (GM feedback, reaction)
   - trigger: ":+gmf"
     replace: "{{output}}"
     vars:
@@ -371,7 +347,7 @@ matches:
             - sum_gm_feedback
             - --mode
             - adv
-  # SUM
+  # SUM (GM feedback, reaction)
   - trigger: ":-gmf"
     replace: "{{output}}"
     vars:
@@ -385,7 +361,7 @@ matches:
             - sum_gm_feedback
             - --mode
             - dis
-  # SUM
+  # SUM (GM World, factions)
   - trigger: ":gmw"
     replace: "{{output}}"
     vars:
@@ -397,8 +373,8 @@ matches:
             - table
             - --table
             - sum_gm_world
-  # SUM
-  - trigger: ":npcc"
+  # SUM (GM World, factions)
+  - trigger: ":+gmw"
     replace: "{{output}}"
     vars:
       - name: output
@@ -408,23 +384,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_contribution
-  # SUM
-  - trigger: ":+npcc"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc_contribution
+            - sum_gm_world
             - --mode
             - adv
-  # SUM
-  - trigger: ":-npcc"
+  # SUM (GM World, factions)
+  - trigger: ":-gmw"
     replace: "{{output}}"
     vars:
       - name: output
@@ -434,10 +398,130 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_contribution
+            - sum_gm_world
             - --mode
             - dis
-  # SUM
+  # SUM (PC matters)
+  - trigger: ":pcmatt"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_matters
+  # SUM (PC matters)
+  - trigger: ":+pcmatt"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_matters
+            - --mode
+            - adv
+  # SUM (PC matters)
+  - trigger: ":-pcmatt"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_matters
+            - --mode
+            - dis
+  # SUM (PC backstories)
+  - trigger: ":pcback"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_backs
+  # SUM (PC backstories)
+  - trigger: ":+pcback"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_backs
+            - --mode
+            - adv
+  # SUM (PC backstories)
+  - trigger: ":-pcback"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_backs
+            - --mode
+            - dis
+  # SUM (PC bonding)
+  - trigger: ":pcbond"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_bonds
+  # SUM (PC bonding)
+  - trigger: ":+pcbond"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_bonds
+            - --mode
+            - adv
+  # SUM (PC bonding)
+  - trigger: ":-pcbond"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_pc_bonds
+            - --mode
+            - dis
+  # SUM (NPC behavior, attitude)
   - trigger: ":npcb"
     replace: "{{output}}"
     vars:
@@ -449,7 +533,7 @@ matches:
             - table
             - --table
             - sum_npc_behavior
-  # SUM
+  # SUM (NPC behavior, attitude)
   - trigger: ":+npcb"
     replace: "{{output}}"
     vars:
@@ -463,7 +547,7 @@ matches:
             - sum_npc_behavior
             - --mode
             - adv
-  # SUM
+  # SUM (NPC behavior, attitude)
   - trigger: ":-npcb"
     replace: "{{output}}"
     vars:
@@ -477,7 +561,47 @@ matches:
             - sum_npc_behavior
             - --mode
             - dis
-  # SUM
+  # SUM (NPC Contribution)
+  - trigger: ":npcc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_contribution
+  # SUM (NPC Contribution)
+  - trigger: ":+npcc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_contribution
+            - --mode
+            - adv
+  # SUM (NPC Contribution)
+  - trigger: ":-npcc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_contribution
+            - --mode
+            - dis
+  # SUM (NPC opinion)
   - trigger: ":npco"
     replace: "{{output}}"
     vars:
@@ -489,7 +613,7 @@ matches:
             - table
             - --table
             - sum_npc_opinion
-  # SUM
+  # SUM (NPC opinion)
   - trigger: ":+npco"
     replace: "{{output}}"
     vars:
@@ -503,7 +627,7 @@ matches:
             - sum_npc_opinion
             - --mode
             - adv
-  # SUM
+  # SUM (NPC opinion)
   - trigger: ":-npco"
     replace: "{{output}}"
     vars:
@@ -517,8 +641,8 @@ matches:
             - sum_npc_opinion
             - --mode
             - dis
-  # SUM
-  - trigger: ":npca"
+  # SUM (Stereotypes)
+  - trigger: ":sumst"
     replace: "{{output}}"
     vars:
       - name: output
@@ -528,35 +652,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_answer
-  # SUM
-  - trigger: ":+npca"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc_answer
-            - --mode
-            - adv
-  # SUM
-  - trigger: ":-npca"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_npc_answer
-            - --mode
-            - dis
+            - sum_stereo
   # SUM (Action)
   - trigger: ":sumac"
     replace: "{{output}}"

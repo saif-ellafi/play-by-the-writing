@@ -1,7 +1,7 @@
 Capture an enemy, dead or alive
 Defeat a faction, bandits, or outlaws
-Discover who caused a problem
-Sabotage an enemy operation
+Discover who is behind a problem
+Sabotage or infiltrate enemy operation
 Retrieve an important or unique artifact
 Stop someone from doing wrong
 Look for proof or evidence in a location
@@ -15,6 +15,6 @@ Prevent an imminent planned attack
 Secure or defend a strategic location
 Assault a moving convoy or target
 Scout a location to help a faction attack
-Reveal or divulge truth or propaganda
+Reveal or divulge a truth or propaganda
 Convince them to change their mind
 Fulfill a prophecy, or a backstory goal

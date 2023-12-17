@@ -1,11 +1,10 @@
-There is a complication: {{pum_subject}} is {{pum_complication}}
-Invoke scene catalyst: {{pum_catalyst}}
-Problem or challenge: {{pum_challenge}}
-Risk about to trigger: {{pum_risk}}
-Opportunity to make a discovery: {{pum_discovery}}
-Social related encounter
-Consequence of your actions or presence
-Location specific event
-Discover enemy actions
-Face active opposition
-Trouble circumstance: {{pum_circumstance}}
+Unexpected complication: {{pum_complication}}
+Play a scene filler catalyst: {{pum_catalyst}}
+Lay out a skill challenge: {{pum_challenge}}
+Put characters in a situation: {{pum_situation}}
+Reflect or trigger a world aspect
+Detach or endanger a relevant actor
+Activate or elevate a relevant actor
+Confront or resolve a story trouble
+Weaken or drop an active lead
+Validate or confirm an active lead

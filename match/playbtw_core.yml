@@ -119,8 +119,8 @@ matches:
             - wtable
             - --table
             - "{{table}}"
-  # Search available tables
-  - triggers: [":list", ":tables"]
+  # Search available tables with keyword
+  - regex: ":list1(?P<contains>?\w)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -147,8 +147,10 @@ matches:
             - table
             - --table
             - "{{form1.file1}}"
+            - --contains
+            - "{{contains}}"
   # Search available tables
-  - triggers: [":+list", ":+tables"]
+  - regex: ":list2(?P<contains>?\w)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -179,8 +181,10 @@ matches:
             - table
             - --table
             - "{{form1.file1}},{{form1.file2}}"
+            - --contains
+            - "{{contains}}"
   # Search available tables
-  - triggers: [":++list", ":++tables"]
+  - regex: ":list3(?P<contains>?\w)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -215,7 +219,8 @@ matches:
             - table
             - --table
             - "{{form1.file1}},{{form1.file2}},{{form1.file3}}"
-
+            - --contains
+            - "{{contains}}"
   # Search available tables
   - triggers: [":wlist", ":wtables"]
     replace: "{{output}}"

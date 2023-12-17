@@ -1,0 +1,10 @@
+Increase simple element
+Decrease simple element
+Add simple element
+Remove simple element
+Increase major element
+Decrease major element
+Add major element
+Remove major element
+Wild positive
+Wild negative

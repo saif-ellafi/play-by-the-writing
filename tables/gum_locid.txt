@@ -1,6 +1,0 @@
-Building: {{gum_locid_build}}
-Urban: {{gum_locid_urban}}
-Outskirts: {{gum_locid_out}}
-Wilderness: {{gum_locid_wild}}
-Space: {{gum_locid_space}}
-Special: {{gum_locid_spec}}

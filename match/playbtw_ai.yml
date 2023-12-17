@@ -5,123 +5,7 @@
 # USE AT YOUR OWN RISK
 
 matches:
-  # OpenAI Completion
-  - triggers: [":text", ":aitext", ":aicomplete", ":aiprompt"]
-    replace: "{{output}}"
-    vars:
-      - name: form_ai
-        type: form
-        params:
-          layout: |
-            Prompt:
-            [[prompt]]
-            Keep in memory       Use memories          Forget memories
-            [[remember]]             [[memories]]         [[forget]]
-            Model                                      Coherence         Answer size:
-            [[model]] [[temperature]] [[tokens]]
-
-            * NOTE: use memories, answer size, model, affects pricing.
-            :aiclear to clear up memories when no longer needed.
-            :aimemory to check what is in AI memory.
-          fields:
-            prompt:
-              type: text
-              multiline: true
-            model:
-              type: list
-              values:
-                - 'text-davinci-003'
-                - 'text-curie-001'
-                - 'text-babbage-001'
-                - 'text-ada-001'
-              default:
-                'text-davinci-003'
-            temperature:
-              type: list
-              values:
-                - '2.0'
-                - '1.75'
-                - '1.5'
-                - '1.25'
-                - '1.0'
-                - '0.9'
-                - '0.75'
-                - '0.5'
-                - '0.25'
-                - '0.1'
-                - '0'
-              default: '1.5'
-            tokens:
-              type: list
-              values:
-                - '16'
-                - '32'
-                - '64'
-                - '128'
-                - '256'
-                - '512'
-                - '1024'
-              default:
-                '256'
-            remember:
-              type: list
-              values:
-                - 'true'
-                - 'false'
-              default:
-                'false'
-            memories:
-              type: list
-              values:
-                - 'true'
-                - 'false'
-              default:
-                'false'
-            forget:
-              type: list
-              values:
-                - 'true'
-                - 'false'
-              default:
-                'false'
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_ai"
-            - ai_complete
-            - --prompt
-            - "{{form_ai.prompt}}"
-            - --model
-            - "{{form_ai.model}}"
-            - --temperature
-            - "{{form_ai.temperature}}"
-            - --tokens
-            - "{{form_ai.tokens}}"
-            - --remember
-            - "{{form_ai.remember}}"
-            - --memories
-            - "{{form_ai.memories}}"
-            - --forget
-            - "{{form_ai.forget}}"
-  - triggers: [":aiforget", ":aierase", ":aiclear"]
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_ai"
-            - ai_complete_forget
-  - triggers: [":aimemory", ":aiknow"]
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_ai"
-            - ai_complete_knowledge
+  # OpenAI ChatGPT
   - triggers: [":aisys", ":aiinit", ":aistart"]
     replace: "{{output}}"
     vars:
@@ -254,6 +138,24 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
+  - triggers: [":aiforget", ":aierase", ":aiclear"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_complete_forget
+  - triggers: [":aimemory", ":aiknow"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_ai"
+            - ai_complete_knowledge
   - triggers: [":aiimg", ":aiimage", ":dall-e"]
     replace: "{{output}}"
     vars:
@@ -271,19 +173,34 @@ matches:
             prompt:
               type: text
               multiline: true
+            img_quality:
+              type: list
+              values:
+                - 'standard'
+                - 'hd'
+              default:
+                'standard'
+            img_style:
+              type: list
+              values:
+                - 'vivid'
+                - 'natural'
+              default:
+                'vivid'
             img_size:
               type: list
               values:
-                - '256x256'
-                - '512x512'
                 - '1024x1024'
+                - '1792x1024'
+                - '1024x1792'
               default:
-                '512x512'
+                '1024x1024'
             img_format:
               type: list
               values:
                 - 'url'
                 - 'markdown'
+                - 'b64_json'
               default:
                 'markdown'
       - name: output

@@ -1,0 +1,6 @@
+New entity
+Entity Positive
+Entity Negative
+Advance plot
+Regress plot
+Wild

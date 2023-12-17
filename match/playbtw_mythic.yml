@@ -13,33 +13,32 @@ matches:
         type: form
         params:
           layout: |
-            Odds [[odd]] Chaos [[cf]] Yes Favorable?* [[fy]]
-            *When 'yes' is favorable for PCs, select 1 (Mythic Variations 2).
+            Modifier [[odd]] Chaos [[cf]]
           fields:
             odd:
               type: list
               values:
-                - "-8"
-                - "-6"
+                - "-5"
                 - "-4"
                 - "-2"
+                - "-1"
                 - "0"
-                - "2"
-                - "4"
-                - "6"
-                - "8"
+                - "+1"
+                - "+2"
+                - "+4"
+                - "+5"
             cf:
               type: list
               values:
+                - "1"
+                - "2"
                 - "3"
                 - "4"
                 - "5"
                 - "6"
-            fy:
-              type: list
-              values:
-                - "0"
-                - "1"
+                - "7"
+                - "8"
+                - "9"
       - name: output
         type: script
         params:
@@ -50,22 +49,9 @@ matches:
             - "{{fcparams.odd}}"
             - --chaos
             - "{{fcparams.cf}}"
-            - --favorable
-            - "{{fcparams.fy}}"
-  # Mythic FAST fate check. Based on Variations 2, e.g. :fc - https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator
-  # Use with weights with :+fc :++fc :+++fc or :-fc :--fc :---fc
-  - regex: ":mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":\\+mfc(?P<chaos>\\d)"
+  # Mythic FAST fate check
+  # Use with modifier and chaos for example :mfc-2c5
+  - regex: ":mfc(?P<odds>?[-+]\\d)c(?P<chaos>\\d)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -75,102 +61,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_mythic"
             - fate_check
             - --odds
-            - "2"
+            - "{{odds}}"
             - --chaos
             - "{{chaos}}"
-  - regex: ":\\+\\+mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "4"
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":\\+\\+\\+mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "6"
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":\\+\\+\\+\\+mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "6"
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":-mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "-2"
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":--mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "-4"
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":---mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "-6"
-            - --chaos
-            - "{{chaos}}"
-  - regex: ":----mfc(?P<chaos>\\d)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_mythic"
-            - fate_check
-            - --odds
-            - "-8"
-            - --chaos
-            - "{{chaos}}"
-  # Mythic Scene Alteration Check
-  - regex: ":malt(?P<chaos>\\d)"
+  # Mythic Scene Check for example :msc7
+  - regex: ":msc(?P<chaos>\\d)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -181,7 +76,7 @@ matches:
             - scene_check
             - --chaos
             - "{{chaos}}"
-  # Mythic default event Focus
+  # Mythic default Focus
   - trigger: ":mfoc"
     replace: "{{output}}"
     vars:
@@ -193,7 +88,19 @@ matches:
             - wtable
             - --table
             - mythic_focus
-  # Mythic Focus with custom table. Table name between dots. Without .psv
+  # Mythic adventure Focus
+  - trigger: ":mfoc"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - mythic_focus_adv
+  # Mythic Focus with custom table. Table name between dots. Without the extension. Must be .psv
   - regex: ":mfo\\.(?P<table>.*)\\."
     replace: "({{table}}): {{output}}"
     vars:
@@ -239,3 +146,48 @@ matches:
             - table
             - --table
             - mythic_description_1,mythic_description_2
+  # Mythic edit characters list
+  - triggers: [":charliste", ":charlisto"]
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_ulist
+            - --table
+            - "mythic_charlist"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Characters list:
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_ulist
+            - --table
+            - "mythic_charlist"
+            - --contains
+            - "{{form1.file1}}"
+  # Mythic roll characters list
+  - trigger: ":charlistr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - mythic_charlist

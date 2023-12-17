@@ -1,20 +1,10 @@
-Missing, Lost, Forgotten
-Delicate, Dangerous, Sensitive
-Blocked, Hidden, Trapped
-Problematic, Disastrous, Rebelled
-Dead, Destroyed, Unrecoverable
-Broken, Damaged, Injured
-Flooded, Overloaded, Exceeded
-Sabotaged, Captured, Taken
-Corrupted, Twisted, Cursed
-False, Fake, Corrupt, Concealed
-Mistaken, Discarded, Wrong
-Leaked, Discovered, Revealed
-Unreliable, Erratic, Insufficient
-Disrupted, Modified, Altered
-Concerning, Unsettling, Feared
-Useless, Abandoned, Obsolete
-Sick, Hazardous, Weak, Incapable
-Prepared, Defended, Ready
-Unprepared, Unarmed, Surprised
-Delayed, Late, Hindered
+Attack, traps, or an ambush!
+Plot unrelated opposition
+Treason, or change of mind
+Location becomes a trouble
+On PCs items or necessities
+Accident, or disaster occurs
+Someone needs help badly
+Intel partially wrong, or lies
+Delayed, blocked, a detour
+Trigger PC flaw or weakness

@@ -1,0 +1,10 @@
+Interrupt with a random prompt: {{pum_prompt}}
+Add anger, or indignation
+Add doubt, or confusion
+Add sadness, or tragedy
+Add stress, or worry
+Add hope, or relief
+Bring someone helpful
+Bring someone unhelpful
+Make it more meaningful
+Make it more complicated

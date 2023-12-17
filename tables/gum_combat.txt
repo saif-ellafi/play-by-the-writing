@@ -1,4 +1,0 @@
-Conditions: {{gum_comb_cond}}
-Tactical: {{gum_comb_tact}}
-Behavior: {{gum_comb_beh}}
-Composition: {{gum_comb_compo}}

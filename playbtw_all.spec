@@ -21,7 +21,6 @@ shutil.copy('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 shutil.copy('match/playbtw_core.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_mythic.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_pum.yml', '{0}/../match/'.format(DISTPATH))
-shutil.copy('match/playbtw_gum.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_gum2.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
 
@@ -35,4 +34,4 @@ else:
 for f in glob.glob('tables/*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v1_35_base', 'zip', 'dist_all')
+shutil.make_archive('PlayBTW_v1_40_base', 'zip', 'dist_all')

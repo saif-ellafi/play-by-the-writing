@@ -5,8 +5,8 @@
 # USE AT YOUR OWN RISK
 
 matches:
-  # GUM V2 - Yes or No (unbiased)
-  - trigger: ":ggqq"
+  # GUM V2 - Scene Exploration
+  - trigger: ":ggexplo"
     replace: "{{output}}"
     vars:
       - name: output
@@ -16,80 +16,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_qq_unbiased
-  # GUM V2 - Yes or No (yes bias)
-  - trigger: ":+ggqq"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_qq_yesbias
-  # GUM V2 - Yes or No (no bias)
-  - trigger: ":-ggqq"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_qq_nobias
-  # GUM V2 - Proposal Check
-  - trigger: ":ggint"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_intervention
-  # GUM V2 - Exploration location
-  - trigger: ":ggexploc"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_explo_loc
-  # GUM V2 - Exploration skill
-  - trigger: ":ggexpskill"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_explo_skill
-  # GUM V2 - Exploration circumstance
-  - trigger: ":ggexpcirc"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_explo_circ
-  # GUM V2 - Battle location
+            - gum2_exploration
+  # GUM V2 - Scene Battle
   - trigger: ":ggbattloc"
     replace: "{{output}}"
     vars:
@@ -100,33 +28,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_batt_loc
-  # GUM V2 - Battle tactics
-  - trigger: ":ggbatttac"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_batt_tac
-  # GUM V2 - Battle Composition
-  - trigger: ":ggbattcomp"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_batt_comp
-  # GUM V2 - Plot clue
-  - trigger: ":ggplotclue"
+            - gum2_battle
+  # GUM V2 - Plot clue type
+  - trigger: ":ggclue"
     replace: "{{output}}"
     vars:
       - name: output
@@ -138,7 +42,7 @@ matches:
             - --table
             - gum2_plot_clue
   # GUM V2 - Plot finding
-  - trigger: ":ggplotfind"
+  - trigger: ":ggfind"
     replace: "{{output}}"
     vars:
       - name: output
@@ -149,8 +53,8 @@ matches:
             - table
             - --table
             - gum2_plot_find
-  # GUM V2 - Plot activities
-  - trigger: ":ggplotact"
+  # GUM V2 - Plot enemy activities
+  - trigger: ":ggenemies"
     replace: "{{output}}"
     vars:
       - name: output
@@ -162,7 +66,7 @@ matches:
             - --table
             - gum2_plot_act
   # GUM V2 - Plot occurrence
-  - trigger: ":ggplotocc"
+  - trigger: ":ggoccur"
     replace: "{{output}}"
     vars:
       - name: output
@@ -173,8 +77,8 @@ matches:
             - table
             - --table
             - gum2_plot_occ
-  # GUM V2 - NPC attitude
-  - trigger: ":ggnpcatt"
+  # GUM V2 - Nemesis impression
+  - trigger: ":ggnemimp"
     replace: "{{output}}"
     vars:
       - name: output
@@ -184,9 +88,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_npcg_att
-  # GUM V2 - NPC contribution
-  - trigger: ":ggnpccont"
+            - gum2_nemesis_imp
+  # GUM V2 - Nemesis deeds
+  - trigger: ":ggnemdeed"
     replace: "{{output}}"
     vars:
       - name: output
@@ -196,9 +100,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_npcg_cont
-  # GUM V2 - NPC opinion
-  - trigger: ":ggnpcop"
+            - gum2_nemesis_deed
+  # GUM V2 - Nemesis intention
+  - trigger: ":ggnemint"
     replace: "{{output}}"
     vars:
       - name: output
@@ -208,67 +112,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_npcg_opi
-  # GUM V2 - NPC wants
-  - trigger: ":ggnpcwant"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_npcg_wants
-  # GUM V2 - Enemy attitude
-  - trigger: ":ggenatt"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_enem_att
-  # GUM V2 - Enemy impression
-  - trigger: ":ggenimp"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_enem_imp
-  # GUM V2 - Enemy deeds
-  - trigger: ":ggendeed"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_enem_deed
-  # GUM V2 - Enemy intention
-  - trigger: ":ggenint"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_enem_int
+            - gum2_nemesis_int
   # GUM V2 - Location feature
   - trigger: ":gglocfeat"
     replace: "{{output}}"
@@ -329,8 +173,8 @@ matches:
             - table
             - --table
             - gum2_char_pos
-  # GUM V2 - Character by looks
-  - trigger: ":ggcharlooks"
+  # GUM V2 - Character by impression
+  - trigger: ":ggcharimp"
     replace: "{{output}}"
     vars:
       - name: output
@@ -461,30 +305,6 @@ matches:
             - table
             - --table
             - gum2_fac_res
-  # GUM V2 - Prompt scene
-  - trigger: ":ggpromptscene"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_prompt_scene
-  # GUM V2 - Prompt world
-  - trigger: ":ggpromptworld"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_prompt_world
   # GUM V2 - Good motives
   - trigger: ":ggmotgood"
     replace: "{{output}}"
@@ -629,6 +449,18 @@ matches:
             - table
             - --table
             - gum2_set_opp
+  # GUM V2 - Campaign motivation
+  - trigger: ":ggsetmot"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_set_mot
   # GUM V2 - Quest hook
   - trigger: ":ggsethook"
     replace: "{{output}}"
