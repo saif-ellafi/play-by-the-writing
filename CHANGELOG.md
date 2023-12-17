@@ -3,7 +3,7 @@
 * PUM updated to v7
 * SUM updated to v6
 * GUM updated to v2
-* Added OPSE to the oracles
+* Added MUNE to the oracles
 * ChatGPT updated to latest API
 * Dall-E updated to v3
 * Dall-E new settings (image size, quality, styles)

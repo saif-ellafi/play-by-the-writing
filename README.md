@@ -10,22 +10,25 @@ To put it in plain words, for example, when you write down the command “:qq”
 
 # Features
 
-- Play many solo GM emulators by writing: Mythic 2e, PUM, SUM, GUM, OPSE, MUNE
-- Roll dice anywhere in your system just with keyboard shortcuts (like `:rr2d6+1.` → 2d6+1: 11)
-- Seek random tables and roll on them super fast
-- Use ChatGPT and Dall-E to interact with AI from anywhere (needs OpenAI account)
+- Call your GM emulators right away from your note-taking application:
+Mythic 2e, PUM, SUM, GUM, OPSE, MUNE
+- Roll dice anywhere in your system just with a short command,
+like :rr2d6+1. → 2d6+1: 11)
+- Seek random tables and roll on them super fast, getting the results in your text
+- Use ChatGPT and Dall-E to interact with AI from anywhere (needs OpenAI account) with high levels of customization
+- An insane amount of random tables is included to roll right away
 - (Advanced) Use nested tables to roll many tables in one go
 - (Advanced) Configure your own random tables to access them anywhere
 
 # How to use?
 
-You will have to install [Espanso](https://espanso.org/) (free) before you install Play by the Writing.
+1. Install Espanso (free) before you install Play by the Writing
+2. Install Play by the Writing with either the installer, unziping, or compiling the source code yourself
+3. Launch Espanso and play!
 
-There are two ways of installing Play by the Writing: With an installer, or compiling the source code yourself.
+For using AI, after installing Play by the Way, place your OpenAPI API key in "<user_folder>\espanso\config\openai.txt"
 
-For using AI, after installing Play by the Way, place your OpenAPI API key in "YOUR_USER_FOLDER\espanso\config\openai.txt"
-
-Test if everything works by typing `:qq`, if you get an oracle yes/no answer, you're good to go! Have fun.
+Test if everything works by typing :qq, if you get an oracle yes/no answer, you're good to go! Have fun.
 
 [Check YouTube explanation video](https://youtu.be/UeV63Iyi5_s)
 
