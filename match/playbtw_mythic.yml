@@ -51,7 +51,7 @@ matches:
             - "{{fcparams.cf}}"
   # Mythic FAST fate check
   # Use with modifier and chaos for example :mfc-2c5
-  - regex: ":mfc(?P<odds>?[-+]\\d)c(?P<chaos>\\d)"
+  - regex: ":mfc(?P<odds>[-+]?\\d)c(?P<chaos>\\d)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -89,7 +89,7 @@ matches:
             - --table
             - mythic_focus
   # Mythic adventure Focus
-  - trigger: ":mfoc"
+  - trigger: ":madfoc"
     replace: "{{output}}"
     vars:
       - name: output
@@ -146,8 +146,8 @@ matches:
             - table
             - --table
             - mythic_description_1,mythic_description_2
-  # Mythic edit characters list
-  - triggers: [":charliste", ":charlisto"]
+  # Mythic characters lists
+  - trigger: ":mchars"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -155,14 +155,16 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - load_ulist
+            - load_utable
             - --table
             - "mythic_charlist"
+            - --contains
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
       - name: form1
         type: form
         params:
           layout: |
-            Characters list:
+            Mythic Characters List:
             [[file1]]
           fields:
             file1:
@@ -174,13 +176,12 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - save_ulist
+            - save_utable
             - --table
             - "mythic_charlist"
             - --contains
             - "{{form1.file1}}"
-  # Mythic roll characters list
-  - trigger: ":charlistr"
+  - trigger: ":mcharr"
     replace: "{{output}}"
     vars:
       - name: output
@@ -190,4 +191,96 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - mythic_charlist
+            - "mythic_charlist"
+  # Mythic threads lists
+  - trigger: ":mthreads"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "mythic_threadlist"
+            - --contains
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Mythic Threads List:
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "mythic_threadlist"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":mthreadr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "mythic_threadlist"
+  # Mythic adventure features lists
+  - trigger: ":mfeatures"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "mythic_featurelist"
+            - --contains
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Mythic Adventure Features List:
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "mythic_featurelist"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":mfeaturer"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "mythic_featurelist"

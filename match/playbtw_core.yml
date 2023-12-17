@@ -120,7 +120,7 @@ matches:
             - --table
             - "{{table}}"
   # Search available tables with keyword
-  - regex: ":list1(?P<contains>?\w)\\."
+  - regex: ":list1?(?P<contains>\\w+)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -129,6 +129,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - list
+            - --contains
+            - "{{contains}}"
       - name: form1
         type: form
         params:
@@ -147,10 +149,8 @@ matches:
             - table
             - --table
             - "{{form1.file1}}"
-            - --contains
-            - "{{contains}}"
   # Search available tables
-  - regex: ":list2(?P<contains>?\w)\\."
+  - regex: ":list2(?P<contains>\\w+)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -159,6 +159,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - list
+            - --contains
+            - "{{contains}}"
       - name: form1
         type: form
         params:
@@ -181,10 +183,8 @@ matches:
             - table
             - --table
             - "{{form1.file1}},{{form1.file2}}"
-            - --contains
-            - "{{contains}}"
   # Search available tables
-  - regex: ":list3(?P<contains>?\w)\\."
+  - regex: ":list3(?P<contains>\\w+)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -193,6 +193,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - list
+            - --contains
+            - "{{contains}}"
       - name: form1
         type: form
         params:
@@ -219,10 +221,8 @@ matches:
             - table
             - --table
             - "{{form1.file1}},{{form1.file2}},{{form1.file3}}"
-            - --contains
-            - "{{contains}}"
-  # Search available tables
-  - triggers: [":wlist", ":wtables"]
+  # Search available tables with keyword
+  - regex: ":wlist1?(?P<contains>\\w+)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -231,6 +231,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - wlist
+            - --contains
+            - "{{contains}}"
       - name: form1
         type: form
         params:
@@ -250,7 +252,7 @@ matches:
             - --table
             - "{{form1.file1}}"
   # Search available tables
-  - triggers: [":+wlist", ":+wtables"]
+  - regex: ":wlist2(?P<contains>\\w+)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -259,6 +261,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - wlist
+            - --contains
+            - "{{contains}}"
       - name: form1
         type: form
         params:
@@ -282,7 +286,7 @@ matches:
             - --table
             - "{{form1.file1}},{{form1.file2}}"
   # Search available tables
-  - triggers: [":++wlist", ":++wtables"]
+  - regex: ":wlist3(?P<contains>\\w+)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -291,6 +295,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - wlist
+            - --contains
+            - "{{contains}}"
       - name: form1
         type: form
         params:

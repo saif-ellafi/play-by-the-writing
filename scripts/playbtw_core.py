@@ -71,24 +71,25 @@ elif action == 'draw':
           .replace('Joker', '🃏')
           )
 elif action == 'list':
-    print(list_tables('.txt'), contains=args['contains'].strip())
+    print(list_tables('.txt', contains=args['contains'].strip()))
 elif action == 'wlist':
-    print(list_tables('.psv'), contains=args['contains'].strip())
+    print(list_tables('.psv', contains=args['contains'].strip()))
 elif action == 'utable':
     tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
-        result.append(roll_user_table(t.strip(), args['mode']))
+        result.append(roll_user_table(t.strip()))
+    print(' '.join(result))
 elif action == 'uwtable':
     tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
-        result.append(roll_user_wtable(t.strip(), args['mode']))
+        result.append(roll_user_wtable(t.strip()))
     print(' '.join(result))
 elif action == 'load_utable':
-    print(load_user_table(args['table']))
+    print(load_user_table(args['table'], default=args['contains']))
 elif action == 'load_uwtable':
-    print(load_user_wtable(args['table']))
+    print(load_user_wtable(args['table'], default=args['contains']))
 elif action == 'save_utable':
     print(save_user_table(args['table'], args['contains']))
 elif action == 'save_uwtable':

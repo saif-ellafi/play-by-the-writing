@@ -29,15 +29,21 @@ def list_tables(tp, contains=''):
 
 # Reads CSV table with exactly one column.
 def read_table(table, override_dir=None):
-    with open(os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt'), encoding='utf-8') as file:
+    path = os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding='utf-8') as file:
         lines = file.readlines()
     return list(map(lambda x: x.strip(), lines))
 
 
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
-def read_wtable(table):
+def read_wtable(table, override_dir=None):
     rows = []
-    with open(os.path.join(os.environ['CONFIG'], 'tables', table+'.psv'), encoding='utf-8') as csvfile:
+    path = os.path.join(override_dir, table+'.psv') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.psv')
+    if not os.path.exists(path):
+        return rows
+    with open(path, encoding='utf-8') as csvfile:
         spamreader = csv.reader(csvfile, delimiter='|', quotechar='"')
         for row in spamreader:
             rows.append(row)
@@ -117,41 +123,45 @@ def draw_card(table):
     return drawn
 
 # Open user defined table
-def load_user_table(name):
+def load_user_table(name, default=''):
     path = os.path.join(tempfile.gettempdir(), name+'.txt')
     if os.path.exists(path):
         with open(path, 'r') as mem:
-            return mem.read()
+            content = mem.read()
+            return content if content else default
     else:
-        return ''
+        return default
     
 # Open user defined wtable
-def load_user_wtable(name):
+def load_user_wtable(name, default=''):
     path = os.path.join(tempfile.gettempdir(), name+'.psv')
     if os.path.exists(path):
         with open(path, 'r') as mem:
-            return mem.read()
+            content = mem.read()
+            return content if content else default
     else:
-        return ''
+        return default
     
 # Save user defined table
 def save_user_table(name, content):
     path = os.path.join(tempfile.gettempdir(), name+'.txt')
     with open(path, 'w') as f:
         f.write(content)
+    return 'List updated:\n'+content
 
 # Save user defined wtable
 def save_user_wtable(name, content):
     path = os.path.join(tempfile.gettempdir(), name+'.psv')
     with open(path, 'w') as f:
         f.write(content)
+    return 'List updated:\n'+content
     
 # Roll user defined table
 def roll_user_table(name):
-    dir = os.path.join(tempfile.gettempdir(), name+'.txt')
-    choice_table(name, override_dir=dir)
+    override_dir = os.path.join(tempfile.gettempdir())
+    return choice_table(name, override_dir=override_dir)
 
 # Roll user defined wtable
 def roll_user_wtable(name):
-    dir = os.path.join(tempfile.gettempdir(), name+'.psv')
-    choice_wtable(name, override_dir=dir)
+    override_dir = os.path.join(tempfile.gettempdir())
+    return choice_wtable(name, override_dir=override_dir)
