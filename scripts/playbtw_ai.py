@@ -7,6 +7,7 @@ import argparse
 
 import openai
 import pickle
+import sys
 
 from playbtw_common import *
 
@@ -36,7 +37,7 @@ with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='
     api_key = file.read().strip()
     if api_key == '<Replace entire line with OpenAI API Key>':
         print('OpenAI API KEY NOT Replaced. Paste your OpenAI API KEY in openai.txt file (and make a backup of the file)')
-        exit(0)
+        sys.exit(0)
     openai.api_key = api_key
 
 
