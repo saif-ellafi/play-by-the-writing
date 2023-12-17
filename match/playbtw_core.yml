@@ -119,8 +119,8 @@ matches:
             - wtable
             - --table
             - "{{table}}"
-  # Search available tables with keyword
-  - regex: ":list1?(?P<contains>\\w+)\\."
+  # Search available tables with keyword for example :list2.mythic. - include search criteria between the dots
+  - regex: ":list[1]?\\.(?P<contains>\\w*)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -150,7 +150,7 @@ matches:
             - --table
             - "{{form1.file1}}"
   # Search available tables
-  - regex: ":list2(?P<contains>\\w+)\\."
+  - regex: ":list2\\.(?P<contains>\\w*)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -184,7 +184,7 @@ matches:
             - --table
             - "{{form1.file1}},{{form1.file2}}"
   # Search available tables
-  - regex: ":list3(?P<contains>\\w+)\\."
+  - regex: ":list3\\.(?P<contains>\\w*)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -222,7 +222,7 @@ matches:
             - --table
             - "{{form1.file1}},{{form1.file2}},{{form1.file3}}"
   # Search available tables with keyword
-  - regex: ":wlist1?(?P<contains>\\w+)\\."
+  - regex: ":wlist[1]?\\.(?P<contains>\\w*)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -252,7 +252,7 @@ matches:
             - --table
             - "{{form1.file1}}"
   # Search available tables
-  - regex: ":wlist2(?P<contains>\\w+)\\."
+  - regex: ":wlist2\\.(?P<contains>\\w*)\\."
     replace: "{{output}}"
     vars:
       - name: files
@@ -286,7 +286,7 @@ matches:
             - --table
             - "{{form1.file1}},{{form1.file2}}"
   # Search available tables
-  - regex: ":wlist3(?P<contains>\\w+)\\."
+  - regex: ":wlist3\\.(?P<contains>\\w*)\\."
     replace: "{{output}}"
     vars:
       - name: files

@@ -1,0 +1,1 @@
+{{sum_oracle_action}} - {{sum_oracle_adjective}} - {{sum_oracle_subject}}

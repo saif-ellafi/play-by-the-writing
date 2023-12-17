@@ -1,1 +1,0 @@
-Location archetype: {{gum2_set_loc}}. Background problems: {{gum2_set_back}} - Plot hook: {{gum2_set_hook}}. The mission: {{gum2_set_miss}}. Motivation: {{gum2_set_mot}} - Initial lead: {{gum2_set_lead}}. The opposition: {{gum2_set_opp}}. Caveat: {{gum2_set_caveat}}.

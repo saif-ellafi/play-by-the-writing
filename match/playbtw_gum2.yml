@@ -18,7 +18,7 @@ matches:
             - --table
             - gum2_exploration
   # GUM V2 - Scene Battle
-  - trigger: ":ggbattloc"
+  - trigger: ":ggbatt"
     replace: "{{output}}"
     vars:
       - name: output
@@ -40,7 +40,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_plot_clue
+            - gum2_plot_clue_type
   # GUM V2 - Plot finding
   - trigger: ":ggfind"
     replace: "{{output}}"
@@ -52,9 +52,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_plot_find
+            - gum2_plot_finding
   # GUM V2 - Plot enemy activities
-  - trigger: ":ggenemies"
+  - trigger: ":ggenemyact"
     replace: "{{output}}"
     vars:
       - name: output
@@ -64,7 +64,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_plot_act
+            - gum2_plot_activities
   # GUM V2 - Plot occurrence
   - trigger: ":ggoccur"
     replace: "{{output}}"
@@ -76,9 +76,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_plot_occ
+            - gum2_plot_occurrence
   # GUM V2 - Nemesis impression
-  - trigger: ":ggnemimp"
+  - trigger: ":ggnemesisimp"
     replace: "{{output}}"
     vars:
       - name: output
@@ -88,9 +88,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_nemesis_imp
+            - gum2_nemesis_impression
   # GUM V2 - Nemesis deeds
-  - trigger: ":ggnemdeed"
+  - trigger: ":ggnemesisdeed"
     replace: "{{output}}"
     vars:
       - name: output
@@ -100,9 +100,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_nemesis_deed
+            - gum2_nemesis_deeds
   # GUM V2 - Nemesis intention
-  - trigger: ":ggnemint"
+  - trigger: ":ggnemesisint"
     replace: "{{output}}"
     vars:
       - name: output
@@ -112,7 +112,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_nemesis_int
+            - gum2_nemesis_intention
   # GUM V2 - Location feature
   - trigger: ":gglocfeat"
     replace: "{{output}}"
@@ -124,7 +124,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_loc_feat
+            - gum2_location_feature
   # GUM V2 - Location worth
   - trigger: ":gglocworth"
     replace: "{{output}}"
@@ -136,7 +136,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_loc_worth
+            - gum2_location_worth
   # GUM V2 - Location purpose
   - trigger: ":gglocpurp"
     replace: "{{output}}"
@@ -148,7 +148,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_loc_purp
+            - gum2_location_purpose
   # GUM V2 - Location content
   - trigger: ":ggloccont"
     replace: "{{output}}"
@@ -160,7 +160,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_loc_cont
+            - gum2_location_content
   # GUM V2 - Character by possessions
   - trigger: ":ggcharposs"
     replace: "{{output}}"
@@ -172,7 +172,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_char_pos
+            - gum2_char_possessions
   # GUM V2 - Character by impression
   - trigger: ":ggcharimp"
     replace: "{{output}}"
@@ -184,7 +184,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_char_looks
+            - gum2_char_impression
   # GUM V2 - Character by activity
   - trigger: ":ggcharact"
     replace: "{{output}}"
@@ -196,7 +196,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_char_act
+            - gum2_char_activity
   # GUM V2 - Character by intention
   - trigger: ":ggcharint"
     replace: "{{output}}"
@@ -208,7 +208,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_char_int
+            - gum2_char_intention
   # GUM V2 - Creature by type
   - trigger: ":ggcretyp"
     replace: "{{output}}"
@@ -220,7 +220,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_cre_type
+            - gum2_creature_type
   # GUM V2 - Creature by ability
   - trigger: ":ggcreab"
     replace: "{{output}}"
@@ -232,7 +232,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_cre_abi
+            - gum2_creature_ability
   # GUM V2 - Creature by behavior
   - trigger: ":ggcrebeh"
     replace: "{{output}}"
@@ -244,7 +244,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_cre_beh
+            - gum2_creature_behavior
   # GUM V2 - Object by function
   - trigger: ":ggobjfunc"
     replace: "{{output}}"
@@ -256,7 +256,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_obj_func
+            - gum2_object_function
   # GUM V2 - Object by form
   - trigger: ":ggobjform"
     replace: "{{output}}"
@@ -268,7 +268,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_obj_form
+            - gum2_object_form
   # GUM V2 - Object by state
   - trigger: ":ggobjstate"
     replace: "{{output}}"
@@ -280,7 +280,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_obj_state
+            - gum2_object_state
   # GUM V2 - Faction focus
   - trigger: ":ggfacfoc"
     replace: "{{output}}"
@@ -292,7 +292,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_fac_foc
+            - gum2_faction_focus
   # GUM V2 - Faction resources
   - trigger: ":ggfacres"
     replace: "{{output}}"
@@ -304,7 +304,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_fac_res
+            - gum2_faction_resource
   # GUM V2 - Good motives
   - trigger: ":ggmotgood"
     replace: "{{output}}"
@@ -316,7 +316,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_good_mot
+            - gum2_good_motivation
   # GUM V2 - Evil motives
   - trigger: ":ggmotevil"
     replace: "{{output}}"
@@ -328,7 +328,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_evil_mot
+            - gum2_evil_motivation
   # GUM V2 - Good deeds
   - triggers: [":ggdeedsgood", ":gggoodact"]
     replace: "{{output}}"
@@ -364,7 +364,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_oracle
+            - gum2_grand_oracle
   # GUM V2 - Grand Oracle (action)
   - trigger: ":ggact"
     replace: "{{output}}"
@@ -376,7 +376,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_oracle
+            - gum2_grand_action
   # GUM V2 - Grand Oracle (adjective)
   - trigger: ":ggadj"
     replace: "{{output}}"
@@ -388,7 +388,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_oracle
+            - gum2_grand_adjective
   # GUM V2 - Grand Oracle (subject)
   - trigger: ":ggsub"
     replace: "{{output}}"
@@ -400,7 +400,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_oracle
+            - gum2_grand_subject
   # GUM V2 - World location archetype
   - trigger: ":ggsetloc"
     replace: "{{output}}"
@@ -412,7 +412,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_loc
+            - gum2_setup_location
   # GUM V2 - World background
   - trigger: ":ggsetback"
     replace: "{{output}}"
@@ -424,7 +424,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_back
+            - gum2_setup_background
   # GUM V2 - Campaign goals mission
   - trigger: ":ggsetmission"
     replace: "{{output}}"
@@ -436,7 +436,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_miss
+            - gum2_setup_mission
   # GUM V2 - Campaign goals opposition
   - trigger: ":ggsetopp"
     replace: "{{output}}"
@@ -448,7 +448,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_opp
+            - gum2_setup_opposition
   # GUM V2 - Campaign motivation
   - trigger: ":ggsetmot"
     replace: "{{output}}"
@@ -460,7 +460,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_mot
+            - gum2_setup_motivation
   # GUM V2 - Quest hook
   - trigger: ":ggsethook"
     replace: "{{output}}"
@@ -472,7 +472,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_hook
+            - gum2_setup_hook
   # GUM V2 - Quest lead
   - trigger: ":ggsetlead"
     replace: "{{output}}"
@@ -484,7 +484,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_lead
+            - gum2_setup_lead
   # GUM V2 - Quest caveat
   - trigger: ":ggsetcaveat"
     replace: "{{output}}"
@@ -496,7 +496,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_caveat
+            - gum2_setup_caveat
   # GUM V2 Setup full guide
   - trigger: ":ggsetfull"
     replace: "{{output}}"
@@ -508,4 +508,4 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - gum2_set_full
+            - gum2_setup_full

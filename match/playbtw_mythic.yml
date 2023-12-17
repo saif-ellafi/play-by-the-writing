@@ -65,7 +65,7 @@ matches:
             - --chaos
             - "{{chaos}}"
   # Mythic Scene Check for example :msc7
-  - regex: ":msc(?P<chaos>\\d)"
+  - regex: ":malt(?P<chaos>\\d)"
     replace: "{{output}}"
     vars:
       - name: output

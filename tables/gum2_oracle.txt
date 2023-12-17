@@ -1,1 +1,0 @@
-{{gum2_action}} - {{gum2_adjective}} - {{gum2_subject}}

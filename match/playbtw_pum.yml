@@ -222,7 +222,7 @@ matches:
             - --table
             - pum_prompt
   # PUM - Scene Modified Proposal
-  - triggers: [":check", ":expectation", ":proposal"]
+  - triggers: [":check", ":proposal"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -281,6 +281,190 @@ matches:
             - table
             - --table
             - pum_situation
+  # PUM World Aspects
+  - triggers: [":worlds", ":aspects"]
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_world"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (World Aspects):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_world"
+            - --contains
+            - "{{form1.file1}}"
+  - triggers: [":worldr", ":aspectr"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_world"
+  # PUM Relevant Actors
+  - trigger: ":actors"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_actor"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (Relevant Actors):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_actor"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":actorr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_actor"
+  # PUM Story Troubles
+  - trigger: ":troubles"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_trouble"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (Story Troubles):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_trouble"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":troubler"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_trouble"
+  # PUM Active Leads
+  - trigger: ":leads"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_lead"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (Active Leads):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_lead"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":leadr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_lead"
   # SUM (GM action, intervention)
   - trigger: ":gma"
     replace: "{{output}}"
@@ -322,7 +506,7 @@ matches:
             - --mode
             - dis
   # SUM (GM feedback, reaction)
-  - trigger: ":gmf"
+  - trigger: ":gmre"
     replace: "{{output}}"
     vars:
       - name: output
@@ -334,7 +518,7 @@ matches:
             - --table
             - sum_gm_feedback
   # SUM (GM feedback, reaction)
-  - trigger: ":+gmf"
+  - trigger: ":+gmre"
     replace: "{{output}}"
     vars:
       - name: output
@@ -348,7 +532,7 @@ matches:
             - --mode
             - adv
   # SUM (GM feedback, reaction)
-  - trigger: ":-gmf"
+  - trigger: ":-gmre"
     replace: "{{output}}"
     vars:
       - name: output
@@ -362,7 +546,7 @@ matches:
             - --mode
             - dis
   # SUM (GM World, factions)
-  - trigger: ":gmw"
+  - trigger: ":gmfac"
     replace: "{{output}}"
     vars:
       - name: output
@@ -374,7 +558,7 @@ matches:
             - --table
             - sum_gm_world
   # SUM (GM World, factions)
-  - trigger: ":+gmw"
+  - trigger: ":+gmfac"
     replace: "{{output}}"
     vars:
       - name: output
@@ -388,7 +572,7 @@ matches:
             - --mode
             - adv
   # SUM (GM World, factions)
-  - trigger: ":-gmw"
+  - trigger: ":-gmfac"
     replace: "{{output}}"
     vars:
       - name: output
@@ -522,7 +706,7 @@ matches:
             - --mode
             - dis
   # SUM (NPC behavior, attitude)
-  - trigger: ":npcb"
+  - trigger: ":npcatt"
     replace: "{{output}}"
     vars:
       - name: output
@@ -532,9 +716,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_behavior
+            - sum_npc_attitude
   # SUM (NPC behavior, attitude)
-  - trigger: ":+npcb"
+  - trigger: ":+npcatt"
     replace: "{{output}}"
     vars:
       - name: output
@@ -544,11 +728,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_behavior
+            - sum_npc_attitude
             - --mode
             - adv
   # SUM (NPC behavior, attitude)
-  - trigger: ":-npcb"
+  - trigger: ":-npcatt"
     replace: "{{output}}"
     vars:
       - name: output
@@ -558,7 +742,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_npc_behavior
+            - sum_npc_attitude
             - --mode
             - dis
   # SUM (NPC Contribution)
@@ -641,6 +825,126 @@ matches:
             - sum_npc_opinion
             - --mode
             - dis
+  # SUM (NPC impression)
+  - trigger: ":npcimp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_impression
+  # SUM (NPC impression)
+  - trigger: ":+npcimp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_impression
+            - --mode
+            - adv
+  # SUM (NPC impression)
+  - trigger: ":-npcimp"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_impression
+            - --mode
+            - dis
+  # SUM (NPC talks)
+  - trigger: ":npctalk"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_talks
+  # SUM (NPC talks)
+  - trigger: ":+npctalk"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_talks
+            - --mode
+            - adv
+  # SUM (NPC talks)
+  - trigger: ":-npctalk"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_talks
+            - --mode
+            - dis
+  # SUM (NPC truth)
+  - trigger: ":npctruth"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_truth
+  # SUM (NPC truth)
+  - trigger: ":+npctruth"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_truth
+            - --mode
+            - adv
+  # SUM (NPC truth)
+  - trigger: ":-npctruth"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - sum_npc_truth
+            - --mode
+            - dis
   # SUM (Stereotypes)
   - trigger: ":sumst"
     replace: "{{output}}"
@@ -664,19 +968,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_action
-  # SUM (Subject)
-  - trigger: ":sumsu"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - sum_subject
+            - sum_oracle_action
   # SUM (Adjective)
   - trigger: ":sumad"
     replace: "{{output}}"
@@ -688,43 +980,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - sum_adjective
-  # PUM World Aspects
-  - triggers: [":worlds", ":aspects"]
-    replace: "{{output}}"
-    vars:
-      - name: entries
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - load_utable
-            - --table
-            - "pum_nodes_world"
-            - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
-      - name: form1
-        type: form
-        params:
-          layout: |
-            PUM Plot Nodes (World Aspects):
-            [[file1]]
-          fields:
-            file1:
-              type: text
-              multiline: true
-              default: "{{entries}}"
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - save_utable
-            - --table
-            - "pum_nodes_world"
-            - --contains
-            - "{{form1.file1}}"
-  - triggers: [":worldr", ":aspectr"]
+            - sum_oracle_adjective
+  # SUM (Subject)
+  - trigger: ":sumsu"
     replace: "{{output}}"
     vars:
       - name: output
@@ -732,45 +990,11 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
-            - "pum_nodes_world"
-  # PUM Relevant Actors
-  - trigger: ":actors"
-    replace: "{{output}}"
-    vars:
-      - name: entries
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - load_utable
-            - --table
-            - "pum_nodes_actor"
-            - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
-      - name: form1
-        type: form
-        params:
-          layout: |
-            PUM Plot Nodes (Relevant Actors):
-            [[file1]]
-          fields:
-            file1:
-              type: text
-              multiline: true
-              default: "{{entries}}"
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - save_utable
-            - --table
-            - "pum_nodes_actor"
-            - --contains
-            - "{{form1.file1}}"
-  - trigger: ":actorr"
+            - sum_oracle_subject
+  # SUM (Oracle)
+  - trigger: ":sumoracle"
     replace: "{{output}}"
     vars:
       - name: output
@@ -778,98 +1002,6 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
-            - "pum_nodes_actor"
-  # PUM Story Troubles
-  - trigger: ":actors"
-    replace: "{{output}}"
-    vars:
-      - name: entries
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - load_utable
-            - --table
-            - "pum_nodes_trouble"
-            - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
-      - name: form1
-        type: form
-        params:
-          layout: |
-            PUM Plot Nodes (Story Troubles):
-            [[file1]]
-          fields:
-            file1:
-              type: text
-              multiline: true
-              default: "{{entries}}"
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - save_utable
-            - --table
-            - "pum_nodes_trouble"
-            - --contains
-            - "{{form1.file1}}"
-  - trigger: ":actorr"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - utable
-            - --table
-            - "pum_nodes_trouble"
-  # PUM Active Leads
-  - trigger: ":leads"
-    replace: "{{output}}"
-    vars:
-      - name: entries
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - load_utable
-            - --table
-            - "pum_nodes_lead"
-            - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
-      - name: form1
-        type: form
-        params:
-          layout: |
-            PUM Plot Nodes (Active Leads):
-            [[file1]]
-          fields:
-            file1:
-              type: text
-              multiline: true
-              default: "{{entries}}"
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - save_utable
-            - --table
-            - "pum_nodes_lead"
-            - --contains
-            - "{{form1.file1}}"
-  - trigger: ":leadr"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - utable
-            - --table
-            - "pum_nodes_lead"
+            - sum_oracle_all

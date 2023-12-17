@@ -33,7 +33,11 @@ ai_memory_file = os.path.join(tempfile.gettempdir(), 'playbtw_ai_memory.txt')
 ai_history_file = os.path.join(tempfile.gettempdir(), 'playbtw_ai_chat.txt')
 
 with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='utf-8') as file:
-    openai.api_key = file.read().strip()
+    api_key = file.read().strip()
+    if api_key == '<Replace entire line with OpenAI API Key>':
+        print('OpenAI API KEY NOT Replaced. Paste your OpenAI API KEY in openai.txt file (and make a backup of the file)')
+        exit(0)
+    openai.api_key = api_key
 
 
 def memory_erase():
@@ -121,6 +125,30 @@ elif action == 'ai_chat':
         })
         memory_save(prompt, answer, 'a')
         chat_save(messages)
+        print(prompt + '\n' + answer)
+elif action == 'ai_chat_isolate':
+    prompt = args['prompt'].strip()
+    if not prompt:
+        print('PBTW-ERROR: No prompt given')
+    else:
+        messages = [{
+            "role": "system",
+            "content": prompt
+        }]
+        model = args['model']
+        temperature = args['temperature']
+        tokens = args['tokens']
+        response = openai.ChatCompletion.create(
+            messages=messages,
+            model=model,
+            temperature=temperature,
+            max_tokens=tokens
+        )
+        answer = response['choices'][0].message.content.strip()
+        messages.append({
+            "role": "assistant",
+            "content": answer
+        })
         print(prompt + '\n' + answer)
 elif action == 'ai_image':
     prompt = args['prompt'].strip()
