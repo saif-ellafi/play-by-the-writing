@@ -6,20 +6,20 @@
 
 matches:
   # OpenAI ChatGPT
-  - triggers: [":aisys", ":aiinit", ":aistart"]
+  - triggers: [":ainew", ":aistart", ":aiquestion", ":aicomplete", ":aiask"]
     replace: "{{output}}"
     vars:
       - name: form_ai
         type: form
         params:
           layout: |
-            Instruction (new AI chat: describe your goal):
+            ChatGPT: Starts a NEW conversation (erases the past):
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
             
             * NOTE: answer size and model affect pricing.
-            * NOTE: use :chat to chat with this chat afterwards.
+            * NOTE: use :aichat to CONTIUNE this conversation later
           fields:
             prompt:
               type: text
@@ -72,20 +72,20 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
-  - triggers: [":aichat", ":chat"]
+  - triggers: [":aichat", ":aicontinue"]
     replace: "{{output}}"
     vars:
       - name: form_ai
         type: form
         params:
           layout: |
-            Prompt (Resume last created chat):
+            ChatGPT: CONTINUES previous conversation!
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
             
             * NOTE: answer size and model affect pricing.
-            * NOTE: use :aistart to begin a new AI chat, erases history.
+            * NOTE: use :aiask to begin a new AI chat, erases history.
           fields:
             prompt:
               type: text
@@ -146,8 +146,8 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
-            - ai_complete_forget
-  - triggers: [":aimemory", ":aiknow"]
+            - ai_forget
+  - triggers: [":aimemory", ":aiknow", ":aihistory", ":ailog"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -155,7 +155,7 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
-            - ai_complete_knowledge
+            - ai_knowledge
   - triggers: [":aiimg", ":aiimage", ":dall-e"]
     replace: "{{output}}"
     vars:
@@ -169,6 +169,10 @@ matches:
             [[img_size]]
             Format:
             [[img_format]]
+            Quality:
+            [[img_quality]]
+            Style:
+            [[img_style]]
           fields:
             prompt:
               type: text
@@ -215,3 +219,7 @@ matches:
             - "{{form_ai.img_size}}"
             - --img_format
             - "{{form_ai.img_format}}"
+            - --img_quality
+            - "{{form_ai.img_quality}}"
+            - --img_style
+            - "{{form_ai.img_style}}"

@@ -31,7 +31,7 @@ def list_tables(tp, contains=''):
 def read_table(table, override_dir=None):
     path = os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
     if not os.path.exists(path):
-        return []
+        return ['Table not found']
     with open(path, encoding='utf-8') as file:
         lines = file.readlines()
     return list(map(lambda x: x.strip(), lines))
@@ -42,7 +42,7 @@ def read_wtable(table, override_dir=None):
     rows = []
     path = os.path.join(override_dir, table+'.psv') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.psv')
     if not os.path.exists(path):
-        return rows
+        return ['Weighted table not found']
     with open(path, encoding='utf-8') as csvfile:
         spamreader = csv.reader(csvfile, delimiter='|', quotechar='"')
         for row in spamreader:

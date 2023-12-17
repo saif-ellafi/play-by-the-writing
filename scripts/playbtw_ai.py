@@ -20,10 +20,10 @@ parser.add_argument('--tokens', type=int, help='Max tokens in the response')
 parser.add_argument('--remember', type=str, help='Whether to keep the answer in AI memory')
 parser.add_argument('--forget', type=str, help='Whether to forget all AI memories and start clean')
 parser.add_argument('--memories', type=str, help='Whether to use memories stored so far')
-parser.add_argument('--img_format', type=str, help='Dall-E response format. url, markdown or b64_json')
-parser.add_argument('--img_size', type=str, help='Image size for dall-e request')
-parser.add_argument('--img_quality', type=str, help='Image quality for dall-e response. standard or hd')
-parser.add_argument('--img_style', type=str, help='Image style for dall-e response. vivid or natural')
+parser.add_argument('--img_format', type=str, default='markdown', help='Dall-E response format. url, markdown or b64_json')
+parser.add_argument('--img_size', type=str, default='1024x1024', help='Image size for dall-e request')
+parser.add_argument('--img_quality', type=str, default='standard', help='Image quality for dall-e response. standard or hd')
+parser.add_argument('--img_style', type=str, default='vivid', help='Image style for dall-e response. vivid or natural')
 
 
 args = vars(parser.parse_args())
@@ -41,12 +41,12 @@ def memory_erase():
         os.remove(ai_memory_file)
 
 
-def memory_append(ai_prompt, ai_answer):
-    with open(ai_memory_file, 'a') as mem:
+def memory_save(ai_prompt, ai_answer, mode):
+    with open(ai_memory_file, mode) as mem:
         mem.write(ai_prompt)
         mem.write('\n')
         mem.write(ai_answer)
-        mem.write('\n')
+        mem.write('\n\n')
 
 
 def memory_read():
@@ -67,33 +67,7 @@ def chat_load():
         return pickle.load(handle)['messages']
 
 
-if action == 'ai_complete':
-    if args['forget'] == 'true':
-        memory_erase()
-    prompt = args['prompt'].strip()
-    if not prompt:
-        print('PBTW-ERROR: No prompt given')
-    else:
-        model = args['model']
-        temperature = args['temperature']
-        tokens = args['tokens']
-        memories = memory_read() if args['memories'] == 'true' else ''
-        response = openai.Completion.create(
-            prompt=memories + prompt,
-            model=model,
-            temperature=temperature,
-            max_tokens=tokens
-        )
-        answer = response['choices'][0]['text'].strip()
-        if args['remember'] == 'true':
-            memory_append(prompt, answer)
-        print(prompt + '\n' + answer)
-elif action == 'ai_complete_knowledge':
-    print(memory_read())
-elif action == 'ai_complete_forget':
-    memory_erase()
-    print("PlayBTW AI Memory erased.")
-elif action == 'ai_chat_init':
+if action == 'ai_chat_init':
     prompt = args['prompt'].strip()
     if not prompt:
         print('PBTW-ERROR: No prompt given')
@@ -116,6 +90,7 @@ elif action == 'ai_chat_init':
             "role": "assistant",
             "content": answer
         })
+        memory_save(prompt, answer, 'w')
         chat_save(messages)
         print(prompt + '\n' + answer)
 elif action == 'ai_chat':
@@ -144,6 +119,7 @@ elif action == 'ai_chat':
             "role": "assistant",
             "content": answer
         })
+        memory_save(prompt, answer, 'a')
         chat_save(messages)
         print(prompt + '\n' + answer)
 elif action == 'ai_image':
@@ -166,5 +142,10 @@ elif action == 'ai_image':
         print('%s\n![%s](%s)' % (prompt, prompt, answer))
     else:
         print(answer)
+elif action == 'ai_knowledge':
+    print(memory_read())
+elif action == 'ai_forget':
+    memory_erase()
+    print("PlayBTW AI Memory erased.")
 else:
     raise Exception("PBTW-ERROR: Wrong Function argument!")

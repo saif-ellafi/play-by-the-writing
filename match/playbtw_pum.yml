@@ -689,3 +689,187 @@ matches:
             - table
             - --table
             - sum_adjective
+  # PUM World Aspects
+  - triggers: [":worlds", ":aspects"]
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_world"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (World Aspects):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_world"
+            - --contains
+            - "{{form1.file1}}"
+  - triggers: [":worldr", ":aspectr"]
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_world"
+  # PUM Relevant Actors
+  - trigger: ":actors"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_actor"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (Relevant Actors):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_actor"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":actorr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_actor"
+  # PUM Story Troubles
+  - trigger: ":actors"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_trouble"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (Story Troubles):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_trouble"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":actorr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_trouble"
+  # PUM Active Leads
+  - trigger: ":leads"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "pum_nodes_lead"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            PUM Plot Nodes (Active Leads):
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "pum_nodes_lead"
+            - --contains
+            - "{{form1.file1}}"
+  - trigger: ":leadr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_nodes_lead"
