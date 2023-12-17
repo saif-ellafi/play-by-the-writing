@@ -1,4 +1,18 @@
 ### 2.00
+* Mythic GME updated to 2e
+* PUM updated to v7
+* SUM updated to v6
+* GUM updated to v2
+* Added OPSE to the oracles
+* ChatGPT updated to latest API
+* Dall-E updated to v3
+* Dall-E new settings (image size, quality, styles)
+* Dall-E can now return b64 into the result
+* ChatGPT deprecated completion
+* ChatGPT now allows isolated questions
+* New list browser allows filtered search (:list.mythic.)
+* User defined lists supported (Character lists, thread lists, plot nodes, etc.)
+* Cleanup code and deprecations of old oracle versions
 
 ### 1.33
 * Updated to GUM V2 (Rev5)
