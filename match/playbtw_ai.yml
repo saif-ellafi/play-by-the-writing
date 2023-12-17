@@ -13,7 +13,7 @@ matches:
         type: form
         params:
           layout: |
-            ChatGPT: Starts a NEW conversation (erases the past):
+            ChatGPT: Starts a NEW conversation (clear):
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
@@ -79,7 +79,7 @@ matches:
         type: form
         params:
           layout: |
-            ChatGPT: CONTINUES previous conversation!
+            ChatGPT: Continues the previous conversation.
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
@@ -145,7 +145,7 @@ matches:
         type: form
         params:
           layout: |
-            ChatGPT: SINGLE separate question! (out of context, not recorded)
+            ChatGPT: Single isolated question! (ignores context, and not recorded)
             [[prompt]]
             Model                                      Coherence         Answer size:
             [[model]] [[temperature]] [[tokens]]
