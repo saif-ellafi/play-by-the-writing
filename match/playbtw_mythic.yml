@@ -6,7 +6,8 @@
 
 matches:
   # Mythic Fate check. Based on Variations 2, e.g. :fatecheck - https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator
-  - trigger: ":mmfc"
+  - triggers: [":myth", ":mmfc"]
+    label: "Fate check"
     replace: "{{output}}"
     vars:
       - name: fcparams
@@ -77,7 +78,8 @@ matches:
             - --chaos
             - "{{chaos}}"
   # Mythic default Focus
-  - trigger: ":mfoc"
+  - triggers: [":myth", ":mfo"]
+    label: "Focus (default)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -89,7 +91,8 @@ matches:
             - --table
             - mythic_focus
   # Mythic adventure Focus
-  - trigger: ":madfoc"
+  - triggers: [":myth", ":madfoc"]
+    label: "Focus (adventure)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -113,7 +116,8 @@ matches:
             - --table
             - "{{table}}"
   # Mythic Random Event
-  - trigger: ":mre"
+  - triggers: [":myth", ":mre", ":mev"]
+    label: "Random Event"
     replace: "{{output}}"
     vars:
       - name: output
@@ -123,7 +127,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_mythic"
             - random_event
   # Mythic Action descriptor. Without Focus.
-  - trigger: ":mac"
+  - triggers: [":myth", ":mac"]
+    label: "Meaning Tables: Action"
     replace: "{{output}}"
     vars:
       - name: output
@@ -135,7 +140,8 @@ matches:
             - --table
             - mythic_action_1,mythic_action_2
   # Mythic Description descriptor.
-  - trigger: ":mde"
+  - triggers: [":myth", ":mde"]
+    label: "Meaning Tables: Action"
     replace: "{{output}}"
     vars:
       - name: output
@@ -145,9 +151,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - mythic_description_1,mythic_description_2
+            - mythic_descriptor_1,mythic_descriptor_2
   # Mythic characters lists
-  - trigger: ":mchars"
+  - triggers: [":myth", ":mchars"]
+    label: "Characters list (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -181,7 +188,8 @@ matches:
             - "mythic_charlist"
             - --contains
             - "{{form1.file1}}"
-  - trigger: ":mcharr"
+  - triggers: [":myth", ":mcharr"]
+    label: "Characters list (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -193,7 +201,8 @@ matches:
             - --table
             - "mythic_charlist"
   # Mythic threads lists
-  - trigger: ":mthreads"
+  - triggers: [":myth", ":mthreads"]
+    label: "Threads list (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -227,7 +236,8 @@ matches:
             - "mythic_threadlist"
             - --contains
             - "{{form1.file1}}"
-  - trigger: ":mthreadr"
+  - triggers: [":myth", ":mthreadr"]
+    label: "Threads list (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -239,7 +249,8 @@ matches:
             - --table
             - "mythic_threadlist"
   # Mythic adventure features lists
-  - trigger: ":mfeatures"
+  - triggers: [":myth", ":mfeatures"]
+    label: "Adventure features list (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -273,7 +284,8 @@ matches:
             - "mythic_featurelist"
             - --contains
             - "{{form1.file1}}"
-  - trigger: ":mfeaturer"
+  - triggers: [":myth", ":mfeaturer"]
+    label: "Adventure features list (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -284,3 +296,544 @@ matches:
             - utable
             - --table
             - "mythic_featurelist"
+  # Mythic element tables (lookup with label)
+  - trigger: ":myth"
+    label: "Alien Species"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_alien,mythic_el_alien
+  - trigger: ":myth"
+    label: "Animal actions"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_animal,mythic_el_animal
+  - trigger: ":myth"
+    label: "Army"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_army,mythic_el_army
+  - trigger: ":myth"
+    label: "Cavern"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_cavern,mythic_el_cavern
+  - trigger: ":myth"
+    label: "Character appearance"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_appearance,mythic_el_char_appearance
+  - trigger: ":myth"
+    label: "Character background"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_background,mythic_el_char_background
+  - trigger: ":myth"
+    label: "Character actions, Combat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_combat,mythic_el_char_combat
+  - trigger: ":myth"
+    label: "Character conversations"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_conversation,mythic_el_char_conversation
+  - trigger: ":myth"
+    label: "Character descriptors"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_descriptors,mythic_el_char_descriptors
+  - trigger: ":myth"
+    label: "Character actions, General"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_general,mythic_el_char_general
+  - trigger: ":myth"
+    label: "Character identity"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_identity,mythic_el_char_identity
+  - trigger: ":myth"
+    label: "Character motivations"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_motivations,mythic_el_char_motivations
+  - trigger: ":myth"
+    label: "Character personality"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_personality,mythic_el_char_personality
+  - trigger: ":myth"
+    label: "Character skills"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_skills,mythic_el_char_skills
+  - trigger: ":myth"
+    label: "Character traits & flaws"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_char_traits,mythic_el_char_traits
+  - trigger: ":myth"
+    label: "City"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_city,mythic_el_city
+  - trigger: ":myth"
+    label: "Characters"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_characters,mythic_el_characters
+  - trigger: ":myth"
+    label: "Civilization"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_civilization,mythic_el_civilization
+  - trigger: ":myth"
+    label: "Creature abilities"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_creature_ability,mythic_el_creature_ability
+  - trigger: ":myth"
+    label: "Creature descriptors"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_creature_descriptor,mythic_el_creature_descriptor
+  - trigger: ":myth"
+    label: "Curses"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_curse,mythic_el_curse
+  - trigger: ":myth"
+    label: "Domicile"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_domicile,mythic_el_domicile
+  - trigger: ":myth"
+    label: "Dungeon"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_dungeon,mythic_el_dungeon
+  - trigger: ":myth"
+    label: "Forest"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_forest,mythic_el_forest
+  - trigger: ":myth"
+    label: "Gods"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_gods,mythic_el_gods
+  - trigger: ":myth"
+    label: "Legends"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_legends,mythic_el_legends
+  - trigger: ":myth"
+    label: "Locations"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_locations,mythic_el_locations
+  - trigger: ":myth"
+    label: "Magic item"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_magic,mythic_el_magic
+  - trigger: ":myth"
+    label: "Cryptic message"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_message,mythic_el_message
+  - trigger: ":myth"
+    label: "Mutation"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_mutation,mythic_el_mutation
+  - trigger: ":myth"
+    label: "Names"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_names,mythic_el_names
+  - trigger: ":myth"
+    label: "Noble house"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_noble,mythic_el_noble
+  - trigger: ":myth"
+    label: "Objects"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_object,mythic_el_object
+  - trigger: ":myth"
+    label: "Powers"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_powers,mythic_el_powers
+  - trigger: ":myth"
+    label: "Scavenging results"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_scavange,mythic_el_scavange
+  - trigger: ":myth"
+    label: "Smells"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_smells,mythic_el_smells
+  - trigger: ":myth"
+    label: "Sounds"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_sounds,mythic_el_sounds
+  - trigger: ":myth"
+    label: "Spell effects"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_spell,mythic_el_spell
+  - trigger: ":myth"
+    label: "Starship"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_starship,mythic_el_starship
+  - trigger: ":myth"
+    label: "Terrain"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_terrain,mythic_el_terrain
+  - trigger: ":myth"
+    label: "Adventure tone"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_tone,mythic_el_tone
+  - trigger: ":myth"
+    label: "Dungeon traps"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_traps,mythic_el_traps
+  - trigger: ":myth"
+    label: "Plot twists"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_twist,mythic_el_twist
+  - trigger: ":myth"
+    label: "Undead"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_undead,mythic_el_undead
+  - trigger: ":myth"
+    label: "Visions & dreams"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - mythic_el_visions,mythic_el_visions

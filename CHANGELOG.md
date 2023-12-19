@@ -1,3 +1,16 @@
+### 2.01
+#### THE ONLY COMMANDS YOU NEED TO LEARN NOW! :)
+* New command :mel - Browse all mythic element tables
+* New command :pum - Browse all PUM tables
+* New command :gum - Browse all GUM tables
+* New command :sum - Browse all SUM tables
+* New command :mune - Browse all MUNE tables
+* New command :opse - Browse all OPSE tables
+* Fixed Mythic descriptors command :mde
+* Fixed ChatGPT error with ugly characters (thanks @BapKing)
+* Support for user defined nested tables
+* Simplified some SUM commands
+
 ### 2.00
 * Mythic GME updated to 2e
 * PUM updated to v7

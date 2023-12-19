@@ -12,7 +12,7 @@ import dice
 import regex as re
 
 if 'CONFIG' not in os.environ:
-    raise Exception("CONFIG key not found. Espanso is not installed?")
+    raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
 
 # List TXT tables
@@ -31,7 +31,7 @@ def list_tables(tp, contains=''):
 def read_table(table, override_dir=None):
     path = os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
     if not os.path.exists(path):
-        return ['Table not found']
+        return ['PBTW Error: Table not found, or not initialized']
     with open(path, encoding='utf-8') as file:
         lines = file.readlines()
     return list(map(lambda x: x.strip(), lines))
@@ -51,7 +51,8 @@ def read_wtable(table, override_dir=None):
 
 
 def unwrap(result):
-    nested = re.sub("w{{(\\w+)}}", lambda x: choice_wtable(x[1]), result)
+    nested = re.sub("u{{(\\w+)}}", lambda x: choice_table(x[1], override_dir=os.path.join(tempfile.gettempdir())), result)
+    nested = re.sub("w{{(\\w+)}}", lambda x: choice_wtable(x[1]), nested)
     nested = re.sub("{{(\\w+)}}", lambda x: choice_table(x[1]), nested)
     return nested
 

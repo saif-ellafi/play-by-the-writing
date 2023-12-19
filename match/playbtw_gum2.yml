@@ -6,7 +6,8 @@
 
 matches:
   # GUM V2 - Scene Exploration
-  - trigger: ":ggexplo"
+  - triggers: [":gum", ":ggexplo"]
+    label: "Scene exploration"
     replace: "{{output}}"
     vars:
       - name: output
@@ -18,7 +19,8 @@ matches:
             - --table
             - gum2_exploration
   # GUM V2 - Scene Battle
-  - trigger: ":ggbatt"
+  - triggers: [":gum", ":ggbatt"]
+    label: "Scene battle"
     replace: "{{output}}"
     vars:
       - name: output
@@ -30,7 +32,8 @@ matches:
             - --table
             - gum2_battle
   # GUM V2 - Plot clue type
-  - trigger: ":ggclue"
+  - triggers: [":gum", ":ggclue"]
+    label: "Plot discovery: Clue type"
     replace: "{{output}}"
     vars:
       - name: output
@@ -42,7 +45,8 @@ matches:
             - --table
             - gum2_plot_clue_type
   # GUM V2 - Plot finding
-  - trigger: ":ggfind"
+  - triggers: [":gum", ":ggfind"]
+    label: "Plot discovery: Useful finding"
     replace: "{{output}}"
     vars:
       - name: output
@@ -54,7 +58,8 @@ matches:
             - --table
             - gum2_plot_finding
   # GUM V2 - Plot enemy activities
-  - trigger: ":ggenemyact"
+  - triggers: [":gum", ":ggenemyact"]
+    label: "Plot discovery: Enemy activities"
     replace: "{{output}}"
     vars:
       - name: output
@@ -66,7 +71,8 @@ matches:
             - --table
             - gum2_plot_activities
   # GUM V2 - Plot occurrence
-  - trigger: ":ggoccur"
+  - triggers: [":gum", ":ggoccur"]
+    label: "Plot discovery: Recent occurrences"
     replace: "{{output}}"
     vars:
       - name: output
@@ -78,7 +84,8 @@ matches:
             - --table
             - gum2_plot_occurrence
   # GUM V2 - Nemesis impression
-  - trigger: ":ggnemesisimp"
+  - triggers: [":gum", ":ggnemesisimp"]
+    label: "Nemesis impression"
     replace: "{{output}}"
     vars:
       - name: output
@@ -90,7 +97,8 @@ matches:
             - --table
             - gum2_nemesis_impression
   # GUM V2 - Nemesis deeds
-  - trigger: ":ggnemesisdeed"
+  - triggers: [":gum", ":ggnemesisdeed"]
+    label: "Nemesis deeds"
     replace: "{{output}}"
     vars:
       - name: output
@@ -102,7 +110,8 @@ matches:
             - --table
             - gum2_nemesis_deeds
   # GUM V2 - Nemesis intention
-  - trigger: ":ggnemesisint"
+  - triggers: [":gum", ":ggnemesisint"]
+    label: "Nemesis intent"
     replace: "{{output}}"
     vars:
       - name: output
@@ -114,7 +123,8 @@ matches:
             - --table
             - gum2_nemesis_intention
   # GUM V2 - Location feature
-  - trigger: ":gglocfeat"
+  - triggers: [":gum", ":gglocfeat"]
+    label: "Location by feature"
     replace: "{{output}}"
     vars:
       - name: output
@@ -126,7 +136,8 @@ matches:
             - --table
             - gum2_location_feature
   # GUM V2 - Location worth
-  - trigger: ":gglocworth"
+  - triggers: [":gum", ":gglocworth"]
+    label: "Location by worth"
     replace: "{{output}}"
     vars:
       - name: output
@@ -138,7 +149,8 @@ matches:
             - --table
             - gum2_location_worth
   # GUM V2 - Location purpose
-  - trigger: ":gglocpurp"
+  - triggers: [":gum", ":gglocpurp"]
+    label: "Location by purpose"
     replace: "{{output}}"
     vars:
       - name: output
@@ -150,7 +162,8 @@ matches:
             - --table
             - gum2_location_purpose
   # GUM V2 - Location content
-  - trigger: ":ggloccont"
+  - triggers: [":gum", ":ggloccont"]
+    label: "Location by content"
     replace: "{{output}}"
     vars:
       - name: output
@@ -162,7 +175,8 @@ matches:
             - --table
             - gum2_location_content
   # GUM V2 - Character by possessions
-  - trigger: ":ggcharposs"
+  - triggers: [":gum", ":ggcharposs"]
+    label: "Character by possessions"
     replace: "{{output}}"
     vars:
       - name: output
@@ -174,7 +188,8 @@ matches:
             - --table
             - gum2_char_possessions
   # GUM V2 - Character by impression
-  - trigger: ":ggcharimp"
+  - triggers: [":gum", ":ggcharimp"]
+    label: "Character by impression"
     replace: "{{output}}"
     vars:
       - name: output
@@ -186,7 +201,8 @@ matches:
             - --table
             - gum2_char_impression
   # GUM V2 - Character by activity
-  - trigger: ":ggcharact"
+  - triggers: [":gum", ":ggcharact"]
+    label: "Character by activity"
     replace: "{{output}}"
     vars:
       - name: output
@@ -198,7 +214,8 @@ matches:
             - --table
             - gum2_char_activity
   # GUM V2 - Character by intention
-  - trigger: ":ggcharint"
+  - triggers: [":gum", ":ggcharint"]
+    label: "Character by intention"
     replace: "{{output}}"
     vars:
       - name: output
@@ -210,7 +227,8 @@ matches:
             - --table
             - gum2_char_intention
   # GUM V2 - Creature by type
-  - trigger: ":ggcretyp"
+  - triggers: [":gum", ":ggcretyp"]
+    label: "Creature by type"
     replace: "{{output}}"
     vars:
       - name: output
@@ -222,7 +240,8 @@ matches:
             - --table
             - gum2_creature_type
   # GUM V2 - Creature by ability
-  - trigger: ":ggcreab"
+  - triggers: [":gum", ":ggcreab"]
+    label: "Creature by ability"
     replace: "{{output}}"
     vars:
       - name: output
@@ -234,7 +253,8 @@ matches:
             - --table
             - gum2_creature_ability
   # GUM V2 - Creature by behavior
-  - trigger: ":ggcrebeh"
+  - triggers: [":gum", ":ggcrebeh"]
+    label: "Creature by behavior"
     replace: "{{output}}"
     vars:
       - name: output
@@ -246,7 +266,8 @@ matches:
             - --table
             - gum2_creature_behavior
   # GUM V2 - Object by function
-  - trigger: ":ggobjfunc"
+  - triggers: [":gum", ":ggobjfunc"]
+    label: "Object by function"
     replace: "{{output}}"
     vars:
       - name: output
@@ -258,7 +279,8 @@ matches:
             - --table
             - gum2_object_function
   # GUM V2 - Object by form
-  - trigger: ":ggobjform"
+  - triggers: [":gum", ":ggobjform"]
+    label: "Object by form"
     replace: "{{output}}"
     vars:
       - name: output
@@ -270,7 +292,8 @@ matches:
             - --table
             - gum2_object_form
   # GUM V2 - Object by state
-  - trigger: ":ggobjstate"
+  - triggers: [":gum", ":ggobjstate"]
+    label: "Object by state"
     replace: "{{output}}"
     vars:
       - name: output
@@ -282,7 +305,8 @@ matches:
             - --table
             - gum2_object_state
   # GUM V2 - Faction focus
-  - trigger: ":ggfacfoc"
+  - triggers: [":gum", ":ggfacfoc"]
+    label: "Faction focus"
     replace: "{{output}}"
     vars:
       - name: output
@@ -294,7 +318,8 @@ matches:
             - --table
             - gum2_faction_focus
   # GUM V2 - Faction resources
-  - trigger: ":ggfacres"
+  - triggers: [":gum", ":ggfacres"]
+    label: "Faction resources"
     replace: "{{output}}"
     vars:
       - name: output
@@ -306,7 +331,8 @@ matches:
             - --table
             - gum2_faction_resource
   # GUM V2 - Good motives
-  - trigger: ":ggmotgood"
+  - triggers: [":gum", ":ggmotgood"]
+    label: "Good purposes or motivations"
     replace: "{{output}}"
     vars:
       - name: output
@@ -318,7 +344,8 @@ matches:
             - --table
             - gum2_good_motivation
   # GUM V2 - Evil motives
-  - trigger: ":ggmotevil"
+  - triggers: [":gum", ":ggmotevil"]
+    label: "Evil purposes or motivations"
     replace: "{{output}}"
     vars:
       - name: output
@@ -330,7 +357,8 @@ matches:
             - --table
             - gum2_evil_motivation
   # GUM V2 - Good deeds
-  - triggers: [":ggdeedsgood", ":gggoodact"]
+  - triggers: [":gum", ":ggdeedsgood", ":gggoodact"]
+    label: "Good intentions or deeds"
     replace: "{{output}}"
     vars:
       - name: output
@@ -342,7 +370,8 @@ matches:
             - --table
             - gum2_good_deed
   # GUM V2 - Evil deeds
-  - triggers: [":ggdeedsevil", ":ggevilact"]
+  - triggers: [":gum", ":ggdeedsevil", ":ggevilact"]
+    label: "Evil intentions or deeds"
     replace: "{{output}}"
     vars:
       - name: output
@@ -354,7 +383,8 @@ matches:
             - --table
             - gum2_evil_deed
   # GUM V2 - Grand Oracle (all)
-  - trigger: ":ggorac"
+  - triggers: [":gum", ":ggorac"]
+    label: "Grand oracle (all)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -366,7 +396,8 @@ matches:
             - --table
             - gum2_grand_oracle
   # GUM V2 - Grand Oracle (action)
-  - trigger: ":ggact"
+  - triggers: [":gum", ":ggact"]
+    label: "Grand oracle (subject)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -378,7 +409,8 @@ matches:
             - --table
             - gum2_grand_action
   # GUM V2 - Grand Oracle (adjective)
-  - trigger: ":ggadj"
+  - triggers: [":gum", ":ggadj"]
+    label: "Grand oracle (adjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -390,7 +422,8 @@ matches:
             - --table
             - gum2_grand_adjective
   # GUM V2 - Grand Oracle (subject)
-  - trigger: ":ggsub"
+  - triggers: [":gum", ":ggsub"]
+    label: "Grand oracle (subject)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -402,7 +435,7 @@ matches:
             - --table
             - gum2_grand_subject
   # GUM V2 - World location archetype
-  - trigger: ":ggsetloc"
+  - triggers: [":ggsetloc"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -414,7 +447,7 @@ matches:
             - --table
             - gum2_setup_location
   # GUM V2 - World background
-  - trigger: ":ggsetback"
+  - triggers: [":ggsetback"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -426,7 +459,7 @@ matches:
             - --table
             - gum2_setup_background
   # GUM V2 - Campaign goals mission
-  - trigger: ":ggsetmission"
+  - triggers: [":ggsetmission"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -438,7 +471,7 @@ matches:
             - --table
             - gum2_setup_mission
   # GUM V2 - Campaign goals opposition
-  - trigger: ":ggsetopp"
+  - triggers: [":ggsetopp"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -450,7 +483,7 @@ matches:
             - --table
             - gum2_setup_opposition
   # GUM V2 - Campaign motivation
-  - trigger: ":ggsetmot"
+  - triggers: [":ggsetmot"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -462,7 +495,7 @@ matches:
             - --table
             - gum2_setup_motivation
   # GUM V2 - Quest hook
-  - trigger: ":ggsethook"
+  - triggers: [":ggsethook"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -474,7 +507,7 @@ matches:
             - --table
             - gum2_setup_hook
   # GUM V2 - Quest lead
-  - trigger: ":ggsetlead"
+  - triggers: [":ggsetlead"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -486,7 +519,7 @@ matches:
             - --table
             - gum2_setup_lead
   # GUM V2 - Quest caveat
-  - trigger: ":ggsetcaveat"
+  - triggers: [":ggsetcaveat"]
     replace: "{{output}}"
     vars:
       - name: output
@@ -498,7 +531,8 @@ matches:
             - --table
             - gum2_setup_caveat
   # GUM V2 Setup full guide
-  - trigger: ":ggsetfull"
+  - triggers: [":gum", ":ggsetfull"]
+    label: "Game setup (full)"
     replace: "{{output}}"
     vars:
       - name: output

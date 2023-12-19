@@ -47,7 +47,7 @@ def memory_erase():
 
 
 def memory_save(ai_prompt, ai_answer, mode):
-    with open(ai_memory_file, mode) as mem:
+    with open(ai_memory_file, mode, encoding="utf-8") as mem:
         mem.write(ai_prompt)
         mem.write('\n')
         mem.write(ai_answer)

@@ -6,7 +6,8 @@
 
 matches:
   # PUM Question: deterministic
-  - trigger: ":qq"
+  - triggers: [":pum", ":qq"]
+    label: "Yes or No (deterministic)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -18,7 +19,8 @@ matches:
             - --table
             - pum_question_deterministic
   # PUM Question: deterministic
-  - trigger: ":+qq"
+  - triggers: [":pum", ":+qq"]
+    label: "Yes or No (likely, deterministic)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -32,7 +34,8 @@ matches:
             - --mode
             - adv
   # PUM Question: deterministic
-  - trigger: ":-qq"
+  - triggers: [":pum", ":-qq"]
+    label: "Yes or No (unlikely, deterministic)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -46,7 +49,8 @@ matches:
             - --mode
             - dis
   # PUM Question: subjective
-  - trigger: ":qsub"
+  - triggers: [":pum", ":qsub"]
+    label: "Yes or No (subjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -58,7 +62,8 @@ matches:
             - --table
             - pum_question_subjective
   # PUM Question: subjective
-  - trigger: ":+qsub"
+  - triggers: [":pum", ":+qsub"]
+    label: "Yes or No (likely, subjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -72,7 +77,8 @@ matches:
             - --mode
             - adv
   # PUM Question: subjective
-  - trigger: ":-qsub"
+  - triggers: [":pum", ":-qsub"]
+    label: "Yes or No (unlikely, subjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -86,7 +92,8 @@ matches:
             - --mode
             - dis
   # PUM Question: interaction
-  - trigger: ":qint"
+  - triggers: [":pum", ":qint"]
+    label: "Yes or No (interaction)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -98,7 +105,8 @@ matches:
             - --table
             - pum_question_interaction
   # PUM Question: interaction
-  - trigger: ":+qint"
+  - triggers: [":pum", ":+qint"]
+    label: "Yes or No (likely, interaction)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -112,7 +120,8 @@ matches:
             - --mode
             - adv
   # PUM Question: interaction
-  - trigger: ":-qint"
+  - triggers: [":pum", ":-qint"]
+    label: "Yes or No (unlikely, interaction)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -126,7 +135,8 @@ matches:
             - --mode
             - dis
   # PUM - Who
-  - trigger: ":who"
+  - triggers: [":pum", ":who"]
+    label: "Who?"
     replace: "{{output}}"
     vars:
       - name: output
@@ -138,7 +148,8 @@ matches:
             - --table
             - pum_who
   # PUM - Intent
-  - trigger: ":intent"
+  - triggers: [":pum", ":intent"]
+    label: "Intent"
     replace: "{{output}}"
     vars:
       - name: output
@@ -150,7 +161,8 @@ matches:
             - --table
             - pum_intent
   # PUM - Activity
-  - trigger: ":activity"
+  - triggers: [":pum", ":activity"]
+    label: "Activity"
     replace: "{{output}}"
     vars:
       - name: output
@@ -162,7 +174,8 @@ matches:
             - --table
             - pum_activity
   # PUM - Place
-  - triggers: [":area", ":location", ":place"]
+  - triggers: [":pum", ":area", ":location", ":place"]
+    label: "Place"
     replace: "{{output}}"
     vars:
       - name: output
@@ -174,7 +187,8 @@ matches:
             - --table
             - pum_place
   # PUM - Object
-  - trigger: ":object"
+  - triggers: [":pum", ":object"]
+    label: "Object"
     replace: "{{output}}"
     vars:
       - name: output
@@ -186,7 +200,8 @@ matches:
             - --table
             - pum_object
   # PUM - Ability
-  - trigger: ":ability"
+  - triggers: [":pum", ":ability"]
+    label: "Ability"
     replace: "{{output}}"
     vars:
       - name: output
@@ -197,8 +212,9 @@ matches:
             - table
             - --table
             - pum_ability
-  # PUM - Subject
-  - trigger: ":subject"
+  # PUM - Subject What?
+  - triggers: [":pum", ":what"]
+    label: "Subject, What?"
     replace: "{{output}}"
     vars:
       - name: output
@@ -210,7 +226,8 @@ matches:
             - --table
             - pum_subject
   # PUM - Scene Random Prompt
-  - triggers: [":scene", ":prompt"]
+  - triggers: [":pum", ":scene", ":prompt"]
+    label: "Beat: Random prompt"
     replace: "{{output}}"
     vars:
       - name: output
@@ -222,7 +239,8 @@ matches:
             - --table
             - pum_prompt
   # PUM - Scene Modified Proposal
-  - triggers: [":check", ":proposal"]
+  - triggers: [":pum", ":check", ":proposal"]
+    label: "Beat: Modified proposal"
     replace: "{{output}}"
     vars:
       - name: output
@@ -234,7 +252,8 @@ matches:
             - --table
             - pum_proposal
   # PUM - Complication
-  - trigger: ":complication"
+  - triggers: [":pum", ":complication"]
+    label: "Complication"
     replace: "{{output}}"
     vars:
       - name: output
@@ -246,7 +265,8 @@ matches:
             - --table
             - pum_complication
   # PUM - Catalyst
-  - trigger: ":catalyst"
+  - triggers: [":pum", ":catalyst"]
+    label: "Catalyst"
     replace: "{{output}}"
     vars:
       - name: output
@@ -258,7 +278,8 @@ matches:
             - --table
             - pum_catalyst
   # PUM - Challenge
-  - triggers: [":challenge", ":skill"]
+  - triggers: [":pum", ":challenge", ":skill"]
+    label: "Challenge"
     replace: "{{output}}"
     vars:
       - name: output
@@ -270,7 +291,8 @@ matches:
             - --table
             - pum_challenge
   # PUM - Situation
-  - trigger: ":situation"
+  - triggers: [":pum", ":situation"]
+    label: "Situation"
     replace: "{{output}}"
     vars:
       - name: output
@@ -282,7 +304,8 @@ matches:
             - --table
             - pum_situation
   # PUM World Aspects
-  - triggers: [":worlds", ":aspects"]
+  - triggers: [":pum", ":worlds", ":aspects"]
+    label: "Plot node: World aspect (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -316,7 +339,8 @@ matches:
             - "pum_nodes_world"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":worldr", ":aspectr"]
+  - triggers: [":pum", ":worldr", ":aspectr"]
+    label: "Plot node: World aspect (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -328,7 +352,8 @@ matches:
             - --table
             - "pum_nodes_world"
   # PUM Relevant Actors
-  - trigger: ":actors"
+  - triggers: [":pum", ":actors"]
+    label: "Plot node: Relevant actors (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -362,7 +387,8 @@ matches:
             - "pum_nodes_actor"
             - --contains
             - "{{form1.file1}}"
-  - trigger: ":actorr"
+  - triggers: [":pum", ":actorr"]
+    label: "Plot node: Relevant actors (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -374,7 +400,8 @@ matches:
             - --table
             - "pum_nodes_actor"
   # PUM Story Troubles
-  - trigger: ":troubles"
+  - triggers: [":pum", ":troubles"]
+    label: "Plot node: Story troubles (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -408,7 +435,8 @@ matches:
             - "pum_nodes_trouble"
             - --contains
             - "{{form1.file1}}"
-  - trigger: ":troubler"
+  - triggers: [":pum", ":troubler"]
+    label: "Plot node: Story troubles (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -420,7 +448,8 @@ matches:
             - --table
             - "pum_nodes_trouble"
   # PUM Active Leads
-  - trigger: ":leads"
+  - triggers: [":pum", ":leads"]
+    label: "Plot node: Active leads (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -454,7 +483,8 @@ matches:
             - "pum_nodes_lead"
             - --contains
             - "{{form1.file1}}"
-  - trigger: ":leadr"
+  - triggers: [":pum", ":leadr"]
+    label: "Plot node: Active leads (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -466,7 +496,8 @@ matches:
             - --table
             - "pum_nodes_lead"
   # SUM (GM action, intervention)
-  - trigger: ":gma"
+  - triggers: [":sum", ":gma"]
+    label: "GM Emulation: Intervention check"
     replace: "{{output}}"
     vars:
       - name: output
@@ -478,7 +509,8 @@ matches:
             - --table
             - sum_gm_action
   # SUM (GM action, intervention)
-  - trigger: ":+gma"
+  - triggers: [":sum", ":+gma"]
+    label: "GM Emulation: Intervention check (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -492,7 +524,8 @@ matches:
             - --mode
             - adv
   # SUM (GM action, intervention)
-  - trigger: ":-gma"
+  - triggers: [":sum", ":-gma"]
+    label: "GM Emulation: Intervention check (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -506,7 +539,8 @@ matches:
             - --mode
             - dis
   # SUM (GM feedback, reaction)
-  - trigger: ":gmre"
+  - triggers: [":sum", ":gmre"]
+    label: "GM Emulation: Action's reaction"
     replace: "{{output}}"
     vars:
       - name: output
@@ -518,7 +552,8 @@ matches:
             - --table
             - sum_gm_feedback
   # SUM (GM feedback, reaction)
-  - trigger: ":+gmre"
+  - triggers: [":sum", ":+gmre"]
+    label: "GM Emulation: Action's reaction (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -532,7 +567,8 @@ matches:
             - --mode
             - adv
   # SUM (GM feedback, reaction)
-  - trigger: ":-gmre"
+  - triggers: [":sum", ":-gmre"]
+    label: "GM Emulation: Action's reaction (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -546,7 +582,8 @@ matches:
             - --mode
             - dis
   # SUM (GM World, factions)
-  - trigger: ":gmfac"
+  - triggers: [":sum", ":gmfac"]
+    label: "GM Emulation: Living factions"
     replace: "{{output}}"
     vars:
       - name: output
@@ -558,7 +595,8 @@ matches:
             - --table
             - sum_gm_world
   # SUM (GM World, factions)
-  - trigger: ":+gmfac"
+  - triggers: [":sum", ":+gmfac"]
+    label: "GM Emulation: Action's reaction (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -572,7 +610,8 @@ matches:
             - --mode
             - adv
   # SUM (GM World, factions)
-  - trigger: ":-gmfac"
+  - triggers: [":sum", ":-gmfac"]
+    label: "GM Emulation: Action's reaction (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -586,7 +625,8 @@ matches:
             - --mode
             - dis
   # SUM (PC matters)
-  - trigger: ":pcmatt"
+  - triggers: [":sum", ":pcmatt"]
+    label: "PC Enrichment: Parallel matters"
     replace: "{{output}}"
     vars:
       - name: output
@@ -598,7 +638,8 @@ matches:
             - --table
             - sum_pc_matters
   # SUM (PC matters)
-  - trigger: ":+pcmatt"
+  - triggers: [":sum", ":+pcmatt"]
+    label: "PC Enrichment: Parallel matters (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -612,7 +653,8 @@ matches:
             - --mode
             - adv
   # SUM (PC matters)
-  - trigger: ":-pcmatt"
+  - triggers: [":sum", ":-pcmatt"]
+    label: "PC Enrichment: Parallel matters (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -626,7 +668,8 @@ matches:
             - --mode
             - dis
   # SUM (PC backstories)
-  - trigger: ":pcback"
+  - triggers: [":sum", ":pcback"]
+    label: "PC Enrichment: Lingering backstories"
     replace: "{{output}}"
     vars:
       - name: output
@@ -638,7 +681,8 @@ matches:
             - --table
             - sum_pc_backs
   # SUM (PC backstories)
-  - trigger: ":+pcback"
+  - triggers: [":sum", ":+pcback"]
+    label: "PC Enrichment: Lingering backstories (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -652,7 +696,8 @@ matches:
             - --mode
             - adv
   # SUM (PC backstories)
-  - trigger: ":-pcback"
+  - triggers: [":sum", ":-pcback"]
+    label: "PC Enrichment: Lingering backstories (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -666,7 +711,8 @@ matches:
             - --mode
             - dis
   # SUM (PC bonding)
-  - trigger: ":pcbond"
+  - triggers: [":sum", ":pcbond"]
+    label: "PC Enrichment: Bonding relations"
     replace: "{{output}}"
     vars:
       - name: output
@@ -678,7 +724,8 @@ matches:
             - --table
             - sum_pc_bonds
   # SUM (PC bonding)
-  - trigger: ":+pcbond"
+  - triggers: [":sum", ":+pcbond"]
+    label: "PC Enrichment: Bonding relations (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -692,7 +739,8 @@ matches:
             - --mode
             - adv
   # SUM (PC bonding)
-  - trigger: ":-pcbond"
+  - triggers: [":sum", ":-pcbond"]
+    label: "PC Enrichment: Bonding relations (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -706,7 +754,8 @@ matches:
             - --mode
             - dis
   # SUM (NPC behavior, attitude)
-  - trigger: ":npcatt"
+  - triggers: [":sum", ":npcatt"]
+    label: "NPC Emulation: Attitude"
     replace: "{{output}}"
     vars:
       - name: output
@@ -718,7 +767,8 @@ matches:
             - --table
             - sum_npc_attitude
   # SUM (NPC behavior, attitude)
-  - trigger: ":+npcatt"
+  - triggers: [":sum", ":+npcatt"]
+    label: "NPC Emulation: Attitude (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -732,7 +782,8 @@ matches:
             - --mode
             - adv
   # SUM (NPC behavior, attitude)
-  - trigger: ":-npcatt"
+  - triggers: [":sum", ":-npcatt"]
+    label: "NPC Emulation: Attitude (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -746,7 +797,8 @@ matches:
             - --mode
             - dis
   # SUM (NPC Contribution)
-  - trigger: ":npcc"
+  - triggers: [":sum", ":npcc"]
+    label: "NPC Emulation: Contribution"
     replace: "{{output}}"
     vars:
       - name: output
@@ -758,7 +810,8 @@ matches:
             - --table
             - sum_npc_contribution
   # SUM (NPC Contribution)
-  - trigger: ":+npcc"
+  - triggers: [":sum", ":+npcc"]
+    label: "NPC Emulation: Contribution (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -772,7 +825,8 @@ matches:
             - --mode
             - adv
   # SUM (NPC Contribution)
-  - trigger: ":-npcc"
+  - triggers: [":sum", ":-npcc"]
+    label: "NPC Emulation: Contribution (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -786,7 +840,8 @@ matches:
             - --mode
             - dis
   # SUM (NPC opinion)
-  - trigger: ":npco"
+  - triggers: [":sum", ":npco"]
+    label: "NPC Emulation: Opinion"
     replace: "{{output}}"
     vars:
       - name: output
@@ -798,7 +853,8 @@ matches:
             - --table
             - sum_npc_opinion
   # SUM (NPC opinion)
-  - trigger: ":+npco"
+  - triggers: [":sum", ":+npco"]
+    label: "NPC Emulation: Opinion (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -812,7 +868,8 @@ matches:
             - --mode
             - adv
   # SUM (NPC opinion)
-  - trigger: ":-npco"
+  - triggers: [":sum", ":-npco"]
+    label: "NPC Emulation: Opinion (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -826,7 +883,8 @@ matches:
             - --mode
             - dis
   # SUM (NPC impression)
-  - trigger: ":npcimp"
+  - triggers: [":sum", ":npcimp"]
+    label: "NPC Emulation: Outside impression"
     replace: "{{output}}"
     vars:
       - name: output
@@ -838,7 +896,8 @@ matches:
             - --table
             - sum_npc_impression
   # SUM (NPC impression)
-  - trigger: ":+npcimp"
+  - triggers: [":sum", ":+npcimp"]
+    label: "NPC Emulation: Outside impression (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -852,7 +911,8 @@ matches:
             - --mode
             - adv
   # SUM (NPC impression)
-  - trigger: ":-npcimp"
+  - triggers: [":sum", ":-npcimp"]
+    label: "NPC Emulation: Outside impression (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -866,7 +926,8 @@ matches:
             - --mode
             - dis
   # SUM (NPC talks)
-  - trigger: ":npctalk"
+  - triggers: [":sum", ":npctalk"]
+    label: "NPC Emulation: Filler talks"
     replace: "{{output}}"
     vars:
       - name: output
@@ -878,7 +939,8 @@ matches:
             - --table
             - sum_npc_talks
   # SUM (NPC talks)
-  - trigger: ":+npctalk"
+  - triggers: [":sum", ":+npctalk"]
+    label: "NPC Emulation: Filler talks (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -892,7 +954,8 @@ matches:
             - --mode
             - adv
   # SUM (NPC talks)
-  - trigger: ":-npctalk"
+  - triggers: [":sum", ":-npctalk"]
+    label: "NPC Emulation: Filler talks (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -906,7 +969,8 @@ matches:
             - --mode
             - dis
   # SUM (NPC truth)
-  - trigger: ":npctruth"
+  - triggers: [":sum", ":npctruth"]
+    label: "NPC Emulation: Truth or dare"
     replace: "{{output}}"
     vars:
       - name: output
@@ -918,7 +982,8 @@ matches:
             - --table
             - sum_npc_truth
   # SUM (NPC truth)
-  - trigger: ":+npctruth"
+  - triggers: [":sum", ":+npctruth"]
+    label: "NPC Emulation: Truth or dare (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -932,7 +997,8 @@ matches:
             - --mode
             - adv
   # SUM (NPC truth)
-  - trigger: ":-npctruth"
+  - triggers: [":sum", ":-npctruth"]
+    label: "NPC Emulation: Truth or dare (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -946,7 +1012,8 @@ matches:
             - --mode
             - dis
   # SUM (Stereotypes)
-  - trigger: ":sumst"
+  - triggers: [":sum", ":stereo"]
+    label: "Stereotypes"
     replace: "{{output}}"
     vars:
       - name: output
@@ -958,7 +1025,8 @@ matches:
             - --table
             - sum_stereo
   # SUM (Action)
-  - trigger: ":sumac"
+  - triggers: [":sum", ":action"]
+    label: "Grand oracle: Action"
     replace: "{{output}}"
     vars:
       - name: output
@@ -970,7 +1038,8 @@ matches:
             - --table
             - sum_oracle_action
   # SUM (Adjective)
-  - trigger: ":sumad"
+  - triggers: [":sum", ":adjective"]
+    label: "Grand oracle: Adjective"
     replace: "{{output}}"
     vars:
       - name: output
@@ -982,7 +1051,8 @@ matches:
             - --table
             - sum_oracle_adjective
   # SUM (Subject)
-  - trigger: ":sumsu"
+  - triggers: [":sum", ":subject"]
+    label: "Grand oracle: Subject"
     replace: "{{output}}"
     vars:
       - name: output
@@ -994,7 +1064,8 @@ matches:
             - --table
             - sum_oracle_subject
   # SUM (Oracle)
-  - trigger: ":sumoracle"
+  - triggers: [":sum", ":grandoracle"]
+    label: "Grand oracle (all)"
     replace: "{{output}}"
     vars:
       - name: output

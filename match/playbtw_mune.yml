@@ -6,7 +6,8 @@
 
 matches:
   # MUNE Oracle Question
-  - trigger: ":mqq"
+  - triggers: [":mune", ":mqq"]
+    label: "Oracle (neutral)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -17,7 +18,8 @@ matches:
             - table
             - --table
             - mune_oracle
-  - trigger: ":+mqq"
+  - triggers: [":mune", ":+mqq"]
+    label: "Oracle (bias yes)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -30,7 +32,8 @@ matches:
             - mune_oracle
             - --mode
             - adv
-  - trigger: ":-mqq"
+  - triggers: [":mune", ":-mqq"]
+    label: "Oracle (bias no)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -44,7 +47,8 @@ matches:
             - --mode
             - dis
   # MUNE Interaction Attitude
-  - trigger: ":matt"
+  - triggers: [":mune", ":matt"]
+    label: "NPC Attitude"
     replace: "{{output}}"
     vars:
       - name: output
@@ -55,7 +59,8 @@ matches:
             - table
             - --table
             - mune_interaction
-  - trigger: ":+matt"
+  - triggers: [":mune", ":+matt"]
+    label: "NPC Attitude, positive"
     replace: "{{output}}"
     vars:
       - name: output
@@ -68,7 +73,8 @@ matches:
             - mune_interaction
             - --mode
             - adv
-  - trigger: ":-matt"
+  - triggers: [":mune", ":-matt"]
+    label: "NPC Attitude, negative"
     replace: "{{output}}"
     vars:
       - name: output
@@ -82,7 +88,8 @@ matches:
             - --mode
             - dis
   # MUNE Intervention
-  - trigger: ":mint"
+  - triggers: [":mune", ":mint"]
+    label: "Intervention"
     replace: "{{output}}"
     vars:
       - name: output
@@ -94,7 +101,8 @@ matches:
             - --table
             - mune_intervention
   # MUNE TWENE
-  - trigger: ":mtwene"
+  - triggers: [":mune", ":mtwene"]
+    label: "TWENE"
     replace: "{{output}}"
     vars:
       - name: output

@@ -6,7 +6,8 @@
 
 matches:
   # opse
-  - trigger: ":qa"
+  - triggers: [":opse", ":qa"]
+    label: "Oracle (even)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -18,7 +19,8 @@ matches:
             - --table
             - opse_qa_even,opse_qa_mod
   # opse
-  - trigger: ":+qa"
+  - triggers: [":opse", ":+qa"]
+    label: "Oracle (likely)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -30,7 +32,8 @@ matches:
             - --table
             - opse_qa_likely,opse_qa_mod
   # opse
-  - trigger: ":-qa"
+  - triggers: [":opse", ":-qa"]
+    label: "Oracle (unlikely)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -42,7 +45,8 @@ matches:
             - --table
             - opse_qa_unlikely,opse_qa_mod
   # Next Scene design - opse
-  - trigger: ":setscene"
+  - triggers: [":opse", ":setscene"]
+    label: "Set the Scene"
     replace: "{{output}}"
     vars:
       - name: output
@@ -54,7 +58,8 @@ matches:
             - --table
             - opse_setscene
   # Next Scene design
-  - trigger: ":setalt"
+  - triggers: [":opse", ":setalt"]
+    label: "Altered Scene"
     replace: "{{output}}"
     vars:
       - name: output
@@ -66,7 +71,8 @@ matches:
             - --table
             - opse_setalt
   # opse
-  - trigger: ":opsehow"
+  - triggers: [":opse", ":opsehow"]
+    label: "Oracle (How)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -78,7 +84,8 @@ matches:
             - --table
             - opse_how
   # opse
-  - trigger: ":pacemove"
+  - triggers: [":opse", ":pacemove"]
+    label: "GM Move: Pacing Move"
     replace: "{{output}}"
     vars:
       - name: output
@@ -90,7 +97,8 @@ matches:
             - --table
             - opse_pacemove
   # opse
-  - trigger: ":failmove"
+  - triggers: [":opse", ":failmove"]
+    label: "GM Move: Failure Move"
     replace: "{{output}}"
     vars:
       - name: output
@@ -102,7 +110,8 @@ matches:
             - --table
             - opse_failmove
   # opse action focus
-  - trigger: ":afocus"
+  - triggers: [":opse", ":afocus"]
+    label: "Focus Action"
     replace: "{{output}}"
     vars:
       - name: output
@@ -114,7 +123,8 @@ matches:
             - --table
             - opse_afocus
   # opse detail focus
-  - trigger: ":dfocus"
+  - triggers: [":opse", ":dfocus"]
+    label: "Focus Detail"
     replace: "{{output}}"
     vars:
       - name: output
@@ -126,7 +136,8 @@ matches:
             - --table
             - opse_dfocus
   # opse topic focus
-  - trigger: ":tfocus"
+  - triggers: [":opse", ":tfocus"]
+    label: "Focus Topic"
     replace: "{{output}}"
     vars:
       - name: output
@@ -138,7 +149,8 @@ matches:
             - --table
             - opse_tfocus
   # opse random event
-  - trigger: ":opsere"
+  - triggers: [":opse", ":opsere"]
+    label: "Random Event"
     replace: "{{output}}"
     vars:
       - name: output
@@ -150,7 +162,8 @@ matches:
             - --table
             - opse_afocus,opse_tfocus
   # opse plot hook
-  - trigger: ":opsehook"
+  - triggers: [":opse", ":opsehook"]
+    label: "Plot Hook Generator"
     replace: "{{output}}"
     vars:
       - name: output
@@ -162,7 +175,8 @@ matches:
             - --table
             - opse_objective,opse_adversaries,opse_rewards
   # opse NPC
-  - trigger: ":opsenpc"
+  - triggers: [":opse", ":opsenpc"]
+    label: "NPC Generator"
     replace: "{{output}}"
     vars:
       - name: output
@@ -174,7 +188,8 @@ matches:
             - --table
             - opse_identity,opse_goal,opse_notable
   # opse dungeon
-  - trigger: ":opsedungeon"
+  - triggers: [":opse", ":opsedungeon"]
+    label: "Dungeon Crawler"
     replace: "{{output}}"
     vars:
       - name: output
@@ -186,7 +201,8 @@ matches:
             - --table
             - opse_dfocus,opse_afocus,opse_location,opse_encounter,opse_object,opse_exits
   # opse hex crawler
-  - trigger: ":opsehex"
+  - triggers: [":opse", ":opsehex"]
+    label: "Hex Crawler"
     replace: "{{output}}"
     vars:
       - name: output

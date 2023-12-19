@@ -89,7 +89,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_00_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_01_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -127,6 +127,7 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 
 | Name                                | keyword                                                                                                   |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| BROWSE ALL TABLES                   | `:mythic`                                                                                                 |
 | Fate Check (prompted)               | `:mmfc`                                                                                                   |
 | Fate Check (per modifier and chaos) | `:mfc<mod>c<chaos>` e.g.: `:mfc+2c4` (+2 modifier, 4 chaos rank) or `mfc-3c9` (-3 modifier, 9 chaos rank) |
 | Scene Alteration                    | `:malt<chaos>` e.g.: `:malt6`                                                                             |
@@ -136,10 +137,10 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 | Roll threads list                   | `:mthreadr`                                                                                               |
 | Setup adventure features list       | `:mfeatures`                                                                                              |
 | Roll adventure features list        | `:mfeaturer`                                                                                              |
-| Random Event                        | `:mre`                                                                                                    |
+| Random Event                        | `:mre` or `:mev`                                                                                          |
 | Action Question                     | `:mac`                                                                                                    |
 | Description Question                | `:mde`                                                                                                    |
-| Focus roll                          | `:mfoc`                                                                                                   |
+| Focus roll                          | `:mfo`                                                                                                    |
 | Focus (adventure)                   | `:madfoc`                                                                                                 |
 | Focus roll (custom)                 | `:mfo.my_focus_table.`                                                                                    |
 
@@ -149,6 +150,7 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 
 | Name                    | keyword                   |
 |-------------------------|---------------------------|
+| BROWSE ALL TABLES       | `:pum`                    |
 | Yes or No Deterministic | `:qq` `:+qq` `:-qq`       |
 | Yes or No Subjective    | `:qsub` `:+qsub` `:-qsub` |
 | Yes or No Interaction   | `:qint` `:+qint` `:-qint` |
@@ -180,6 +182,7 @@ These are meant to be played with SUM: https://jeansenvaars.itch.io/scene-unfold
 
 | Name              | keyword                                     |
 |-------------------|---------------------------------------------|
+| BROWSE ALL TABLES | `:sum`                                      |
 | GM Action         | `:gma` or `:+gma` or `:-gma`                |
 | GM Reaction       | `:gmre` or `:+gmre` or `:-gmre`             |
 | GM Factions       | `:gmfac` or `:+gmfac` or `:-gmfac`          |
@@ -203,6 +206,7 @@ These are meant to be played with GUM: https://jeansenvaars.itch.io/game-unfoldi
 
 | Name                      | keyword                        |
 |---------------------------|--------------------------------|
+| BROWSE ALL TABLES         | `:gum`                         |
 | Exploration               | `:ggexplo`                     |
 | Battle location           | `:ggbatt`                      |
 | Plot clue type            | `:ggclue`                      |
@@ -253,6 +257,7 @@ These are meant to be played with https://inflatablestudios.itch.io/one-page-sol
 
 | Name                         | keyword             |
 |------------------------------|---------------------|
+| BROWSE ALL TABLES            | `:opse`             |
 | Oracle (Yes/No)              | `:qa` `:+qa` `:-qa` |
 | Set the Scene (Complication) | `:setscene`         |
 | Set the Scene (Alteration)   | `:setalt`           |
@@ -274,6 +279,7 @@ These are meant to be played with https://inflatablestudios.itch.io/one-page-sol
 
 | Name                     | keyword                   |
 |--------------------------|---------------------------|
+| BROWSE ALL TABLES        | `:mune`                   |
 | Oracle (Yes/No)          | `:mqq` `:+mqq` `:-mqq`    |
 | NPC Interaction Attitude | `:matt` `:+matt` `:-matt` |
 | Intervention             | `:mint`                   |
