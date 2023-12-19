@@ -195,10 +195,10 @@ These are meant to be played with SUM: https://jeansenvaars.itch.io/scene-unfold
 | NPC Impression    | `:npcimp` or `:+npcimp` or `:-npcimp`       |
 | NPC Small talk    | `:npctalk` or `:+npctalk` or `:-npctalk`    |
 | NPC Truth or dare | `:npctruth` or `:+npctruth` or `:-npctruth` |
-| Oracles all       | `:sumoracle`                                |
-| Action Prompt     | `:sumac`                                    |
-| Subject Prompt    | `:sumsu`                                    |
-| Adjective Prompt  | `:sumad`                                    |
+| Oracles all       | `:grandoracle`                              |
+| Action Prompt     | `:action`                                   |
+| Adjective Prompt  | `:adjective`                                |
+| Subject Prompt    | `:subject`                                  |
 
 ## Game Unfolding Machine v2 Keywords
 
