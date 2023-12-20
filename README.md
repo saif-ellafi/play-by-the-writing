@@ -183,7 +183,7 @@ These are meant to be played with SUM: https://jeansenvaars.itch.io/scene-unfold
 | Name              | keyword                                     |
 |-------------------|---------------------------------------------|
 | BROWSE ALL TABLES | `:sum`                                      |
-| GM Action         | `:gma` or `:+gma` or `:-gma`                |
+| GM Action         | `:gma` or `:+gma` or `:-gma` (or :gmint)    |
 | GM Reaction       | `:gmre` or `:+gmre` or `:-gmre`             |
 | GM Factions       | `:gmfac` or `:+gmfac` or `:-gmfac`          |
 | PC Matters        | `:pcmatt` or `:+pcmatt` or `:-pcmatt`       |

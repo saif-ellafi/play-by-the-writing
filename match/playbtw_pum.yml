@@ -496,7 +496,7 @@ matches:
             - --table
             - "pum_nodes_lead"
   # SUM (GM action, intervention)
-  - triggers: [":sum", ":gma"]
+  - triggers: [":sum", ":gma", ":gmint"]
     label: "GM Emulation: Intervention check"
     replace: "{{output}}"
     vars:
@@ -509,7 +509,7 @@ matches:
             - --table
             - sum_gm_action
   # SUM (GM action, intervention)
-  - triggers: [":sum", ":+gma"]
+  - triggers: [":sum", ":+gma", ":+gmint]
     label: "GM Emulation: Intervention check (unfavorable)"
     replace: "{{output}}"
     vars:
@@ -524,7 +524,7 @@ matches:
             - --mode
             - adv
   # SUM (GM action, intervention)
-  - triggers: [":sum", ":-gma"]
+  - triggers: [":sum", ":-gma", ":-gmint]
     label: "GM Emulation: Intervention check (favorable)"
     replace: "{{output}}"
     vars:
