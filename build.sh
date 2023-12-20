@@ -12,6 +12,8 @@ pyinstaller playbtw_mune.spec --clean --distpath dist_mune/match;
 
 pyinstaller playbtw_opse.spec --clean --distpath dist_opse/match;
 
+pyinstaller playbtw_crge.spec --clean --distpath dist_crge/match;
+
 pyinstaller playbtw_ai.spec --clean --distpath dist_ai/scripts;
 
 pyinstaller playbtw_all.spec --clean --distpath dist_all/scripts;

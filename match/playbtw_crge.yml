@@ -1,0 +1,398 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+# CRGE https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games
+
+matches:
+  # CRGE Loom of Fate (to Knowledge)
+  - triggers: [":crge", ":qkno"]
+    label: "Loom of Fate (To Knowledge)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - crge_fate_knowledge
+  # CRGE Loom of Fate (To Conflict)
+  - triggers: [":crge", ":qcon"]
+    label: "Loom of Fate (To Conflict)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - crge_fate_conflict
+  # CRGE Loom of Fate (To Endings)
+  - triggers: [":crge", ":qend"]
+    label: "Loom of Fate (To Endings)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - crge_fate_endings
+  # CRGE Loom of Fate (To Endings)
+  - triggers: [":crge", ":qunex"]
+    label: "Unexpectedly"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - crge_unexpectedly
+  # UNE NPC Creator - Modifier + Noun
+  - triggers: [":une", ":unpc"]
+    label: "Creator: Modifier+Noun"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_creator_modifier,une_creator_noun
+  # UNE NPC Creator - Motivation
+  - triggers: [":une", ":umot"]
+    label: "Creator: Motivation"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_creator_motivation_verb,une_creator_motivation_noun
+  # UNE NPC Creator - NPC Power
+  - triggers: [":une", ":--upow"]
+    label: "Creator: Power (Order)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_creator_power_order
+  # UNE NPC Creator - NPC Power
+  - triggers: [":une", ":-upow"]
+    label: "Creator: Power (Calm)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_creator_power_calm
+  # UNE NPC Creator - NPC Power
+  - triggers: [":une", ":upow"]
+    label: "Creator: Power (Standard)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_creator_power_standard
+  # UNE NPC Creator - NPC Power
+  - triggers: [":une", ":+upow"]
+    label: "Creator: Power (Disarray)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_creator_power_disarray
+  # UNE NPC Creator - NPC Power
+  - triggers: [":une", ":++upow"]
+    label: "Creator: Power (Chaos)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_creator_power_chaos
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":---umood"]
+    label: "Interaction: Mood (hated)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_hated
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":--umood"]
+    label: "Interaction: Mood (hostile)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_hostile
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":-umood"]
+    label: "Interaction: Mood (distrustful)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_distrustful
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":umood"]
+    label: "Interaction: Mood (neutral)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_neutral
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":+umood"]
+    label: "Interaction: Mood (peaceful)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_peaceful
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":++umood"]
+    label: "Interaction: Mood (friendly)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_friendly
+  # UNE NPC Interaction - Mood
+  - triggers: [":une", ":+++umood"]
+    label: "Interaction: Mood (loved)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - wtable
+            - --table
+            - une_interaction_mood_loved
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une", ":ubear"]
+    label: "Interaction: Bearing (unknown)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (scheming)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_scheming
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (insane)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_insane
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (friendly)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_friendly
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (hostile)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_hostile
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (inquisitive)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_inquisitive
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (knowing)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_knowing
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (mysterious)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_mysterious
+  # UNE NPC Interaction - Bearing
+  - triggers: [":une"]
+    label: "Interaction: Bearing (prejudiced)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_bearing_prejudiced
+  # UNE NPC Interaction - Focus
+  - triggers: [":une", ":ufoc"]
+    label: "Interaction: Focus"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - une_interaction_focus
+  # BOLD Waylays
+  - triggers: [":bold", ":bway"]
+    label: "Waylays"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - bold_waylays
+  # BOLD Connections
+  - triggers: [":bold", ":bcon"]
+    label: "Connections"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - bold_connection_action,bold_connection_gerund,bold_connection_subject

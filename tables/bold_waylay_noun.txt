@@ -1,0 +1,50 @@
+Easy Foes: animals
+Easy Foes: mooks
+Easy Foes: mob
+Easy Foes: bandits
+Easy Foes: deputies
+Hard Foes: bounty hunter
+Hard Foes: soldiers
+Hard Foes: monster
+Hard Foes: villain
+Hard Foes: horror
+Knowledge: ascetic
+Knowledge: research
+Knowledge: occult
+Knowledge: enigma
+Knowledge: science
+Physical: pursuit
+Physical: trap
+Physical: struggle
+Physical: illness
+Physical: labor
+Factional: army
+Factional: invader
+Factional: holdings
+Factional: authority
+Factional: rebels
+Haven: festival
+Haven: hermit
+Haven: tavern
+Haven: hamlet
+Haven: conclave
+Party: misunderstanding
+Party: accusations
+Party: power play
+Party: friend-in-need
+Party: disappearance
+Personal: traitor
+Personal: lover
+Personal: death
+Personal: relative
+Personal: rival
+Epic: heaven / hell
+Epic: afterlife
+Epic: myth
+Epic: otherworldly
+Epic: the strange
+Natural: weather
+Natural: straying / lost
+Natural: social environ
+Natural: deprivation
+Natural: the wild

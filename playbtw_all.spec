@@ -24,6 +24,7 @@ shutil.copy('match/playbtw_pum.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_gum2.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_mune.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
+shutil.copy('match/playbtw_crge.yml', '{0}/../match/'.format(DISTPATH))
 
 if os.path.exists('dist_core/scripts/playbtw_core.exe'):
     shutil.copy('dist_core/scripts/playbtw_core.exe', '{0}/../scripts/'.format(DISTPATH))
@@ -35,4 +36,4 @@ else:
 for f in glob.glob('tables/*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_01_base', 'zip', 'dist_all')
+shutil.make_archive('PlayBTW_v2_02_base', 'zip', 'dist_all')

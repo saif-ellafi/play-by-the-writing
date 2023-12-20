@@ -18,9 +18,9 @@ md2pdf('README.pdf', md_file_path='README.md', css_file_path='pdf.css', base_url
 
 shutil.move('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 
-shutil.copy('match/playbtw_mune.yml', '{0}/../match/'.format(DISTPATH))
+shutil.copy('match/playbtw_crge.yml', '{0}/../match/'.format(DISTPATH))
 
-for f in glob.glob('tables/mune*'):
+for f in glob.glob('tables/crge*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_02_mune', 'zip', 'dist_mune')
+shutil.make_archive('PlayBTW_v2_02_crge', 'zip', 'dist_crge')

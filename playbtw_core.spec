@@ -56,4 +56,4 @@ md2pdf('README.pdf', md_file_path='README.md', css_file_path='pdf.css', base_url
 shutil.copy('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 shutil.copy('match/playbtw_core.yml', '{0}/../match/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_01_core', 'zip', 'dist_core')
+shutil.make_archive('PlayBTW_v2_02_core', 'zip', 'dist_core')

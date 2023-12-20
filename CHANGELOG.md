@@ -1,3 +1,8 @@
+### 2.02
+* New commands for Conjecutre games (CRGE, UNE, BOLD)
+* Added missing GUM setup commands
+* Small corrections here and there
+
 ### 2.01
 #### THE ONLY COMMANDS YOU NEED TO LEARN NOW! :)
 * New command :mel - Browse all mythic element tables

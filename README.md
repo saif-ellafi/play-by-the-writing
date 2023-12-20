@@ -11,9 +11,9 @@ To put it in plain words, for example, when you write down the command “:qq”
 # Features
 
 - Call your GM emulators right away from your note-taking application:
-Mythic 2e, PUM, SUM, GUM, OPSE, MUNE
+Mythic 2e, PUM, SUM, GUM, OPSE, MUNE, CRGE
 - Roll dice anywhere in your system just with a short command,
-like :rr2d6+1. → 2d6+1: 11)
+like :rr2d6+1. → 2d6+1: 11
 - Seek random tables and roll on them super fast, getting the results in your text
 - Use ChatGPT and Dall-E to interact with AI from anywhere (needs OpenAI account) with high levels of customization
 - An insane amount of random tables is included to roll right away
@@ -46,7 +46,14 @@ Instructions included in the source code files.
 # What is included?
 
 - **Example kit**: Test before you buy. Once installed, by writing `:example` you should see a happy output.
-- **Core kit**: Includes dice rolling, random tables, weighted tables, [Mythic GM Emulator](https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator), [Plot Unfolding Machine (PUM)](https://jeansenvaars.itch.io/plot-unfolding-machine), [Game Unfolding Machine (GUM)](https://jeansenvaars.itch.io/game-unfolding-machine), [Scene Unfolding Machine (PUM)](https://jeansenvaars.itch.io/scene-unfolding-machine) and [One Page Solo Engine (OPSE)]((https://inflatablestudios.itch.io/one-page-solo-engine)) keywords
+- **Core kit**: Includes dice rolling, random tables, weighted tables from:
+  - [Mythic GM Emulator](https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator)
+  - [Plot Unfolding Machine (PUM)](https://jeansenvaars.itch.io/plot-unfolding-machine)
+  - [Scene Unfolding Machine (PUM)](https://jeansenvaars.itch.io/scene-unfolding-machine)
+  - [Game Unfolding Machine (GUM)](https://jeansenvaars.itch.io/game-unfolding-machine)
+  - [One Page Solo Engine (OPSE)](https://inflatablestudios.itch.io/one-page-solo-engine)
+  - [Conjecture Games (CRGE, UNE, BOLD)](https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games)
+  - [The Madey Upy Namey Emulator (MUNE)](https://homebrewery.naturalcrit.com/share/rkmo0t9k4Q)
 - **AI kit**: Includes Core kit + [OpenAI ChatGPT and Dall-E integration](https://beta.openai.com/playground) 
 
 # What is inside?
@@ -89,7 +96,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_01_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_02_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -273,9 +280,27 @@ These are meant to be played with https://inflatablestudios.itch.io/one-page-sol
 | Dungeon Crawler              | `:opsedungeon`      |
 | Hex Crawler                  | `:opsehex`          |
 
+## CRGE Keywords
+
+These are meant to be played with https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games
+
+| Name                        | keyword                                      |
+|-----------------------------|----------------------------------------------|
+| BROWSE ALL TABLES           | `:crge` or `:une` or `:bold`                 |
+| CRGE (Loom of fate)         | `:qkno` or `:qcon` or `:qend`               |
+| CRGE Unexpectedly           | `:qunex`                                     |
+| UNE NPC Creator Identity    | `:unpc`                                      |
+| UNE NPC Creator Motivation  | `:umot`                                      |
+| UNE NPC Creator Power       | `:upow` between `:--upow` and `:++upow`      |
+| UNE NPC Interaction Mood    | `:umood` between `:---umood` and `:+++umood` |
+| UNE NPC Interaction Bearing | `:ubear` others in `:bold`                   |
+| UNE NPC Interaction Focus   | `:ufoc`                                      |
+| BOLD Waylays                | `:bway`                                      |
+| BOLD Connections            | `:bcon`                                      |
+
 ## MUNE Keywords
 
-These are meant to be played with https://inflatablestudios.itch.io/one-page-solo-engine
+These are meant to be played with https://www.drivethrurpg.com/product/134163/UNE-The-Universal-NPC-Emulator-rev
 
 | Name                     | keyword                   |
 |--------------------------|---------------------------|

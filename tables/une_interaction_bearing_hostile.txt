@@ -1,0 +1,10 @@
+death
+capture
+judgment
+combat
+surrender
+rage
+resentment
+submission
+injury
+destruction

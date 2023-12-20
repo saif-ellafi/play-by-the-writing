@@ -1,0 +1,8 @@
+scheming {{une_interaction_bearing_scheming}}
+insane {{une_interaction_bearing_insane}}
+friendly {{une_interaction_bearing_friendly}}
+hostile {{une_interaction_bearing_hostile}}
+inquisitive {{une_interaction_bearing_inquisitive}}
+knowing {{une_interaction_bearing_knowing}}
+mysterious {{une_interaction_bearing_mysterious}}
+prejudiced {{une_interaction_bearing_prejudiced}}

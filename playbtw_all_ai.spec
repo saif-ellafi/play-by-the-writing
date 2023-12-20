@@ -27,6 +27,7 @@ shutil.copy('match/playbtw_pum.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_gum2.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_mune.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
+shutil.copy('match/playbtw_crge.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('config/openai.txt', '{0}/../config/'.format(DISTPATH))
 
@@ -42,4 +43,4 @@ else:
 for f in glob.glob('tables/*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_01_base_with_ai', 'zip', 'dist_all_ai')
+shutil.make_archive('PlayBTW_v2_02_base_with_ai', 'zip', 'dist_all_ai')
