@@ -134,9 +134,9 @@ matches:
             - pum_question_interaction
             - --mode
             - dis
-  # PUM - Who
-  - triggers: [":pum", ":who"]
-    label: "Who?"
+  # PUM - Someone
+  - triggers: [":pum", ":who", ":someone"]
+    label: "Someone (who)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -148,8 +148,8 @@ matches:
             - --table
             - pum_who
   # PUM - Intent
-  - triggers: [":pum", ":intent"]
-    label: "Intent"
+  - triggers: [":pum", ":intent", ":want"]
+    label: "Intent (want)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -161,8 +161,8 @@ matches:
             - --table
             - pum_intent
   # PUM - Activity
-  - triggers: [":pum", ":activity"]
-    label: "Activity"
+  - triggers: [":pum", ":activity", ":doing"]
+    label: "Activity (doing)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -174,8 +174,8 @@ matches:
             - --table
             - pum_activity
   # PUM - Place
-  - triggers: [":pum", ":area", ":location", ":place"]
-    label: "Place"
+  - triggers: [":pum", ":location", ":place", ":where"]
+    label: "Place (where)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -187,8 +187,8 @@ matches:
             - --table
             - pum_place
   # PUM - Object
-  - triggers: [":pum", ":object"]
-    label: "Object"
+  - triggers: [":pum", ":reason", ":why"]
+    label: "Reason (why)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -198,10 +198,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_object
+            - pum_reason
   # PUM - Ability
-  - triggers: [":pum", ":ability"]
-    label: "Ability"
+  - triggers: [":pum", ":explain", ":how"]
+    label: "Explain (who)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -211,10 +211,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - pum_ability
+            - pum_explain
   # PUM - Subject What?
-  - triggers: [":pum", ":what"]
-    label: "Subject, What?"
+  - triggers: [":pum", ":what", ":focus"]
+    label: "Focus (what)"
     replace: "{{output}}"
     vars:
       - name: output

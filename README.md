@@ -167,13 +167,13 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Catalyst                | `:catalyst`               |
 | Complication            | `:complication`           |
 | Situation               | `:situation`              |
-| Subject                 | `:subject`                |
-| Who?                    | `:who`                    |
-| Intent                  | `:intent`                 |
-| Activity                | `:activity`               |
-| Place                   | `:place`                  |
-| Ability                 | `:ability`                |
-| Object                  | `:object`                 |
+| Focus                   | `:what` or `:focus`    |
+| Someone                 | `:someone` or `:who`      |
+| Intent                  | `:intent` or `:want`      |
+| Activity                | `:activity` or `:doing`   |
+| Place                   | `:place` or `:where`      |
+| Reason                  | `:reason` or `:why`       |
+| How                     | `:explain` or `:how`      |
 | World Aspects setup     | `:aspects` or `:worlds`   |
 | World Aspects roll      | `:aspectr` or `:worldr`   |
 | Relevant Actors setup   | `:actors`                 |

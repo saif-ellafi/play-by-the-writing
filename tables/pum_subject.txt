@@ -8,7 +8,7 @@ Cipher/Code
 Culture/Past
 Debt/Trade
 Domain/Land
-Finding/Clue
+Finding/Search
 Enemy/Danger
 Enigma/Query
 Faction/Family
@@ -22,7 +22,7 @@ Hazard/Nature
 Illusions/Ghost
 Jewelry/Gem
 Karma/Deed
-Key/Secrets
+Key/Doors
 Lies/Whisper
 Love/Passion
 Machine/Robot
@@ -32,15 +32,15 @@ Monster/Beast
 Mystery/Murder
 Noise/Sound
 Pain/Suffering
-Place/Area
+Place/Mood
 Plan/Blackmail
 Politics/Laws
 Power/Control
-Promise/Word
+Promise/Vow
 Protocol/Rules
 Rebels/Traitor
 Riches/Wealth
-Secrets/Plot
+Secrets/Plots
 Tech/Future
 Transformation
 Traps/Ambush
