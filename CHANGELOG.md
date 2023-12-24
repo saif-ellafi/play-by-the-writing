@@ -1,3 +1,6 @@
+### 2.03
+* Updated to PUM v7-7
+
 ### 2.02
 * New commands for Conjecutre games (CRGE, UNE, BOLD)
 * Added missing GUM setup commands

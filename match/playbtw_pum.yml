@@ -201,7 +201,7 @@ matches:
             - pum_reason
   # PUM - Ability
   - triggers: [":pum", ":explain", ":how"]
-    label: "Explain (who)"
+    label: "Explain (how)"
     replace: "{{output}}"
     vars:
       - name: output
