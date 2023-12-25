@@ -136,7 +136,7 @@ matches:
             - mythic_focus_adv
   # Mythic Focus with custom table. Table name between dots. Without the extension. Must be .psv
   - regex: ":mfo\\.(?P<table>.*)\\."
-    replace: "({{table}}): {{output}}"
+    replace: "{{table}}: {{output}}"
     vars:
       - name: output
         type: script
