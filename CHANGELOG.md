@@ -3,7 +3,7 @@
 * Added support for custom decks (in text form)
 * Docummented ALT+SPACE command which shows all available commands
 * Added labels so all tables can be used with ALT+SPACE
-* Added new command `:aihelp` that shows all AI related commands
+* Added new command `:aicall` that shows all AI related commands
 
 ### 2.03
 * Updated to PUM v7-7

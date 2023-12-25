@@ -142,7 +142,7 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 | BROWSE CRGE commands   | `:crge`   |
 | BROWSE UNE commands    | `:une`    |
 | BROWSE BOLD commands   | `:bold`   |
-| BROWSE AI commands     | `:aihelp` |
+| BROWSE AI commands     | `:aicall` |
 
 
 ## Mythic GM Emulator 2e Keywords
