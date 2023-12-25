@@ -283,7 +283,7 @@ matches:
             - pum_proposal
   # PUM - Scene Modified Proposal (favorable)
   - triggers: [":pum", ":+check", ":+proposal"]
-    label: "Beat: Modified proposal"
+    label: "Beat: Modified proposal (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -298,7 +298,7 @@ matches:
             - adv
   # PUM - Scene Modified Proposal (unfavorable)
   - triggers: [":pum", ":-check", ":-proposal"]
-    label: "Beat: Modified proposal"
+    label: "Beat: Modified proposal (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
