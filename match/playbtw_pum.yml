@@ -238,6 +238,36 @@ matches:
             - table
             - --table
             - pum_prompt
+  # PUM - Scene Random Prompt (favorable)
+  - triggers: [":pum", ":+scene", ":+prompt"]
+    label: "Beat: Random prompt (favorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_prompt
+            - --mode
+            - adv
+  # PUM - Scene Random Prompt (unfavorable)
+  - triggers: [":pum", ":-scene", ":-prompt"]
+    label: "Beat: Random prompt (unfavorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_prompt
+            - --mode
+            - dis
   # PUM - Scene Modified Proposal
   - triggers: [":pum", ":check", ":proposal"]
     label: "Beat: Modified proposal"
@@ -251,6 +281,36 @@ matches:
             - table
             - --table
             - pum_proposal
+  # PUM - Scene Modified Proposal (favorable)
+  - triggers: [":pum", ":+check", ":+proposal"]
+    label: "Beat: Modified proposal"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_proposal
+            - --mode
+            - adv
+  # PUM - Scene Modified Proposal (unfavorable)
+  - triggers: [":pum", ":-check", ":-proposal"]
+    label: "Beat: Modified proposal"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_proposal
+            - --mode
+            - dis
   # PUM - Complication
   - triggers: [":pum", ":complication"]
     label: "Complication"
@@ -315,7 +375,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_world"
+            - "pum_nodes_world_aspects"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
@@ -336,7 +396,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_world"
+            - "pum_nodes_world_aspects"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":pum", ":worldr", ":aspectr"]
@@ -350,7 +410,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_world"
+            - "pum_nodes_world_aspects"
   # PUM Relevant Actors
   - triggers: [":pum", ":actors"]
     label: "Plot node: Relevant actors (Setup)"
@@ -363,7 +423,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_actor"
+            - "pum_nodes_relevant_actors"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
@@ -384,7 +444,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_actor"
+            - "pum_nodes_relevant_actors"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":pum", ":actorr"]
@@ -398,7 +458,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_actor"
+            - "pum_nodes_relevant_actors"
   # PUM Story Troubles
   - triggers: [":pum", ":troubles"]
     label: "Plot node: Story troubles (Setup)"
@@ -411,7 +471,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_trouble"
+            - "pum_nodes_story_troubles"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
@@ -432,7 +492,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_trouble"
+            - "pum_nodes_story_troubles"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":pum", ":troubler"]
@@ -446,7 +506,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_trouble"
+            - "pum_nodes_story_troubles"
   # PUM Active Leads
   - triggers: [":pum", ":leads"]
     label: "Plot node: Active leads (Setup)"
@@ -459,7 +519,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_lead"
+            - "pum_nodes_active_leads"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
@@ -480,7 +540,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_lead"
+            - "pum_nodes_active_leads"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":pum", ":leadr"]
@@ -494,7 +554,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_lead"
+            - "pum_nodes_active_leads"
   # SUM (GM action, intervention)
   - triggers: [":sum", ":gma", ":gmint"]
     label: "GM Emulation: Intervention check"

@@ -2,9 +2,9 @@ Unexpected complication: {{pum_complication}}
 Play a scene filler catalyst: {{pum_catalyst}}
 Lay out a skill challenge: {{pum_challenge}}
 Put characters in a situation: {{pum_situation}}
-Reflect or trigger a world aspect (Node, World aspect: u{{pum_nodes_world}})
-Detach or endanger a relevant actor (Node, Relevant actor: u{{pum_nodes_actor}})
-Activate or elevate a relevant actor (Node, Relevant actor: u{{pum_nodes_actor}})
-Confront or resolve a story trouble (Node, Story trouble: u{{pum_nodes_trouble}})
-Weaken or drop an active lead (Node, Active lead: u{{pum_nodes_lead}})
-Validate or confirm an active lead (Node, Active lead: u{{pum_nodes_lead}})
+Reflect or trigger a world aspect (Node, World aspect: u{{pum_nodes_world_aspects}})
+Detach or endanger a relevant actor (Node, Relevant actor: u{{pum_nodes_relevant_actors}})
+Activate or elevate a relevant actor (Node, Relevant actor: u{{pum_nodes_relevant_actors}})
+Confront or resolve a story trouble (Node, Story trouble: u{{pum_nodes_story_troubles}})
+Weaken or drop an active lead (Node, Active lead: u{{pum_nodes_active_leads}})
+Validate or confirm an active lead (Node, Active lead: u{{pum_nodes_active_leads}})

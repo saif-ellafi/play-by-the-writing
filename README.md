@@ -173,33 +173,33 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 
 These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfolding-machine
 
-| Name                    | keyword                   |
-|-------------------------|---------------------------|
-| BROWSE ALL TABLES       | `:pum`                    |
-| Yes or No Deterministic | `:qq` `:+qq` `:-qq`       |
-| Yes or No Subjective    | `:qsub` `:+qsub` `:-qsub` |
-| Yes or No Interaction   | `:qint` `:+qint` `:-qint` |
-| Random Prompt           | `:scene` or `:prompt`     |
-| Expectation Checker     | `:check` or `:proposal`   |
-| Challenge               | `:challenge` or `:skill`  |
-| Catalyst                | `:catalyst`               |
-| Complication            | `:complication`           |
-| Situation               | `:situation`              |
-| Focus                   | `:what` or `:focus`    |
-| Someone                 | `:someone` or `:who`      |
-| Intent                  | `:intent` or `:want`      |
-| Activity                | `:activity` or `:doing`   |
-| Place                   | `:place` or `:where`      |
-| Reason                  | `:reason` or `:why`       |
-| How                     | `:explain` or `:how`      |
-| World Aspects setup     | `:aspects` or `:worlds`   |
-| World Aspects roll      | `:aspectr` or `:worldr`   |
-| Relevant Actors setup   | `:actors`                 |
-| Relevant Actors roll    | `:actorr`                 |
-| Story Troubles setup    | `:troubles`               |
-| Story Troubles roll     | `:troubler`               |
-| Active Leads setup      | `:leads`                  |
-| Active Leads roll       | `:leadr`                  |
+| Name                    | keyword                                         |
+|-------------------------|-------------------------------------------------|
+| BROWSE ALL TABLES       | `:pum`                                          |
+| Yes or No Deterministic | `:qq` `:+qq` `:-qq`                             |
+| Yes or No Subjective    | `:qsub` `:+qsub` `:-qsub`                       |
+| Yes or No Interaction   | `:qint` `:+qint` `:-qint`                       |
+| Random Prompt           | `:scene` or `:prompt` (add +/- for fav/unfav)   |
+| Expectation Checker     | `:check` or `:proposal` (add +/- for fav/unfav) |
+| Challenge               | `:challenge` or `:skill`                        |
+| Catalyst                | `:catalyst`                                     |
+| Complication            | `:complication`                                 |
+| Situation               | `:situation`                                    |
+| Focus                   | `:what` or `:focus`                             |
+| Someone                 | `:someone` or `:who`                            |
+| Intent                  | `:intent` or `:want`                            |
+| Activity                | `:activity` or `:doing`                         |
+| Place                   | `:place` or `:where`                            |
+| Reason                  | `:reason` or `:why`                             |
+| How                     | `:explain` or `:how`                            |
+| World Aspects setup     | `:aspects` or `:worlds`                         |
+| World Aspects roll      | `:aspectr` or `:worldr`                         |
+| Relevant Actors setup   | `:actors`                                       |
+| Relevant Actors roll    | `:actorr`                                       |
+| Story Troubles setup    | `:troubles`                                     |
+| Story Troubles roll     | `:troubler`                                     |
+| Active Leads setup      | `:leads`                                        |
+| Active Leads roll       | `:leadr`                                        |
 
 ## Scene Unfolding Machine v6 Keywords
 

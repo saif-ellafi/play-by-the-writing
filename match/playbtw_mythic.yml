@@ -195,7 +195,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_charlist"
+            - "mythic_characters_list"
             - --contains
             - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
       - name: form1
@@ -216,7 +216,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_charlist"
+            - "mythic_characters_list"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":myth", ":mcharr"]
@@ -230,7 +230,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "mythic_charlist"
+            - "mythic_characters_list"
   # Mythic threads lists
   - triggers: [":myth", ":mthreads"]
     label: "Threads list (Setup)"
@@ -243,7 +243,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_threadlist"
+            - "mythic_thread_list"
             - --contains
             - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
       - name: form1
@@ -264,7 +264,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_threadlist"
+            - "mythic_thread_list"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":myth", ":mthreadr"]
@@ -278,7 +278,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "mythic_threadlist"
+            - "mythic_thread_list"
   # Mythic adventure features lists
   - triggers: [":myth", ":mfeatures"]
     label: "Adventure features list (Setup)"
@@ -291,7 +291,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_featurelist"
+            - "mythic_features_list"
             - --contains
             - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
       - name: form1
@@ -312,7 +312,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_featurelist"
+            - "mythic_features_list"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":myth", ":mfeaturer"]
@@ -326,7 +326,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "mythic_featurelist"
+            - "mythic_features_list"
   # Mythic element tables (lookup with label)
   - trigger: ":myth"
     label: "Alien Species"

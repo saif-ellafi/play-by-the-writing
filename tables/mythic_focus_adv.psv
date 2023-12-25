@@ -1,7 +1,7 @@
-20|Adventure Feature (NPC: u{{mythic_featurelist}})
-40|NPC Action (NPC: u{{mythic_charlist}})
-50|NPC Negative (NPC: u{{mythic_charlist}})
-55|NPC Positive (NPC: u{{mythic_charlist}})
+20|Adventure Feature (NPC: u{{mythic_features_list}})
+40|NPC Action (NPC: u{{mythic_characters_list}})
+50|NPC Negative (NPC: u{{mythic_characters_list}})
+55|NPC Positive (NPC: u{{mythic_characters_list}})
 70|PC Negative
 80|PC Negative
 100|Current Context
