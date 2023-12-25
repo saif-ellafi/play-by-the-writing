@@ -6,7 +6,8 @@
 
 matches:
   # OpenAI ChatGPT
-  - triggers: [":ainew", ":aistart"]
+  - triggers: [":aihelp", ":ainew", ":aistart"]
+    label: "New ChatGPT conversation"
     replace: "{{output}}"
     vars:
       - name: form_ai
@@ -72,7 +73,42 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
-  - triggers: [":aichat", ":aicontinue", ":aiadd"]
+  - triggers: [":aihelp", ":aichat", ":aicontinue", ":aiadd"]
+    label: "Continue ChatGPT conversation"
+    replace: "{{output}}"
+    vars:
+      - name: form_ai
+        type: form
+        params:
+          layout: |
+            ChatGPT: Continues the previous conversation:
+            [[prompt]]
+            Model                                      Coherence         Answer size:
+            [[model]] [[temperature]] [[tokens]]
+            
+            * NOTE: answer size and model affect pricing.
+            * NOTE: use :aichat to CONTIUNE this conversation later
+          fields:
+            prompt:
+              type: text
+              multiline: true
+            model:
+              type: list
+              values:
+                - 'gpt-4'
+                - 'gpt-3.5-turbo'
+              default:
+                'gpt-3.5-turbo'
+            temperature:
+              type: list
+              values:
+                - '2.0'
+                - '1.75'
+                - '1.5'
+                - '1.25'
+                - '1.0'
+                - '0.9'
+                - '0.75'
     replace: "{{output}}"
     vars:
       - name: form_ai
@@ -138,7 +174,8 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
-  - triggers: [":aiquestion", ":aisingle", ":aiask"]
+  - triggers: [":aihelp", ":aiquestion", ":aisingle", ":aiask"]
+    label: "Single ChatGPT question"
     replace: "{{output}}"
     vars:
       - name: form_ai
@@ -204,7 +241,8 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
-  - triggers: [":aiforget", ":aierase", ":aiclear"]
+  - triggers: [":aihelp", ":aiforget", ":aierase", ":aiclear"]
+    label: "Clear ChatGPT conversation"
     replace: "{{output}}"
     vars:
       - name: output
@@ -213,7 +251,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_forget
-  - triggers: [":aimemory", ":aihistory", ":ailog"]
+  - triggers: [":aihelp", ":aimemory", ":aihistory", ":ailog"]
+    label: "Show ChatGPT conversation history"
     replace: "{{output}}"
     vars:
       - name: output
@@ -222,7 +261,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_knowledge
-  - triggers: [":aiimg", ":aiimage", ":dall-e"]
+  - triggers: [":aihelp", ":aiimg", ":aiimage", ":dall-e"]
+    label: "Generate a Dall-E Image"
     replace: "{{output}}"
     vars:
       - name: form_ai

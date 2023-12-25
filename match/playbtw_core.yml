@@ -6,6 +6,7 @@
 
 matches:
   - trigger: ":help"
+    label: "Help"
     replace: "{{form.nothing}}"
     vars:
       - name: "form"
@@ -24,8 +25,10 @@ matches:
             Roll w. tables → :wlist or :wtables
             Complete AI → :aicomplete
   - triggers: [":dd"]
+    label: "Dice symbol"
     replace: "🎲"
   - triggers: [":arr"]
+    label: "Arrow symbol"
     replace: "→"
   # Roll simple dice - :r1d6
   - regex: ":r(?P<quantity>\\d+)d(?P<size>\\d+)\\."
@@ -55,6 +58,7 @@ matches:
             - "{{formula}}"
   # Roll fudge.
   - trigger: ":df."
+    label: "FATE Fudge dice"
     replace: "{{output}}"
     vars:
       - name: output
@@ -77,6 +81,7 @@ matches:
             - "{{mods}}"
   # Draw from card deck (no replacement)
   - triggers: [":draw", ":card"]
+    label: "Draw from card deck"
     replace: "{{output}}"
     vars:
       - name: output
@@ -85,8 +90,11 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - draw
+            - --table
+            - "poker_deck"
   # Draw from card deck (no replacement)
   - trigger: ":shuffle"
+    label: "Shuffle deck"
     replace: "{{output}}"
     vars:
       - name: output
@@ -95,6 +103,8 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_core"
             - shuffle
+            - --table
+            - "poker_deck"
   # Roll from weighted random table of two columns. Without .txt
   - regex: ":tt\\.(?P<table>.*)\\."
     replace: "{{output}}"

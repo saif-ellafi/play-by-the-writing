@@ -6,6 +6,7 @@
 
 matches:
   - regex: ":example"
+    label: "Playbtw Example"
     replace: "{{output}}"
     vars:
       - name: output

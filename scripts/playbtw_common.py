@@ -104,22 +104,22 @@ def rolls_advanced(formula):
 def shuffle_deck(table):
     cards = read_table(table)
     random.shuffle(cards)
-    with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+    with open(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards))
     return cards
 
 
 def draw_card(table):
     drawn = ''
-    if not os.path.exists(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt')):
+    if not os.path.exists(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt')):
         shuffle_deck(table)
-    with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
+    with open(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
         cards = list(map(lambda x: x.strip(), play_deck.readlines()))
     if not cards:
         cards = shuffle_deck(table)
         drawn += '(Shuffled!) '
     drawn += cards[0].strip()
-    with open(os.path.join(tempfile.gettempdir(), '__play_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+    with open(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards[1:]))
     return drawn
 

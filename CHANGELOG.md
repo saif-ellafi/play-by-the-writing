@@ -1,3 +1,10 @@
+### 2.04
+* Updated to PUM v7-8
+* Added support for custom decks (in text form)
+* Docummented ALT+SPACE command which shows all available commands
+* Added labels so all tables can be used with ALT+SPACE
+* Added new command `:aihelp` that shows all AI related commands
+
 ### 2.03
 * Updated to PUM v7-7
 
@@ -7,7 +14,7 @@
 * Small corrections here and there
 
 ### 2.01
-#### THE ONLY COMMANDS YOU NEED TO LEARN NOW! :)
+#### THE ONLY COMMANDS YOU NEED TO LEARN NOW!
 * New command :mel - Browse all mythic element tables
 * New command :pum - Browse all PUM tables
 * New command :gum - Browse all GUM tables

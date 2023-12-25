@@ -60,10 +60,10 @@ elif action == 'roll_fudge':
     total = fudges.count('(+)') - fudges.count('(-)') + bonus
     print((' '.join(fudges) + ' + (' + str(bonus) + ') = ') + str(total))
 elif action == 'shuffle':
-    shuffle_deck('poker_deck')
+    shuffle_deck(args['table'].strip())
     print('Shuffled!')
 elif action == 'draw':
-    print(draw_card('poker_deck')
+    print(draw_card(args['table'].strip())
           .replace('Spades', '♠')
           .replace('Hearts', '♥')
           .replace('Diamonds', '♦')

@@ -50,6 +50,37 @@ matches:
             - "{{fcparams.odd}}"
             - --chaos
             - "{{fcparams.cf}}"
+  # Mythic Alteration check
+  - triggers: [":myth", ":mmalt"]
+    label: "Scene Alteration check"
+    replace: "{{output}}"
+    vars:
+      - name: fcparams
+        type: form
+        params:
+          layout: |
+            Chaos [[cf]]
+          fields:
+            cf:
+              type: list
+              values:
+                - "1"
+                - "2"
+                - "3"
+                - "4"
+                - "5"
+                - "6"
+                - "7"
+                - "8"
+                - "9"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_mythic"
+            - scene_check
+            - --chaos
+            - "{{fcparams.cf}}"
   # Mythic FAST fate check
   # Use with modifier and chaos for example :mfc-2c5
   - regex: ":mfc(?P<odds>[-+]?\\d)c(?P<chaos>\\d)"

@@ -96,7 +96,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_03_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_04_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -128,6 +128,23 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 | Browse and Roll from List   | `:list.<search_criteria>.` `:2list.<search_criteria>.` `:3list.<search_criteria>.`    | ...                        | Display all available tables in the directory                |
 | Browse and Roll from W-List | `:wlist.<search_criteria>.` `:2wlist.<search_criteria>.` `:3wlist.<search_criteria>.` | ...                        | Display all available weighted tables in the directory there |
 
+## System Keywords (most useful!!!)
+
+| Name                   | keyword   |
+|------------------------|-----------|
+| BROWSE ALL commands    | ALT+SPACE |
+| BROWSE Mythic commands | `:mythic` |
+| BROWSE PUM commands    | `:pum`    |
+| BROWSE SUM commands    | `:sum`    |
+| BROWSE GUM commands    | `:gum`    |
+| BROWSE OPSE commands   | `:opse`   |
+| BROWSE MUNE commands   | `:mune`   |
+| BROWSE CRGE commands   | `:crge`   |
+| BROWSE UNE commands    | `:une`    |
+| BROWSE BOLD commands   | `:bold`   |
+| BROWSE AI commands     | `:aihelp` |
+
+
 ## Mythic GM Emulator 2e Keywords
 
 Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/422929/Mythic-Game-Master-Emulator-Second-Edition
@@ -136,6 +153,7 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | BROWSE ALL TABLES                   | `:mythic`                                                                                                 |
 | Fate Check (prompted)               | `:mmfc`                                                                                                   |
+| Alteration Check (prompted)         | `:mmalt`                                                                                                  |
 | Fate Check (per modifier and chaos) | `:mfc<mod>c<chaos>` e.g.: `:mfc+2c4` (+2 modifier, 4 chaos rank) or `mfc-3c9` (-3 modifier, 9 chaos rank) |
 | Scene Alteration                    | `:malt<chaos>` e.g.: `:malt6`                                                                             |
 | Setup characters list               | `:mchars`                                                                                                 |

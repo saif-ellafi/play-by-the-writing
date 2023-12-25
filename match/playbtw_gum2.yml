@@ -436,6 +436,7 @@ matches:
             - gum2_grand_subject
   # GUM V2 - World location archetype
   - triggers: [":ggsetloc"]
+    label: "World location archetype"
     replace: "{{output}}"
     vars:
       - name: output
@@ -448,6 +449,7 @@ matches:
             - gum2_setup_location
   # GUM V2 - World background
   - triggers: [":ggsetback"]
+    label: "World background"
     replace: "{{output}}"
     vars:
       - name: output
@@ -460,6 +462,7 @@ matches:
             - gum2_setup_background
   # GUM V2 - Campaign goals mission
   - triggers: [":ggsetmission"]
+    label: "Campaign goals mission"
     replace: "{{output}}"
     vars:
       - name: output
@@ -472,6 +475,7 @@ matches:
             - gum2_setup_mission
   # GUM V2 - Campaign goals opposition
   - triggers: [":ggsetopp"]
+    label: "Campaign goals opposition"
     replace: "{{output}}"
     vars:
       - name: output
@@ -484,6 +488,7 @@ matches:
             - gum2_setup_opposition
   # GUM V2 - Campaign motivation
   - triggers: [":ggsetmot"]
+    label: "Campaign motivation"
     replace: "{{output}}"
     vars:
       - name: output
@@ -496,6 +501,7 @@ matches:
             - gum2_setup_motivation
   # GUM V2 - Quest hook
   - triggers: [":ggsethook"]
+    label: "Quest hook"
     replace: "{{output}}"
     vars:
       - name: output
@@ -508,6 +514,7 @@ matches:
             - gum2_setup_hook
   # GUM V2 - Quest lead
   - triggers: [":ggsetlead"]
+    label: "Quest lead"
     replace: "{{output}}"
     vars:
       - name: output
@@ -520,6 +527,7 @@ matches:
             - gum2_setup_lead
   # GUM V2 - Quest caveat
   - triggers: [":ggsetcaveat"]
+    label: "Quest caveat"
     replace: "{{output}}"
     vars:
       - name: output
