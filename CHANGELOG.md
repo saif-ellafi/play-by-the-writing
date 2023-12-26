@@ -1,7 +1,7 @@
 ### 2.04
 * Updated to PUM v7-8
 * Added support for custom decks (in text form)
-* Docummented ALT+SPACE command which shows all available commands
+* Documented ALT+SPACE command which shows all available commands
 * Added labels so all tables can be used with ALT+SPACE
 * Added new command `:aicall` that shows all AI related commands
 * Improved error message for when a user list is not defined
