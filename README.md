@@ -96,7 +96,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_04_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_05_base_with_ai.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 

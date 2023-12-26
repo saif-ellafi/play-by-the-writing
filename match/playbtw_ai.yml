@@ -198,7 +198,7 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
-            - ai_chat
+            - ai_chat_isolate
             - --prompt
             - "{{form_ai.prompt}}"
             - --model

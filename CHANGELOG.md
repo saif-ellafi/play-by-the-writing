@@ -1,3 +1,6 @@
+### 2.05
+* Updated to latest OpenAI Python API (AI commands were broken)
+
 ### 2.04
 * Updated to PUM v7-8
 * Added support for custom decks (in text form)

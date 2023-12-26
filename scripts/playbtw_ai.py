@@ -5,7 +5,16 @@
 
 import argparse
 
-import openai
+from openai import OpenAI
+from openai.types import Image
+
+with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='utf-8') as file:
+    api_key = file.read().strip()
+    if api_key == '<Replace entire line with OpenAI API Key>':
+        print('OpenAI API KEY NOT Replaced. Paste your OpenAI API KEY in openai.txt file (and make a backup of the file)')
+        sys.exit(0)
+
+client = OpenAI(api_key=api_key)
 import pickle
 import sys
 
@@ -32,13 +41,6 @@ action = args['action']
 
 ai_memory_file = os.path.join(tempfile.gettempdir(), 'playbtw_ai_memory.txt')
 ai_history_file = os.path.join(tempfile.gettempdir(), 'playbtw_ai_chat.txt')
-
-with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='utf-8') as file:
-    api_key = file.read().strip()
-    if api_key == '<Replace entire line with OpenAI API Key>':
-        print('OpenAI API KEY NOT Replaced. Paste your OpenAI API KEY in openai.txt file (and make a backup of the file)')
-        sys.exit(0)
-    openai.api_key = api_key
 
 
 def memory_erase():
@@ -84,13 +86,12 @@ if action == 'ai_chat_init':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
-        response = openai.ChatCompletion.create(
-            messages=messages,
-            model=model,
-            temperature=temperature,
-            max_tokens=tokens
-        )
-        answer = response['choices'][0].message.content.strip()
+        response = client.chat.completions.create(
+        messages=messages,
+        model=model,
+        temperature=temperature,
+        max_tokens=tokens)
+        answer = response.choices[0].message.content.strip()
         messages.append({
             "role": "assistant",
             "content": answer
@@ -113,13 +114,12 @@ elif action == 'ai_chat':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
-        response = openai.ChatCompletion.create(
-            messages=messages,
-            model=model,
-            temperature=temperature,
-            max_tokens=tokens
-        )
-        answer = response['choices'][0].message.content.strip()
+        response = client.chat.completions.create(
+        messages=messages,
+        model=model,
+        temperature=temperature,
+        max_tokens=tokens)
+        answer = response.choices[0].message.content.strip()
         messages.append({
             "role": "assistant",
             "content": answer
@@ -139,13 +139,12 @@ elif action == 'ai_chat_isolate':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
-        response = openai.ChatCompletion.create(
-            messages=messages,
-            model=model,
-            temperature=temperature,
-            max_tokens=tokens
-        )
-        answer = response['choices'][0].message.content.strip()
+        response = client.chat.completions.create(
+        messages=messages,
+        model=model,
+        temperature=temperature,
+        max_tokens=tokens)
+        answer = response.choices[0].message.content.strip()
         messages.append({
             "role": "assistant",
             "content": answer
@@ -157,7 +156,7 @@ elif action == 'ai_image':
     img_format = args['img_format']
     img_quality = args['img_quality']
     img_style = args['img_style']
-    response = openai.Image().create(
+    response = client.images.generate(
         prompt=prompt,
         size=img_size,
         quality=img_quality,
@@ -166,7 +165,10 @@ elif action == 'ai_image':
         n=1,
         model='dall-e-3'
     )
-    answer = response['data'][0]['url'].strip()
+    if img_format == 'b64_json':
+        answer = response.data[0].b64_json.strip()
+    else:
+        answer = response.data[0].url.strip()
     if img_format == 'markdown':
         print('%s\n![%s](%s)' % (prompt, prompt, answer))
     else:
