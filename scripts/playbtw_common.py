@@ -158,7 +158,7 @@ def save_user_table(name, content):
     path = os.path.join(tempfile.gettempdir(), name+'.txt')
     with open(path, 'w') as f:
         f.write(content)
-    return 'List updated:\n'+content
+    return content
 
 
 # Save user defined wtable
@@ -166,7 +166,7 @@ def save_user_wtable(name, content):
     path = os.path.join(tempfile.gettempdir(), name+'.psv')
     with open(path, 'w') as f:
         f.write(content)
-    return 'List updated:\n'+content
+    return content
 
 
 # Roll user defined table
