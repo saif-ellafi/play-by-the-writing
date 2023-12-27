@@ -19,6 +19,13 @@ parser.add_argument('--contains', type=str, default='', help='Contains sub expre
 parser.add_argument('--quantity', type=int, help='Simple Roll dice quantity')
 parser.add_argument('--size', type=int, help='Simple Roll dice size')
 
+parser.add_argument('--gen_a', type=int, help='Genesys dice ability')
+parser.add_argument('--gen_p', type=int, help='Genesys dice proficiency')
+parser.add_argument('--gen_b', type=int, help='Genesys dice boost')
+parser.add_argument('--gen_d', type=int, help='Genesys dice difficulty')
+parser.add_argument('--gen_c', type=int, help='Genesys dice challenge')
+parser.add_argument('--gen_s', type=int, help='Genesys dice setback')
+
 
 args = vars(parser.parse_args())
 action = args['action']
@@ -59,6 +66,8 @@ elif action == 'roll_fudge':
         fudges.append(map_fudge(roll['total']))
     total = fudges.count('(+)') - fudges.count('(-)') + bonus
     print((' '.join(fudges) + ' + (' + str(bonus) + ') = ') + str(total))
+elif action == 'roll_genesys':
+    roll_genesys([args['gen_b'], args['gen_s'], args['gen_a'], args['gen_d'], args['gen_p'], args['gen_c']])
 elif action == 'shuffle':
     shuffle_deck(args['table'].strip())
     print('Shuffled!')

@@ -121,6 +121,7 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 | Roll complex dice           | `:rr<formula>.`                                                                       | 3d6x: [1, 3, 1]            | Complex formulas: https://github.com/borntyping/python-dice  |
 | Roll fudge dice             | `:df.`                                                                                | ( ) (+) (-) (-) + (0) = -1 | Fudge dice for FATE                                          |
 | Roll fudge dice with mod    | `:df<modifier>.`                                                                      | ( ) ( ) (-) (-) + (3) = 1  | Fudge dice for FATE with a bonus                             |
+| Roll denesys dice           | `:genesys` or `:gend`                                                                 | ...                        | Rolls dice for Genesys RPG by FFG                            |
 | Roll Random Table           | `:tt.<tablename>.`                                                                    | [Third result]             | Roll from a .txt table based on its filename                 |
 | Roll Weighted Table         | `:wt.<tablename>.`                                                                    | [Next quarter]             | Roll from a .psv table with weights based on its filenam     |
 | Shuffle Poker Deck          | `:shuffle`                                                                            | Shuffled!                  | restarts the poker deck                                      |
@@ -173,33 +174,33 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 
 These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfolding-machine
 
-| Name                    | keyword                                         |
-|-------------------------|-------------------------------------------------|
-| BROWSE ALL TABLES       | `:pum`                                          |
-| Yes or No Deterministic | `:qq` `:+qq` `:-qq`                             |
-| Yes or No Subjective    | `:qsub` `:+qsub` `:-qsub`                       |
-| Yes or No Interaction   | `:qint` `:+qint` `:-qint`                       |
-| Random Prompt           | `:scene` or `:prompt` (add +/- for fav/unfav)   |
-| Expectation Checker     | `:check` or `:proposal` (add +/- for fav/unfav) |
-| Challenge               | `:challenge` or `:skill`                        |
-| Catalyst                | `:catalyst`                                     |
-| Complication            | `:complication`                                 |
-| Situation               | `:situation`                                    |
-| Focus                   | `:what` or `:focus`                             |
-| Someone                 | `:someone` or `:who`                            |
-| Intent                  | `:intent` or `:want`                            |
-| Activity                | `:activity` or `:doing`                         |
-| Place                   | `:place` or `:where`                            |
-| Reason                  | `:reason` or `:why`                             |
-| How                     | `:explain` or `:how`                            |
-| World Aspects setup     | `:aspects` or `:worlds`                         |
-| World Aspects roll      | `:aspectr` or `:worldr`                         |
-| Relevant Actors setup   | `:actors`                                       |
-| Relevant Actors roll    | `:actorr`                                       |
-| Story Troubles setup    | `:troubles`                                     |
-| Story Troubles roll     | `:troubler`                                     |
-| Active Leads setup      | `:leads`                                        |
-| Active Leads roll       | `:leadr`                                        |
+| Name                       | keyword                                         |
+|----------------------------|-------------------------------------------------|
+| BROWSE ALL TABLES          | `:pum`                                          |
+| Yes or No Deterministic    | `:qq` `:+qq` `:-qq`                             |
+| Yes or No Subjective       | `:qsub` `:+qsub` `:-qsub`                       |
+| Yes or No Interaction      | `:qint` `:+qint` `:-qint`                       |
+| Random Prompt              | `:scene` or `:prompt` (add +/- for fav/unfav)   |
+| Expectation Checker        | `:check` or `:proposal` (add +/- for fav/unfav) |
+| Challenge                  | `:challenge` or `:skill`                        |
+| Catalyst                   | `:catalyst`                                     |
+| Complication               | `:complication`                                 |
+| Situation                  | `:situation`                                    |
+| Focus                      | `:what` or `:focus`                             |
+| Someone                    | `:someone` or `:who`                            |
+| Intent                     | `:intent` or `:want`                            |
+| Activity                   | `:activity` or `:doing`                         |
+| Place                      | `:place` or `:where`                            |
+| Reason                     | `:reason` or `:why`                             |
+| How                        | `:explain` or `:how`                            |
+| World Events setup         | `:events` or `:worlds`                          |
+| World Events roll          | `:eventr` or `:worldr`                          |
+| Important Encounters setup | `:events`                                       |
+| Important Encounters roll  | `:eventr`                                       |
+| Things to be Found setup   | `:finds`                                        |
+| Things to be Found roll    | `:findr`                                        |
+| Pending Questions setup    | `:questions`                                    |
+| Pending Questions roll     | `:questionr`                                    |
 
 ## Scene Unfolding Machine v6 Keywords
 

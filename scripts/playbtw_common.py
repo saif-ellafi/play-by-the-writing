@@ -11,6 +11,8 @@ import dice
 
 import regex as re
 
+from playbtw_genesys import GenesysDiceRoller
+
 if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
@@ -101,6 +103,11 @@ def rolls_advanced(formula):
     return sum(dice.roll(formula))
 
 
+# Roll Genesys dice
+def roll_genesys(dice_array):
+    GenesysDiceRoller(dice_array).displayResults()
+
+
 def shuffle_deck(table):
     cards = read_table(table)
     random.shuffle(cards)
@@ -123,6 +130,7 @@ def draw_card(table):
         play_deck.write('\n'.join(cards[1:]))
     return drawn
 
+
 # Open user defined table
 def load_user_table(name, default=''):
     path = os.path.join(tempfile.gettempdir(), name+'.txt')
@@ -132,7 +140,8 @@ def load_user_table(name, default=''):
             return content if content else default
     else:
         return default
-    
+
+
 # Open user defined wtable
 def load_user_wtable(name, default=''):
     path = os.path.join(tempfile.gettempdir(), name+'.psv')
@@ -142,7 +151,8 @@ def load_user_wtable(name, default=''):
             return content if content else default
     else:
         return default
-    
+
+
 # Save user defined table
 def save_user_table(name, content):
     path = os.path.join(tempfile.gettempdir(), name+'.txt')
@@ -150,17 +160,20 @@ def save_user_table(name, content):
         f.write(content)
     return 'List updated:\n'+content
 
+
 # Save user defined wtable
 def save_user_wtable(name, content):
     path = os.path.join(tempfile.gettempdir(), name+'.psv')
     with open(path, 'w') as f:
         f.write(content)
     return 'List updated:\n'+content
-    
+
+
 # Roll user defined table
 def roll_user_table(name):
     override_dir = os.path.join(tempfile.gettempdir())
     return choice_table(name, override_dir=override_dir)
+
 
 # Roll user defined wtable
 def roll_user_wtable(name):

@@ -79,6 +79,105 @@ matches:
             - roll_fudge
             - --mods
             - "{{mods}}"
+# Roll genesys.
+  - triggers: [":genesys", ":gend"]
+    label: "Genesys dice roller"
+    replace: "{{output}}"
+    vars:
+      - name: form_gen
+        type: form
+        params:
+          layout: |
+            Genesys dice roller
+            Ability    Proficiency     Boost
+            [[gen_a]] [[gen_p]] [[gen_b]]
+            Difficulty    Challenge     Setback
+            [[gen_d]] [[gen_c]] [[gen_s]]
+          fields:
+            gen_a:
+              type: list
+              values:
+                - '0'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+              default:
+                '0'
+            gen_p:
+              type: list
+              values:
+                - '0'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+              default:
+                '0'
+            gen_b:
+              type: list
+              values:
+                - '0'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+              default:
+                '0'
+            gen_d:
+              type: list
+              values:
+                - '0'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+              default:
+                '0'
+            gen_c:
+              type: list
+              values:
+                - '0'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+              default:
+                '0'
+            gen_s:
+              type: list
+              values:
+                - '0'
+                - '1'
+                - '2'
+                - '3'
+                - '4'
+                - '5'
+              default:
+                '0'
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - roll_genesys
+            - --gen_a
+            - "{{form_gen.gen_a}}"
+            - --gen_p
+            - "{{form_gen.gen_p}}"
+            - --gen_b
+            - "{{form_gen.gen_b}}"
+            - --gen_d
+            - "{{form_gen.gen_d}}"
+            - --gen_c
+            - "{{form_gen.gen_c}}"
+            - --gen_s
+            - "{{form_gen.gen_s}}"
   # Draw from card deck (no replacement)
   - triggers: [":draw", ":card"]
     label: "Draw from card deck"

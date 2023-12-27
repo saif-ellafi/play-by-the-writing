@@ -363,9 +363,9 @@ matches:
             - table
             - --table
             - pum_situation
-  # PUM World Aspects
-  - triggers: [":pum", ":worlds", ":aspects"]
-    label: "Plot node: World aspect (Setup)"
+  # PUM World Events
+  - triggers: [":pum", ":worlds", ":event"]
+    label: "Plot node: World event (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -375,14 +375,14 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_world_aspects"
+            - "pum_nodes_world_events"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
         type: form
         params:
           layout: |
-            PUM Plot Nodes (World Aspects):
+            PUM Plot Nodes (World Events):
             [[file1]]
           fields:
             file1:
@@ -396,11 +396,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_world_aspects"
+            - "pum_nodes_world_events"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":worldr", ":aspectr"]
-    label: "Plot node: World aspect (Roll)"
+  - triggers: [":pum", ":worldr", ":eventr"]
+    label: "Plot node: World event (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -410,10 +410,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_world_aspects"
-  # PUM Relevant Actors
-  - triggers: [":pum", ":actors"]
-    label: "Plot node: Relevant actors (Setup)"
+            - "pum_nodes_world_events"
+  # PUM Important Encounters
+  - triggers: [":pum", ":encounters"]
+    label: "Plot node: Important Encounters (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -423,14 +423,14 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_relevant_actors"
+            - "pum_nodes_things_to_find"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
         type: form
         params:
           layout: |
-            PUM Plot Nodes (Relevant Actors):
+            PUM Plot Nodes (Important Encounters):
             [[file1]]
           fields:
             file1:
@@ -444,11 +444,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_relevant_actors"
+            - "pum_nodes_things_to_find"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":actorr"]
-    label: "Plot node: Relevant actors (Roll)"
+  - triggers: [":pum", ":encounterr"]
+    label: "Plot node: Important Encounters (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -458,10 +458,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_relevant_actors"
-  # PUM Story Troubles
-  - triggers: [":pum", ":troubles"]
-    label: "Plot node: Story troubles (Setup)"
+            - "pum_nodes_things_to_find"
+  # PUM Things to be found
+  - triggers: [":pum", ":finds"]
+    label: "Plot node: Things to be Found (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -471,14 +471,14 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_story_troubles"
+            - "pum_nodes_important_encounters"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
         type: form
         params:
           layout: |
-            PUM Plot Nodes (Story Troubles):
+            PUM Plot Nodes (Things to be Found):
             [[file1]]
           fields:
             file1:
@@ -492,11 +492,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_story_troubles"
+            - "pum_nodes_important_encounters"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":troubler"]
-    label: "Plot node: Story troubles (Roll)"
+  - triggers: [":pum", ":findr"]
+    label: "Plot node: Things to be Found (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -506,10 +506,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_story_troubles"
-  # PUM Active Leads
-  - triggers: [":pum", ":leads"]
-    label: "Plot node: Active leads (Setup)"
+            - "pum_nodes_important_encounters"
+  # PUM Pending Questions
+  - triggers: [":pum", ":questions"]
+    label: "Plot node: Pending Questions (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -519,14 +519,14 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_active_leads"
+            - "pum_nodes_pending_questions"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
         type: form
         params:
           layout: |
-            PUM Plot Nodes (Active Leads):
+            PUM Plot Nodes (Pending Questions):
             [[file1]]
           fields:
             file1:
@@ -540,11 +540,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_active_leads"
+            - "pum_nodes_pending_questions"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":leadr"]
-    label: "Plot node: Active leads (Roll)"
+  - triggers: [":pum", ":questionr"]
+    label: "Plot node: Pending Questions (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -554,7 +554,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_active_leads"
+            - "pum_nodes_pending_questions"
   # SUM (GM action, intervention)
   - triggers: [":sum", ":gma", ":gmint"]
     label: "GM Emulation: Intervention check"
