@@ -364,7 +364,7 @@ matches:
             - --table
             - pum_situation
   # PUM World Events
-  - triggers: [":pum", ":worlds", ":event"]
+  - triggers: [":pum", ":worlds", ":events"]
     label: "Plot node: World event (Setup)"
     replace: "{{output}}"
     vars:
