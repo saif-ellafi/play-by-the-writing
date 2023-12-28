@@ -1,3 +1,7 @@
+### 2.06
+* Added Genesys RPG dice (:genesys or :gend)
+* Updated to PUM v8
+
 ### 2.05
 * Updated to latest OpenAI Python API (AI commands were broken)
 

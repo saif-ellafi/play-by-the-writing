@@ -64,4 +64,4 @@ shutil.move('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('config/openai.txt', '{0}/../config/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_05_ai', 'zip', 'dist_ai')
+shutil.make_archive('PlayBTW_v2_06_ai', 'zip', 'dist_ai')
