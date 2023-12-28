@@ -2,9 +2,9 @@ Unexpected complication: {{pum_complication}}
 Play a scene filler catalyst: {{pum_catalyst}}
 Lay out a skill challenge: {{pum_challenge}}
 Put characters in a situation: {{pum_situation}}
-Foreshadow imminent or new danger
-Introduce or learn about a new NPC
-Trigger a game or world event
-Handle an important encounter
-Place or refer a thing to be found
+Foreshadow an imminent problem
+Meet or learn about a someone new
+Trigger a game or world element
+Deal with an important encounter
+Place or refer to a thing to be found
 Give answer to a pending question
