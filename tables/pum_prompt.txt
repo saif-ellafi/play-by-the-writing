@@ -5,6 +5,6 @@ Put characters in a situation: {{pum_situation}}
 Foreshadow an imminent problem
 Meet or learn about a someone new
 Trigger a game or world element
-Deal with an important encounter
+Handle a meaningful encounter
 Place or refer to a thing to be found
 Give answer to a pending question
