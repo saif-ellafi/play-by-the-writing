@@ -460,7 +460,7 @@ matches:
             - --table
             - "pum_nodes_important_encounters"
   # PUM Things to be found
-  - triggers: [":pum", ":things"]
+  - triggers: [":pum", ":things", ":finds"]
     label: "Plot node: Things to be Found (Setup)"
     replace: "{{output}}"
     vars:
@@ -495,7 +495,7 @@ matches:
             - "pum_nodes_things_to_find"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":thingr"]
+  - triggers: [":pum", ":thingr", ":findr"]
     label: "Plot node: Things to be Found (Roll)"
     replace: "{{output}}"
     vars:

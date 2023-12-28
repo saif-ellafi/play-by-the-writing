@@ -197,8 +197,8 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | World Events roll          | `:eventr` or `:worldr`                          |
 | Important Encounters setup | `:encounters`                                   |
 | Important Encounters roll  | `:encounterr`                                   |
-| Things to be Found setup   | `:finds`                                        |
-| Things to be Found roll    | `:findr`                                        |
+| Things to be Found setup   | `:finds` or `:things`                           |
+| Things to be Found roll    | `:findr` or `:thingr`                           |
 | Pending Questions setup    | `:questions`                                    |
 | Pending Questions roll     | `:questionr`                                    |
 
