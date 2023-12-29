@@ -4,7 +4,7 @@ Lay out a skill challenge: {{pum_challenge}}
 Put characters in a situation: {{pum_situation}}
 Foreshadow an imminent problem
 Meet or learn about a someone new
-Trigger a game or world element - u{{pum_nodes_world_events}}
-Handle a meaningful encounter - u{{pum_nodes_important_encounters}}
+Trigger a game or world element - u{{pum_nodes_world_elements}}
+Handle a meaningful encounter - u{{pum_nodes_meaningful_encounters}}
 Place or refer to a thing to be found - u{{pum_nodes_things_to_find}}
 Give answer to a pending question - u{{pum_nodes_pending_questions}}

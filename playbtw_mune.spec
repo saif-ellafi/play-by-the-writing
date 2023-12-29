@@ -23,4 +23,4 @@ shutil.copy('match/playbtw_mune.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/mune*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_07_mune', 'zip', 'dist_mune')
+shutil.make_archive('PlayBTW_v2_08_mune', 'zip', 'dist_mune')

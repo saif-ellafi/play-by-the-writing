@@ -363,9 +363,9 @@ matches:
             - table
             - --table
             - pum_situation
-  # PUM World Events
-  - triggers: [":pum", ":worlds", ":events"]
-    label: "Plot node: World event (Setup)"
+  # PUM World and Game events
+  - triggers: [":pum", ":worlds", ":elements"]
+    label: "Plot node: World and Game elements (Setup)"
     replace: "{{output}}"
     vars:
       - name: entries
@@ -375,14 +375,14 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_world_events"
+            - "pum_nodes_world_elements"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
         type: form
         params:
           layout: |
-            PUM Plot Nodes (World Events):
+            PUM Plot Nodes (World and Game elements):
             [[file1]]
           fields:
             file1:
@@ -396,11 +396,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_world_events"
+            - "pum_nodes_world_elements"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":worldr", ":eventr"]
-    label: "Plot node: World event (Roll)"
+  - triggers: [":pum", ":worldr", ":elementr"]
+    label: "Plot node: World and Game elements (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -410,8 +410,8 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_world_events"
-  # PUM Important Encounters
+            - "pum_nodes_world_elements"
+  # PUM Meaningful Encounters
   - triggers: [":pum", ":encounters"]
     label: "Plot node: Meaningful Encounters (Setup)"
     replace: "{{output}}"
@@ -423,7 +423,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "pum_nodes_important_encounters"
+            - "pum_nodes_meaningful_encounters"
             - --contains
             - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
       - name: form1
@@ -444,7 +444,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "pum_nodes_important_encounters"
+            - "pum_nodes_meaningful_encounters"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":pum", ":encounterr"]
@@ -458,7 +458,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "pum_nodes_important_encounters"
+            - "pum_nodes_meaningful_encounters"
   # PUM Things to be found
   - triggers: [":pum", ":things", ":finds"]
     label: "Plot node: Things to be Found (Setup)"
