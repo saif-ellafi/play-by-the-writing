@@ -1,3 +1,6 @@
+### 2.08
+* More table typos and mistakes I'm afraid
+
 ### 2.07
 * Fixed wrong table name in PUM
 * Shifted :myth to :mythic
