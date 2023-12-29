@@ -174,33 +174,33 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 
 These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfolding-machine
 
-| Name                        | keyword                                         |
-|-----------------------------|-------------------------------------------------|
-| BROWSE ALL TABLES           | `:pum`                                          |
-| Yes or No Deterministic     | `:qq` `:+qq` `:-qq`                             |
-| Yes or No Subjective        | `:qsub` `:+qsub` `:-qsub`                       |
-| Yes or No Interaction       | `:qint` `:+qint` `:-qint`                       |
-| Random Prompt               | `:scene` or `:prompt` (add +/- for fav/unfav)   |
-| Expectation Checker         | `:check` or `:proposal` (add +/- for fav/unfav) |
-| Challenge                   | `:challenge` or `:skill`                        |
-| Catalyst                    | `:catalyst`                                     |
-| Complication                | `:complication`                                 |
-| Situation                   | `:situation`                                    |
-| Focus                       | `:what` or `:focus`                             |
-| Someone                     | `:someone` or `:who`                            |
-| Intent                      | `:intent` or `:want`                            |
-| Activity                    | `:activity` or `:doing`                         |
-| Place                       | `:place` or `:where`                            |
-| Reason                      | `:reason` or `:why`                             |
-| How                         | `:explain` or `:how`                            |
-| World Elements setup        | `:elements` or `:worlds`                        |
-| World Elements roll         | `:elementr` or `:worldr`                        |
-| Meaningful Encounters setup | `:encounters`                                   |
-| Meaningful Encounters roll  | `:encounterr`                                   |
-| Things to be Found setup    | `:finds` or `:things`                           |
-| Things to be Found roll     | `:findr` or `:thingr`                           |
-| Pending Questions setup     | `:questions`                                    |
-| Pending Questions roll      | `:questionr`                                    |
+| Name                        | keyword                                            |
+|-----------------------------|----------------------------------------------------|
+| BROWSE ALL TABLES           | `:pum`                                             |
+| Yes or No Deterministic     | `:qq` `:+qq` `:-qq`                                |
+| Yes or No Subjective        | `:qsub` `:+qsub` `:-qsub`                          |
+| Yes or No Interaction       | `:qint` `:+qint` `:-qint`                          |
+| Random Prompt               | `:scene` or `:prompt` (add +/- for fav/unfav)      |
+| Modified proposal           | `:modified` or `:proposal` (add +/- for fav/unfav) |
+| Challenge                   | `:challenge` or `:skill`                           |
+| Catalyst                    | `:catalyst`                                        |
+| Complication                | `:complication`                                    |
+| Situation                   | `:situation`                                       |
+| Focus                       | `:what` or `:focus`                                |
+| Someone                     | `:someone` or `:who`                               |
+| Intent                      | `:intent` or `:want`                               |
+| Activity                    | `:activity` or `:doing`                            |
+| Place                       | `:place` or `:where`                               |
+| Reason                      | `:reason` or `:why`                                |
+| How                         | `:explain` or `:how`                               |
+| World Elements setup        | `:elements` or `:worlds`                           |
+| World Elements roll         | `:elementr` or `:worldr`                           |
+| Meaningful Encounters setup | `:encounters`                                      |
+| Meaningful Encounters roll  | `:encounterr`                                      |
+| Things to be Found setup    | `:finds` or `:things`                              |
+| Things to be Found roll     | `:findr` or `:thingr`                              |
+| Pending Questions setup     | `:questions`                                       |
+| Pending Questions roll      | `:questionr`                                       |
 
 ## Scene Unfolding Machine v6 Keywords
 
