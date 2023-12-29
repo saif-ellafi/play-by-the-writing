@@ -23,4 +23,4 @@ shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/opse*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_06_opse', 'zip', 'dist_opse')
+shutil.make_archive('PlayBTW_v2_07_opse', 'zip', 'dist_opse')

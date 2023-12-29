@@ -1,3 +1,7 @@
+### 2.07
+* Fixed wrong table name in PUM
+* Shifted :myth to :mythic
+
 ### 2.06
 * Added Genesys RPG dice (:genesys or :gend)
 * Updated to PUM v8

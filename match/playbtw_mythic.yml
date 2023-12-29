@@ -6,7 +6,7 @@
 
 matches:
   # Mythic Fate check. Based on Variations 2, e.g. :fatecheck - https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator
-  - triggers: [":myth", ":mmfc"]
+  - triggers: [":mythic", ":mmfc"]
     label: "Fate check"
     replace: "{{output}}"
     vars:
@@ -51,7 +51,7 @@ matches:
             - --chaos
             - "{{fcparams.cf}}"
   # Mythic Alteration check
-  - triggers: [":myth", ":mmalt"]
+  - triggers: [":mythic", ":mmalt"]
     label: "Scene Alteration check"
     replace: "{{output}}"
     vars:
@@ -109,7 +109,7 @@ matches:
             - --chaos
             - "{{chaos}}"
   # Mythic default Focus
-  - triggers: [":myth", ":mfo"]
+  - triggers: [":mythic", ":mfo"]
     label: "Focus (default)"
     replace: "{{output}}"
     vars:
@@ -122,7 +122,7 @@ matches:
             - --table
             - mythic_focus
   # Mythic adventure Focus
-  - triggers: [":myth", ":madfoc"]
+  - triggers: [":mythic", ":madfoc"]
     label: "Focus (adventure)"
     replace: "{{output}}"
     vars:
@@ -147,7 +147,7 @@ matches:
             - --table
             - "{{table}}"
   # Mythic Random Event
-  - triggers: [":myth", ":mre", ":mev"]
+  - triggers: [":mythic", ":mre", ":mev"]
     label: "Random Event"
     replace: "{{output}}"
     vars:
@@ -158,7 +158,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_mythic"
             - random_event
   # Mythic Action descriptor. Without Focus.
-  - triggers: [":myth", ":mac"]
+  - triggers: [":mythic", ":mac"]
     label: "Meaning Tables: Action"
     replace: "{{output}}"
     vars:
@@ -171,7 +171,7 @@ matches:
             - --table
             - mythic_action_1,mythic_action_2
   # Mythic Description descriptor.
-  - triggers: [":myth", ":mde"]
+  - triggers: [":mythic", ":mde"]
     label: "Meaning Tables: Action"
     replace: "{{output}}"
     vars:
@@ -184,7 +184,7 @@ matches:
             - --table
             - mythic_descriptor_1,mythic_descriptor_2
   # Mythic characters lists
-  - triggers: [":myth", ":mchars"]
+  - triggers: [":mythic", ":mchars"]
     label: "Characters list (Setup)"
     replace: "{{output}}"
     vars:
@@ -219,7 +219,7 @@ matches:
             - "mythic_characters_list"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":myth", ":mcharr"]
+  - triggers: [":mythic", ":mcharr"]
     label: "Characters list (Roll)"
     replace: "{{output}}"
     vars:
@@ -232,7 +232,7 @@ matches:
             - --table
             - "mythic_characters_list"
   # Mythic threads lists
-  - triggers: [":myth", ":mthreads"]
+  - triggers: [":mythic", ":mthreads"]
     label: "Threads list (Setup)"
     replace: "{{output}}"
     vars:
@@ -267,7 +267,7 @@ matches:
             - "mythic_thread_list"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":myth", ":mthreadr"]
+  - triggers: [":mythic", ":mthreadr"]
     label: "Threads list (Roll)"
     replace: "{{output}}"
     vars:
@@ -280,7 +280,7 @@ matches:
             - --table
             - "mythic_thread_list"
   # Mythic adventure features lists
-  - triggers: [":myth", ":mfeatures"]
+  - triggers: [":mythic", ":mfeatures"]
     label: "Adventure features list (Setup)"
     replace: "{{output}}"
     vars:
@@ -315,7 +315,7 @@ matches:
             - "mythic_features_list"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":myth", ":mfeaturer"]
+  - triggers: [":mythic", ":mfeaturer"]
     label: "Adventure features list (Roll)"
     replace: "{{output}}"
     vars:
@@ -328,7 +328,7 @@ matches:
             - --table
             - "mythic_features_list"
   # Mythic element tables (lookup with label)
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Alien Species"
     replace: "{{output}}"
     vars:
@@ -340,7 +340,7 @@ matches:
             - table
             - --table
             - mythic_el_alien,mythic_el_alien
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Animal actions"
     replace: "{{output}}"
     vars:
@@ -352,7 +352,7 @@ matches:
             - table
             - --table
             - mythic_el_animal,mythic_el_animal
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Army"
     replace: "{{output}}"
     vars:
@@ -364,7 +364,7 @@ matches:
             - table
             - --table
             - mythic_el_army,mythic_el_army
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Cavern"
     replace: "{{output}}"
     vars:
@@ -376,7 +376,7 @@ matches:
             - table
             - --table
             - mythic_el_cavern,mythic_el_cavern
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character appearance"
     replace: "{{output}}"
     vars:
@@ -388,7 +388,7 @@ matches:
             - table
             - --table
             - mythic_el_char_appearance,mythic_el_char_appearance
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character background"
     replace: "{{output}}"
     vars:
@@ -400,7 +400,7 @@ matches:
             - table
             - --table
             - mythic_el_char_background,mythic_el_char_background
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character actions, Combat"
     replace: "{{output}}"
     vars:
@@ -412,7 +412,7 @@ matches:
             - table
             - --table
             - mythic_el_char_combat,mythic_el_char_combat
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character conversations"
     replace: "{{output}}"
     vars:
@@ -424,7 +424,7 @@ matches:
             - table
             - --table
             - mythic_el_char_conversation,mythic_el_char_conversation
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character descriptors"
     replace: "{{output}}"
     vars:
@@ -436,7 +436,7 @@ matches:
             - table
             - --table
             - mythic_el_char_descriptors,mythic_el_char_descriptors
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character actions, General"
     replace: "{{output}}"
     vars:
@@ -448,7 +448,7 @@ matches:
             - table
             - --table
             - mythic_el_char_general,mythic_el_char_general
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character identity"
     replace: "{{output}}"
     vars:
@@ -460,7 +460,7 @@ matches:
             - table
             - --table
             - mythic_el_char_identity,mythic_el_char_identity
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character motivations"
     replace: "{{output}}"
     vars:
@@ -472,7 +472,7 @@ matches:
             - table
             - --table
             - mythic_el_char_motivations,mythic_el_char_motivations
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character personality"
     replace: "{{output}}"
     vars:
@@ -484,7 +484,7 @@ matches:
             - table
             - --table
             - mythic_el_char_personality,mythic_el_char_personality
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character skills"
     replace: "{{output}}"
     vars:
@@ -496,7 +496,7 @@ matches:
             - table
             - --table
             - mythic_el_char_skills,mythic_el_char_skills
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Character traits & flaws"
     replace: "{{output}}"
     vars:
@@ -508,7 +508,7 @@ matches:
             - table
             - --table
             - mythic_el_char_traits,mythic_el_char_traits
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "City"
     replace: "{{output}}"
     vars:
@@ -520,7 +520,7 @@ matches:
             - table
             - --table
             - mythic_el_city,mythic_el_city
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Characters"
     replace: "{{output}}"
     vars:
@@ -532,7 +532,7 @@ matches:
             - table
             - --table
             - mythic_el_characters,mythic_el_characters
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Civilization"
     replace: "{{output}}"
     vars:
@@ -544,7 +544,7 @@ matches:
             - table
             - --table
             - mythic_el_civilization,mythic_el_civilization
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Creature abilities"
     replace: "{{output}}"
     vars:
@@ -556,7 +556,7 @@ matches:
             - table
             - --table
             - mythic_el_creature_ability,mythic_el_creature_ability
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Creature descriptors"
     replace: "{{output}}"
     vars:
@@ -568,7 +568,7 @@ matches:
             - table
             - --table
             - mythic_el_creature_descriptor,mythic_el_creature_descriptor
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Curses"
     replace: "{{output}}"
     vars:
@@ -580,7 +580,7 @@ matches:
             - table
             - --table
             - mythic_el_curse,mythic_el_curse
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Domicile"
     replace: "{{output}}"
     vars:
@@ -592,7 +592,7 @@ matches:
             - table
             - --table
             - mythic_el_domicile,mythic_el_domicile
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Dungeon"
     replace: "{{output}}"
     vars:
@@ -604,7 +604,7 @@ matches:
             - table
             - --table
             - mythic_el_dungeon,mythic_el_dungeon
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Forest"
     replace: "{{output}}"
     vars:
@@ -616,7 +616,7 @@ matches:
             - table
             - --table
             - mythic_el_forest,mythic_el_forest
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Gods"
     replace: "{{output}}"
     vars:
@@ -628,7 +628,7 @@ matches:
             - table
             - --table
             - mythic_el_gods,mythic_el_gods
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Legends"
     replace: "{{output}}"
     vars:
@@ -640,7 +640,7 @@ matches:
             - table
             - --table
             - mythic_el_legends,mythic_el_legends
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Locations"
     replace: "{{output}}"
     vars:
@@ -652,7 +652,7 @@ matches:
             - table
             - --table
             - mythic_el_locations,mythic_el_locations
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Magic item"
     replace: "{{output}}"
     vars:
@@ -664,7 +664,7 @@ matches:
             - table
             - --table
             - mythic_el_magic,mythic_el_magic
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Cryptic message"
     replace: "{{output}}"
     vars:
@@ -676,7 +676,7 @@ matches:
             - table
             - --table
             - mythic_el_message,mythic_el_message
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Mutation"
     replace: "{{output}}"
     vars:
@@ -688,7 +688,7 @@ matches:
             - table
             - --table
             - mythic_el_mutation,mythic_el_mutation
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Names"
     replace: "{{output}}"
     vars:
@@ -700,7 +700,7 @@ matches:
             - table
             - --table
             - mythic_el_names,mythic_el_names
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Noble house"
     replace: "{{output}}"
     vars:
@@ -712,7 +712,7 @@ matches:
             - table
             - --table
             - mythic_el_noble,mythic_el_noble
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Objects"
     replace: "{{output}}"
     vars:
@@ -724,7 +724,7 @@ matches:
             - table
             - --table
             - mythic_el_object,mythic_el_object
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Powers"
     replace: "{{output}}"
     vars:
@@ -736,7 +736,7 @@ matches:
             - table
             - --table
             - mythic_el_powers,mythic_el_powers
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Scavenging results"
     replace: "{{output}}"
     vars:
@@ -748,7 +748,7 @@ matches:
             - table
             - --table
             - mythic_el_scavange,mythic_el_scavange
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Smells"
     replace: "{{output}}"
     vars:
@@ -760,7 +760,7 @@ matches:
             - table
             - --table
             - mythic_el_smells,mythic_el_smells
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Sounds"
     replace: "{{output}}"
     vars:
@@ -772,7 +772,7 @@ matches:
             - table
             - --table
             - mythic_el_sounds,mythic_el_sounds
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Spell effects"
     replace: "{{output}}"
     vars:
@@ -784,7 +784,7 @@ matches:
             - table
             - --table
             - mythic_el_spell,mythic_el_spell
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Starship"
     replace: "{{output}}"
     vars:
@@ -796,7 +796,7 @@ matches:
             - table
             - --table
             - mythic_el_starship,mythic_el_starship
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Terrain"
     replace: "{{output}}"
     vars:
@@ -808,7 +808,7 @@ matches:
             - table
             - --table
             - mythic_el_terrain,mythic_el_terrain
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Adventure tone"
     replace: "{{output}}"
     vars:
@@ -820,7 +820,7 @@ matches:
             - table
             - --table
             - mythic_el_tone,mythic_el_tone
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Dungeon traps"
     replace: "{{output}}"
     vars:
@@ -832,7 +832,7 @@ matches:
             - table
             - --table
             - mythic_el_traps,mythic_el_traps
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Plot twists"
     replace: "{{output}}"
     vars:
@@ -844,7 +844,7 @@ matches:
             - table
             - --table
             - mythic_el_twist,mythic_el_twist
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Undead"
     replace: "{{output}}"
     vars:
@@ -856,7 +856,7 @@ matches:
             - table
             - --table
             - mythic_el_undead,mythic_el_undead
-  - trigger: ":myth"
+  - trigger: ":mythic"
     label: "Visions & dreams"
     replace: "{{output}}"
     vars:
