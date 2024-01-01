@@ -397,7 +397,7 @@ matches:
             - gum2_grand_oracle
   # GUM V2 - Grand Oracle (action)
   - triggers: [":gum", ":ggact"]
-    label: "Grand oracle (subject)"
+    label: "Grand oracle (action)"
     replace: "{{output}}"
     vars:
       - name: output
