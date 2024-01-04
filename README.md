@@ -59,7 +59,7 @@ Instructions included in the source code files.
 # What is inside?
 
 - An installer which will setup play by the writing for you
-- An executable (Windows or Linux) that is run by Espanso to support dice rolling and random tables logic
+- An executable (Windows, MacOS, Linux) that is run by Espanso to support dice rolling and random tables logic
 - Other configuration files necessary for PlayBTW
 - Random Tables as included and used by PlayBTW (plain text)
 - Instructions in PDF format (README, INSTALL, KEYWORDS, LICENSE)
@@ -92,11 +92,21 @@ The installer will identify this location automatically, so normally you don't h
 3. Follow the installer instructions. By default, the installer should point to Espanso config folder: 
 `C:\Users\USERNAME\AppData\Roaming\espanso\`. Adjust if it is different.
 
+## MacOS
+
+1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`).
+2. Download the MacOs zip archive
+3. Unzip and merge the archive `PlayBTW_v2_09_ai_macos.zip` into `/Users/Library/Application Support/espanso`
+
+If you accidentaly replace and not merge and get errors, simply restart the Espanso service and all will be fine.
+
+That's it, test an oracle example with `:qq`.
+
 ## Linux
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_09_base_with_ai.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_09_ai_linux.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -372,7 +382,7 @@ than one of them, i.e. `Hello {{table_1}}, I hope you had a great {{table_2}}!`
 # Service Level Agreement of Purchase
 - This software is provided as-is, I provide support to users on good-will and listen to feedback and ideas, but cannot commit to eternal promises.
 - This software is only available on itch.io – For your safety, only download from there
-- Currently working only in Microsoft Windows and Linux (MacOS eventually. Not on mobile.)
+- Currently working only in Microsoft Windows, MacOS, and Linux
 - This software is purely and entirely recreational, and it should not cause any harm to your system. I cannot be held responsible for misuses or damage caused to your system.
 - For users that have paid, they shall receive all future updates for free. However, new content may be sold separately.
 - No refunds! Sorry – Use the example package to test this software before you buy
