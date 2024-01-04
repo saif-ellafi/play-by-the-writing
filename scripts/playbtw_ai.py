@@ -58,19 +58,19 @@ def memory_save(ai_prompt, ai_answer, mode):
 
 def memory_read():
     if os.path.exists(ai_memory_file):
-        with open(ai_memory_file, 'r') as mem:
+        with open(ai_memory_file, 'r', encoding="utf-8") as mem:
             return mem.read()
     else:
         return ''
 
 
 def chat_save(msg):
-    with open(ai_history_file, 'wb') as handle:
+    with open(ai_history_file, 'wb', encoding="utf-8") as handle:
         pickle.dump({"messages": msg}, handle)
 
 
 def chat_load():
-    with open(ai_history_file, 'rb') as handle:
+    with open(ai_history_file, 'rb', encoding="utf-8") as handle:
         return pickle.load(handle)['messages']
 
 

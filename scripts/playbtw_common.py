@@ -4,6 +4,7 @@
 # Use at your OWN RISK
 
 import os
+import sys
 import tempfile
 import random
 import csv
@@ -12,6 +13,8 @@ import dice
 import regex as re
 
 from playbtw_genesys import GenesysDiceRoller
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")

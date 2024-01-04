@@ -1,3 +1,7 @@
+### 2.09
+* Fixed an issue on output with non-english characters
+* Fixed a typo in a table name
+
 ### 2.08
 * More table typos and mistakes I'm afraid
 

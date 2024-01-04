@@ -4,10 +4,7 @@
 # Use at your OWN RISK
 
 import argparse
-import sys
 from playbtw_common import *
-
-sys.stdout.reconfigure(encoding="utf-8")
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
 parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|')
