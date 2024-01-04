@@ -1,4 +1,5 @@
 ### 2.09
+* Build for MacOS available
 * Fixed an issue on output with non-english characters
 * Fixed a typo in a table name
 
