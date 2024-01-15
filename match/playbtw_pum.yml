@@ -225,6 +225,90 @@ matches:
             - table
             - --table
             - pum_subject
+  - triggers: [":pum", ":time", ":when"]
+    label: "Discovery (find)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_time"
+  - triggers: [":pum", ":object", ":whatfor"]
+    label: "Object (what for)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_object"
+  - triggers: [":pum", ":fight", ":skills"]
+    label: "Fight (skills)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_fight"
+  - triggers: [":pum", ":sense", ":perceive"]
+    label: "Sense (perceive)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_sense"
+  - triggers: [":pum", ":find", ":discovery"]
+    label: "Discovery (find)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_discovery"
+  - triggers: [":pum", ":stakes", ":risk"]
+    label: "Discovery (find)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_stakes"
+  - triggers: [":pum", ":description", ":looks"]
+    label: "Discovery (find)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - utable
+            - --table
+            - "pum_looks"
   # PUM - Scene Random Prompt
   - triggers: [":pum", ":scene", ":prompt"]
     label: "Beat: Random prompt"
