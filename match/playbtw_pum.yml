@@ -225,6 +225,7 @@ matches:
             - table
             - --table
             - pum_subject
+  # PUM - Time
   - triggers: [":pum", ":time", ":when"]
     label: "Discovery (find)"
     replace: "{{output}}"
@@ -234,10 +235,11 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_time"
-  - triggers: [":pum", ":object", ":whatfor"]
+  # PUM - Object
+  - triggers: [":pum", ":object", ":for"]
     label: "Object (what for)"
     replace: "{{output}}"
     vars:
@@ -246,10 +248,11 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_object"
-  - triggers: [":pum", ":fight", ":skills"]
+  # PUM - Fight
+  - triggers: [":pum", ":fight", ":skill"]
     label: "Fight (skills)"
     replace: "{{output}}"
     vars:
@@ -258,9 +261,10 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_fight"
+  # PUM - Senses
   - triggers: [":pum", ":sense", ":perceive"]
     label: "Sense (perceive)"
     replace: "{{output}}"
@@ -270,9 +274,10 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_sense"
+  # PUM - Discovery
   - triggers: [":pum", ":find", ":discovery"]
     label: "Discovery (find)"
     replace: "{{output}}"
@@ -282,10 +287,11 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_discovery"
-  - triggers: [":pum", ":stakes", ":risk"]
+  # PUM - Stakes
+  - triggers: [":pum", ":stake", ":risk"]
     label: "Discovery (find)"
     replace: "{{output}}"
     vars:
@@ -294,9 +300,10 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_stakes"
+  # PUM - Description (looks)
   - triggers: [":pum", ":description", ":looks"]
     label: "Discovery (find)"
     replace: "{{output}}"
@@ -306,7 +313,7 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
             - "pum_looks"
   # PUM - Scene Random Prompt
@@ -422,7 +429,7 @@ matches:
             - --table
             - pum_catalyst
   # PUM - Challenge
-  - triggers: [":pum", ":challenge", ":skill"]
+  - triggers: [":pum", ":challenge", ":test"]
     label: "Challenge"
     replace: "{{output}}"
     vars:

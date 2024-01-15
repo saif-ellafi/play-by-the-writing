@@ -192,17 +192,23 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Yes or No Interaction       | `:qint` `:+qint` `:-qint`                          |
 | Random Prompt               | `:scene` or `:prompt` (add +/- for fav/unfav)      |
 | Modified proposal           | `:modified` or `:proposal` (add +/- for fav/unfav) |
-| Challenge                   | `:challenge` or `:skill`                           |
+| Challenge                   | `:challenge` or `:test`                            |
 | Catalyst                    | `:catalyst`                                        |
 | Complication                | `:complication`                                    |
 | Situation                   | `:situation`                                       |
-| Focus                       | `:what` or `:focus`                                |
-| Someone                     | `:someone` or `:who`                               |
-| Intent                      | `:intent` or `:want`                               |
-| Activity                    | `:activity` or `:doing`                            |
-| Place                       | `:place` or `:where`                               |
-| Reason                      | `:reason` or `:why`                                |
-| How                         | `:explain` or `:how`                               |
+| Focus - What                | `:what` or `:focus`                                |
+| Someone - Who               | `:someone` or `:who`                               |
+| Intent - Want               | `:intent` or `:want`                               |
+| Activity - Doing            | `:activity` or `:doing`                            |
+| Place - Where               | `:place` or `:where`                               |
+| Reason - Why                | `:reason` or `:why`                                |
+| Explain - How               | `:explain` or `:how`                               |
+| Time - When                 | `:time` or `:when`                                 |
+| Object - What for           | `:object` or `:for`                                |
+| Fight - Skills              | `:fight` or `:skill`                               |
+| Senses - Perceive           | `:sense` or `:perceive`                            |
+| Discovery - Find            | `:discovery` or `:find`                            |
+| Description - Looks         | `:description` or `:looks`                         |
 | World Elements setup        | `:elements` or `:worlds`                           |
 | World Elements roll         | `:elementr` or `:worldr`                           |
 | Meaningful Encounters setup | `:encounters`                                      |
