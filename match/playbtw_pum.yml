@@ -227,7 +227,7 @@ matches:
             - pum_subject
   # PUM - Time
   - triggers: [":pum", ":time", ":when"]
-    label: "Oracle: Discovery (find)"
+    label: "Oracle: Time (when)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -292,7 +292,7 @@ matches:
             - "pum_discovery"
   # PUM - Stakes
   - triggers: [":pum", ":stake", ":risk"]
-    label: "Oracle: Discovery (find)"
+    label: "Oracle: Stakes (risk)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -305,7 +305,7 @@ matches:
             - "pum_stakes"
   # PUM - Description (looks)
   - triggers: [":pum", ":description", ":looks"]
-    label: "Oracle: Discovery (find)"
+    label: "Oracle: Description (looks)"
     replace: "{{output}}"
     vars:
       - name: output
