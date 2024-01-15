@@ -7,7 +7,7 @@
 matches:
   # PUM Question: deterministic
   - triggers: [":pum", ":qq"]
-    label: "Yes or No (deterministic)"
+    label: "Oracle: Yes or No (deterministic)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -20,7 +20,7 @@ matches:
             - pum_question_deterministic
   # PUM Question: deterministic
   - triggers: [":pum", ":+qq"]
-    label: "Yes or No (likely, deterministic)"
+    label: "Oracle: Yes or No (likely, deterministic)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -35,7 +35,7 @@ matches:
             - adv
   # PUM Question: deterministic
   - triggers: [":pum", ":-qq"]
-    label: "Yes or No (unlikely, deterministic)"
+    label: "Oracle: Yes or No (unlikely, deterministic)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -50,7 +50,7 @@ matches:
             - dis
   # PUM Question: subjective
   - triggers: [":pum", ":qsub"]
-    label: "Yes or No (subjective)"
+    label: "Oracle: Yes or No (subjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -63,7 +63,7 @@ matches:
             - pum_question_subjective
   # PUM Question: subjective
   - triggers: [":pum", ":+qsub"]
-    label: "Yes or No (likely, subjective)"
+    label: "Oracle: Yes or No (likely, subjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -78,7 +78,7 @@ matches:
             - adv
   # PUM Question: subjective
   - triggers: [":pum", ":-qsub"]
-    label: "Yes or No (unlikely, subjective)"
+    label: "Oracle: Yes or No (unlikely, subjective)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -93,7 +93,7 @@ matches:
             - dis
   # PUM Question: interaction
   - triggers: [":pum", ":qint"]
-    label: "Yes or No (interaction)"
+    label: "Oracle: Yes or No (interaction)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -106,7 +106,7 @@ matches:
             - pum_question_interaction
   # PUM Question: interaction
   - triggers: [":pum", ":+qint"]
-    label: "Yes or No (likely, interaction)"
+    label: "Oracle: Yes or No (likely, interaction)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -121,7 +121,7 @@ matches:
             - adv
   # PUM Question: interaction
   - triggers: [":pum", ":-qint"]
-    label: "Yes or No (unlikely, interaction)"
+    label: "Oracle: Yes or No (unlikely, interaction)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -136,7 +136,7 @@ matches:
             - dis
   # PUM - Someone
   - triggers: [":pum", ":who", ":someone"]
-    label: "Someone (who)"
+    label: "Oracle: Someone (who)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -149,7 +149,7 @@ matches:
             - pum_who
   # PUM - Intent
   - triggers: [":pum", ":intent", ":want"]
-    label: "Intent (want)"
+    label: "Oracle: Intent (want)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -162,7 +162,7 @@ matches:
             - pum_intent
   # PUM - Activity
   - triggers: [":pum", ":activity", ":doing"]
-    label: "Activity (doing)"
+    label: "Oracle: Activity (doing)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -175,7 +175,7 @@ matches:
             - pum_activity
   # PUM - Place
   - triggers: [":pum", ":location", ":place", ":where"]
-    label: "Place (where)"
+    label: "Oracle: Place (where)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -188,7 +188,7 @@ matches:
             - pum_place
   # PUM - Object
   - triggers: [":pum", ":reason", ":why"]
-    label: "Reason (why)"
+    label: "Oracle: Reason (why)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -201,7 +201,7 @@ matches:
             - pum_reason
   # PUM - Ability
   - triggers: [":pum", ":explain", ":how"]
-    label: "Explain (how)"
+    label: "Oracle: Explain (how)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -214,7 +214,7 @@ matches:
             - pum_explain
   # PUM - Subject What?
   - triggers: [":pum", ":what", ":focus"]
-    label: "Focus (what)"
+    label: "Oracle: Focus (what)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -227,7 +227,7 @@ matches:
             - pum_subject
   # PUM - Time
   - triggers: [":pum", ":time", ":when"]
-    label: "Discovery (find)"
+    label: "Oracle: Discovery (find)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -240,7 +240,7 @@ matches:
             - "pum_time"
   # PUM - Object
   - triggers: [":pum", ":object", ":for"]
-    label: "Object (what for)"
+    label: "Oracle: Object (what for)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -253,7 +253,7 @@ matches:
             - "pum_object"
   # PUM - Fight
   - triggers: [":pum", ":fight", ":skill"]
-    label: "Fight (skills)"
+    label: "Oracle: Fight (skills)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -266,7 +266,7 @@ matches:
             - "pum_fight"
   # PUM - Senses
   - triggers: [":pum", ":sense", ":perceive"]
-    label: "Sense (perceive)"
+    label: "Oracle: Sense (perceive)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -279,7 +279,7 @@ matches:
             - "pum_sense"
   # PUM - Discovery
   - triggers: [":pum", ":find", ":discovery"]
-    label: "Discovery (find)"
+    label: "Oracle: Discovery (find)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -292,7 +292,7 @@ matches:
             - "pum_discovery"
   # PUM - Stakes
   - triggers: [":pum", ":stake", ":risk"]
-    label: "Discovery (find)"
+    label: "Oracle: Discovery (find)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -305,7 +305,7 @@ matches:
             - "pum_stakes"
   # PUM - Description (looks)
   - triggers: [":pum", ":description", ":looks"]
-    label: "Discovery (find)"
+    label: "Oracle: Discovery (find)"
     replace: "{{output}}"
     vars:
       - name: output
