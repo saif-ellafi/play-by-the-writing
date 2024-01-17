@@ -20,6 +20,26 @@ if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
 
+# Download the master repo zip file and extract it in CONFIG dir using urllib
+def download_master():
+    import urllib.request
+    import zipfile
+    import shutil
+    import distutils.dir_util
+
+    url = 'https://codeload.github.com/saif-ellafi/play-by-the-writing/zip/refs/heads/main'
+    temp_file = tempfile.gettempdir()+'/master.zip'
+    urllib.request.urlretrieve(url, temp_file)
+    with zipfile.ZipFile(temp_file, 'r') as zip_ref:
+        zip_ref.extractall(os.path.join(tempfile.gettempdir(), 'pbtw_files'))    
+    # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
+    distutils.dir_util.copy_tree(os.path.join(tempfile.gettempdir(), 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
+    distutils.dir_util.copy_tree(os.path.join(tempfile.gettempdir(), 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
+    # delete the remaining downloaded files
+    shutil.rmtree(os.path.join(tempfile.gettempdir(), 'pbtw_files'))
+    os.remove(temp_file)
+
+
 # List TXT tables
 def list_tables(tp, contains=''):
     files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))

@@ -5,9 +5,10 @@
 
 import argparse
 from playbtw_common import *
+import os
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|update')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
@@ -23,7 +24,6 @@ parser.add_argument('--gen_d', type=int, help='Genesys dice difficulty')
 parser.add_argument('--gen_c', type=int, help='Genesys dice challenge')
 parser.add_argument('--gen_s', type=int, help='Genesys dice setback')
 
-
 args = vars(parser.parse_args())
 action = args['action']
 
@@ -33,6 +33,9 @@ if action == 'table':
     for t in tables:
         result.append(choice_table(t.strip(), args['mode']))
     print(' '.join(result))
+elif action == 'update':
+    download_master()
+    print('Updated!')
 elif action == 'wtable':
     tables = map(str.strip, args['table'].split(','))
     result = []

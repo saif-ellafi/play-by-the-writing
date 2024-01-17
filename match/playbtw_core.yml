@@ -5,6 +5,7 @@
 # USE AT YOUR OWN RISK
 
 matches:
+  # Get help with commands
   - trigger: ":help"
     label: "Help"
     replace: "{{form.nothing}}"
@@ -30,8 +31,9 @@ matches:
   - triggers: [":arr"]
     label: "Arrow symbol"
     replace: "→"
-  # Roll simple dice - :r1d6
-  - regex: ":r(?P<quantity>\\d+)d(?P<size>\\d+)\\."
+  # Download and update all tables from internet
+  - triggers: [":pull", ":update"]
+    label: "Download latest version of tables from PlayBTW's GitHub"
     replace: "{{output}}"
     vars:
       - name: output
@@ -39,13 +41,9 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - roll_dice
-            - --quantity
-            - "{{quantity}}"
-            - --size
-            - "{{size}}"
+            - update
   # Roll dice - PRO mode (Read the docs)
-  - regex: ":rr(?P<formula>.*)\\."
+  - regex: ":r(?P<formula>.*)\\."
     replace: "{{output}}"
     vars:
       - name: output
