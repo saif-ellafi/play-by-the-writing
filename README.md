@@ -13,7 +13,7 @@ To put it in plain words, for example, when you write down the command “:qq”
 - Call your GM emulators right away from your note-taking application:
 Mythic 2e, PUM, SUM, GUM, OPSE, MUNE, CRGE
 - Roll dice anywhere in your system just with a short command,
-like :rr2d6+1. → 2d6+1: 11
+like :r2d6+1. → 2d6+1: 11
 - Seek random tables and roll on them super fast, getting the results in your text
 - Use ChatGPT and Dall-E to interact with AI from anywhere (needs OpenAI account) with high levels of customization
 - An insane amount of random tables is included to roll right away
@@ -96,7 +96,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`).
 2. Download the MacOs zip archive
-3. Unzip and merge the archive `PlayBTW_v2_09_ai_macos.zip` into `/Users/Library/Application Support/espanso`
+3. Unzip and merge the archive `PlayBTW_v2_10_ai_macos.zip` into `/Users/Library/Application Support/espanso`
 
 If you accidentaly replace and not merge and get errors, simply restart the Espanso service and all will be fine.
 
@@ -106,7 +106,7 @@ That's it, test an oracle example with `:qq`.
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_09_ai_linux.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_10_ai_linux.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
@@ -127,13 +127,12 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 |-----------------------------|---------------------------------------------------------------------------------------|----------------------------|--------------------------------------------------------------|
 | Dice                        | `:dd`                                                                                 | 🎲                         | Just fancy dice                                              |
 | Arrow character             | `:arr`                                                                                | →                          | Just an arrow                                                |
-| Roll simple dice            | `:r<formula>.`                                                                        | 1d6: 6                     | Simple formulas only. Try below if a formula doesn't work.   |
-| Roll complex dice           | `:rr<formula>.`                                                                       | 3d6x: [1, 3, 1]            | Complex formulas: https://github.com/borntyping/python-dice  |
-| Roll fudge dice             | `:df.`                                                                                | ( ) (+) (-) (-) + (0) = -1 | Fudge dice for FATE                                          |
-| Roll fudge dice with mod    | `:df<modifier>.`                                                                      | ( ) ( ) (-) (-) + (3) = 1  | Fudge dice for FATE with a bonus                             |
+| Roll dice                   | `:r<formula>.`                                                                        | 3d6x: [1, 3, 1]            | Complex formulas: https://github.com/borntyping/python-dice  |
+| Roll fudge dice             | `:df.` or `:df<modifier>.`                                                            | ( ) (+) (-) (-) + (3) = -1 | Fudge dice for FATE                                          |
 | Roll denesys dice           | `:genesys` or `:gend`                                                                 | ...                        | Rolls dice for Genesys RPG by FFG                            |
 | Roll Random Table           | `:tt.<tablename>.`                                                                    | [Third result]             | Roll from a .txt table based on its filename                 |
 | Roll Weighted Table         | `:wt.<tablename>.`                                                                    | [Next quarter]             | Roll from a .psv table with weights based on its filenam     |
+| Update tables               | `:update` or `:pull`                                                                  | ...                        | Download and update PlayBTW tables                           |
 | Shuffle Poker Deck          | `:shuffle`                                                                            | Shuffled!                  | restarts the poker deck                                      |
 | Draw from Poker Deck        | `:draw`                                                                               | 8♠ 7♥ 6♦                   | Draws a card from poker deck                                 |
 | Browse and Roll from List   | `:list.<search_criteria>.` `:2list.<search_criteria>.` `:3list.<search_criteria>.`    | ...                        | Display all available tables in the directory                |

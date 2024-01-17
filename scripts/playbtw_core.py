@@ -8,7 +8,7 @@ from playbtw_common import *
 import os
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_advanced|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|update')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|update')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
@@ -35,22 +35,16 @@ if action == 'table':
     print(' '.join(result))
 elif action == 'update':
     download_master()
-    print('Updated!')
+    print('PlayBTW: Latest version of tables updated!')
 elif action == 'wtable':
     tables = map(str.strip, args['table'].split(','))
     result = []
     for t in tables:
         result.append(choice_wtable(t.strip(), args['mode']))
     print(' '.join(result))
-elif action == 'roll_dice':
-    result = roll_dice(args['quantity'], args['size'])
     print(str(args['quantity']) + 'd' + str(args['size']) + ': [' + ', '.join(result['values']) + '] = ' + str(result['total']))
-elif action == 'roll_advanced':
-    result = roll_advanced(args['formula'])
-    if type(result) == dice.elements.Roll:
-        print(args['formula'] + ': ' + str(result) + ' = ' + str(sum(result)))
-    else:
-        print(args['formula'] + ': ' + str(result))
+elif action == 'roll_dice':
+    print(roll_advanced(args['formula']))
 elif action == 'roll_fudge':
     fudges = []
     bonus = args['mods']

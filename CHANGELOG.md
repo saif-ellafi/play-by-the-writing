@@ -1,3 +1,8 @@
+### 2.10
+* Always show all rolled dice in formulas when rolling for example 2d6+2: [2, 6] = 10
+* Added new command :update which pulls latest tables from the internet without having to download a new version
+* Removed command :rr - now there is only one dice roll command which is :r<formula>
+
 ### 2.09
 * Build for MacOS available
 * Fixed an issue on output with non-english characters

@@ -108,6 +108,7 @@ def choice_wtable(table, mode=None, override_dir=None):
             return unwrap(e[1])
 
 
+# Simple dice roller. No longer used but kept for internal use
 def roll_dice(q, s):
     total = 0
     values = []
@@ -118,12 +119,29 @@ def roll_dice(q, s):
     return {'values': values, 'total': total}
 
 
+# dice library is weird... different functions have different return types based on the formula given... act with care
 def roll_advanced(formula):
-    return dice.roll(formula)
+    roll = dice.roll(formula, raw=True)
+    # triggers evaluate and includes member 'result'
+    details = dice.utilities.verbose_print(roll)
+    # apply regex to select the last piece of text that looks like [3, 2] or [5, 1, 2]
+    parts = re.findall(r'(\[(\d+,\s)*\d+\])', details)
+    # return the longest string among components
+    longest_part = max(parts, key=lambda x: len(x[0]))[0]
+    # result member is only available after evaluation
+    result = roll.result
+    if type(result) == dice.elements.Integer:
+        return formula + ': ' + longest_part + ' = ' + str(result)
+    else:
+        return formula + ': ' + longest_part + ' = ' + str(sum(result))
 
 
 def rolls_advanced(formula):
-    return sum(dice.roll(formula))
+    roll = dice.roll(formula)
+    if type(roll) == dice.elements.Integer:
+        return int(roll)
+    else:
+        return sum(roll)
 
 
 # Roll Genesys dice

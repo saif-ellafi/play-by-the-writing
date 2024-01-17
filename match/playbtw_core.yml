@@ -16,8 +16,7 @@ matches:
           layout: |
             Dice icon → :dd
             Arrow icon → :arr
-            Dice roll → :r1d6.
-            Dice roll+ → :rr1d6x+4.
+            Dice roll → :r3d6+2.
             Fudge roll → :df.
             Fudge roll+ → :df+4.
             Poker shuffle → :shuffle
@@ -25,6 +24,7 @@ matches:
             Roll table → :list or :tables
             Roll w. tables → :wlist or :wtables
             Complete AI → :aicomplete
+            Update all tables → :update or :pull
   - triggers: [":dd"]
     label: "Dice symbol"
     replace: "🎲"
@@ -51,7 +51,7 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - roll_advanced
+            - roll_dice
             - --formula
             - "{{formula}}"
   # Roll fudge.
