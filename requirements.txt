@@ -1,7 +1,7 @@
 markdown2
 weasyprint
 pyinstaller
-md2pdf # with https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases
+md2pdf # with https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases in Windows, or brew install pango in MacOS
 openai
 pyperclip
 dice
