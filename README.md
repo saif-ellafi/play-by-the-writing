@@ -179,7 +179,7 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 | Focus (adventure)                   | `:madfoc`                                                                                                 |
 | Focus roll (custom)                 | `:mfo.my_focus_table.`                                                                                    |
 
-## Plot Unfolding Machine v7 Keywords
+## Plot Unfolding Machine v8 Keywords
 
 These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfolding-machine
 
@@ -207,6 +207,7 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Fight - Skills              | `:fight` or `:skill`                               |
 | Senses - Perceive           | `:sense` or `:perceive`                            |
 | Discovery - Find            | `:discovery` or `:find`                            |
+| Stake - Risk                | `:stake` or `:risk`                                |
 | Description - Looks         | `:description` or `:looks`                         |
 | World Elements setup        | `:elements` or `:worlds`                           |
 | World Elements roll         | `:elementr` or `:worldr`                           |
