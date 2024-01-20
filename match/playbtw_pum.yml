@@ -6,7 +6,7 @@
 
 matches:
   # PUM Question: deterministic
-  - triggers: [":pum", ":qq"]
+  - triggers: [":pum", ":qq", ":qdet"]
     label: "Oracle: Yes or No (deterministic)"
     replace: "{{output}}"
     vars:
@@ -19,7 +19,7 @@ matches:
             - --table
             - pum_question_deterministic
   # PUM Question: deterministic
-  - triggers: [":pum", ":+qq"]
+  - triggers: [":pum", ":+qq", ":+qdet"]
     label: "Oracle: Yes or No (likely, deterministic)"
     replace: "{{output}}"
     vars:
@@ -34,7 +34,7 @@ matches:
             - --mode
             - adv
   # PUM Question: deterministic
-  - triggers: [":pum", ":-qq"]
+  - triggers: [":pum", ":-qq", ":-qdet"]
     label: "Oracle: Yes or No (unlikely, deterministic)"
     replace: "{{output}}"
     vars:

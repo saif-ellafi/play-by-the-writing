@@ -187,7 +187,7 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Name                        | keyword                                            |
 |-----------------------------|----------------------------------------------------|
 | BROWSE ALL TABLES           | `:pum`                                             |
-| Yes or No Deterministic     | `:qq` `:+qq` `:-qq`                                |
+| Yes or No Deterministic     | `:qq` `:+qq` `:-qq` or with `:qdet`                |
 | Yes or No Subjective        | `:qsub` `:+qsub` `:-qsub`                          |
 | Yes or No Interaction       | `:qint` `:+qint` `:-qint`                          |
 | Random Prompt               | `:scene` or `:prompt` (add +/- for fav/unfav)      |
