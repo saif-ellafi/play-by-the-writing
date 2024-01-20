@@ -10,6 +10,8 @@ pyinstaller playbtw_gum2.spec --clean --distpath dist_gum2/scripts;
 
 pyinstaller playbtw_mune.spec --clean --distpath dist_mune/match;
 
+pyinstaller playbtw_prompty.spec --clean --distpath dist_prompty/match;
+
 pyinstaller playbtw_opse.spec --clean --distpath dist_opse/match;
 
 pyinstaller playbtw_crge.spec --clean --distpath dist_crge/match;

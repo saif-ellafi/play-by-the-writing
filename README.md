@@ -11,7 +11,7 @@ To put it in plain words, for example, when you write down the command “:qq”
 # Features
 
 - Call your GM emulators right away from your note-taking application:
-Mythic 2e, PUM, SUM, GUM, OPSE, MUNE, CRGE
+Mythic 2e, PUM, SUM, GUM, OPSE, MUNE, CRGE, Prompty Questions
 - Roll dice anywhere in your system just with a short command,
 like :r2d6+1. → 2d6+1: 11
 - Seek random tables and roll on them super fast, getting the results in your text
@@ -54,6 +54,7 @@ Instructions included in the source code files.
   - [One Page Solo Engine (OPSE)](https://inflatablestudios.itch.io/one-page-solo-engine)
   - [Conjecture Games (CRGE, UNE, BOLD)](https://www.drivethrurpg.com/browse/pub/7251/Conjecture-Games)
   - [The Madey Upy Namey Emulator (MUNE)](https://homebrewery.naturalcrit.com/share/rkmo0t9k4Q)
+  - [Storyteller's Prompty Questions (PROMPTY)](https://jeansenvaars.itch.io/storytellers-prompty-questions)
 - **AI kit**: Includes Core kit + [OpenAI ChatGPT and Dall-E integration](https://beta.openai.com/playground) 
 
 # What is inside?
@@ -344,6 +345,21 @@ These are meant to be played with https://www.drivethrurpg.com/product/134163/UN
 | NPC Interaction Attitude | `:matt` `:+matt` `:-matt` |
 | Intervention             | `:mint`                   |
 | TWENE                    | `:mtwene`                 |
+
+## Prompty Questions Keywords
+
+| Name              | keyword    |
+|-------------------|------------|
+| BROWSE ALL TABLES | `:prompty` |
+| Any question      | `:prany`   |
+| Location          | `:prloc`   |
+| Travel            | `:prtra`   |
+| Relations         | `:prrel`   |
+| Situational       | `:prsit`   |
+| World             | `:prworld` |
+| Character         | `:prback`  |
+| Faction           | `:prfact`  |
+| Crafts            | `:prcraft` |
 
 ## AI Keywords (OpenAI)
 

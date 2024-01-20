@@ -1,0 +1,116 @@
+# espanso match file
+# Author: JeansenVaars
+# Consider inviting me a Coffee, this took quite some work! -> https://ko-fi.com/JeansenVaars
+# Check out my Blog -> https://jvhouse.xyz/
+# USE AT YOUR OWN RISK
+
+matches:
+  # Prompty Any Question
+  - triggers: [":prompty", ":prany"]
+    label: "Prompty Question: Any"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_any
+  - triggers: [":prompty", ":prloc"]
+    label: "Prompty Question: Location and region"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_locations
+  - triggers: [":prompty", ":prtrav"]
+    label: "Prompty Question: Travel and exploration"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_travel
+  - triggers: [":prompty", ":prrel"]
+    label: "Prompty Question: Relations and society"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_relations
+  - triggers: [":prompty", ":prsit"]
+    label: "Prompty Question: Situational aspeect"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_situational
+  - triggers: [":prompty", ":prworld"]
+    label: "Prompty Question: World and politics"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_world
+  - triggers: [":prompty", ":prback"]
+    label: "Prompty Question: Character backstory"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_backstory
+  - triggers: [":prompty", ":prfact"]
+    label: "Prompty Question: Factions and groups"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_factions
+  - triggers: [":prompty", ":prcraft"]
+    label: "Prompty Question: Magic, tech, and crafts"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - prompty_crafts

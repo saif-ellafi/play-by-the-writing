@@ -1,0 +1,8 @@
+Character backstory: {{prompty_backstory}}
+Magic, tech, and crafts: {{prompty_crafts}}
+Factions and groups: {{prompty_faction}}
+Location and region: {{prompty_locations}}
+Relations and society: {{prompty_relations}}
+Situational aspects: {{prompty_situational}}
+Travel and exploration: {{prompty_travel}}
+World and politics: {{prompty_world}}
