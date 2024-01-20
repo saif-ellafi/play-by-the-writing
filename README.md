@@ -353,7 +353,7 @@ These are meant to be played with https://www.drivethrurpg.com/product/134163/UN
 | BROWSE ALL TABLES | `:question` |
 | Any question      | `:prany`   |
 | Location          | `:prloc`   |
-| Travel            | `:prtra`   |
+| Travel            | `:prtrav`   |
 | Relations         | `:prrel`   |
 | Situational       | `:prsit`   |
 | World             | `:prworld` |

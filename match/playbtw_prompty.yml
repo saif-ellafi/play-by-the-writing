@@ -101,7 +101,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - prompty_factions
+            - prompty_faction
   - triggers: [":question", ":prcraft"]
     label: "Prompty Question: Magic, tech, and crafts"
     replace: "{{output}}"
