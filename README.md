@@ -350,7 +350,7 @@ These are meant to be played with https://www.drivethrurpg.com/product/134163/UN
 
 | Name              | keyword    |
 |-------------------|------------|
-| BROWSE ALL TABLES | `:prompty` |
+| BROWSE ALL TABLES | `:question` |
 | Any question      | `:prany`   |
 | Location          | `:prloc`   |
 | Travel            | `:prtra`   |

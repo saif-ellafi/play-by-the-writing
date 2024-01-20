@@ -6,7 +6,7 @@
 
 matches:
   # Prompty Any Question
-  - triggers: [":prompty", ":prany"]
+  - triggers: [":question", ":prany"]
     label: "Prompty Question: Any"
     replace: "{{output}}"
     vars:
@@ -18,7 +18,7 @@ matches:
             - table
             - --table
             - prompty_any
-  - triggers: [":prompty", ":prloc"]
+  - triggers: [":question", ":prloc"]
     label: "Prompty Question: Location and region"
     replace: "{{output}}"
     vars:
@@ -30,7 +30,7 @@ matches:
             - table
             - --table
             - prompty_locations
-  - triggers: [":prompty", ":prtrav"]
+  - triggers: [":question", ":prtrav"]
     label: "Prompty Question: Travel and exploration"
     replace: "{{output}}"
     vars:
@@ -42,7 +42,7 @@ matches:
             - table
             - --table
             - prompty_travel
-  - triggers: [":prompty", ":prrel"]
+  - triggers: [":question", ":prrel"]
     label: "Prompty Question: Relations and society"
     replace: "{{output}}"
     vars:
@@ -54,7 +54,7 @@ matches:
             - table
             - --table
             - prompty_relations
-  - triggers: [":prompty", ":prsit"]
+  - triggers: [":question", ":prsit"]
     label: "Prompty Question: Situational aspeect"
     replace: "{{output}}"
     vars:
@@ -66,7 +66,7 @@ matches:
             - table
             - --table
             - prompty_situational
-  - triggers: [":prompty", ":prworld"]
+  - triggers: [":question", ":prworld"]
     label: "Prompty Question: World and politics"
     replace: "{{output}}"
     vars:
@@ -78,7 +78,7 @@ matches:
             - table
             - --table
             - prompty_world
-  - triggers: [":prompty", ":prback"]
+  - triggers: [":question", ":prback"]
     label: "Prompty Question: Character backstory"
     replace: "{{output}}"
     vars:
@@ -90,7 +90,7 @@ matches:
             - table
             - --table
             - prompty_backstory
-  - triggers: [":prompty", ":prfact"]
+  - triggers: [":question", ":prfact"]
     label: "Prompty Question: Factions and groups"
     replace: "{{output}}"
     vars:
@@ -102,7 +102,7 @@ matches:
             - table
             - --table
             - prompty_factions
-  - triggers: [":prompty", ":prcraft"]
+  - triggers: [":question", ":prcraft"]
     label: "Prompty Question: Magic, tech, and crafts"
     replace: "{{output}}"
     vars:
