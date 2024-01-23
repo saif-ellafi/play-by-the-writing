@@ -23,4 +23,4 @@ shutil.copy('match/playbtw_crge.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/crge*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_10_crge', 'zip', 'dist_crge')
+shutil.make_archive('PlayBTW_v2_11_crge', 'zip', 'dist_crge')

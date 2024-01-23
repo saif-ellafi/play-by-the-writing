@@ -66,4 +66,4 @@ shutil.copy('match/playbtw_example.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/example*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_10_example', 'zip', 'dist_example')
+shutil.make_archive('PlayBTW_v2_11_example', 'zip', 'dist_example')

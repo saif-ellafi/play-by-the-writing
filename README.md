@@ -97,7 +97,7 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`).
 2. Download the MacOs zip archive
-3. Unzip and merge the archive `PlayBTW_v2_10_ai_macos.zip` into `/Users/Library/Application Support/espanso`
+3. Unzip and merge the archive `PlayBTW_v2_11_ai_macos.zip` into `/Users/Library/Application Support/espanso`
 
 If you accidentaly replace and not merge and get errors, simply restart the Espanso service and all will be fine.
 
@@ -107,7 +107,7 @@ That's it, test an oracle example with `:qq`.
 
 1. Make sure your Espanso installation is valid and espanso starts and works correctly (test with `:espanso`).
 2. Download the Zip packages for Linux (either base or base with AI)
-3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_10_ai_linux.zip -d ~/.config/espanso/`
+3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v2_11_ai_linux.zip -d ~/.config/espanso/`
 
 ### AI Complete errors
 
