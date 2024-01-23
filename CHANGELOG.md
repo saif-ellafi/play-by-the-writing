@@ -1,3 +1,6 @@
+### 2.11
+* Fixed failing AI commands (:aistart)
+
 ### 2.10
 * Always show all rolled dice in formulas when rolling for example 2d6+2: [2, 6] = 10
 * Added new command :update which pulls latest tables from the internet without having to download a new version
