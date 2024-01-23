@@ -65,12 +65,12 @@ def memory_read():
 
 
 def chat_save(msg):
-    with open(ai_history_file, 'wb', encoding="utf-8") as handle:
+    with open(ai_history_file, 'wb') as handle:
         pickle.dump({"messages": msg}, handle)
 
 
 def chat_load():
-    with open(ai_history_file, 'rb', encoding="utf-8") as handle:
+    with open(ai_history_file, 'rb') as handle:
         return pickle.load(handle)['messages']
 
 
