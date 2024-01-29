@@ -1,10 +1,10 @@
-Interrupt with a random prompt: {{pum_prompt}}
-Bring someone inconvenient
-Deal with some bad news
-Add anger, or frustration
-Add stress, or worry
-Add doubt, or confusion
-Add hope, or some relief
-Include some good news
-Bring someone convenient
-Make it exaggerated or dramatic
+Increase intensity, tension, drama
+Bring someone quite inconvenient
+Deal with unexpected bad news
+Make the location less favorable
+Provoke frustration, stress, worry
+Cause confusion, doubt, question
+Make the location more favorable
+Introduce welcoming good news
+Bring someone quite convenient
+Decrease intensity, tension, drama

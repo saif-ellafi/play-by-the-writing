@@ -4,7 +4,7 @@ Sneaky, hiding
 Tactical, smart
 Magical, special
 Technical, gadgets
-Strong, brute
+Strong, brute, large
 Flying, floating
 Intimidating, scary
 Ranged, accurate

@@ -316,6 +316,161 @@ matches:
             - table
             - --table
             - "pum_looks"
+  # PUM Question: How many/much
+  - triggers: [":pum", ":many", ":much"]
+    label: "Oracle: How many/much"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howmuch
+  # PUM Question: How many/much
+  - triggers: [":pum", ":+many", ":+much"]
+    label: "Oracle: How many/much (likely)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howmuch
+            - --mode
+            - adv
+  # PUM Question: How many/much
+  - triggers: [":pum", ":-many", ":-much"]
+    label: "Oracle: How many/much (unlikely)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howmuch
+            - --mode
+            - dis
+  # PUM Question: How good/well
+  - triggers: [":pum", ":good", ":well"]
+    label: "Oracle: How good/well"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howwell
+  # PUM Question: How good/well
+  - triggers: [":pum", ":+good", ":+well"]
+    label: "Oracle: How good/well (likely)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howwell
+            - --mode
+            - adv
+  # PUM Question: How good/well
+  - triggers: [":pum", ":+good", ":+well"]
+    label: "Oracle: How good/well (unlikely)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howwell
+            - --mode
+            - dis
+  # PUM Question: How hard/tough
+  - triggers: [":pum", ":hard", ":tough"]
+    label: "Oracle: How hard/tough"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howhard
+  # PUM Question: How hard/tough
+  - triggers: [":pum", ":+hard", ":+tough"]
+    label: "Oracle: How hard/tough (likely)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howhard
+            - --mode
+            - adv
+  # PUM Question: How hard/tough
+  - triggers: [":pum", ":-hard", ":-tough"]
+    label: "Oracle: How hard/tough (unlikely)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_howhard
+            - --mode
+            - dis
+  # PUM Desruption check
+  - triggers: [":pum", ":disrupt"]
+    label: "Disruption check"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_disruption
+  # PUM Scene starter
+  - triggers: [":pum", ":starter"]
+    label: "Scene start unblocker"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - pum_starter
   # PUM - Scene Random Prompt
   - triggers: [":pum", ":scene", ":prompt"]
     label: "Beat: Random prompt"
