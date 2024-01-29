@@ -221,8 +221,8 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Meaningful Encounters roll  | `:encounterr`                                      |
 | Things to be Found setup    | `:finds` or `:things`                              |
 | Things to be Found roll     | `:findr` or `:thingr`                              |
-| Pending Questions setup     | `:questions`                                       |
-| Pending Questions roll      | `:questionr`                                       |
+| Pending Questions setup     | `:pendings`                                       |
+| Pending Questions roll      | `:pendingr`                                       |
 
 ## Scene Unfolding Machine v6 Keywords
 
