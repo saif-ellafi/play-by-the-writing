@@ -7,4 +7,4 @@ Meet or learn about someone new
 Trigger a game or world element
 Handle a meaningful encounter
 Place or refer to a thing to be found
-Give answer to a pending question
+Progress or solve a pending question

@@ -1,8 +1,8 @@
 Agile, fast, nimble
 Armored, defensive
-Sneaky, hiding
-Tactical, smart
-Magical, special
+Sneaky, hiding, rogue
+Tactical, smart, clever
+Magic, special, power
 Technical, gadgets
 Strong, brute, large
 Flying, swim, jumps
