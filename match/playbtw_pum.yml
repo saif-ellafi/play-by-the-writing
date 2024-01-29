@@ -754,7 +754,7 @@ matches:
             - --table
             - "pum_nodes_things_to_find"
   # PUM Pending Questions
-  - triggers: [":pum", ":questions"]
+  - triggers: [":pum", ":pendings"]
     label: "Plot node: Pending Questions (Setup)"
     replace: "{{output}}"
     vars:
@@ -789,7 +789,7 @@ matches:
             - "pum_nodes_pending_questions"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":questionr"]
+  - triggers: [":pum", ":pendingr"]
     label: "Plot node: Pending Questions (Roll)"
     replace: "{{output}}"
     vars:
