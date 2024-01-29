@@ -459,7 +459,7 @@ matches:
             - --table
             - pum_disruption
   # PUM Scene starter
-  - triggers: [":pum", ":starter"]
+  - triggers: [":pum", ":starter", ":stuck"]
     label: "Scene start unblocker"
     replace: "{{output}}"
     vars:

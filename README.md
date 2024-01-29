@@ -214,7 +214,7 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | How good/well               | `:good` or `:well` (add +/-)                       |
 | How hard/tough              | `:hard` or `:tough`                                |
 | Disruption check            | `:disrupt`                                         |
-| Scene starter unblocker     | `:starter`                                         |
+| Scene starter unblocker     | `:starter` or `:stuck`                             |
 | World Elements setup        | `:elements` or `:worlds`                           |
 | World Elements roll         | `:elementr` or `:worldr`                           |
 | Meaningful Encounters setup | `:encounters`                                      |
