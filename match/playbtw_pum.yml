@@ -265,7 +265,7 @@ matches:
             - --table
             - "pum_fight"
   # PUM - Senses
-  - triggers: [":pum", ":sense", ":perceive"]
+  - triggers: [":pum", ":feel", ":perceive"]
     label: "Oracle: Sense (perceive)"
     replace: "{{output}}"
     vars:
@@ -276,7 +276,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - "pum_sense"
+            - "pum_feeling"
   # PUM - Discovery
   - triggers: [":pum", ":find", ":discovery"]
     label: "Oracle: Discovery (find)"

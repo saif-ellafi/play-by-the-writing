@@ -206,7 +206,7 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Time - When                 | `:time` or `:when`                                 |
 | Object - What for           | `:object` or `:for`                                |
 | Fight - Skills              | `:fight` or `:skill`                               |
-| Senses - Perceive           | `:sense` or `:perceive`                            |
+| Feeling - Perceive          | `:feel` or `:perceive`                             |
 | Discovery - Find            | `:discovery` or `:find`                            |
 | Stake - Risk                | `:stake` or `:risk`                                |
 | Description - Looks         | `:description` or `:looks`                         |
