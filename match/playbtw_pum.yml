@@ -253,7 +253,7 @@ matches:
             - "pum_object"
   # PUM - Fight
   - triggers: [":pum", ":fight", ":skill"]
-    label: "Oracle: Fight (skills)"
+    label: "Oracle: Fight (skill)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -265,8 +265,8 @@ matches:
             - --table
             - "pum_fight"
   # PUM - Senses
-  - triggers: [":pum", ":feel", ":perceive"]
-    label: "Oracle: Sense (perceive)"
+  - triggers: [":pum", ":insight", ":notice"]
+    label: "Oracle: Insight (notice)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -276,7 +276,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - table
             - --table
-            - "pum_feeling"
+            - "pum_insight"
   # PUM - Discovery
   - triggers: [":pum", ":find", ":discovery"]
     label: "Oracle: Discovery (find)"
