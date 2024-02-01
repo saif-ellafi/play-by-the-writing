@@ -434,110 +434,6 @@ matches:
             - table
             - --table
             - gum2_grand_subject
-  # GUM V2 - World location archetype
-  - triggers: [":ggsetloc"]
-    label: "World location archetype"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_location
-  # GUM V2 - World background
-  - triggers: [":ggsetback"]
-    label: "World background"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_background
-  # GUM V2 - Campaign goals mission
-  - triggers: [":ggsetmission"]
-    label: "Campaign goals mission"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_mission
-  # GUM V2 - Campaign goals opposition
-  - triggers: [":ggsetopp"]
-    label: "Campaign goals opposition"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_opposition
-  # GUM V2 - Campaign motivation
-  - triggers: [":ggsetmot"]
-    label: "Campaign motivation"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_motivation
-  # GUM V2 - Quest hook
-  - triggers: [":ggsethook"]
-    label: "Quest hook"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_hook
-  # GUM V2 - Quest lead
-  - triggers: [":ggsetlead"]
-    label: "Quest lead"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_lead
-  # GUM V2 - Quest caveat
-  - triggers: [":ggsetcaveat"]
-    label: "Quest caveat"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_caveat
   # GUM V2 Setup guide
   - triggers: [":gum", ":ggsetfull"]
     label: "Plot seed (full)"
@@ -551,43 +447,8 @@ matches:
             - table
             - --table
             - gum2_setup_full
-  - triggers: [":gum"]
-    label: "Plot seed: Caveat"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_caveat
-  - triggers: [":gum"]
-    label: "Plot seed: Hook"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_hook
-  - triggers: [":gum"]
-    label: "Plot seed: Initial lead"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - table
-            - --table
-            - gum2_setup_lead
-  - triggers: [":gum"]
+  # GUM V2 - Setup Location Archetype
+  - triggers: [":gum", "ggsetloc"]
     label: "Plot seed: Location archetype"
     replace: "{{output}}"
     vars:
@@ -599,7 +460,60 @@ matches:
             - table
             - --table
             - gum2_setup_location
-  - triggers: [":gum"]
+  # GUM V2 - Setup World background
+  - triggers: [":gum", ":ggsetback"]
+    label: "Plot seed: World background"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_setup_background
+  # GUM V2 - Setup Caveat
+  - triggers: [":gum", ":ggsetcaveat"]
+    label: "Plot seed: Caveat"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_setup_caveat
+  # GUM V2 - Setup Hook
+  - triggers: [":gum", ":ggsethook"]
+    label: "Plot seed: Hook"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_setup_hook
+  # GUM V2 - Setup Initial Lead
+  - triggers: [":gum", ":ggsetlead"]
+    label: "Plot seed: Initial lead"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - table
+            - --table
+            - gum2_setup_lead
+  # GUM V2 - Setup Mission
+  - triggers: [":gum", ":ggsetmission"]
     label: "Plot seed: Mission"
     replace: "{{output}}"
     vars:
@@ -611,7 +525,8 @@ matches:
             - table
             - --table
             - gum2_setup_mission
-  - triggers: [":gum"]
+  # GUM V2 - Setup Motivation
+  - triggers: [":gum", ":ggsetmot"]
     label: "Plot seed: Motivation"
     replace: "{{output}}"
     vars:
@@ -623,7 +538,8 @@ matches:
             - table
             - --table
             - gum2_setup_motivation
-  - triggers: [":gum"]
+  # GUM V2 - Setup Opposition
+  - triggers: [":gum", ":ggsetopp"]
     label: "Plot seed: Opposition"
     replace: "{{output}}"
     vars:
