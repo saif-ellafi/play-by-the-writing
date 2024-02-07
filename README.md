@@ -2,7 +2,7 @@
 ### by JeansenVaars
 
 Play by the writing is a small application powered by [Espanso](https://espanso.org/) that enables rolling dice, 
-random tables and playing solo RPG systems directly when writing with your keyboard. Just write down the magic 
+random tables, and playing solo RPG systems directly when writing with your keyboard. Just write down the magic 
 keywords (listed below), and they will be replaced with the result of such command, wherever you are typing from.
 
 To put it in plain words, for example, when you write down the command “:qq” (a yes/no oracle), an answer text like
@@ -13,7 +13,7 @@ To put it in plain words, for example, when you write down the command “:qq”
 - Call your GM emulators right away from your note-taking application:
 Mythic 2e, PUM, SUM, GUM, OPSE, MUNE, CRGE, Prompty Questions
 - Roll dice anywhere in your system just with a short command,
-like :r2d6+1. → 2d6+1: 11
+like `:r2d6+1.` → `2d6+1: 11`
 - Seek random tables and roll on them super fast, getting the results in your text
 - Use ChatGPT and Dall-E to interact with AI from anywhere (needs OpenAI account) with high levels of customization
 - An insane amount of random tables is included to roll right away
@@ -23,19 +23,19 @@ like :r2d6+1. → 2d6+1: 11
 # How to use?
 
 1. Install Espanso (free) before you install Play by the Writing
-2. Install Play by the Writing with either the installer, unziping, or compiling the source code yourself
+2. Install Play by the Writing with either the installer, unzipping, or compiling the source code yourself
 3. Launch Espanso and play!
 
 For using AI, after installing Play by the Way, place your OpenAPI API key in "<user_folder>\espanso\config\openai.txt"
 
-Test if everything works by typing :qq, if you get an oracle yes/no answer, you're good to go! Have fun.
+Test if everything works by typing `:qq`, if you get an Oracle yes/no answer, you're good to go! Have fun.
 
 [Check YouTube explanation video](https://youtu.be/UeV63Iyi5_s)
 
 ## Installable Version
 
 If you are a Windows user, the recommended way to use this is with the installer found [HERE](https://jeansenvaars.itch.io/play-by-the-writing)
-There's a price tag on it to justify the work effort overall, for the installer. If you use the open source version, please consider a donation too.
+There's a price tag on it to justify the work effort overall, for the installer. If you use the open-source version, please consider a donation too.
 
 ## Open Source Version
 
@@ -60,17 +60,17 @@ Instructions included in the source code files.
 # What is inside?
 
 - An installer which will setup play by the writing for you
-- An executable (Windows, MacOS, Linux) that is run by Espanso to support dice rolling and random tables logic
+- An executable (Windows, MacOS, Linux) that is run by Espanso to support dice rolling and random tables' logic
 - Other configuration files necessary for PlayBTW
 - Random Tables as included and used by PlayBTW (plain text)
 - Instructions in PDF format (README, INSTALL, KEYWORDS, LICENSE)
 
 # Is this safe?
-- Espanso itself is an open source application
-- Play by the Writing is Open Source, you can compile it yourself if you don't trust me, or to compare it
+- Espanso itself is an open-source application
+- Play by the Writing is open source, feel free to compile it from source
 - Microsoft Windows may consider PlayBTW unsafe, you'll have to trust me, and ignore the warnings or set an exception if necessary
 - I am an indie developer; I do most of my stuff for [free and open source](https://github.com/saif-ellafi) - Including Mythic GME Tools for Foundry VTT
-- I do this for love. But this took me quite a bunch of hours to get it right. This is why this time I decide to put a minimum price-gap for it 😊 Take it as a contribution and a coffee for me
+- I do this for love. But this took me quite a bunch of hours to get it right. This is why this time I decided to put a minimum price cap for it 😊 Take it as a contribution and a coffee for me
 
 # Executable version instructions
 
@@ -78,7 +78,7 @@ The installer will install everything correctly by default, only change the inst
 
 ## Installer details
 
-Play by the Writing (Play-btw) files go inside the Espanso's user config directory. **IMPORTANT:** Config directory is **NOT** the same as installation directory.
+Play by the Writing (Play-btw) files go inside Espanso's user config directory. **IMPORTANT:** Config directory is **NOT** the same as installation directory.
 
 For example, if you install Espanso on the F:/ drive, the **config** directory will still be on the Windows installation drive, where your Documents and user files are located.
 
@@ -99,7 +99,7 @@ The installer will identify this location automatically, so normally you don't h
 2. Download the MacOs zip archive
 3. Unzip and merge the archive `PlayBTW_v2_11_ai_macos.zip` into `/Users/Library/Application Support/espanso`
 
-If you accidentaly replace and not merge and get errors, simply restart the Espanso service and all will be fine.
+If you accidentally replace, and do not merge and get errors, simply restart the Espanso service and all will be fine.
 
 That's it, test an oracle example with `:qq`.
 
@@ -407,11 +407,11 @@ where the table name refers to the file name. You can use these however you like
 than one of them, i.e. `Hello {{table_1}}, I hope you had a great {{table_2}}!`
 
 # Service Level Agreement of Purchase
-- This software is provided as-is, I provide support to users on good-will and listen to feedback and ideas, but cannot commit to eternal promises.
+- This software is provided as-is, I support users on goodwill and listen to feedback and ideas, but cannot commit to eternal promises.
 - This software is only available on itch.io – For your safety, only download from there
-- Currently working only in Microsoft Windows, MacOS, and Linux
-- This software is purely and entirely recreational, and it should not cause any harm to your system. I cannot be held responsible for misuses or damage caused to your system.
-- For users that have paid, they shall receive all future updates for free. However, new content may be sold separately.
+- Tested in Windows 11, MacOS Sierra, and Linux (Ubuntu, and OpenSUSE)
+- This software is purely and entirely recreational, and it should not cause any harm to your system. I cannot be held responsible for misuse or damage caused to your system.
+- Users that have paid, shall receive all future updates for free. However, new content may be sold separately.
 - No refunds! Sorry – Use the example package to test this software before you buy
 
 # License - Open Source Code
