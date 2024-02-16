@@ -5,10 +5,9 @@
 
 import argparse
 from playbtw_common import *
-import os
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|list|wlist|load_utable|save_utable|utable|update')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|utable|aisetup|update')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
@@ -33,16 +32,17 @@ if action == 'table':
     for t in tables:
         result.append(choice_table(t.strip(), args['mode']))
     print(' '.join(result))
-elif action == 'update':
-    download_master()
-    print('PlayBTW: Latest version of tables updated!')
 elif action == 'wtable':
     tables = map(str.strip, args['table'].split(','))
     result = []
     for t in tables:
         result.append(choice_wtable(t.strip(), args['mode']))
     print(' '.join(result))
-    print(str(args['quantity']) + 'd' + str(args['size']) + ': [' + ', '.join(result['values']) + '] = ' + str(result['total']))
+elif action == 'aisetup':
+    setup_ai(args['formula'])
+    print("Done")
+elif action == 'update':
+    print(download_master())
 elif action == 'roll_dice':
     print(roll_advanced(args['formula']))
 elif action == 'roll_fudge':
@@ -73,21 +73,17 @@ elif action == 'draw':
           .replace('Clubs', '♣')
           .replace('Joker', '🃏')
           )
-elif action == 'list':
-    print(list_tables('.txt', contains=args['contains'].strip()))
-elif action == 'wlist':
-    print(list_tables('.psv', contains=args['contains'].strip()))
 elif action == 'utable':
     tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
-        result.append(roll_user_table(t.strip()))
+        result.append(roll_user_table(t.strip(), default=args['contains']))
     print(' '.join(result))
 elif action == 'uwtable':
     tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
-        result.append(roll_user_wtable(t.strip()))
+        result.append(roll_user_wtable(t.strip(), default=args['contains']))
     print(' '.join(result))
 elif action == 'load_utable':
     print(load_user_table(args['table'], default=args['contains']))

@@ -5,7 +5,32 @@
 # USE AT YOUR OWN RISK
 
 matches:
-  # OpenAI ChatGPT
+  # OpenAI API KEY Setup
+  - trigger: ":aisetup"
+    label: "Setup OpenAI API Key"
+    replace: "{{output}}"
+    vars:
+      - name: form_ai_setup
+        type: form
+        params:
+          layout: |
+            Setup your OpenAPI API Key:
+            [[key]]
+
+            * NOTE: your key will be saved in config/openai.txt
+          fields:
+            key:
+              type: text
+              multiline: true
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - aisetup
+            - --formula
+            - "{{form_ai_setup.key}}"
+  # OpenAI ChatGPT new conversation
   - triggers: [":aicall", ":ainew", ":aistart"]
     label: "New ChatGPT conversation"
     replace: "{{output}}"
@@ -73,6 +98,7 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
+  # OpenAI ChatGPT continue conversation
   - triggers: [":aicall", ":aichat", ":aicontinue", ":aiadd"]
     label: "Continue ChatGPT conversation"
     replace: "{{output}}"
@@ -140,6 +166,7 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
+  # OpenAI ChatGPT isolated question
   - triggers: [":aicall", ":aiquestion", ":aisingle", ":aiask"]
     label: "Single ChatGPT question"
     replace: "{{output}}"
@@ -207,6 +234,7 @@ matches:
             - "{{form_ai.temperature}}"
             - --tokens
             - "{{form_ai.tokens}}"
+  # OpenAI ChatGPT cleanup history
   - triggers: [":aicall", ":aiforget", ":aierase", ":aiclear"]
     label: "Clear ChatGPT conversation"
     replace: "{{output}}"
@@ -217,6 +245,7 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_forget
+  # OpenAI ChatGPT recall conversation
   - triggers: [":aicall", ":aimemory", ":aihistory", ":ailog"]
     label: "Show ChatGPT conversation history"
     replace: "{{output}}"
@@ -227,6 +256,7 @@ matches:
           args:
             - "%CONFIG%/scripts/playbtw_ai"
             - ai_knowledge
+  # OpenAI Dall-E
   - triggers: [":aicall", ":aiimg", ":aiimage", ":dall-e"]
     label: "Generate a Dall-E Image"
     replace: "{{output}}"

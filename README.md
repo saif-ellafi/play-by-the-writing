@@ -26,7 +26,7 @@ like `:r2d6+1.` → `2d6+1: 11`
 2. Install Play by the Writing with either the installer, unzipping, or compiling the source code yourself
 3. Launch Espanso and play!
 
-For using AI, after installing Play by the Way, place your OpenAPI API key in "<user_folder>\espanso\config\openai.txt"
+For using AI, after installing Play by the Writing, run `:aisetup` - this will ask you for your OpenAI API Key (and place it in $HOME/playbtw/config/openai.txt)
 
 Test if everything works by typing `:qq`, if you get an Oracle yes/no answer, you're good to go! Have fun.
 
@@ -124,20 +124,18 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 
 ## Core Keywords
 
-| Name                        | keyword                                                                               | Output                     | Information                                                  |
-|-----------------------------|---------------------------------------------------------------------------------------|----------------------------|--------------------------------------------------------------|
-| Dice                        | `:dd`                                                                                 | 🎲                         | Just fancy dice                                              |
-| Arrow character             | `:arr`                                                                                | →                          | Just an arrow                                                |
-| Roll dice                   | `:r<formula>.`                                                                        | 3d6x: [1, 3, 1]            | Complex formulas: https://github.com/borntyping/python-dice  |
-| Roll fudge dice             | `:df.` or `:df<modifier>.`                                                            | ( ) (+) (-) (-) + (3) = -1 | Fudge dice for FATE                                          |
-| Roll denesys dice           | `:genesys` or `:gend`                                                                 | ...                        | Rolls dice for Genesys RPG by FFG                            |
-| Roll Random Table           | `:tt.<tablename>.`                                                                    | [Third result]             | Roll from a .txt table based on its filename                 |
-| Roll Weighted Table         | `:wt.<tablename>.`                                                                    | [Next quarter]             | Roll from a .psv table with weights based on its filenam     |
-| Update tables               | `:update` or `:pull`                                                                  | ...                        | Download and update PlayBTW tables                           |
-| Shuffle Poker Deck          | `:shuffle`                                                                            | Shuffled!                  | restarts the poker deck                                      |
-| Draw from Poker Deck        | `:draw`                                                                               | 8♠ 7♥ 6♦                   | Draws a card from poker deck                                 |
-| Browse and Roll from List   | `:list.<search_criteria>.` `:2list.<search_criteria>.` `:3list.<search_criteria>.`    | ...                        | Display all available tables in the directory                |
-| Browse and Roll from W-List | `:wlist.<search_criteria>.` `:2wlist.<search_criteria>.` `:3wlist.<search_criteria>.` | ...                        | Display all available weighted tables in the directory there |
+| Name                 | keyword                    | Output                     | Information                                                 |
+|----------------------|----------------------------|----------------------------|-------------------------------------------------------------|
+| Dice                 | `:dd`                      | 🎲                         | Just fancy dice                                             |
+| Arrow character      | `:arr`                     | →                          | Just an arrow                                               |
+| Roll dice            | `:r<formula>.`             | 3d6x: [1, 3, 1]            | Complex formulas: https://github.com/borntyping/python-dice |
+| Roll fudge dice      | `:df.` or `:df<modifier>.` | ( ) (+) (-) (-) + (3) = -1 | Fudge dice for FATE                                         |
+| Roll denesys dice    | `:genesys` or `:gend`      | ...                        | Rolls dice for Genesys RPG by FFG                           |
+| Roll Random Table    | `:tt.<tablename>.`         | [Third result]             | Roll from a .txt table based on its filename                |
+| Roll Weighted Table  | `:wt.<tablename>.`         | [Next quarter]             | Roll from a .psv table with weights based on its filenam    |
+| Update tables        | `:update` or `:pull`       | ...                        | Download and update PlayBTW tables                          |
+| Shuffle Poker Deck   | `:shuffle`                 | Shuffled!                  | restarts the poker deck                                     |
+| Draw from Poker Deck | `:draw`                    | 8♠ 7♥ 6♦                   | Draws a card from poker deck                                |
 
 ## System Keywords (most useful!!!)
 
@@ -167,18 +165,17 @@ Play with Mythic Game Master Emulator: https://www.drivethrurpg.com/product/4229
 | Alteration Check (prompted)         | `:mmalt`                                                                                                  |
 | Fate Check (per modifier and chaos) | `:mfc<mod>c<chaos>` e.g.: `:mfc+2c4` (+2 modifier, 4 chaos rank) or `mfc-3c9` (-3 modifier, 9 chaos rank) |
 | Scene Alteration                    | `:malt<chaos>` e.g.: `:malt6`                                                                             |
-| Setup characters list               | `:mchars`                                                                                                 |
-| Roll characters list                | `:mcharr`                                                                                                 |
-| Setup threads list                  | `:mthreads`                                                                                               |
-| Roll threads list                   | `:mthreadr`                                                                                               |
-| Setup adventure features list       | `:mfeatures`                                                                                              |
-| Roll adventure features list        | `:mfeaturer`                                                                                              |
+| Setup characters list               | `:mlists` or `:mchars`                                                                                                 |
+| Roll characters list                | `:mlists` or `:mcharr`                                                                                                 |
+| Setup threads list                  | `:mlists` or `:mthreads`                                                                                               |
+| Roll threads list                   | `:mlists` or `:mthreadr`                                                                                               |
+| Setup adventure features list       | `:mlists` or `:mfeatures`                                                                                              |
+| Roll adventure features list        | `:mlists` or `:mfeaturer`                                                                                              |
 | Random Event                        | `:mre` or `:mev`                                                                                          |
 | Action Question                     | `:mac`                                                                                                    |
 | Description Question                | `:mde`                                                                                                    |
-| Focus roll                          | `:mfo`                                                                                                    |
-| Focus (adventure)                   | `:madfoc`                                                                                                 |
-| Focus roll (custom)                 | `:mfo.my_focus_table.`                                                                                    |
+| Setup Focus                         | `:mlists` or `:mfocs`                                                                                                  |
+| Roll Focus                          | `:mlists` or `:mfocr`                                                                                                  |
 
 ## Plot Unfolding Machine v8 Keywords
 
@@ -215,14 +212,14 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | How hard/tough              | `:hard` or `:tough`                                |
 | Disruption check            | `:disrupt`                                         |
 | Scene starter unblocker     | `:starter` or `:stuck`                             |
-| World Elements setup        | `:elements` or `:worlds`                           |
-| World Elements roll         | `:elementr` or `:worldr`                           |
-| Meaningful Encounters setup | `:encounters`                                      |
-| Meaningful Encounters roll  | `:encounterr`                                      |
-| Things to be Found setup    | `:finds` or `:things`                              |
-| Things to be Found roll     | `:findr` or `:thingr`                              |
-| Pending Questions setup     | `:pendings`                                       |
-| Pending Questions roll      | `:pendingr`                                       |
+| World Elements setup        | `:pnodes` or `:elements` or `:worlds`                           |
+| World Elements roll         | `:pnodes` or `:elementr` or `:worldr`                           |
+| Meaningful Encounters setup | `:pnodes` or `:encounters`                                      |
+| Meaningful Encounters roll  | `:pnodes` or `:encounterr`                                      |
+| Things to be Found setup    | `:pnodes` or `:finds` or `:things`                              |
+| Things to be Found roll     | `:pnodes` or `:findr` or `:thingr`                              |
+| Pending Questions setup     | `:pnodes` or `:pendings`                                       |
+| Pending Questions roll      | `:pnodes` or `:pendingr`                                       |
 
 ## Scene Unfolding Machine v6 Keywords
 
@@ -371,11 +368,11 @@ These are meant to be played with https://www.drivethrurpg.com/product/134163/UN
 This experimental functionality relies on OpenAI: https://openai.com for using Artificial Intelligence to autocomplete a prompt. For this to function:
 1. Go to openai and create an account (for free)
 2. Go to your account settings and copy the API Key
-3. Go to espanso settings folder inside the config folder
-4. Paste the API Key in the file called openai.txt
+3. With Play by the Writing installed, type `:aisetup` and paste your API Key
 
 | Name                                      | keyword                            | Output                                                       |
 |-------------------------------------------|------------------------------------|--------------------------------------------------------------|
+| AI OpenAI API Key setup                   | `:aisetup`                         | Setup OpenAI API Key to be used by other commands.           |
 | AI ChatGPT New conversation (erases past) | `:aistart`  `:ainew`               | Initialize a new AI ChatGPT interaction. Deletes history.    |
 | AI ChatGPT Continue conversation          | `:aichat` `:aiadd` `:aicontinue`   | Continue an initialized ChatGPT conversation                 |
 | AI ChatGPT Single question                | `:aiask` `:aisingle` `:aiquestion` | Ask ChatGPT out of the conversation/context (won't remember) |

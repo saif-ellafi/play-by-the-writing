@@ -19,6 +19,25 @@ sys.stdout.reconfigure(encoding="utf-8")
 if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
+if not os.path.exists(os.path.join(os.environ['CONFIG'], 'user_tables')):
+    os.mkdir(os.path.join(os.environ['CONFIG'], 'user_tables'))
+    with open(os.path.join(os.environ['CONFIG'], 'user_tables', 'example.txt'), mode='w', encoding='utf-8') as file:
+        file.write('First result\nSecond result\nThird result')
+    with open(os.path.join(os.environ['CONFIG'], 'user_tables', 'example.psv'), mode='w', encoding='utf-8') as file:
+        file.write('25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter')
+
+PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
+
+TREV = 1000
+
+if not os.path.exists(PBWDIR):
+    os.mkdir(PBWDIR)
+
+if not os.path.exists(os.path.join(PBWDIR, 'config')):
+    os.mkdir(os.path.join(PBWDIR, 'config'))
+
+if not os.path.exists(os.path.join(PBWDIR, 'ai')):
+    os.mkdir(os.path.join(PBWDIR, 'ai'))
 
 # Download the master repo zip file and extract it in CONFIG dir using urllib
 def download_master():
@@ -28,46 +47,63 @@ def download_master():
     import distutils.dir_util
 
     url = 'https://codeload.github.com/saif-ellafi/play-by-the-writing/zip/refs/heads/main'
-    temp_file = tempfile.gettempdir()+'/master.zip'
+    temp_dir = tempfile.gettempdir()
+    temp_file = temp_dir+'/master.zip'
     urllib.request.urlretrieve(url, temp_file)
     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
-        zip_ref.extractall(os.path.join(tempfile.gettempdir(), 'pbtw_files'))    
+        zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))    
     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
-    distutils.dir_util.copy_tree(os.path.join(tempfile.gettempdir(), 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
-    distutils.dir_util.copy_tree(os.path.join(tempfile.gettempdir(), 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
+        with open(os.path.join(temp_dir, '.playbtw_trev'), encoding='utf-8') as trev:
+            update_available = int(trev.readline().strip()) > TREV
+            update_notes = trev.readline().strip()
+    if update_available:
+        distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
+        distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
+        text = 'Updated: ' + update_notes
+    else:
+        text = 'Already up to date'
     # delete the remaining downloaded files
-    shutil.rmtree(os.path.join(tempfile.gettempdir(), 'pbtw_files'))
+    shutil.rmtree(os.path.join(temp_dir, 'pbtw_files'))
     os.remove(temp_file)
+    return text
 
 
-# List TXT tables
-def list_tables(tp, contains=''):
-    files = os.listdir(os.path.join(os.environ['CONFIG'], 'tables'))
-    names = []
-    for file in files:
-        split = os.path.splitext(file)
-        if split[1] == tp and split[0].__contains__(contains):
-            names.append(split[0])
-    names.sort()
-    return '\n'.join(names)
+def setup_ai(key):
+    path = os.path.join(PBWDIR, 'config', 'openai.txt')
+    with open(path, mode='w', encoding='utf-8') as file:
+        file.write(key)
 
 
 # Reads CSV table with exactly one column.
-def read_table(table, override_dir=None):
+def read_table(table, override_dir=None, default=None):
     path = os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
+    # check otherwise in the user folder
     if not os.path.exists(path):
-        return [f'List not setup: (%s) ' % table.replace('_', ' ')]
+        path = os.path.join(PBWDIR, 'user_tables', table+'.txt')
+    if not os.path.exists(path):
+        if default:
+            with open(path, 'w') as f:
+                f.write(default)
+        else:
+            return [f'List not found: (%s) ' % table]
     with open(path, encoding='utf-8') as file:
         lines = file.readlines()
     return list(map(lambda x: x.strip(), lines))
 
 
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
-def read_wtable(table, override_dir=None):
+def read_wtable(table, override_dir=None, default=None):
     rows = []
     path = os.path.join(override_dir, table+'.psv') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.psv')
+    # check otherwise in the user folder
     if not os.path.exists(path):
-        return ['Weighted table not found']
+        path = os.path.join(PBWDIR, 'user_tables', table+'.psv')
+    if not os.path.exists(path):
+        if default:
+            with open(path, 'w') as f:
+                f.write(default)
+        else:
+            return [f'Weighted list not found: (%s) ' % table]
     with open(path, encoding='utf-8') as csvfile:
         spamreader = csv.reader(csvfile, delimiter='|', quotechar='"')
         for row in spamreader:
@@ -76,15 +112,15 @@ def read_wtable(table, override_dir=None):
 
 
 def unwrap(result):
-    nested = re.sub("u{{(\\w+)}}", lambda x: choice_table(x[1], override_dir=os.path.join(tempfile.gettempdir())), result)
+    nested = re.sub("u{{(\\w+)}}", lambda x: choice_table(x[1], override_dir=PBWDIR), result)
     nested = re.sub("w{{(\\w+)}}", lambda x: choice_wtable(x[1]), nested)
     nested = re.sub("{{(\\w+)}}", lambda x: choice_table(x[1]), nested)
     return nested
 
 
 # Rolls random from a table once
-def choice_table(table, mode=None, override_dir=None):
-    values = read_table(table, override_dir=override_dir)
+def choice_table(table, mode=None, override_dir=None, default=None):
+    values = read_table(table, override_dir=override_dir, default=default)
     rolled = random.randint(0, len(values)-1)
     if mode == 'adv':
         rolled = max(rolled, random.randint(0, len(values)-1))
@@ -95,8 +131,8 @@ def choice_table(table, mode=None, override_dir=None):
 
 
 # Rolls random from a weighted table once, based on the max values provided on first column
-def choice_wtable(table, mode=None, override_dir=None):
-    values = read_wtable(table, override_dir=override_dir)
+def choice_wtable(table, mode=None, override_dir=None, default=None):
+    values = read_wtable(table, override_dir=override_dir, default=default)
     max_value = int(values[-1][0])
     rolled = random.randint(1, max_value)
     if mode == 'adv':
@@ -152,29 +188,29 @@ def roll_genesys(dice_array):
 def shuffle_deck(table):
     cards = read_table(table)
     random.shuffle(cards)
-    with open(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+    with open(os.path.join(PBWDIR, '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards))
     return cards
 
 
 def draw_card(table):
     drawn = ''
-    if not os.path.exists(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt')):
+    if not os.path.exists(os.path.join(PBWDIR, '__cards_'+table+'.txt')):
         shuffle_deck(table)
-    with open(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
+    with open(os.path.join(PBWDIR, '__cards_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
         cards = list(map(lambda x: x.strip(), play_deck.readlines()))
     if not cards:
         cards = shuffle_deck(table)
         drawn += '(Shuffled!) '
     drawn += cards[0].strip()
-    with open(os.path.join(tempfile.gettempdir(), '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+    with open(os.path.join(PBWDIR, '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards[1:]))
     return drawn
 
 
 # Open user defined table
 def load_user_table(name, default=''):
-    path = os.path.join(tempfile.gettempdir(), name+'.txt')
+    path = os.path.join(PBWDIR, name+'.txt')
     if os.path.exists(path):
         with open(path, 'r') as mem:
             content = mem.read()
@@ -185,7 +221,7 @@ def load_user_table(name, default=''):
 
 # Open user defined wtable
 def load_user_wtable(name, default=''):
-    path = os.path.join(tempfile.gettempdir(), name+'.psv')
+    path = os.path.join(PBWDIR, name+'.psv')
     if os.path.exists(path):
         with open(path, 'r') as mem:
             content = mem.read()
@@ -196,7 +232,7 @@ def load_user_wtable(name, default=''):
 
 # Save user defined table
 def save_user_table(name, content):
-    path = os.path.join(tempfile.gettempdir(), name+'.txt')
+    path = os.path.join(PBWDIR, name+'.txt')
     with open(path, 'w') as f:
         f.write(content)
     return content
@@ -204,19 +240,17 @@ def save_user_table(name, content):
 
 # Save user defined wtable
 def save_user_wtable(name, content):
-    path = os.path.join(tempfile.gettempdir(), name+'.psv')
+    path = os.path.join(PBWDIR, name+'.psv')
     with open(path, 'w') as f:
         f.write(content)
     return content
 
 
 # Roll user defined table
-def roll_user_table(name):
-    override_dir = os.path.join(tempfile.gettempdir())
-    return choice_table(name, override_dir=override_dir)
+def roll_user_table(name, default=None):
+    return choice_table(name, override_dir=PBWDIR, default=default)
 
 
 # Roll user defined wtable
-def roll_user_wtable(name):
-    override_dir = os.path.join(tempfile.gettempdir())
-    return choice_wtable(name, override_dir=override_dir)
+def roll_user_wtable(name, default=None):
+    return choice_wtable(name, override_dir=PBWDIR, default=default)

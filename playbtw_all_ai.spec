@@ -10,12 +10,9 @@ if os.path.isdir('{0}/../match'):
     shutil.rmtree('{0}/../match'.format(DISTPATH), ignore_errors=True)
 if os.path.isdir('{0}/../tables'):
     shutil.rmtree('{0}/../tables'.format(DISTPATH), ignore_errors=True)
-if os.path.isdir('{0}/../config'):
-    shutil.rmtree('{0}/../config'.format(DISTPATH), ignore_errors=True)
 
 os.makedirs('{0}/../match'.format(DISTPATH), exist_ok=True)
 os.makedirs('{0}/../tables'.format(DISTPATH), exist_ok=True)
-os.makedirs('{0}/../config'.format(DISTPATH), exist_ok=True)
 
 md2pdf('README.pdf', md_file_path='README.md', css_file_path='pdf.css', base_url='./')
 
@@ -30,7 +27,6 @@ shutil.copy('match/playbtw_prompty.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_crge.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
-shutil.copy('config/openai.txt', '{0}/../config/'.format(DISTPATH))
 
 if os.path.exists('dist_core/scripts/playbtw_core.exe'):
     shutil.copy('dist_core/scripts/playbtw_core.exe', '{0}/../scripts/'.format(DISTPATH))

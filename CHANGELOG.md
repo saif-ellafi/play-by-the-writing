@@ -1,3 +1,12 @@
+### 3.0
+* FEATURE: Use home folder for PlayBTW configuration from now on
+* FEATURE: Pull command now checks for updates and gives notes
+* FEATURE: Simpler lists and plot nodes commands (:mlists and :pnodes)
+* FIXED: User defined lists yield default when not setup
+* FIXED: Deprecated list commands in favor of Espanso's search
+* FIXED: Mythic Fate Check wrong probabilities
+* FIXED: Broken weighted lists (Mythic focus)
+
 ### 2.11
 * Fixed failing AI commands (:aistart)
 

@@ -108,9 +108,45 @@ matches:
             - scene_check
             - --chaos
             - "{{chaos}}"
-  # Mythic default Focus
-  - triggers: [":mythic", ":mfo"]
-    label: "Focus (default)"
+  # Mythic Focus (Setup)
+  - triggers: [":mythic", ":mfocs", ":mlists"]
+    label: "Focus (Setup)"
+    replace: "{{output}}"
+    vars:
+      - name: entries
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - load_utable
+            - --table
+            - "mythic_focus_list"
+            - --contains
+            - "5|Remote Event\n10|Ambiguous Event\n20|New NPC\n40|NPC Action: u\\{\\{mythic_characters_list\\}\\}\n45|NPC Negative: u\\{\\{mythic_characters_list\\}\\}\n50|NPC Positive: u\\{\\{mythic_characters_list\\}\\}\n55|Move Toward A Thread: u\\{\\{mythic_threads_list\\}\\}\n65|Move Away From A Thread: u\\{\\{mythic_threads_list\\}\\}\n70|Close A Thread: u\\{\\{mythic_threads_list\\}\\}\n80|PC Negative\n85|PC Positive\n100|Current Context"
+      - name: form1
+        type: form
+        params:
+          layout: |
+            Focus Weighted List:
+            [[file1]]
+          fields:
+            file1:
+              type: text
+              multiline: true
+              default: "{{entries}}"
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_core"
+            - save_utable
+            - --table
+            - "mythic_focus_list"
+            - --contains
+            - "{{form1.file1}}"
+  # Mythic Focus (Roll)
+  - triggers: [":mythic", ":mfocr", ":mlists"]
+    label: "Focus (Roll)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -118,34 +154,11 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - wtable
+            - uwtable
             - --table
-            - mythic_focus
-  # Mythic adventure Focus
-  - triggers: [":mythic", ":madfoc"]
-    label: "Focus (adventure)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - wtable
-            - --table
-            - mythic_focus_adv
-  # Mythic Focus with custom table. Table name between dots. Without the extension. Must be .psv
-  - regex: ":mfo\\.(?P<table>.*)\\."
-    replace: "{{table}}: {{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - wtable
-            - --table
-            - "{{table}}"
+            - "mythic_focus_list"
+            - --contains
+            - "5|Remote Event\n10|Ambiguous Event\n20|New NPC\n40|NPC Action: u\\{\\{mythic_characters_list\\}\\}\n45|NPC Negative: u\\{\\{mythic_characters_list\\}\\}\n50|NPC Positive: u\\{\\{mythic_characters_list\\}\\}\n55|Move Toward A Thread: u\\{\\{mythic_threads_list\\}\\}\n65|Move Away From A Thread: u\\{\\{mythic_threads_list\\}\\}\n70|Close A Thread: u\\{\\{mythic_threads_list\\}\\}\n80|PC Negative\n85|PC Positive\n100|Current Context"
   # Mythic Random Event
   - triggers: [":mythic", ":mre", ":mev"]
     label: "Random Event"
@@ -184,7 +197,7 @@ matches:
             - --table
             - mythic_descriptor_1,mythic_descriptor_2
   # Mythic characters lists
-  - triggers: [":mythic", ":mchars"]
+  - triggers: [":mythic", ":mchars", ":mlists"]
     label: "Characters list (Setup)"
     replace: "{{output}}"
     vars:
@@ -197,7 +210,7 @@ matches:
             - --table
             - "mythic_characters_list"
             - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
       - name: form1
         type: form
         params:
@@ -219,7 +232,7 @@ matches:
             - "mythic_characters_list"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":mythic", ":mcharr"]
+  - triggers: [":mythic", ":mcharr", ":mlists"]
     label: "Characters list (Roll)"
     replace: "{{output}}"
     vars:
@@ -231,8 +244,10 @@ matches:
             - utable
             - --table
             - "mythic_characters_list"
+            - --contains
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
   # Mythic threads lists
-  - triggers: [":mythic", ":mthreads"]
+  - triggers: [":mythic", ":mthreads", ":mlists"]
     label: "Threads list (Setup)"
     replace: "{{output}}"
     vars:
@@ -243,9 +258,9 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_thread_list"
+            - "mythic_threads_list"
             - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
       - name: form1
         type: form
         params:
@@ -264,10 +279,10 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_thread_list"
+            - "mythic_threads_list"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":mythic", ":mthreadr"]
+  - triggers: [":mythic", ":mthreadr", ":mlists"]
     label: "Threads list (Roll)"
     replace: "{{output}}"
     vars:
@@ -278,9 +293,11 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - utable
             - --table
-            - "mythic_thread_list"
+            - "mythic_threads_list"
+            - --contains
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
   # Mythic adventure features lists
-  - triggers: [":mythic", ":mfeatures"]
+  - triggers: [":mythic", ":mfeatures", ":mlists"]
     label: "Adventure features list (Setup)"
     replace: "{{output}}"
     vars:
@@ -293,7 +310,7 @@ matches:
             - --table
             - "mythic_features_list"
             - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE\n"
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
       - name: form1
         type: form
         params:
@@ -315,7 +332,7 @@ matches:
             - "mythic_features_list"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":mythic", ":mfeaturer"]
+  - triggers: [":mythic", ":mfeaturer", ":mlists"]
     label: "Adventure features list (Roll)"
     replace: "{{output}}"
     vars:
@@ -327,6 +344,8 @@ matches:
             - utable
             - --table
             - "mythic_features_list"
+            - --contains
+            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
   # Mythic element tables (lookup with label)
   - trigger: ":mythic"
     label: "Alien Species"

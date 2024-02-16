@@ -33,11 +33,13 @@ def fate_check(odds=0, chaos_rank=5):
     rint2 = rolls_advanced('1d10')
     chaos_mod = chaos_map[chaos_rank]
     core = rint1 + rint2 + odds + chaos_mod
-    if core <= 4:
+    if core < 2:
+        answer = 'No'
+    elif core <= 4:
         answer = 'Exceptional No'
     elif core <= 10:
         answer = 'No'
-    elif core >= 18:
+    elif core >= 18 and core <= 20:
         answer = 'Exceptional Yes'
     if rint1 == rint2 and rint1 <= chaos_rank:
         answer += ', with a Random Event: ' + random_event()
@@ -56,7 +58,8 @@ def scene_check(chaos=5):
 
 
 def random_event():
-    return '%s: %s %s' % (choice_wtable('mythic_focus'), choice_table('mythic_action_1'), choice_table('mythic_action_2'))
+    default = "5|Remote Event\n10|Ambiguous Event\n20|New NPC\n40|NPC Action: u{{mythic_characters_list}}\n45|NPC Negative: u{{mythic_characters_list}}\n50|NPC Positive: u{{mythic_characters_list}}\n55|Move Toward A Thread: u{{mythic_threads_list}}\n65|Move Away From A Thread: u{{mythic_threads_list}}\n70|Close A Thread: u{{mythic_threads_list}}\n80|PC Negative\n85|PC Positive\n100|Current Context"
+    return '%s: %s %s' % (roll_user_wtable('mythic_focus_list', default=default), choice_table('mythic_action_1'), choice_table('mythic_action_2'))
 
 
 if action == 'fate_check':

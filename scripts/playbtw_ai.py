@@ -4,22 +4,23 @@
 # Use at your OWN RISK
 
 import argparse
-
-from openai import OpenAI
-from openai.types import Image
-
-with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='utf-8') as file:
-    api_key = file.read().strip()
-    if api_key == '<Replace entire line with OpenAI API Key>':
-        print('OpenAI API KEY NOT Replaced. Paste your OpenAI API KEY in openai.txt file (and make a backup of the file)')
-        sys.exit(0)
-
-client = OpenAI(api_key=api_key)
 import pickle
 import sys
 
+from openai import OpenAI
 from playbtw_common import *
 
+AI_MEM_FILE = os.path.join(PBWDIR, 'ai', 'playbtw_ai_memory.obj')
+AI_HISTORY_FILE = os.path.join(PBWDIR, 'ai', 'playbtw_ai_chat.txt')
+
+if os.path.exists(os.path.join(PBWDIR, 'config', 'openai.txt')):
+    with open(os.path.join(PBWDIR, 'config', 'openai.txt'), encoding='utf-8') as file:
+        api_key = file.read().strip()
+else:
+    print('OpenAI API key NOT FOUND. Please type :aisetup to setup your API key.')
+    sys.exit(0)
+
+client = OpenAI(api_key=api_key)
 
 parser = argparse.ArgumentParser(description='Play by the Writing - for Espanso - AI Mode')
 parser.add_argument('action', type=str, help='Open AI GPT')
@@ -39,17 +40,16 @@ parser.add_argument('--img_style', type=str, default='vivid', help='Image style 
 args = vars(parser.parse_args())
 action = args['action']
 
-ai_memory_file = os.path.join(tempfile.gettempdir(), 'playbtw_ai_memory.txt')
-ai_history_file = os.path.join(tempfile.gettempdir(), 'playbtw_ai_chat.txt')
-
 
 def memory_erase():
-    if os.path.exists(ai_memory_file):
-        os.remove(ai_memory_file)
+    if os.path.exists(AI_MEM_FILE):
+        os.remove(AI_MEM_FILE)
+    if os.path.exists(AI_HISTORY_FILE):
+        os.remove(AI_HISTORY_FILE)
 
 
 def memory_save(ai_prompt, ai_answer, mode):
-    with open(ai_memory_file, mode, encoding="utf-8") as mem:
+    with open(AI_MEM_FILE, mode, encoding="utf-8") as mem:
         mem.write(ai_prompt)
         mem.write('\n')
         mem.write(ai_answer)
@@ -57,20 +57,20 @@ def memory_save(ai_prompt, ai_answer, mode):
 
 
 def memory_read():
-    if os.path.exists(ai_memory_file):
-        with open(ai_memory_file, 'r', encoding="utf-8") as mem:
+    if os.path.exists(AI_MEM_FILE):
+        with open(AI_MEM_FILE, 'r', encoding="utf-8") as mem:
             return mem.read()
     else:
         return ''
 
 
 def chat_save(msg):
-    with open(ai_history_file, 'wb') as handle:
+    with open(AI_HISTORY_FILE, 'wb') as handle:
         pickle.dump({"messages": msg}, handle)
 
 
 def chat_load():
-    with open(ai_history_file, 'rb') as handle:
+    with open(AI_HISTORY_FILE, 'rb') as handle:
         return pickle.load(handle)['messages']
 
 
@@ -103,7 +103,7 @@ elif action == 'ai_chat':
     prompt = args['prompt'].strip()
     if not prompt:
         print('PBTW-ERROR: No prompt given')
-    elif not os.path.exists(ai_history_file):
+    elif not os.path.exists(AI_HISTORY_FILE):
         print('PBTW-ERROR: Call `:aistart` to begin a chat first.')
     else:
         messages = chat_load()

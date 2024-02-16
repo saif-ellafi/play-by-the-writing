@@ -51,17 +51,13 @@ import glob
 
 if os.path.isdir('{0}/../match'):
     shutil.rmtree('{0}/../match'.format(DISTPATH), ignore_errors=True)
-if os.path.isdir('{0}/../config'):
-    shutil.rmtree('{0}/../config'.format(DISTPATH), ignore_errors=True)
 
 os.makedirs('{0}/../match'.format(DISTPATH), exist_ok=True)
-os.makedirs('{0}/../config'.format(DISTPATH), exist_ok=True)
 
 md2pdf('README.pdf', md_file_path='README.md', css_file_path='pdf.css', base_url='./')
 
 shutil.move('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
-shutil.copy('config/openai.txt', '{0}/../config/'.format(DISTPATH))
 
 shutil.make_archive('PlayBTW_v2_11_ai', 'zip', 'dist_ai')

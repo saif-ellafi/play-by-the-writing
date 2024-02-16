@@ -610,7 +610,7 @@ matches:
             - --table
             - pum_situation
   # PUM World and Game events
-  - triggers: [":pum", ":worlds", ":elements"]
+  - triggers: [":pum", ":worlds", ":elements", ":pnodes"]
     label: "Plot node: World and Game elements (Setup)"
     replace: "{{output}}"
     vars:
@@ -623,7 +623,7 @@ matches:
             - --table
             - "pum_nodes_world_elements"
             - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
       - name: form1
         type: form
         params:
@@ -645,7 +645,7 @@ matches:
             - "pum_nodes_world_elements"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":worldr", ":elementr"]
+  - triggers: [":pum", ":worldr", ":elementr", ":pnodes"]
     label: "Plot node: World and Game elements (Roll)"
     replace: "{{output}}"
     vars:
@@ -657,8 +657,10 @@ matches:
             - utable
             - --table
             - "pum_nodes_world_elements"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
   # PUM Meaningful Encounters
-  - triggers: [":pum", ":encounters"]
+  - triggers: [":pum", ":encounters", ":pnodes"]
     label: "Plot node: Meaningful Encounters (Setup)"
     replace: "{{output}}"
     vars:
@@ -671,7 +673,7 @@ matches:
             - --table
             - "pum_nodes_meaningful_encounters"
             - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
       - name: form1
         type: form
         params:
@@ -693,7 +695,7 @@ matches:
             - "pum_nodes_meaningful_encounters"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":encounterr"]
+  - triggers: [":pum", ":encounterr", ":pnodes"]
     label: "Plot node: Meaningful Encounters (Roll)"
     replace: "{{output}}"
     vars:
@@ -705,8 +707,10 @@ matches:
             - utable
             - --table
             - "pum_nodes_meaningful_encounters"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
   # PUM Things to be found
-  - triggers: [":pum", ":things", ":finds"]
+  - triggers: [":pum", ":things", ":finds", ":pnodes"]
     label: "Plot node: Things to be Found (Setup)"
     replace: "{{output}}"
     vars:
@@ -719,7 +723,7 @@ matches:
             - --table
             - "pum_nodes_things_to_find"
             - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
       - name: form1
         type: form
         params:
@@ -741,7 +745,7 @@ matches:
             - "pum_nodes_things_to_find"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":thingr", ":findr"]
+  - triggers: [":pum", ":thingr", ":findr", ":pnodes"]
     label: "Plot node: Things to be Found (Roll)"
     replace: "{{output}}"
     vars:
@@ -753,8 +757,10 @@ matches:
             - utable
             - --table
             - "pum_nodes_things_to_find"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
   # PUM Pending Questions
-  - triggers: [":pum", ":pendings"]
+  - triggers: [":pum", ":pendings", ":pnodes"]
     label: "Plot node: Pending Questions (Setup)"
     replace: "{{output}}"
     vars:
@@ -767,7 +773,7 @@ matches:
             - --table
             - "pum_nodes_pending_questions"
             - --contains
-            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL\n"
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
       - name: form1
         type: form
         params:
@@ -789,7 +795,7 @@ matches:
             - "pum_nodes_pending_questions"
             - --contains
             - "{{form1.file1}}"
-  - triggers: [":pum", ":pendingr"]
+  - triggers: [":pum", ":pendingr", ":pnodes"]
     label: "Plot node: Pending Questions (Roll)"
     replace: "{{output}}"
     vars:
@@ -801,6 +807,8 @@ matches:
             - utable
             - --table
             - "pum_nodes_pending_questions"
+            - --contains
+            - "1-2 CHOOSE OR REROLL\n3-4 CHOOSE OR REROLL\n5-6 CHOOSE OR REROLL\n7-8 CHOOSE OR REROLL\n9-10 ADD NEW OR REROLL"
   # SUM (GM action, intervention)
   - triggers: [":sum", ":gma", ":gmint"]
     label: "GM Emulation: Intervention check"

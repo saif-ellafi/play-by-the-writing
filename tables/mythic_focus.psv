@@ -1,12 +1,12 @@
 5|Remote Event
 10|Ambiguous Event
 20|New NPC
-40|NPC Action (NPC: u{{mythic_characters_list}})
-45|NPC Negative (NPC: u{{mythic_characters_list}})
-50|NPC Positive (NPC: u{{mythic_characters_list}})
-55|Move Toward A Thread (Thread: u{{mythic_thread_list}})
-65|Move Away From A Thread (Thread: u{{mythic_thread_list}})
-70|Close A Thread (Thread: u{{mythic_thread_list}})
+40|NPC Action: u{{mythic_characters_list}}
+45|NPC Negative: u{{mythic_characters_list}}
+50|NPC Positive: u{{mythic_characters_list}}
+55|Move Toward A Thread: u{{mythic_threads_list}}
+65|Move Away From A Thread: u{{mythic_threads_list}}
+70|Close A Thread: u{{mythic_threads_list}}
 80|PC Negative
 85|PC Positive
 100|Current Context
