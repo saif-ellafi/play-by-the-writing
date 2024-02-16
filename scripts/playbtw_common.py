@@ -53,7 +53,7 @@ def download_master():
     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
         zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))    
     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
-        with open(os.path.join(temp_dir, '.playbtw_trev'), encoding='utf-8') as trev:
+        with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trev:
             update_available = int(trev.readline().strip()) > TREV
             update_notes = trev.readline().strip()
     if update_available:
@@ -79,7 +79,7 @@ def read_table(table, override_dir=None, default=None):
     path = os.path.join(override_dir, table+'.txt') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
     # check otherwise in the user folder
     if not os.path.exists(path):
-        path = os.path.join(PBWDIR, 'user_tables', table+'.txt')
+        path = os.path.join(os.environ['CONFIG'], 'user_tables', table+'.txt')
     if not os.path.exists(path):
         if default:
             with open(path, 'w') as f:
@@ -97,7 +97,7 @@ def read_wtable(table, override_dir=None, default=None):
     path = os.path.join(override_dir, table+'.psv') if override_dir else os.path.join(os.environ['CONFIG'], 'tables', table+'.psv')
     # check otherwise in the user folder
     if not os.path.exists(path):
-        path = os.path.join(PBWDIR, 'user_tables', table+'.psv')
+        path = os.path.join(os.environ['CONFIG'], 'user_tables', table+'.psv')
     if not os.path.exists(path):
         if default:
             with open(path, 'w') as f:

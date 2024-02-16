@@ -1,5 +1,6 @@
 ### 3.0
 * FEATURE: Use home folder for PlayBTW configuration from now on
+* FEATURE: New user_tables folder in espanso's folder for custom tables
 * FEATURE: Pull command now checks for updates and gives notes
 * FEATURE: Simpler lists and plot nodes commands (:mlists and :pnodes)
 * FIXED: User defined lists yield default when not setup
