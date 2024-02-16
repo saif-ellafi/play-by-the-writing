@@ -152,7 +152,7 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - uwtable
+            - wtable
             - --table
             - "mythic_list_focus"
   # Mythic Random Event
