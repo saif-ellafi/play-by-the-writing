@@ -26,6 +26,10 @@ TREV = 1000
 if not os.path.exists(PBWDIR):
     os.mkdir(PBWDIR)
 
+if not os.path.exists(os.path.join(PBWDIR, '.pbtwtrev')):
+    with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
+        trevlocal.write(str(TREV))
+
 if not os.path.exists(os.path.join(PBWDIR, 'my_tables')):
     os.mkdir(os.path.join(PBWDIR, 'my_tables'))
     with open(os.path.join(PBWDIR, 'my_tables', 'example.txt'), mode='w', encoding='utf-8') as file:
@@ -56,12 +60,16 @@ def download_master():
     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
         zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))    
     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
-        with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trev:
-            update_available = int(trev.readline().strip()) > TREV
-            update_notes = trev.readline().strip()
+        with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trevpull:
+            with open(os.path.join(PBWDIR, '.pbtwtrev'), encoding='utf-8') as trevlocal:
+                newrev = int(trevpull.readline().strip())
+                update_available = newrev > int(trevlocal.read().strip())
+                update_notes = trevpull.readline().strip()
     if update_available:
         distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
         distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
+        with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
+            trevlocal.write(str(newrev))
         text = 'Updated: ' + update_notes
     else:
         text = 'Already up to date'
