@@ -58,8 +58,7 @@ def scene_check(chaos=5):
 
 
 def random_event():
-    default = "5|Remote Event\n10|Ambiguous Event\n20|New NPC\n40|NPC Action: u{{mythic_characters_list}}\n45|NPC Negative: u{{mythic_characters_list}}\n50|NPC Positive: u{{mythic_characters_list}}\n55|Move Toward A Thread: u{{mythic_threads_list}}\n65|Move Away From A Thread: u{{mythic_threads_list}}\n70|Close A Thread: u{{mythic_threads_list}}\n80|PC Negative\n85|PC Positive\n100|Current Context"
-    return '%s: %s %s' % (roll_user_wtable('mythic_focus_list', default=default), choice_table('mythic_action_1'), choice_table('mythic_action_2'))
+    return '%s: %s %s' % (choice_wtable('mythic_list_focus'), choice_table('mythic_action_1'), choice_table('mythic_action_2'))
 
 
 if action == 'fate_check':

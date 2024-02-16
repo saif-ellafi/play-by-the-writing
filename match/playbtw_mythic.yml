@@ -118,11 +118,9 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - load_utable
+            - load_uwtable
             - --table
-            - "mythic_focus_list"
-            - --contains
-            - "5|Remote Event\n10|Ambiguous Event\n20|New NPC\n40|NPC Action: u\\{\\{mythic_characters_list\\}\\}\n45|NPC Negative: u\\{\\{mythic_characters_list\\}\\}\n50|NPC Positive: u\\{\\{mythic_characters_list\\}\\}\n55|Move Toward A Thread: u\\{\\{mythic_threads_list\\}\\}\n65|Move Away From A Thread: u\\{\\{mythic_threads_list\\}\\}\n70|Close A Thread: u\\{\\{mythic_threads_list\\}\\}\n80|PC Negative\n85|PC Positive\n100|Current Context"
+            - "mythic_list_focus"
       - name: form1
         type: form
         params:
@@ -139,9 +137,9 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - save_utable
+            - save_uwtable
             - --table
-            - "mythic_focus_list"
+            - "mythic_list_focus"
             - --contains
             - "{{form1.file1}}"
   # Mythic Focus (Roll)
@@ -156,9 +154,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - uwtable
             - --table
-            - "mythic_focus_list"
-            - --contains
-            - "5|Remote Event\n10|Ambiguous Event\n20|New NPC\n40|NPC Action: u\\{\\{mythic_characters_list\\}\\}\n45|NPC Negative: u\\{\\{mythic_characters_list\\}\\}\n50|NPC Positive: u\\{\\{mythic_characters_list\\}\\}\n55|Move Toward A Thread: u\\{\\{mythic_threads_list\\}\\}\n65|Move Away From A Thread: u\\{\\{mythic_threads_list\\}\\}\n70|Close A Thread: u\\{\\{mythic_threads_list\\}\\}\n80|PC Negative\n85|PC Positive\n100|Current Context"
+            - "mythic_list_focus"
   # Mythic Random Event
   - triggers: [":mythic", ":mre", ":mev"]
     label: "Random Event"
@@ -208,9 +204,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_characters_list"
-            - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
+            - "mythic_list_characters"
       - name: form1
         type: form
         params:
@@ -229,7 +223,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_characters_list"
+            - "mythic_list_characters"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":mythic", ":mcharr", ":mlists"]
@@ -241,11 +235,9 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
-            - "mythic_characters_list"
-            - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
+            - "mythic_list_characters"
   # Mythic threads lists
   - triggers: [":mythic", ":mthreads", ":mlists"]
     label: "Threads list (Setup)"
@@ -258,9 +250,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_threads_list"
-            - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
+            - "mythic_list_threads"
       - name: form1
         type: form
         params:
@@ -279,7 +269,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_threads_list"
+            - "mythic_list_threads"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":mythic", ":mthreadr", ":mlists"]
@@ -291,11 +281,9 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
-            - "mythic_threads_list"
-            - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
+            - "mythic_list_threads"
   # Mythic adventure features lists
   - triggers: [":mythic", ":mfeatures", ":mlists"]
     label: "Adventure features list (Setup)"
@@ -308,9 +296,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - load_utable
             - --table
-            - "mythic_features_list"
-            - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
+            - "mythic_list_features"
       - name: form1
         type: form
         params:
@@ -329,7 +315,7 @@ matches:
             - "%CONFIG%/scripts/playbtw_core"
             - save_utable
             - --table
-            - "mythic_features_list"
+            - "mythic_list_features"
             - --contains
             - "{{form1.file1}}"
   - triggers: [":mythic", ":mfeaturer", ":mlists"]
@@ -341,11 +327,9 @@ matches:
         params:
           args:
             - "%CONFIG%/scripts/playbtw_core"
-            - utable
+            - table
             - --table
-            - "mythic_features_list"
-            - --contains
-            - "1-2 CHOOSE\n3-4 CHOOSE\n5-6 CHOOSE\n7-8 CHOOSE\n9-10 CHOOSE"
+            - "mythic_list_features"
   # Mythic element tables (lookup with label)
   - trigger: ":mythic"
     label: "Alien Species"

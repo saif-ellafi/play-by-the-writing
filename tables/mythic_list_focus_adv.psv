@@ -1,0 +1,7 @@
+20|Adventure Feature: w{{mythic_list_features}}
+40|NPC Action: {{mythic_list_characters}}
+50|NPC Negative: {{mythic_list_characters}}
+55|NPC Positive: {{mythic_list_characters}}
+70|PC Negative
+80|PC Negative
+100|Current Context

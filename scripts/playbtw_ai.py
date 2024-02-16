@@ -10,8 +10,8 @@ import sys
 from openai import OpenAI
 from playbtw_common import *
 
-AI_MEM_FILE = os.path.join(PBWDIR, 'ai', 'playbtw_ai_memory.obj')
-AI_HISTORY_FILE = os.path.join(PBWDIR, 'ai', 'playbtw_ai_chat.txt')
+AI_MEM_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_memory.obj')
+AI_HISTORY_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_chat.txt')
 
 if os.path.exists(os.path.join(PBWDIR, 'config', 'openai.txt')):
     with open(os.path.join(PBWDIR, 'config', 'openai.txt'), encoding='utf-8') as file:

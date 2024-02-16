@@ -7,7 +7,7 @@ import argparse
 from playbtw_common import *
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|utable|aisetup|update')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|aisetup|update')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
@@ -73,22 +73,10 @@ elif action == 'draw':
           .replace('Clubs', '♣')
           .replace('Joker', '🃏')
           )
-elif action == 'utable':
-    tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
-    result = []
-    for t in tables:
-        result.append(roll_user_table(t.strip(), default=args['contains']))
-    print(' '.join(result))
-elif action == 'uwtable':
-    tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
-    result = []
-    for t in tables:
-        result.append(roll_user_wtable(t.strip(), default=args['contains']))
-    print(' '.join(result))
 elif action == 'load_utable':
-    print(load_user_table(args['table'], default=args['contains']))
+    print(load_user_table(args['table']))
 elif action == 'load_uwtable':
-    print(load_user_wtable(args['table'], default=args['contains']))
+    print(load_user_wtable(args['table']))
 elif action == 'save_utable':
     print(save_user_table(args['table'], args['contains']))
 elif action == 'save_uwtable':

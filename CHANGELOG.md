@@ -1,14 +1,20 @@
 ### 3.0
-* FEATURE: Use home folder for PlayBTW configuration (no need to backup anymore)
-* FEATURE: New user_tables folder in espanso's folder for custom tables
-* FEATURE: Pull command now checks for updates and gives notes
-* FEATURE: Mythic Focus table is now a configurable table
+Overview: Essentially, from now on, PlayBTW will store player specific tables and configurations in $HOME/PlayBTW folder, this gives space to the user for customization in the future, plus not breaking files upon updates. Users can more easily fiddle with custom tables and lists without worrying about updates. For example, users can now override default tables content with own content, without touching the original table. Espanso folder's data should no longer be altered.
+
+* FEATURE: PlayBTW now stores configuration tables in $HOME directory
+* FEATURE: my_tables folder in config folder allows for random tables
+* FEATURE: list_tables folder stores player lists for mythic and pum
+* FEATURE: Pull command now checks for updates and gives update notes
+* FEATURE: Mythic Focus table is now a configurable list_table
 * FEATURE: Simpler lists and plot nodes commands (:mlists and :pnodes)
-* FEATURE: OpenAI Key now introduced via prompt
-* FIXED: User defined lists yield default when not setup
-* FIXED: Deprecated list commands in favor of Espanso's search
+* FEATURE: OpenAI Key setup now introduced via prompt
+* UPDATED: Updated to latest PUM V8-1
+* UPDATED: Prompty Questions tables now included
+* FIXED: User list_tables like plot nodes yield default lists when unset
 * FIXED: Mythic Fate Check wrong probabilities
 * FIXED: Broken weighted lists (Mythic focus)
+* DEPRECATED: Deprecated :list commands in favor of Espanso's search
+* DEPRECATED: Unwrappable tables of type u{{}} (just use normal)
 
 ### 2.11
 * Fixed failing AI commands (:aistart)

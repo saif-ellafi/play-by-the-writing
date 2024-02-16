@@ -43,6 +43,10 @@ The installable is compilable from the source code available [HERE](https://gith
 If you know some Python and want to fiddle with Espanso, the source code for this is Open Source and Free (consider a donation!)
 Instructions included in the source code files.
 
+## Join us on Discord
+
+Would you like to chat about this? [Join us!](https://discord.gg/k2rQMa33Kq)
+
 # What is included?
 
 - **Example kit**: Test before you buy. Once installed, by writing `:example` you should see a happy output.
@@ -396,6 +400,10 @@ Understanding this, will allow you to copy these segments to create your own com
 
 There are two types of tables. Ones ending in `.txt` (simple tables) and others in `.psv` (weighted tables). Check
 the ones available in the folder `tables` for examples of each.
+
+Add your own tables in the `my_tables` folder within the espanso folder to keep your own tables safe and untouched after you upgrade PlayBTW.
+
+You can also copy tables from Espanso's `tables` folder into `my_tables` and change them there, they will be prioritized!
 
 ## Nested tables
 
