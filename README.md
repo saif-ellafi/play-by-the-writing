@@ -26,7 +26,7 @@ like `:r2d6+1.` → `2d6+1: 11`
 2. Install Play by the Writing with either the installer, unzipping, or compiling the source code yourself
 3. Launch Espanso and play!
 
-For using AI, after installing Play by the Writing, run `:aisetup` - this will ask you for your OpenAI API Key (and place it in $HOME/playbtw/config/openai.txt)
+For using AI, after installing Play by the Writing, run `:aisetup` - this will ask you for your OpenAI API Key (and place it in $HOME/PlayBTW/config/openai.txt)
 
 Test if everything works by typing `:qq`, if you get an Oracle yes/no answer, you're good to go! Have fun.
 

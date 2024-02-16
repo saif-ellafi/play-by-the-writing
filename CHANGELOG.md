@@ -1,8 +1,10 @@
 ### 3.0
-* FEATURE: Use home folder for PlayBTW configuration from now on
+* FEATURE: Use home folder for PlayBTW configuration (no need to backup anymore)
 * FEATURE: New user_tables folder in espanso's folder for custom tables
 * FEATURE: Pull command now checks for updates and gives notes
+* FEATURE: Mythic Focus table is now a configurable table
 * FEATURE: Simpler lists and plot nodes commands (:mlists and :pnodes)
+* FEATURE: OpenAI Key now introduced via prompt
 * FIXED: User defined lists yield default when not setup
 * FIXED: Deprecated list commands in favor of Espanso's search
 * FIXED: Mythic Fate Check wrong probabilities
