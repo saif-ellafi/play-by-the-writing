@@ -60,4 +60,4 @@ shutil.move('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v2_11_ai', 'zip', 'dist_ai')
+shutil.make_archive('PlayBTW_v3_00_ai', 'zip', 'dist_ai')
