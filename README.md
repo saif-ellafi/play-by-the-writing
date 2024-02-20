@@ -99,9 +99,10 @@ The installer will identify this location automatically, so normally you don't h
 
 ## MacOS
 
-1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`).
+1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`)
 2. Download the MacOs zip archive
-3. Unzip and merge the archive `PlayBTW_v3_00_ai_macos.zip` into `/Users/Library/Application Support/espanso`
+3. Unzip and merge the archive `PlayBTW_v3_00_ai_macos.zip` into `~/Library/Application\ Support/espanso`
+You can also run `unzip -o -d ~/Library/Application\ Support/espanso ~/Downloads/PlayBTW_v3_00_ai_macos.zip`
 
 If you accidentally replace, and do not merge and get errors, simply restart the Espanso service and all will be fine.
 
