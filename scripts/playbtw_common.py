@@ -30,6 +30,9 @@ if not os.path.exists(os.path.join(PBWDIR, '.pbtwtrev')):
     with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
         trevlocal.write(str(TREV))
 
+if not os.path.exists(os.path.join(PBWDIR, 'cards_tables')):
+    os.mkdir(os.path.join(PBWDIR, 'cards_tables'))
+
 if not os.path.exists(os.path.join(PBWDIR, 'my_tables')):
     os.mkdir(os.path.join(PBWDIR, 'my_tables'))
     with open(os.path.join(PBWDIR, 'my_tables', 'example.txt'), mode='w', encoding='utf-8') as file:
@@ -58,7 +61,7 @@ def download_master():
     temp_file = temp_dir+'/master.zip'
     urllib.request.urlretrieve(url, temp_file)
     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
-        zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))    
+        zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))
     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
         with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trevpull:
             with open(os.path.join(PBWDIR, '.pbtwtrev'), encoding='utf-8') as trevlocal:
