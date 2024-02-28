@@ -20,31 +20,42 @@ if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
 PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
+def pbwdir_path(path, *paths):
+    """
+    Creates an absolute path to a subpath of the user-config directory PBWDIR.
+    """
+    path = os.path.join(PBWDIR, path, *paths)
+    return path
+
+# Ensure user config folder structure exists, otherwise opening files will fail due to missing directory.
+empty_user_folders = ['cards_tables', 'list_tables', 'config', 'data_ai']
+for folder in empty_user_folders:
+    path = pbwdir_path(folder)
+    os.makedirs(path, exist_ok=True)
 
 TREV = 1000
 
-if not os.path.exists(PBWDIR):
-    os.mkdir(PBWDIR)
-
-if not os.path.exists(os.path.join(PBWDIR, '.pbtwtrev')):
-    with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
+# Record trev in hidden file.
+trev_path = pbwdir_path('.pbtwtrev')
+if not os.path.exists(trev_path):
+    with open(trev_path, mode='w', encoding='utf-8') as trevlocal:
         trevlocal.write(str(TREV))
 
-if not os.path.exists(os.path.join(PBWDIR, 'my_tables')):
-    os.mkdir(os.path.join(PBWDIR, 'my_tables'))
-    with open(os.path.join(PBWDIR, 'my_tables', 'example.txt'), mode='w', encoding='utf-8') as file:
-        file.write('First result\nSecond result\nThird result')
-    with open(os.path.join(PBWDIR, 'my_tables', 'example.psv'), mode='w', encoding='utf-8') as file:
-        file.write('25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter')
-
-if not os.path.exists(os.path.join(PBWDIR, 'list_tables')):
-    os.mkdir(os.path.join(PBWDIR, 'list_tables'))
-
-if not os.path.exists(os.path.join(PBWDIR, 'config')):
-    os.mkdir(os.path.join(PBWDIR, 'config'))
-
-if not os.path.exists(os.path.join(PBWDIR, 'data_ai')):
-    os.mkdir(os.path.join(PBWDIR, 'data_ai'))
+# If newly creating my_tables, also install example tables.
+my_tables = 'my_tables'
+my_tables_path = pbwdir_path(my_tables)
+if not os.path.exists(my_tables_path):
+    os.makedirs(my_tables_path, exist_ok=True)
+    demo_tables = {
+        'example.txt':
+            'First result\nSecond result\nThird result',
+        'example.psv':
+            '25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter',
+        }
+    for filename, contents in demo_tables.items():
+        path = pbwdir_path(my_tables, filename)
+        with open(path, mode='w', encoding='utf-8') as file:
+            file.write(contents)
 
 # Download the master repo zip file and extract it in CONFIG dir using urllib
 def download_master():
@@ -58,7 +69,7 @@ def download_master():
     temp_file = temp_dir+'/master.zip'
     urllib.request.urlretrieve(url, temp_file)
     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
-        zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))    
+        zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))
     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
         with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trevpull:
             with open(os.path.join(PBWDIR, '.pbtwtrev'), encoding='utf-8') as trevlocal:
