@@ -129,7 +129,7 @@ def read_wtable(table):
     elif os.path.exists(path3):
         path = path3
     else:
-        return [f'Weighted list not found: (%s) ' % table]
+        return [[1, f'Weighted list not found: (%s) ' % table]]
     with open(path, encoding='utf-8') as psvfile:
         spamreader = csv.reader(psvfile, delimiter='|', quotechar='"')
         for row in spamreader:
