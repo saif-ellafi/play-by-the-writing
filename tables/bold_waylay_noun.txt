@@ -1,50 +1,50 @@
-Easy Foes: animals
-Easy Foes: mooks
-Easy Foes: mob
-Easy Foes: bandits
-Easy Foes: deputies
-Hard Foes: bounty hunter
-Hard Foes: soldiers
-Hard Foes: monster
-Hard Foes: villain
-Hard Foes: horror
-Knowledge: ascetic
-Knowledge: research
-Knowledge: occult
-Knowledge: enigma
-Knowledge: science
-Physical: pursuit
-Physical: trap
-Physical: struggle
-Physical: illness
-Physical: labor
-Factional: army
-Factional: invader
-Factional: holdings
-Factional: authority
-Factional: rebels
-Haven: festival
-Haven: hermit
-Haven: tavern
-Haven: hamlet
-Haven: conclave
-Party: misunderstanding
-Party: accusations
-Party: power play
-Party: friend-in-need
-Party: disappearance
-Personal: traitor
-Personal: lover
-Personal: death
-Personal: relative
-Personal: rival
-Epic: heaven / hell
-Epic: afterlife
-Epic: myth
-Epic: otherworldly
-Epic: the strange
-Natural: weather
-Natural: straying / lost
-Natural: social environ
-Natural: deprivation
-Natural: the wild
+animals (easy foes)
+mooks (easy foes)
+mob (easy foes)
+bandits (easy foes)
+deputies (easy foes)
+bounty hunter (hard foes)
+soldiers (hard foes)
+monster (hard foes)
+villain (hard foes)
+horror (hard foes)
+ascetic (knowledge)
+research (knowledge)
+occult (knowledge)
+enigma (knowledge)
+science (knowledge)
+pursuit (physical)
+trap (physical)
+struggle (physical)
+illness (physical)
+labor (physical)
+army (factional)
+invader (factional)
+holdings (factional)
+authority (factional)
+rebels (factional)
+festival (haven)
+hermit (haven)
+tavern (haven)
+hamlet (haven)
+conclave (haven)
+misunderstanding (party)
+accusations (party)
+power play (party)
+friend-in-need (party)
+disappearance (party)
+traitor (personal)
+lover (personal)
+death (personal)
+relative (personal)
+rival (personal)
+heaven/hell (epic)
+afterlife (epic)
+myth (epic)
+otherworldly (epic)
+the strange (epic)
+weather (natural)
+straying/lost (natural)
+social environ (natural)
+deprivation (natural)
+the wild (natural)

@@ -3,7 +3,8 @@ Overview: This update is pure credit to the community who reported issues here a
 
 * FIXED: Broken cards commands (Thank you @jeremy-w)
 * FIXED: Broken weighted tables commands (Thank you @jeremy-w)
-* Fixed: Broken BOLD Waylay table (Thank you @jeremy-w)
+* FIXED: Broken BOLD Waylay table (Thank you @jeremy-w)
+* FIXED: Improved Waylay table expression
 
 ### 3.00
 Overview: Essentially, from now on, PlayBTW will store player specific tables and configurations in $HOME/PlayBTW folder, this gives space to the user for customization in the future, plus not breaking files upon updates. Users can more easily fiddle with custom tables and lists without worrying about updates. For example, users can now override default tables content with own content, without touching the original table. Espanso folder's data should no longer be altered.
