@@ -181,7 +181,7 @@ matches:
             - mythic_action_1,mythic_action_2
   # Mythic Description descriptor.
   - triggers: [":mythic", ":mde"]
-    label: "Meaning Tables: Action"
+    label: "Meaning Tables: Description"
     replace: "{{output}}"
     vars:
       - name: output
