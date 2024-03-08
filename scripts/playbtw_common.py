@@ -33,7 +33,7 @@ for folder in empty_user_folders:
     path = pbwdir_path(folder)
     os.makedirs(path, exist_ok=True)
 
-TREV = 1001
+TREV = 1002
 
 # Record trev in hidden file.
 trev_path = pbwdir_path('.pbtwtrev')
