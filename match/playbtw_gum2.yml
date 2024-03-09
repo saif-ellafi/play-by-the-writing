@@ -436,7 +436,7 @@ matches:
             - gum2_grand_subject
   # GUM V2 Setup guide
   - triggers: [":gum", ":ggsetfull"]
-    label: "Plot seed (full)"
+    label: "Plot seed setup (full)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -449,7 +449,7 @@ matches:
             - gum2_setup_full
   # GUM V2 - Setup Location Archetype
   - triggers: [":gum", "ggsetloc"]
-    label: "Plot seed: Location archetype"
+    label: "World truth: Location archetype"
     replace: "{{output}}"
     vars:
       - name: output
@@ -462,7 +462,7 @@ matches:
             - gum2_setup_location
   # GUM V2 - Setup World background
   - triggers: [":gum", ":ggsetback"]
-    label: "Plot seed: World background"
+    label: "World truth: Background problem"
     replace: "{{output}}"
     vars:
       - name: output

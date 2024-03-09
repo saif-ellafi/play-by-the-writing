@@ -33,14 +33,6 @@ for folder in empty_user_folders:
     path = pbwdir_path(folder)
     os.makedirs(path, exist_ok=True)
 
-TREV = 1002
-
-# Record trev in hidden file.
-trev_path = pbwdir_path('.pbtwtrev')
-if not os.path.exists(trev_path):
-    with open(trev_path, mode='w', encoding='utf-8') as trevlocal:
-        trevlocal.write(str(TREV))
-
 # If newly creating my_tables, also install example tables.
 my_tables = 'my_tables'
 my_tables_path = pbwdir_path(my_tables)
