@@ -121,15 +121,15 @@ That's it, test an oracle example with `:qq`.
 There are many files with `.yml` extension inside the `match` folder of espanso. Open with a text editor and change the lines 
 that start with `:` in order to change their command keyword.
 
-The match files point to the random tables included out of the box, which are in the `tables` folder, in the same level than `match` folder.
-There you will find all included random tables by default (this will be overritten on every upgrade, so you should work in `my_tables` instead for customization).
+The match files point to the random tables included out of the box, which are in the `tables` folder, in the same level as the `match` folder.
+There you will find all included random tables by default (this will be overridden on every upgrade, so you should work in `my_tables` instead for customization).
 
 Most match files entries point to a command using `--table` (or `--wtable` for weighted tables) which follow with a table name. This table name 
-is the filename within the folder `tables`, and you can append with comma more than one, i.e. `table1,table2` when customizing.
+is the filename within the folder `tables`, and you can append using comma symbols more than once, i.e. `table1,table2` when customizing.
 
 Understanding this, will allow you to copy these segments to create your own commands with your own tables!
 
-## Random Tables
+## Customizing Random Tables
 
 Play by the Writing stores its config and random tables in a different folder, precisely `$HOME/PlayBTW/`.
 
@@ -140,7 +140,7 @@ Add your own tables in the `my_tables` folder within the espanso folder to keep 
 
 You can also copy tables from Espanso's `tables` folder into `my_tables` and change them there, they will be prioritized!
 
-## Nested tables
+## Nesting tables
 
 You can nest table rolls within others, by utilizing the format `{{table_simple_name}}` or `w{{weighted_table_name}}`
 where the table name refers to the file name. You can use these however you like, and even build sentences with more
