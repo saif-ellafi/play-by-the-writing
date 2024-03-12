@@ -82,9 +82,9 @@ The installer will install everything correctly by default, only change the inst
 
 ## Installer details
 
-Play by the Writing (Play-btw) files go inside Espanso's user config directory. **IMPORTANT:** Config directory is **NOT** the same as installation directory.
+Play by the Writing (PbtW) files go inside Espanso's user config directory. **IMPORTANT:** Config directory is **NOT** the same as installation directory.
 
-For example, if you install Espanso on the F:/ drive, the **config** directory will still be on the Windows installation drive, where your Documents and user files are located.
+For example, if you install Espanso on the F:/ drive, the **config** directory will still be on the Windows installation drive, where your user files are.
 
 The installer will identify this location automatically, so normally you don't have to switch the path installation of Play by the writing.
 
@@ -93,7 +93,7 @@ The installer will identify this location automatically, so normally you don't h
 ### Installer
 
 1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`).
-2. Download the Windows installer executables
+2. Download Play by the Writing Windows installer executables
 3. Follow the installer instructions. By default, the installer should point to Espanso config folder: 
 `C:\Users\USERNAME\AppData\Roaming\espanso\`. Adjust if it is different.
 
@@ -114,12 +114,40 @@ That's it, test an oracle example with `:qq`.
 2. Download the Zip packages for Linux (either base or base with AI)
 3. If using default paths, this should just work: `unzip ~/Downloads/PlayBTW_v3_01_ai_linux.zip -d ~/.config/espanso/`
 
-### AI Complete errors
+# Customization and Advanced usage
 
-If you get any errors when using `aicomplete` keyword, it may be due to missing clipboard mechanisms.
-Install `xclip` or learn more about it here: https://pyperclip.readthedocs.io/en/latest/index.html#not-implemented-error
+## Match files and shortcut keywords
 
-That’s it. See the keywords list below in this document.
+There are many files with `.yml` extension inside the `match` folder of espanso. Open with a text editor and change the lines 
+that start with `:` in order to change their command keyword.
+
+Some entries point to `table` (or `wtable` for weighted tables) which follow with a table name. This table name 
+is the file name within the folder `tables`, and you can append with comma more than one, i.e. `table1,table2`
+
+Understanding this, will allow you to copy these segments to create your own commands with your own tables!
+
+## Random Tables
+
+Play by the Writing stores its config and random tables in a different folder, precisely `$HOME/PlayBTW/`.
+
+There are two types of tables. Ones ending in `.txt` (simple tables) and others in `.psv` (weighted tables). Check
+the ones available in the folder `tables` for examples of each.
+
+Add your own tables in the `my_tables` folder within the espanso folder to keep your own tables safe and untouched after you upgrade PlayBTW.
+
+You can also copy tables from Espanso's `tables` folder into `my_tables` and change them there, they will be prioritized!
+
+## Nested tables
+
+You can nest table rolls within others, by utilizing the format `{{table_simple_name}}` or `w{{weighted_table_name}}`
+where the table name refers to the file name. You can use these however you like, and even build sentences with more
+than one of them, i.e. `Hello {{table_1}}, I hope you had a great {{table_2}}!`
+
+## List tables
+
+Inside the folder `list_tables` you can find references to tables that change during the course of your game, like Mythic's Characters List.
+
+The tables here are generated dynamically as you use PBTW, but you can check this folder to make backup or changes manually.
 
 # Keywords List
 
@@ -385,35 +413,9 @@ This experimental functionality relies on OpenAI: https://openai.com for using A
 | AI ChatGPT Forget history                 | `:aiforget` `:aierase` `:aiclear`  | Delete AI memories (saves costs)                             |
 | AI Image Dall-E 3                         | `:aiimg` `:aiimage` `:dall-e`      | An AI generated image                                        |
 
-# Customization and Advanced usage
-
-## Match files
-
-There are many files with `.yml` extension inside the `match` folder. Open with a text editor and change the lines 
-that start with `:` in order to change their command keyword.
-
-Some entries point to `table` (or `wtable` for weighted tables) which follow with a table name. This table name 
-is the file name within the folder `tables`, and you can append with comma more than one, i.e. `table1,table2`
-
-Understanding this, will allow you to copy these segments to create your own commands with your own tables!
-
-## Table customization
-
-There are two types of tables. Ones ending in `.txt` (simple tables) and others in `.psv` (weighted tables). Check
-the ones available in the folder `tables` for examples of each.
-
-Add your own tables in the `my_tables` folder within the espanso folder to keep your own tables safe and untouched after you upgrade PlayBTW.
-
-You can also copy tables from Espanso's `tables` folder into `my_tables` and change them there, they will be prioritized!
-
-## Nested tables
-
-You can nest table rolls within others, by utilizing the format `{{table_simple_name}}` or `w{{weighted_table_name}}`
-where the table name refers to the file name. You can use these however you like, and even build sentences with more
-than one of them, i.e. `Hello {{table_1}}, I hope you had a great {{table_2}}!`
-
 # Service Level Agreement of Purchase
-- This software is provided as-is, I support users on goodwill and listen to feedback and ideas, but cannot commit to eternal promises.
+- The software is free, what is sold is the installer and executable files for your convenience, and as a way to support the author
+- This software is provided as-is, I support users on goodwill and listen to feedback and ideas, but cannot commit to eternal promises
 - This software is only available on itch.io – For your safety, only download from there
 - Tested in Windows 11, MacOS Sierra, and Linux (Ubuntu, and OpenSUSE)
 - This software is purely and entirely recreational, and it should not cause any harm to your system. I cannot be held responsible for misuse or damage caused to your system.
