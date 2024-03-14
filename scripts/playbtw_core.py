@@ -25,14 +25,6 @@ parser.add_argument('--gen_s', type=int, help='Genesys dice setback')
 
 args = vars(parser.parse_args())
 
-TREV = 1003
-
-# Record trev in hidden file.
-trev_path = pbwdir_path('.pbtwtrev')
-if not os.path.exists(trev_path):
-    with open(trev_path, mode='w', encoding='utf-8') as trevlocal:
-        trevlocal.write(str(TREV))
-
 action = args['action']
 
 if action == 'table':

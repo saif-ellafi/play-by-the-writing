@@ -22,24 +22,12 @@ matches:
             Poker shuffle → :shuffle
             Poker draw → :draw
             Complete AI → :aicomplete
-            Update all tables → :update or :pull
   - triggers: [":dd"]
     label: "Dice symbol"
     replace: "🎲"
   - triggers: [":arr"]
     label: "Arrow symbol"
     replace: "→"
-  # Download and update all tables from internet
-  - triggers: [":pull", ":update"]
-    label: "Download latest version of tables from PlayBTW's GitHub"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw_core"
-            - update
   # Roll dice
   - regex: ":r(?P<formula>.*)\\."
     replace: "{{output}}"

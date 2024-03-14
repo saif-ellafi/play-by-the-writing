@@ -169,6 +169,7 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 | Roll denesys dice    | `:genesys` or `:gend`      | ...                        | Rolls dice for Genesys RPG by FFG                           |
 | Roll Random Table    | `:tt.<tablename>.`         | [Third result]             | Roll from a .txt table based on its filename                |
 | Roll Weighted Table  | `:wt.<tablename>.`         | [Next quarter]             | Roll from a .psv table with weights based on its filenam    |
+| Update tables        | `:update` or `:pull`       | ...                        | Download and update PlayBTW tables                          |
 | Shuffle Poker Deck   | `:shuffle`                 | Shuffled!                  | restarts the poker deck                                     |
 | Draw from Poker Deck | `:draw`                    | 8♠ 7♥ 6♦                   | Draws a card from poker deck                                |
 

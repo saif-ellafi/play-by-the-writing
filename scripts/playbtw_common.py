@@ -16,6 +16,8 @@ if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
 PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
+
+
 def pbwdir_path(path, *paths):
     """
     Creates an absolute path to a subpath of the user-config directory PBWDIR.
@@ -23,11 +25,12 @@ def pbwdir_path(path, *paths):
     path = os.path.join(PBWDIR, path, *paths)
     return path
 
+
 # Ensure user config folder structure exists, otherwise opening files will fail due to missing directory.
 empty_user_folders = ['cards_tables', 'list_tables', 'config', 'data_ai']
 for folder in empty_user_folders:
-    path = pbwdir_path(folder)
-    os.makedirs(path, exist_ok=True)
+    epath = pbwdir_path(folder)
+    os.makedirs(epath, exist_ok=True)
 
 # If newly creating my_tables, also install example tables.
 my_tables = 'my_tables'
@@ -41,42 +44,9 @@ if not os.path.exists(my_tables_path):
             '25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter',
         }
     for filename, contents in demo_tables.items():
-        path = pbwdir_path(my_tables, filename)
-        with open(path, mode='w', encoding='utf-8') as file:
-            file.write(contents)
-
-# Download the master repo zip file and extract it in CONFIG dir using urllib
-# FUTURE WORK: Figure a way out to download files and place them without importing so many libraries
-# def download_master():
-#     import urllib.request
-#     import zipfile
-#     import shutil
-#     import distutils.dir_util
-#
-#     url = 'https://codeload.github.com/saif-ellafi/play-by-the-writing/zip/refs/heads/main'
-#     temp_dir = tempfile.gettempdir()
-#     temp_file = temp_dir+'/master.zip'
-#     urllib.request.urlretrieve(url, temp_file)
-#     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
-#         zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))
-#     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
-#         with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trevpull:
-#             with open(os.path.join(PBWDIR, '.pbtwtrev'), encoding='utf-8') as trevlocal:
-#                 newrev = int(trevpull.readline().strip())
-#                 update_available = newrev > int(trevlocal.read().strip())
-#                 update_notes = trevpull.readline().strip()
-#     if update_available:
-#         distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
-#         distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
-#         with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
-#             trevlocal.write(str(newrev))
-#         text = 'Updated: ' + update_notes
-#     else:
-#         text = 'Already up to date'
-#     # delete the remaining downloaded files
-#     shutil.rmtree(os.path.join(temp_dir, 'pbtw_files'))
-#     os.remove(temp_file)
-#     return text
+        fpath = pbwdir_path(my_tables, filename)
+        with open(fpath, mode='w', encoding='utf-8') as efile:
+            efile.write(contents)
 
 
 def setup_ai(key):
@@ -180,7 +150,6 @@ def roll_advanced(formula):
     # longest_part = max(parts, key=lambda x: len(x[0]))[0]
     # result member is only available after evaluation
     return rolldice.roll_dice(formula)
-
 
 
 # Roll Genesys dice

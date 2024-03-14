@@ -1,0 +1,12 @@
+matches:
+  # Download and update all tables from internet
+  - triggers: [":pull", ":update"]
+    label: "Download latest version of tables from PlayBTW's GitHub"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw_utils"
+            - update
