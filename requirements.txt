@@ -4,5 +4,5 @@ pyinstaller
 md2pdf # with https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases in Windows, or brew install pango in MacOS (and run 'Install Certificates.command')
 openai
 pyperclip
-dice
+py-rolldice
 regex

@@ -4,17 +4,13 @@
 # Use at your OWN RISK
 
 import os
-import sys
-import tempfile
 import random
 import csv
-import dice
+import rolldice
 
 import regex as re
 
 from playbtw_genesys import GenesysDiceRoller
-
-sys.stdout.reconfigure(encoding="utf-8")
 
 if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
@@ -50,36 +46,37 @@ if not os.path.exists(my_tables_path):
             file.write(contents)
 
 # Download the master repo zip file and extract it in CONFIG dir using urllib
-def download_master():
-    import urllib.request
-    import zipfile
-    import shutil
-    import distutils.dir_util
-
-    url = 'https://codeload.github.com/saif-ellafi/play-by-the-writing/zip/refs/heads/main'
-    temp_dir = tempfile.gettempdir()
-    temp_file = temp_dir+'/master.zip'
-    urllib.request.urlretrieve(url, temp_file)
-    with zipfile.ZipFile(temp_file, 'r') as zip_ref:
-        zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))
-    # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
-        with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trevpull:
-            with open(os.path.join(PBWDIR, '.pbtwtrev'), encoding='utf-8') as trevlocal:
-                newrev = int(trevpull.readline().strip())
-                update_available = newrev > int(trevlocal.read().strip())
-                update_notes = trevpull.readline().strip()
-    if update_available:
-        distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
-        distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
-        with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
-            trevlocal.write(str(newrev))
-        text = 'Updated: ' + update_notes
-    else:
-        text = 'Already up to date'
-    # delete the remaining downloaded files
-    shutil.rmtree(os.path.join(temp_dir, 'pbtw_files'))
-    os.remove(temp_file)
-    return text
+# FUTURE WORK: Figure a way out to download files and place them without importing so many libraries
+# def download_master():
+#     import urllib.request
+#     import zipfile
+#     import shutil
+#     import distutils.dir_util
+#
+#     url = 'https://codeload.github.com/saif-ellafi/play-by-the-writing/zip/refs/heads/main'
+#     temp_dir = tempfile.gettempdir()
+#     temp_file = temp_dir+'/master.zip'
+#     urllib.request.urlretrieve(url, temp_file)
+#     with zipfile.ZipFile(temp_file, 'r') as zip_ref:
+#         zip_ref.extractall(os.path.join(temp_dir, 'pbtw_files'))
+#     # copy folders 'tables' and 'match' to CONFIG dir, merge files if already exist
+#         with open(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', '.pbtwtrev'), encoding='utf-8') as trevpull:
+#             with open(os.path.join(PBWDIR, '.pbtwtrev'), encoding='utf-8') as trevlocal:
+#                 newrev = int(trevpull.readline().strip())
+#                 update_available = newrev > int(trevlocal.read().strip())
+#                 update_notes = trevpull.readline().strip()
+#     if update_available:
+#         distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
+#         distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
+#         with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
+#             trevlocal.write(str(newrev))
+#         text = 'Updated: ' + update_notes
+#     else:
+#         text = 'Already up to date'
+#     # delete the remaining downloaded files
+#     shutil.rmtree(os.path.join(temp_dir, 'pbtw_files'))
+#     os.remove(temp_file)
+#     return text
 
 
 def setup_ai(key):
@@ -174,27 +171,16 @@ def roll_dice(q, s):
 
 # dice library is weird... different functions have different return types based on the formula given... act with care
 def roll_advanced(formula):
-    roll = dice.roll(formula, raw=True)
+    # CLEANUP IF THE NEW ROLLDICE LIB WORKS WELL
     # triggers evaluate and includes member 'result'
-    details = dice.utilities.verbose_print(roll)
+    # details = dice.utilities.verbose_print(roll)
     # apply regex to select the last piece of text that looks like [3, 2] or [5, 1, 2]
-    parts = re.findall(r'(\[(\d+,\s)*\d+\])', details)
+    # parts = re.findall(r'(\[(\d+,\s)*\d+\])', details)
     # return the longest string among components
-    longest_part = max(parts, key=lambda x: len(x[0]))[0]
+    # longest_part = max(parts, key=lambda x: len(x[0]))[0]
     # result member is only available after evaluation
-    result = roll.result
-    if type(result) == dice.elements.Integer:
-        return formula + ': ' + longest_part + ' = ' + str(result)
-    else:
-        return formula + ': ' + longest_part + ' = ' + str(sum(result))
+    return rolldice.roll_dice(formula)
 
-
-def rolls_advanced(formula):
-    roll = dice.roll(formula)
-    if type(roll) == dice.elements.Integer:
-        return int(roll)
-    else:
-        return sum(roll)
 
 
 # Roll Genesys dice

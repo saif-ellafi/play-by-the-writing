@@ -29,8 +29,8 @@ chaos_map = {
 
 def fate_check(odds=0, chaos_rank=5):
     answer = 'Yes'
-    rint1 = rolls_advanced('1d10')
-    rint2 = rolls_advanced('1d10')
+    rint1 = roll_advanced('1d10')[0]
+    rint2 = roll_advanced('1d10')[0]
     chaos_mod = chaos_map[chaos_rank]
     core = rint1 + rint2 + odds + chaos_mod
     if core < 2:
@@ -39,7 +39,7 @@ def fate_check(odds=0, chaos_rank=5):
         answer = 'Exceptional No'
     elif core <= 10:
         answer = 'No'
-    elif core >= 18 and core <= 20:
+    elif 18 <= core <= 20:
         answer = 'Exceptional Yes'
     if rint1 == rint2 and rint1 <= chaos_rank:
         answer += ', with a Random Event: ' + random_event()
@@ -47,7 +47,7 @@ def fate_check(odds=0, chaos_rank=5):
 
 
 def scene_check(chaos=5):
-    rolled = rolls_advanced('1d10')
+    rolled = roll_advanced('1d10')[0]
     if rolled <= chaos:
         if rolled % 2 == 0:
             return 'Interrupt Scene! ' + random_event()

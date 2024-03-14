@@ -7,7 +7,7 @@ import argparse
 from playbtw_common import *
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|aisetup|update')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|aisetup|')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
@@ -50,10 +50,12 @@ elif action == 'wtable':
 elif action == 'aisetup':
     setup_ai(args['formula'])
     print("Done")
-elif action == 'update':
-    print(download_master())
+# elif action == 'update':
+#     print(download_master())
 elif action == 'roll_dice':
-    print(roll_advanced(args['formula']))
+    formula = args['formula']
+    roll = roll_advanced(formula)
+    print(formula + ': ' + roll[1] + ' = ' + str(roll[0]))
 elif action == 'roll_fudge':
     fudges = []
     bonus = args['mods']
