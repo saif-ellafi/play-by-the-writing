@@ -7,7 +7,7 @@ import argparse
 from playbtw_common import *
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
-parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|aisetup|')
+parser.add_argument('action', type=str, help='|action|description|table|wtable|roll_dice|roll_fudge|shuffle|draw|load_utable|save_utable|fate_check|scene_check|random_event')
 parser.add_argument('--mods', type=int, default=0, help='Modifier, Numeric, various use cases')
 parser.add_argument('--mode', type=str, default=None, help='Roll mode, supports normal|adv|dis')
 parser.add_argument('--table', type=str, help='Random Table Key')
@@ -15,6 +15,9 @@ parser.add_argument('--formula', type=str, help='Dice formula')
 parser.add_argument('--contains', type=str, default='', help='Contains sub expressions and content')
 parser.add_argument('--quantity', type=int, help='Simple Roll dice quantity')
 parser.add_argument('--size', type=int, help='Simple Roll dice size')
+
+parser.add_argument('--odds', type=int, default=0, help='Odds towards result. From -8 to +8')
+parser.add_argument('--chaos', type=int, default=5, help='Chaos Factor. From 3 to 6')
 
 parser.add_argument('--gen_a', type=int, help='Genesys dice ability')
 parser.add_argument('--gen_p', type=int, help='Genesys dice proficiency')
@@ -39,15 +42,16 @@ elif action == 'wtable':
     for t in tables:
         result.append(choice_wtable(t.strip(), args['mode']))
     print(' '.join(result))
-elif action == 'aisetup':
-    setup_ai(args['formula'])
-    print("Done")
-# elif action == 'update':
-#     print(download_master())
 elif action == 'roll_dice':
     formula = args['formula']
     roll = roll_advanced(formula)
     print(formula + ': ' + roll[1] + ' = ' + str(roll[0]))
+elif action == 'fate_check':
+    print(fate_check(args['odds'], args['chaos']))
+elif action == 'scene_check':
+    print(scene_check(args['chaos']))
+elif action == 'random_event':
+    print(random_event())
 elif action == 'roll_fudge':
     fudges = []
     bonus = args['mods']

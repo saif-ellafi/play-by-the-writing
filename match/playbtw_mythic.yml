@@ -44,7 +44,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_mythic"
+            - "%CONFIG%/scripts/playbtw_core"
             - fate_check
             - --odds
             - "{{fcparams.odd}}"
@@ -77,7 +77,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_mythic"
+            - "%CONFIG%/scripts/playbtw_core"
             - scene_check
             - --chaos
             - "{{fcparams.cf}}"
@@ -90,7 +90,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_mythic"
+            - "%CONFIG%/scripts/playbtw_core"
             - fate_check
             - --odds
             - "{{odds}}"
@@ -104,7 +104,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_mythic"
+            - "%CONFIG%/scripts/playbtw_core"
             - scene_check
             - --chaos
             - "{{chaos}}"
@@ -164,7 +164,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_mythic"
+            - "%CONFIG%/scripts/playbtw_core"
             - random_event
   # Mythic Action descriptor. Without Focus.
   - triggers: [":mythic", ":mac"]

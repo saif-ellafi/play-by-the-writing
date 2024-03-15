@@ -15,50 +15,29 @@ from playbtw_genesys import GenesysDiceRoller
 if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
-PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
-
-
-def pbwdir_path(path, *paths):
-    """
-    Creates an absolute path to a subpath of the user-config directory PBWDIR.
-    """
-    path = os.path.join(PBWDIR, path, *paths)
-    return path
-
-
 # Ensure user config folder structure exists, otherwise opening files will fail due to missing directory.
-empty_user_folders = ['cards_tables', 'list_tables', 'config', 'data_ai']
+empty_user_folders = ['cards_tables', 'my_tables', 'list_tables', 'data_ai']
 for folder in empty_user_folders:
-    epath = pbwdir_path(folder)
-    os.makedirs(epath, exist_ok=True)
-
-# If newly creating my_tables, also install example tables.
-my_tables = 'my_tables'
-my_tables_path = pbwdir_path(my_tables)
-if not os.path.exists(my_tables_path):
-    os.makedirs(my_tables_path, exist_ok=True)
-    demo_tables = {
-        'example.txt':
-            'First result\nSecond result\nThird result',
-        'example.psv':
-            '25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter',
-        }
-    for filename, contents in demo_tables.items():
-        fpath = pbwdir_path(my_tables, filename)
-        with open(fpath, mode='w', encoding='utf-8') as efile:
-            efile.write(contents)
-
-
-def setup_ai(key):
-    path = os.path.join(PBWDIR, 'config', 'openai.txt')
-    with open(path, mode='w', encoding='utf-8') as file:
-        file.write(key)
+    fpath = os.path.join(os.environ['CONFIG'], folder)
+    if not os.path.exists(fpath):
+        os.makedirs(fpath, exist_ok=True)
+        if folder == 'my_tables':
+            demo_tables = {
+                'example.txt':
+                    'First result\nSecond result\nThird result',
+                'example.psv':
+                    '25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter',
+            }
+            for filename, contents in demo_tables.items():
+                file_path = os.path.join(fpath, filename)
+                with open(file_path, mode='w', encoding='utf-8') as efile:
+                    efile.write(contents)
 
 
 # Reads CSV table with exactly one column.
 def read_table(table):
-    path1 = os.path.join(PBWDIR, 'list_tables', table+'.txt')
-    path2 = os.path.join(PBWDIR, 'my_tables', table+'.txt')
+    path1 = os.path.join(os.environ['CONFIG'], 'list_tables', table+'.txt')
+    path2 = os.path.join(os.environ['CONFIG'], 'my_tables', table+'.txt')
     path3 = os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
     # check otherwise in the user folder
     if os.path.exists(path1):
@@ -77,8 +56,8 @@ def read_table(table):
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
 def read_wtable(table):
     rows = []
-    path1 = os.path.join(PBWDIR, 'list_tables', table+'.psv')
-    path2 = os.path.join(PBWDIR, 'my_tables', table+'.psv')
+    path1 = os.path.join(os.environ['CONFIG'], 'list_tables', table+'.psv')
+    path2 = os.path.join(os.environ['CONFIG'], 'my_tables', table+'.psv')
     path3 = os.path.join(os.environ['CONFIG'], 'tables', table+'.psv')
     # check otherwise in the user folder
     if os.path.exists(path1):
@@ -152,6 +131,51 @@ def roll_advanced(formula):
     return rolldice.roll_dice(formula)
 
 
+def fate_check(odds=0, chaos_rank=5):
+    chaos_map = {
+        1: -5,
+        2: -4,
+        3: -2,
+        4: -1,
+        5: 0,
+        6: 1,
+        7: 2,
+        8: 4,
+        9: 5
+    }
+    answer = 'Yes'
+    rint1 = roll_advanced('1d10')[0]
+    rint2 = roll_advanced('1d10')[0]
+    chaos_mod = chaos_map[chaos_rank]
+    core = rint1 + rint2 + odds + chaos_mod
+    if core < 2:
+        answer = 'No'
+    elif core <= 4:
+        answer = 'Exceptional No'
+    elif core <= 10:
+        answer = 'No'
+    elif 18 <= core <= 20:
+        answer = 'Exceptional Yes'
+    if rint1 == rint2 and rint1 <= chaos_rank:
+        answer += ', with a Random Event: ' + random_event()
+    return answer
+
+
+def scene_check(chaos=5):
+    rolled = roll_advanced('1d10')[0]
+    if rolled <= chaos:
+        if rolled % 2 == 0:
+            return 'Interrupt Scene! ' + random_event()
+        else:
+            return 'Altered Scene'
+    else:
+        return 'Expected Scene'
+
+
+def random_event():
+    return '%s: %s %s' % (choice_wtable('mythic_list_focus'), choice_table('mythic_action_1'), choice_table('mythic_action_2'))
+
+
 # Roll Genesys dice
 def roll_genesys(dice_array):
     GenesysDiceRoller(dice_array).displayResults()
@@ -159,30 +183,32 @@ def roll_genesys(dice_array):
 
 def shuffle_deck(table):
     cards = read_table(table)
+    cards_path = os.path.join(os.environ['CONFIG'], 'cards_tables', '__cards_'+table+'.txt')
     random.shuffle(cards)
-    with open(os.path.join(PBWDIR, 'cards_tables', '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+    with open(cards_path, 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards))
     return cards
 
 
 def draw_card(table):
+    cards_path = os.path.join(os.environ['CONFIG'], 'cards_tables', '__cards_'+table+'.txt')
     drawn = ''
-    if not os.path.exists(os.path.join(PBWDIR, 'cards_tables', '__cards_'+table+'.txt')):
+    if not os.path.exists(cards_path):
         shuffle_deck(table)
-    with open(os.path.join(PBWDIR, 'cards_tables', '__cards_'+table+'.txt'), 'r', encoding='utf-8') as play_deck:
+    with open(cards_path, 'r', encoding='utf-8') as play_deck:
         cards = list(map(lambda x: x.strip(), play_deck.readlines()))
     if not cards:
         cards = shuffle_deck(table)
         drawn += '(Shuffled!) '
     drawn += cards[0].strip()
-    with open(os.path.join(PBWDIR, 'cards_tables', '__cards_'+table+'.txt'), 'w', encoding='utf-8') as play_deck:
+    with open(cards_path, 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards[1:]))
     return drawn
 
 
 # Open user defined table
 def load_user_table(name):
-    path = os.path.join(PBWDIR, 'list_tables', name+'.txt')
+    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.txt')
     default_path = os.path.join(os.environ['CONFIG'], 'tables', name+'.txt')
     if os.path.exists(path):
         with open(path, 'r') as mem:
@@ -196,7 +222,7 @@ def load_user_table(name):
 
 # Open user defined wtable
 def load_user_wtable(name):
-    path = os.path.join(PBWDIR, 'list_tables', name+'.psv')
+    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.psv')
     default_path = os.path.join(os.environ['CONFIG'], 'tables', name+'.psv')
     if os.path.exists(path):
         with open(path, 'r') as mem:
@@ -210,7 +236,7 @@ def load_user_wtable(name):
 
 # Save user defined table
 def save_user_table(name, content):
-    path = os.path.join(PBWDIR, 'list_tables', name+'.txt')
+    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.txt')
     with open(path, 'w') as f:
         f.write(content)
     return content
@@ -218,7 +244,7 @@ def save_user_table(name, content):
 
 # Save user defined wtable
 def save_user_wtable(name, content):
-    path = os.path.join(PBWDIR, 'list_tables', name+'.psv')
+    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.psv')
     with open(path, 'w') as f:
         f.write(content)
     return content

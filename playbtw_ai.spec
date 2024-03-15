@@ -43,8 +43,6 @@ exe = EXE(
     entitlements_file=None,
 )
 
-from md2pdf.core import md2pdf
-
 import shutil
 import os
 import glob
@@ -53,10 +51,6 @@ if os.path.isdir('{0}/../match'):
     shutil.rmtree('{0}/../match'.format(DISTPATH), ignore_errors=True)
 
 os.makedirs('{0}/../match'.format(DISTPATH), exist_ok=True)
-
-md2pdf('README.pdf', md_file_path='README.md', css_file_path='pdf.css', base_url='./')
-
-shutil.move('README.pdf', '{0}/../README.pdf'.format(DISTPATH))
 
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
 

@@ -11,20 +11,19 @@ import sys
 from openai import OpenAI
 
 
-PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
+AI_MEM_FILE = os.path.join(os.environ['CONFIG'], 'data_ai', 'playbtw_ai_memory.obj')
+AI_HISTORY_FILE = os.path.join(os.environ['CONFIG'], 'data_ai', 'playbtw_ai_chat.txt')
 
 
-AI_MEM_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_memory.obj')
-AI_HISTORY_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_chat.txt')
+def get_client():
+    if os.path.exists(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt')):
+        with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='utf-8') as file:
+            api_key = file.read().strip()
+    else:
+        print('OpenAI API key NOT FOUND. Please type :aisetup to setup your API key.')
+        sys.exit(0)
+    return OpenAI(api_key=api_key)
 
-if os.path.exists(os.path.join(PBWDIR, 'config', 'openai.txt')):
-    with open(os.path.join(PBWDIR, 'config', 'openai.txt'), encoding='utf-8') as file:
-        api_key = file.read().strip()
-else:
-    print('OpenAI API key NOT FOUND. Please type :aisetup to setup your API key.')
-    sys.exit(0)
-
-client = OpenAI(api_key=api_key)
 
 parser = argparse.ArgumentParser(description='Play by the Writing - for Espanso - AI Mode')
 parser.add_argument('action', type=str, help='Open AI GPT')
@@ -78,7 +77,16 @@ def chat_load():
         return pickle.load(handle)['messages']
 
 
-if action == 'ai_chat_init':
+def setup_ai(key):
+    path = os.path.join(os.environ['CONFIG'], 'config', 'openai.txt')
+    with open(path, mode='w', encoding='utf-8') as file:
+        file.write(key)
+
+
+if action == 'aisetup':
+    setup_ai(args['formula'])
+    print("Done")
+elif action == 'ai_chat_init':
     prompt = args['prompt'].strip()
     if not prompt:
         print('PBTW-ERROR: No prompt given')
@@ -90,6 +98,7 @@ if action == 'ai_chat_init':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
+        client = get_client()
         response = client.chat.completions.create(
         messages=messages,
         model=model,
@@ -118,6 +127,7 @@ elif action == 'ai_chat':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
+        client = get_client()
         response = client.chat.completions.create(
         messages=messages,
         model=model,
@@ -143,6 +153,7 @@ elif action == 'ai_chat_isolate':
         model = args['model']
         temperature = args['temperature']
         tokens = args['tokens']
+        client = get_client()
         response = client.chat.completions.create(
         messages=messages,
         model=model,
@@ -160,6 +171,7 @@ elif action == 'ai_image':
     img_format = args['img_format']
     img_quality = args['img_quality']
     img_style = args['img_style']
+    client = get_client()
     response = client.images.generate(
         prompt=prompt,
         size=img_size,
