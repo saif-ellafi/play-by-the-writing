@@ -11,13 +11,14 @@ import sys
 from openai import OpenAI
 
 
-AI_MEM_FILE = os.path.join(os.environ['CONFIG'], 'data_ai', 'playbtw_ai_memory.obj')
-AI_HISTORY_FILE = os.path.join(os.environ['CONFIG'], 'data_ai', 'playbtw_ai_chat.txt')
+PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
+AI_MEM_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_memory.obj')
+AI_HISTORY_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_chat.txt')
 
 
 def get_client():
-    if os.path.exists(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt')):
-        with open(os.path.join(os.environ['CONFIG'], 'config', 'openai.txt'), encoding='utf-8') as file:
+    if os.path.exists(os.path.join(PBWDIR, 'config', 'openai.txt')):
+        with open(os.path.join(PBWDIR, 'config', 'openai.txt'), encoding='utf-8') as file:
             api_key = file.read().strip()
     else:
         print('OpenAI API key NOT FOUND. Please type :aisetup to setup your API key.')
@@ -78,7 +79,7 @@ def chat_load():
 
 
 def setup_ai(key):
-    path = os.path.join(os.environ['CONFIG'], 'config', 'openai.txt')
+    path = os.path.join(PBWDIR, 'config', 'openai.txt')
     with open(path, mode='w', encoding='utf-8') as file:
         file.write(key)
 

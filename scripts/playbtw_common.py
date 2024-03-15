@@ -15,10 +15,12 @@ from playbtw_genesys import GenesysDiceRoller
 if 'CONFIG' not in os.environ:
     raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
 
+PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
+
 # Ensure user config folder structure exists, otherwise opening files will fail due to missing directory.
-empty_user_folders = ['cards_tables', 'my_tables', 'list_tables', 'data_ai']
+empty_user_folders = ['cards_tables', 'my_tables', 'list_tables', 'data_ai', 'config']
 for folder in empty_user_folders:
-    fpath = os.path.join(os.environ['CONFIG'], folder)
+    fpath = os.path.join(PBWDIR, folder)
     if not os.path.exists(fpath):
         os.makedirs(fpath, exist_ok=True)
         if folder == 'my_tables':
@@ -36,8 +38,8 @@ for folder in empty_user_folders:
 
 # Reads CSV table with exactly one column.
 def read_table(table):
-    path1 = os.path.join(os.environ['CONFIG'], 'list_tables', table+'.txt')
-    path2 = os.path.join(os.environ['CONFIG'], 'my_tables', table+'.txt')
+    path1 = os.path.join(PBWDIR, 'list_tables', table+'.txt')
+    path2 = os.path.join(PBWDIR, 'my_tables', table+'.txt')
     path3 = os.path.join(os.environ['CONFIG'], 'tables', table+'.txt')
     # check otherwise in the user folder
     if os.path.exists(path1):
@@ -56,8 +58,8 @@ def read_table(table):
 # Reads CSV table with exactly two columns. First column must be the max value in such range. Second column the value.
 def read_wtable(table):
     rows = []
-    path1 = os.path.join(os.environ['CONFIG'], 'list_tables', table+'.psv')
-    path2 = os.path.join(os.environ['CONFIG'], 'my_tables', table+'.psv')
+    path1 = os.path.join(PBWDIR, 'list_tables', table+'.psv')
+    path2 = os.path.join(PBWDIR, 'my_tables', table+'.psv')
     path3 = os.path.join(os.environ['CONFIG'], 'tables', table+'.psv')
     # check otherwise in the user folder
     if os.path.exists(path1):
@@ -183,7 +185,7 @@ def roll_genesys(dice_array):
 
 def shuffle_deck(table):
     cards = read_table(table)
-    cards_path = os.path.join(os.environ['CONFIG'], 'cards_tables', '__cards_'+table+'.txt')
+    cards_path = os.path.join(PBWDIR, 'cards_tables', '__cards_'+table+'.txt')
     random.shuffle(cards)
     with open(cards_path, 'w', encoding='utf-8') as play_deck:
         play_deck.write('\n'.join(cards))
@@ -191,7 +193,7 @@ def shuffle_deck(table):
 
 
 def draw_card(table):
-    cards_path = os.path.join(os.environ['CONFIG'], 'cards_tables', '__cards_'+table+'.txt')
+    cards_path = os.path.join(PBWDIR, 'cards_tables', '__cards_'+table+'.txt')
     drawn = ''
     if not os.path.exists(cards_path):
         shuffle_deck(table)
@@ -208,7 +210,7 @@ def draw_card(table):
 
 # Open user defined table
 def load_user_table(name):
-    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.txt')
+    path = os.path.join(PBWDIR, 'list_tables', name+'.txt')
     default_path = os.path.join(os.environ['CONFIG'], 'tables', name+'.txt')
     if os.path.exists(path):
         with open(path, 'r') as mem:
@@ -222,7 +224,7 @@ def load_user_table(name):
 
 # Open user defined wtable
 def load_user_wtable(name):
-    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.psv')
+    path = os.path.join(PBWDIR, 'list_tables', name+'.psv')
     default_path = os.path.join(os.environ['CONFIG'], 'tables', name+'.psv')
     if os.path.exists(path):
         with open(path, 'r') as mem:
@@ -236,7 +238,7 @@ def load_user_wtable(name):
 
 # Save user defined table
 def save_user_table(name, content):
-    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.txt')
+    path = os.path.join(PBWDIR, 'list_tables', name+'.txt')
     with open(path, 'w') as f:
         f.write(content)
     return content
@@ -244,7 +246,7 @@ def save_user_table(name, content):
 
 # Save user defined wtable
 def save_user_wtable(name, content):
-    path = os.path.join(os.environ['CONFIG'], 'list_tables', name+'.psv')
+    path = os.path.join(PBWDIR, 'list_tables', name+'.psv')
     with open(path, 'w') as f:
         f.write(content)
     return content
