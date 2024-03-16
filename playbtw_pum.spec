@@ -17,4 +17,4 @@ shutil.copy('match/playbtw_pum.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/pum*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v3_01_pum', 'zip', 'dist_pum')
+shutil.make_archive('PlayBTW_v3_02_pum', 'zip', 'dist_pum')

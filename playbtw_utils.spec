@@ -56,4 +56,4 @@ os.makedirs('{0}/../tables'.format(DISTPATH), exist_ok=True)
 
 shutil.copy('match/playbtw_utils.yml', '{0}/../match/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v3_01_utils', 'zip', 'dist_utils')
+shutil.make_archive('PlayBTW_v3_02_utils', 'zip', 'dist_utils')

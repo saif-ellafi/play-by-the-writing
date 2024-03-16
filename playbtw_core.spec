@@ -51,4 +51,4 @@ os.makedirs('{0}/../match'.format(DISTPATH), exist_ok=True)
 
 shutil.copy('match/playbtw_core.yml', '{0}/../match/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v3_01_core', 'zip', 'dist_core')
+shutil.make_archive('PlayBTW_v3_02_core', 'zip', 'dist_core')

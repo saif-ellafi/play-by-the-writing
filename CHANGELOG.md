@@ -1,3 +1,11 @@
+### 3.02
+Overview: This update makes PlayBTW slightly faster by making the scripts lighter
+
+* FIXED: Smaller executables help in faster PlayBTW response
+* FIXED: Faster build from source by removing redundant steps
+* CHANGED: Used a faster dice roller library, syntax may change
+* DEPRECATED: Mythic script now is part of "Core"
+
 ### 3.01
 Overview: This update is pure credit to the community who reported issues here and in the Discord server. Special thanks to Jeremy (@jeremy-w) for fixing these as I was going through life stuff! Thank you so much!
 

@@ -17,4 +17,4 @@ shutil.copy('match/playbtw_prompty.yml', '{0}/../match/'.format(DISTPATH))
 for f in glob.glob('tables/prompty*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v3_01_prompty', 'zip', 'dist_prompty')
+shutil.make_archive('PlayBTW_v3_02_prompty', 'zip', 'dist_prompty')
