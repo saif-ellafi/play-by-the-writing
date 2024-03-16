@@ -85,7 +85,7 @@ def setup_ai(key):
 
 
 if action == 'aisetup':
-    setup_ai(args['formula'])
+    setup_ai(args['prompt'])
     print("Done")
 elif action == 'ai_chat_init':
     prompt = args['prompt'].strip()

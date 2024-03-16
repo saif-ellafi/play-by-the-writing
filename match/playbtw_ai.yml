@@ -26,9 +26,9 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw_ai"
             - aisetup
-            - --formula
+            - --prompt
             - "{{form_ai_setup.key}}"
   # OpenAI ChatGPT new conversation
   - triggers: [":aicall", ":ainew", ":aistart"]
