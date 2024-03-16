@@ -19,14 +19,11 @@ a = Analysis(
     cipher=block_cipher,
     noarchive=False,
 )
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
     [],
     name='playbtw_core',
     debug=False,
@@ -41,14 +38,12 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    exclude_binaries=True
 )
 
-import shutil
-import os
-import glob
-
-os.makedirs('{0}/../match'.format(DISTPATH), exist_ok=True)
-
-shutil.copy('match/playbtw_core.yml', '{0}/../match/'.format(DISTPATH))
-
-shutil.make_archive('PlayBTW_v3_02_core', 'zip', 'dist_core')
+col = COLLECT(
+    exe,
+    a.binaries,
+    a.datas,
+    name='playbtw_core_files'
+)
