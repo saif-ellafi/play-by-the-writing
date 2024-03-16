@@ -8,5 +8,5 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_utils"
+            - "%CONFIG%/scripts/playbtw"
             - update

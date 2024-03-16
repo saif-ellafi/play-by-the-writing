@@ -14,7 +14,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_qa_even,opse_qa_mod
@@ -27,7 +27,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_qa_likely,opse_qa_mod
@@ -40,7 +40,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_qa_unlikely,opse_qa_mod
@@ -53,7 +53,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_setscene
@@ -66,7 +66,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_setalt
@@ -79,7 +79,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_how
@@ -92,7 +92,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_pacemove
@@ -105,7 +105,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_failmove
@@ -118,7 +118,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_afocus
@@ -131,7 +131,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_dfocus
@@ -144,7 +144,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_tfocus
@@ -157,7 +157,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_afocus,opse_tfocus
@@ -170,7 +170,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_objective,opse_adversaries,opse_rewards
@@ -183,7 +183,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_identity,opse_goal,opse_notable
@@ -196,7 +196,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_dfocus,opse_afocus,opse_location,opse_encounter,opse_object,opse_exits
@@ -209,7 +209,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - opse_terrain,opse_content,opse_feature,opse_event

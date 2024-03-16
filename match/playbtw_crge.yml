@@ -15,7 +15,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - crge_fate_knowledge
@@ -28,7 +28,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - crge_fate_conflict
@@ -41,7 +41,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - crge_fate_endings
@@ -54,7 +54,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - crge_unexpectedly
@@ -67,7 +67,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_creator_modifier,une_creator_noun
@@ -80,7 +80,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_creator_motivation_verb,une_creator_motivation_noun
@@ -93,7 +93,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_creator_power_order
@@ -106,7 +106,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_creator_power_calm
@@ -119,7 +119,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_creator_power_standard
@@ -132,7 +132,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_creator_power_disarray
@@ -145,7 +145,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_creator_power_chaos
@@ -158,7 +158,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_hated
@@ -171,7 +171,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_hostile
@@ -184,7 +184,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_distrustful
@@ -197,7 +197,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_neutral
@@ -210,7 +210,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_peaceful
@@ -223,7 +223,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_friendly
@@ -236,7 +236,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - une_interaction_mood_loved
@@ -249,7 +249,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing
@@ -262,7 +262,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_scheming
@@ -275,7 +275,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_insane
@@ -288,7 +288,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_friendly
@@ -301,7 +301,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_hostile
@@ -314,7 +314,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_inquisitive
@@ -327,7 +327,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_knowing
@@ -340,7 +340,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_mysterious
@@ -353,7 +353,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_bearing_prejudiced
@@ -366,7 +366,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - une_interaction_focus
@@ -379,7 +379,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - bold_waylays
@@ -392,7 +392,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - bold_connection_action,bold_connection_gerund,bold_connection_subject

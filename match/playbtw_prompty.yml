@@ -14,7 +14,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_any
@@ -26,7 +26,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_locations
@@ -38,7 +38,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_travel
@@ -50,7 +50,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_relations
@@ -62,7 +62,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_situational
@@ -74,7 +74,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_world
@@ -86,7 +86,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_backstory
@@ -98,7 +98,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_faction
@@ -110,7 +110,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - prompty_crafts

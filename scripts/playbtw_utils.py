@@ -1,17 +1,10 @@
 import os
-import argparse
 import tempfile
 import urllib.request
 import zipfile
 import shutil
 import distutils.dir_util
 
-
-parser = argparse.ArgumentParser(description='Play by the Writing - for Espanso - Extra utilities')
-parser.add_argument('action', type=str, help='Extra utilities helper')
-
-args = vars(parser.parse_args())
-action = args['action']
 
 PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
 TREV = 1003
@@ -48,9 +41,3 @@ def download_master():
     shutil.rmtree(os.path.join(temp_dir, 'pbtw_files'))
     os.remove(temp_file)
     return text
-
-
-if action == 'update':
-    print(download_master())
-else:
-    raise Exception("PBTW-ERROR: Wrong Function argument!")

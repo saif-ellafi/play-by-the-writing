@@ -14,7 +14,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_exploration
@@ -27,7 +27,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_battle
@@ -40,7 +40,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_plot_clue_type
@@ -53,7 +53,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_plot_finding
@@ -66,7 +66,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_plot_activities
@@ -79,7 +79,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_plot_occurrence
@@ -92,7 +92,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_nemesis_impression
@@ -105,7 +105,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_nemesis_deeds
@@ -118,7 +118,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_nemesis_intention
@@ -131,7 +131,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_location_feature
@@ -144,7 +144,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_location_worth
@@ -157,7 +157,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_location_purpose
@@ -170,7 +170,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_location_content
@@ -183,7 +183,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_char_possessions
@@ -196,7 +196,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_char_impression
@@ -209,7 +209,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_char_activity
@@ -222,7 +222,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_char_intention
@@ -235,7 +235,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_creature_type
@@ -248,7 +248,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_creature_ability
@@ -261,7 +261,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_creature_behavior
@@ -274,7 +274,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_object_function
@@ -287,7 +287,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_object_form
@@ -300,7 +300,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_object_state
@@ -313,7 +313,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_faction_focus
@@ -326,7 +326,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_faction_resource
@@ -339,7 +339,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_good_motivation
@@ -352,7 +352,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_evil_motivation
@@ -365,7 +365,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_good_deed
@@ -378,7 +378,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_evil_deed
@@ -391,7 +391,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_grand_oracle
@@ -404,7 +404,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_grand_action
@@ -417,7 +417,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_grand_adjective
@@ -430,7 +430,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_grand_subject
@@ -443,7 +443,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_full
@@ -456,7 +456,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_location
@@ -469,7 +469,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_background
@@ -482,7 +482,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_caveat
@@ -495,7 +495,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_hook
@@ -508,7 +508,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_lead
@@ -521,7 +521,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_mission
@@ -534,7 +534,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_motivation
@@ -547,7 +547,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - gum2_setup_opposition

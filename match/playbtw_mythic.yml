@@ -44,7 +44,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - fate_check
             - --odds
             - "{{fcparams.odd}}"
@@ -77,7 +77,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - scene_check
             - --chaos
             - "{{fcparams.cf}}"
@@ -90,7 +90,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - fate_check
             - --odds
             - "{{odds}}"
@@ -104,7 +104,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - scene_check
             - --chaos
             - "{{chaos}}"
@@ -117,7 +117,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - load_uwtable
             - --table
             - "mythic_list_focus"
@@ -136,7 +136,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - save_uwtable
             - --table
             - "mythic_list_focus"
@@ -151,7 +151,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - "mythic_list_focus"
@@ -164,7 +164,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - random_event
   # Mythic Action descriptor. Without Focus.
   - triggers: [":mythic", ":mac"]
@@ -175,7 +175,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_action_1,mythic_action_2
@@ -188,7 +188,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_descriptor_1,mythic_descriptor_2
@@ -201,7 +201,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - load_utable
             - --table
             - "mythic_list_characters"
@@ -220,7 +220,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - save_utable
             - --table
             - "mythic_list_characters"
@@ -234,7 +234,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - "mythic_list_characters"
@@ -247,7 +247,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - load_utable
             - --table
             - "mythic_list_threads"
@@ -266,7 +266,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - save_utable
             - --table
             - "mythic_list_threads"
@@ -280,7 +280,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - "mythic_list_threads"
@@ -293,7 +293,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - load_utable
             - --table
             - "mythic_list_features"
@@ -312,7 +312,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - save_utable
             - --table
             - "mythic_list_features"
@@ -326,7 +326,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - "mythic_list_features"
@@ -339,7 +339,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_alien,mythic_el_alien
@@ -351,7 +351,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_animal,mythic_el_animal
@@ -363,7 +363,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_army,mythic_el_army
@@ -375,7 +375,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_cavern,mythic_el_cavern
@@ -387,7 +387,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_appearance,mythic_el_char_appearance
@@ -399,7 +399,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_background,mythic_el_char_background
@@ -411,7 +411,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_combat,mythic_el_char_combat
@@ -423,7 +423,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_conversation,mythic_el_char_conversation
@@ -435,7 +435,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_descriptors,mythic_el_char_descriptors
@@ -447,7 +447,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_general,mythic_el_char_general
@@ -459,7 +459,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_identity,mythic_el_char_identity
@@ -471,7 +471,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_motivations,mythic_el_char_motivations
@@ -483,7 +483,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_personality,mythic_el_char_personality
@@ -495,7 +495,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_skills,mythic_el_char_skills
@@ -507,7 +507,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_char_traits,mythic_el_char_traits
@@ -519,7 +519,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_city,mythic_el_city
@@ -531,7 +531,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_characters,mythic_el_characters
@@ -543,7 +543,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_civilization,mythic_el_civilization
@@ -555,7 +555,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_creature_ability,mythic_el_creature_ability
@@ -567,7 +567,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_creature_descriptor,mythic_el_creature_descriptor
@@ -579,7 +579,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_curse,mythic_el_curse
@@ -591,7 +591,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_domicile,mythic_el_domicile
@@ -603,7 +603,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_dungeon,mythic_el_dungeon
@@ -615,7 +615,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_forest,mythic_el_forest
@@ -627,7 +627,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_gods,mythic_el_gods
@@ -639,7 +639,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_legends,mythic_el_legends
@@ -651,7 +651,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_locations,mythic_el_locations
@@ -663,7 +663,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_magic,mythic_el_magic
@@ -675,7 +675,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_message,mythic_el_message
@@ -687,7 +687,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_mutation,mythic_el_mutation
@@ -699,7 +699,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_names,mythic_el_names
@@ -711,7 +711,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_noble,mythic_el_noble
@@ -723,7 +723,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_object,mythic_el_object
@@ -735,7 +735,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_powers,mythic_el_powers
@@ -747,7 +747,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_scavange,mythic_el_scavange
@@ -759,7 +759,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_smells,mythic_el_smells
@@ -771,7 +771,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_sounds,mythic_el_sounds
@@ -783,7 +783,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_spell,mythic_el_spell
@@ -795,7 +795,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_starship,mythic_el_starship
@@ -807,7 +807,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_terrain,mythic_el_terrain
@@ -819,7 +819,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_tone,mythic_el_tone
@@ -831,7 +831,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_traps,mythic_el_traps
@@ -843,7 +843,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_twist,mythic_el_twist
@@ -855,7 +855,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_undead,mythic_el_undead
@@ -867,7 +867,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - mythic_el_visions,mythic_el_visions

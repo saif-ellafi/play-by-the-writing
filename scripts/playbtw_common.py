@@ -180,7 +180,7 @@ def random_event():
 
 # Roll Genesys dice
 def roll_genesys(dice_array):
-    GenesysDiceRoller(dice_array).displayResults()
+    GenesysDiceRoller(dice_array).display_results()
 
 
 def shuffle_deck(table):

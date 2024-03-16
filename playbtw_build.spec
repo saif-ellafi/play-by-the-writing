@@ -1,11 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-
-block_cipher = None
-
-
 a = Analysis(
-    ['scripts/playbtw_ai.py'],
+    ['scripts/playbtw_core.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -16,19 +12,16 @@ a = Analysis(
     excludes=[],
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
-    cipher=block_cipher,
+    cipher=None,
     noarchive=False,
 )
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
     [],
-    name='playbtw_ai',
+    name='playbtw',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -41,17 +34,12 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    exclude_binaries=True
 )
 
-import shutil
-import os
-import glob
-
-if os.path.isdir('{0}/../match'):
-    shutil.rmtree('{0}/../match'.format(DISTPATH), ignore_errors=True)
-
-os.makedirs('{0}/../match'.format(DISTPATH), exist_ok=True)
-
-shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
-
-shutil.make_archive('PlayBTW_v3_02_ai', 'zip', 'dist_ai')
+col = COLLECT(
+    exe,
+    a.binaries,
+    a.datas,
+    name=''
+)

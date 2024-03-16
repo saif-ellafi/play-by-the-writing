@@ -29,16 +29,7 @@ shutil.copy('match/playbtw_opse.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_crge.yml', '{0}/../match/'.format(DISTPATH))
 shutil.copy('match/playbtw_ai.yml', '{0}/../match/'.format(DISTPATH))
 
-if os.path.exists('dist_core/scripts/playbtw_core.exe'):
-    shutil.copy('dist_core/scripts/playbtw_core.exe', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_utils/scripts/playbtw_utils.exe', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_ai/scripts/playbtw_ai.exe', '{0}/../scripts/'.format(DISTPATH))
-else:
-    shutil.copy('dist_core/scripts/playbtw_core', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_utils/scripts/playbtw_utils', '{0}/../scripts/'.format(DISTPATH))
-    shutil.copy('dist_ai/scripts/playbtw_ai', '{0}/../scripts/'.format(DISTPATH))
-
 for f in glob.glob('tables/*'):
     shutil.copy2(f, '{0}/../tables/'.format(DISTPATH))
 
-shutil.make_archive('PlayBTW_v3_02_base_with_ai', 'zip', 'dist_all_ai')
+shutil.make_archive('PlayBTW_v3_02', 'zip', 'dist_playbtw')

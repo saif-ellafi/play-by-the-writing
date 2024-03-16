@@ -36,7 +36,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - roll_dice
             - --formula
             - "{{formula}}"
@@ -49,7 +49,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - roll_fudge
   # Roll fudge with bonus.
   - regex: ":df(?P<mods>[+-]?\\d+)\\."
@@ -59,7 +59,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - roll_fudge
             - --mods
             - "{{mods}}"
@@ -148,7 +148,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - roll_genesys
             - --gen_a
             - "{{form_gen.gen_a}}"
@@ -171,7 +171,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - draw
             - --table
             - "poker_deck"
@@ -184,7 +184,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - shuffle
             - --table
             - "poker_deck"
@@ -196,7 +196,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - table
             - --table
             - "{{table}}"
@@ -208,7 +208,7 @@ matches:
         type: script
         params:
           args:
-            - "%CONFIG%/scripts/playbtw_core"
+            - "%CONFIG%/scripts/playbtw"
             - wtable
             - --table
             - "{{table}}"
