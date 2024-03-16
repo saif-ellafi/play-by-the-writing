@@ -160,18 +160,18 @@ The keyword column is what you simply write in your keyboard, to get it replaced
 
 ## Core Keywords
 
-| Name                 | keyword                    | Output                     | Information                                                 |
-|----------------------|----------------------------|----------------------------|-------------------------------------------------------------|
-| Dice                 | `:dd`                      | 🎲                         | Just fancy dice                                             |
-| Arrow character      | `:arr`                     | →                          | Just an arrow                                               |
+| Name                 | keyword                    | Output                     | Information                                                     |
+|----------------------|----------------------------|----------------------------|-----------------------------------------------------------------|
+| Dice                 | `:dd`                      | 🎲                         | Just fancy dice                                                 |
+| Arrow character      | `:arr`                     | →                          | Just an arrow                                                   |
 | Roll dice            | `:r<formula>.`             | 3d6x: [1, 3, 1]            | Complex formulas: https://github.com/fionafibration/py-rolldice |
-| Roll fudge dice      | `:df.` or `:df<modifier>.` | ( ) (+) (-) (-) + (3) = -1 | Fudge dice for FATE                                         |
-| Roll denesys dice    | `:genesys` or `:gend`      | ...                        | Rolls dice for Genesys RPG by FFG                           |
-| Roll Random Table    | `:tt.<tablename>.`         | [Third result]             | Roll from a .txt table based on its filename                |
-| Roll Weighted Table  | `:wt.<tablename>.`         | [Next quarter]             | Roll from a .psv table with weights based on its filenam    |
-| Update tables        | `:update` or `:pull`       | ...                        | Download and update PlayBTW tables                          |
-| Shuffle Poker Deck   | `:shuffle`                 | Shuffled!                  | restarts the poker deck                                     |
-| Draw from Poker Deck | `:draw`                    | 8♠ 7♥ 6♦                   | Draws a card from poker deck                                |
+| Roll fudge dice      | `:df.` or `:df<modifier>.` | ( ) (+) (-) (-) + (3) = -1 | Fudge dice for FATE                                             |
+| Roll denesys dice    | `:genesys` or `:gend`      | ...                        | Rolls dice for Genesys RPG by FFG                               |
+| Roll Random Table    | `:tt.<tablename>.`         | [Third result]             | Roll from a .txt table based on its filename                    |
+| Roll Weighted Table  | `:wt.<tablename>.`         | [Next quarter]             | Roll from a .psv table with weights based on its filename       |
+| Update tables        | `:update` or `:pull`       | ...                        | Download and update PlayBTW tables                              |
+| Shuffle Poker Deck   | `:shuffle`                 | Shuffled!                  | restarts the poker deck                                         |
+| Draw from Poker Deck | `:draw`                    | 8♠ 7♥ 6♦                   | Draws a card from poker deck                                    |
 
 ## System Keywords (most useful!!!)
 

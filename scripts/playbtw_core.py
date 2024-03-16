@@ -53,8 +53,6 @@ elif action == 'scene_check':
 elif action == 'random_event':
     print(random_event())
 elif action == 'roll_fudge':
-    fudges = []
-    bonus = args['mods']
     def map_fudge(value):
         if value in [1, 2]:
             return '(-)'
@@ -62,6 +60,8 @@ elif action == 'roll_fudge':
             return '( )'
         else:
             return '(+)'
+    fudges = []
+    bonus = args['mods']
     for r in range(0, 4):
         roll = roll_dice(1, 6)
         fudges.append(map_fudge(roll['total']))
