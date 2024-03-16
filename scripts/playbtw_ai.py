@@ -8,9 +8,9 @@ import pickle
 import sys
 
 from openai import OpenAI
+from playbtw_common import PBWDIR
 
 
-PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
 AI_MEM_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_memory.obj')
 AI_HISTORY_FILE = os.path.join(PBWDIR, 'data_ai', 'playbtw_ai_chat.txt')
 

@@ -12,28 +12,7 @@ import regex as re
 
 from playbtw_genesys import GenesysDiceRoller
 
-if 'CONFIG' not in os.environ:
-    raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
-
 PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
-
-# Ensure user config folder structure exists, otherwise opening files will fail due to missing directory.
-empty_user_folders = ['cards_tables', 'my_tables', 'list_tables', 'data_ai', 'config']
-for folder in empty_user_folders:
-    fpath = os.path.join(PBWDIR, folder)
-    if not os.path.exists(fpath):
-        os.makedirs(fpath, exist_ok=True)
-        if folder == 'my_tables':
-            demo_tables = {
-                'example.txt':
-                    'First result\nSecond result\nThird result',
-                'example.psv':
-                    '25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter',
-            }
-            for filename, contents in demo_tables.items():
-                file_path = os.path.join(fpath, filename)
-                with open(file_path, mode='w', encoding='utf-8') as efile:
-                    efile.write(contents)
 
 
 # Reads CSV table with exactly one column.

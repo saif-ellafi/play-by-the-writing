@@ -4,9 +4,7 @@
 # Use at your OWN RISK
 
 import argparse
-from playbtw_common import *
-from playbtw_ai import *
-from playbtw_utils import *
+import os
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
 parser.add_argument('action', type=str)
@@ -44,29 +42,64 @@ args = vars(parser.parse_args())
 
 action = args['action']
 
+if 'CONFIG' not in os.environ:
+    raise Exception("PBTW Error: CONFIG key not found. Espanso is not installed?")
+
+
+# Ensure user config folder structure exists, otherwise opening files will fail due to missing directory.
+def check_folders():
+    empty_user_folders = ['cards_tables', 'my_tables', 'list_tables', 'data_ai', 'config']
+    from playbtw_common import PBWDIR
+    for folder in empty_user_folders:
+        fpath = os.path.join(PBWDIR, folder)
+        if not os.path.exists(fpath):
+            os.makedirs(fpath, exist_ok=True)
+            if folder == 'my_tables':
+                demo_tables = {
+                    'example.txt':
+                        'First result\nSecond result\nThird result',
+                    'example.psv':
+                        '25|First quarter\n50|First half\n75|Next quarter\n100|Last quarter',
+                }
+                for filename, contents in demo_tables.items():
+                    file_path = os.path.join(fpath, filename)
+                    with open(file_path, mode='w', encoding='utf-8') as efile:
+                        efile.write(contents)
+
+
 if action == 'table':
+    from playbtw_common import choice_table
+    check_folders()
     tables = filter(lambda x: x, map(str.strip, args['table'].split(',')))
     result = []
     for t in tables:
         result.append(choice_table(t.strip(), args['mode']))
     print(' '.join(result))
 elif action == 'wtable':
+    from playbtw_common import choice_wtable
+    check_folders()
     tables = map(str.strip, args['table'].split(','))
     result = []
     for t in tables:
         result.append(choice_wtable(t.strip(), args['mode']))
     print(' '.join(result))
 elif action == 'roll_dice':
+    from playbtw_common import roll_advanced
     formula = args['formula']
     roll = roll_advanced(formula)
     print(formula + ': ' + roll[1] + ' = ' + str(roll[0]))
 elif action == 'fate_check':
+    from playbtw_common import fate_check
     print(fate_check(args['odds'], args['chaos']))
 elif action == 'scene_check':
+    from playbtw_common import scene_check
     print(scene_check(args['chaos']))
 elif action == 'random_event':
+    from playbtw_common import random_event
+    check_folders()
     print(random_event())
 elif action == 'roll_fudge':
+    from playbtw_common import roll_dice
     def map_fudge(value):
         if value in [1, 2]:
             return '(-)'
@@ -82,11 +115,16 @@ elif action == 'roll_fudge':
     total = fudges.count('(+)') - fudges.count('(-)') + bonus
     print((' '.join(fudges) + ' + (' + str(bonus) + ') = ') + str(total))
 elif action == 'roll_genesys':
+    from playbtw_common import roll_genesys
     roll_genesys([args['gen_b'], args['gen_s'], args['gen_a'], args['gen_d'], args['gen_p'], args['gen_c']])
 elif action == 'shuffle':
+    from playbtw_common import shuffle_deck
+    check_folders()
     shuffle_deck(args['table'].strip())
     print('Shuffled!')
 elif action == 'draw':
+    from playbtw_common import draw_card
+    check_folders()
     print(draw_card(args['table'].strip())
           .replace('Spades', '♠')
           .replace('Hearts', '♥')
@@ -95,23 +133,37 @@ elif action == 'draw':
           .replace('Joker', '🃏')
           )
 elif action == 'load_utable':
+    from playbtw_common import load_user_table
+    check_folders()
     print(load_user_table(args['table']))
 elif action == 'load_uwtable':
+    from playbtw_common import load_user_wtable
+    check_folders()
     print(load_user_wtable(args['table']))
 elif action == 'save_utable':
+    from playbtw_common import save_user_table
+    check_folders()
     print(save_user_table(args['table'], args['contains']))
 elif action == 'save_uwtable':
+    from playbtw_common import save_user_wtable
+    check_folders()
     print(save_user_wtable(args['table'], args['contains']))
 elif action == 'update':
+    from playbtw_utils import download_master
+    check_folders()
     print(download_master())
 elif action == 'aisetup':
+    from playbtw_ai import setup_ai
+    check_folders()
     setup_ai(args['prompt'])
     print("Done")
 elif action == 'ai_chat_init':
+    check_folders()
     prompt = args['prompt'].strip()
     if not prompt:
         print('PBTW-ERROR: No prompt given')
     else:
+        from playbtw_ai import *
         messages = [{
             "role": "system",
             "content": prompt
@@ -134,6 +186,8 @@ elif action == 'ai_chat_init':
         chat_save(messages)
         print(prompt + '\n' + answer)
 elif action == 'ai_chat':
+    check_folders()
+    from playbtw_ai import *
     prompt = args['prompt'].strip()
     if not prompt:
         print('PBTW-ERROR: No prompt given')
@@ -163,6 +217,8 @@ elif action == 'ai_chat':
         chat_save(messages)
         print(prompt + '\n' + answer)
 elif action == 'ai_chat_isolate':
+    from playbtw_ai import get_client
+    check_folders()
     prompt = args['prompt'].strip()
     if not prompt:
         print('PBTW-ERROR: No prompt given')
@@ -187,6 +243,8 @@ elif action == 'ai_chat_isolate':
         })
         print(prompt + '\n' + answer)
 elif action == 'ai_image':
+    from playbtw_ai import get_client
+    check_folders()
     prompt = args['prompt'].strip()
     img_size = args['img_size']
     img_format = args['img_format']
@@ -211,8 +269,12 @@ elif action == 'ai_image':
     else:
         print(answer)
 elif action == 'ai_knowledge':
+    from playbtw_ai import memory_read
+    check_folders()
     print(memory_read())
 elif action == 'ai_forget':
+    from playbtw_ai import memory_erase
+    check_folders()
     memory_erase()
     print("PlayBTW AI Memory erased.")
 else:

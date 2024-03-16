@@ -5,8 +5,8 @@ import zipfile
 import shutil
 import distutils.dir_util
 
+from playbtw_common import PBWDIR
 
-PBWDIR = os.path.join(os.path.expanduser('~'), 'PlayBTW')
 TREV = 1003
 
 
