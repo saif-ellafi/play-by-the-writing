@@ -2,6 +2,7 @@
 Overview: Performance boosts! PlayBTW now is compiled differently, so it works faster than ever
 
 * CHANGED: Build changes reduces storage and CPU usage significantly when running
+* CHANGED: Build scripts are way snappier now, faster to compile
 * CHANGED: Made pull function snappier, so it doesn't take so many resources
 * CHANGED: no-AI option allows building PbtW without AI support (lightweight build)
 
