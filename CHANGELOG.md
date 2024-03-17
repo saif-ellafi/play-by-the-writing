@@ -1,3 +1,10 @@
+### 3.10
+Overview: Performance boosts! PlayBTW now is compiled differently, so it works faster than ever
+
+* CHANGED: Build changes reduces storage and CPU usage significantly when running
+* CHANGED: Made pull function snappier, so it doesn't take so many resources
+* CHANGED: no-AI option allows building PbtW without AI support (lightweight build)
+
 ### 3.02
 Overview: This update makes PlayBTW slightly faster by making the scripts lighter
 
