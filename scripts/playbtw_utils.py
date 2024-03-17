@@ -3,7 +3,6 @@ import tempfile
 import urllib.request
 import zipfile
 import shutil
-import distutils.dir_util
 
 from playbtw_common import PBWDIR
 
@@ -30,8 +29,12 @@ def download_master():
                 update_available = newrev > int(trevlocal.read().strip())
                 update_notes = trevpull.readline().strip()
     if update_available:
-        distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'), os.path.join(os.environ['CONFIG'], 'tables'))
-        distutils.dir_util.copy_tree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'), os.path.join(os.environ['CONFIG'], 'match'))
+        # Copy 'tables' directory
+        shutil.copytree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'),
+                        os.path.join(os.environ['CONFIG'], 'tables'))
+        # Copy 'match' directory
+        shutil.copytree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'),
+                        os.path.join(os.environ['CONFIG'], 'match'))
         with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
             trevlocal.write(str(newrev))
         text = 'Updated: ' + update_notes
