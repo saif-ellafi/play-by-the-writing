@@ -1,5 +1,6 @@
 ### 3.10
 Overview: Performance boosts! PlayBTW now is compiled differently, so it works faster than ever
+NOTE: This update will leave behind files inside espanso/Scripts folder that won't be needed anymore. Feel free to cleanup before installing this version.
 
 * CHANGED: Build changes reduces storage and CPU usage significantly when running
 * CHANGED: Build scripts are way snappier now, faster to compile
