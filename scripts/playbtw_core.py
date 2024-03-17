@@ -5,6 +5,9 @@
 
 import argparse
 import os
+import sys
+
+sys.stdout.reconfigure(encoding="utf-8")
 
 parser = argparse.ArgumentParser(description='Play by the Writing - Oracle for Espanso')
 parser.add_argument('action', type=str)
