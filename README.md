@@ -257,29 +257,26 @@ These are meant to be played with PUM: https://jeansenvaars.itch.io/plot-unfoldi
 | Pending Questions setup     | `:pnodes` or `:pendings`                                       |
 | Pending Questions roll      | `:pnodes` or `:pendingr`                                       |
 
-## Scene Unfolding Machine v6 Keywords
+## Scene Unfolding Machine v7 Keywords
 
 These are meant to be played with SUM: https://jeansenvaars.itch.io/scene-unfolding-machine
 
-| Name              | keyword                                     |
-|-------------------|---------------------------------------------|
-| BROWSE ALL TABLES | `:sum`                                      |
-| GM Action         | `:gma` or `:+gma` or `:-gma` (or :gmint)    |
-| GM Reaction       | `:gmre` or `:+gmre` or `:-gmre`             |
-| GM Factions       | `:gmfac` or `:+gmfac` or `:-gmfac`          |
-| PC Matters        | `:pcmatt` or `:+pcmatt` or `:-pcmatt`       |
-| PC Backstory      | `:pcback` or `:+pcback` or `:-pcback`       |
-| PC Bonding        | `:pcbond` or `:+pcbond` or `:-pcbond`       |
-| NPC Attitude      | `:npcatt` or `:+npcatt` or `:-npcatt`       |
-| NPC Contribution  | `:npcc` or `:+npcc` or `:-npcc`             |
-| NPC Opinion       | `:npco` or `:+npco` or `:-npco`             |
-| NPC Impression    | `:npcimp` or `:+npcimp` or `:-npcimp`       |
-| NPC Small talk    | `:npctalk` or `:+npctalk` or `:-npctalk`    |
-| NPC Truth or dare | `:npctruth` or `:+npctruth` or `:-npctruth` |
-| Oracles all       | `:grandoracle`                              |
-| Action Prompt     | `:action`                                   |
-| Adjective Prompt  | `:adjective`                                |
-| Subject Prompt    | `:subject`                                  |
+| Name               | keyword                                        |
+|--------------------|------------------------------------------------|
+| BROWSE ALL TABLES  | `:sum`                                         |
+| GM Intervention    | `:sceneint` or `:+sceneint` or `:-sceneint`    |
+| GM Reaction        | `:scenereac` or `:+scenereac` or `:-scenereac` |
+| GM Scene opener    | `:sceneopen` or `:+sceneopen` or `:-sceneopen` |
+| Char Matters       | `:npcmatt` or `:+npcmatt` or `:-npcmatt`       |
+| Char Backstory     | `:npcback` or `:+npcback` or `:-npcback`       |
+| Char Bonding       | `:npcbond` or `:+npcbond` or `:-npcbond`       |
+| Char Attitude      | `:npcatt` or `:+npcatt` or `:-npcatt`          |
+| Char Contribution  | `:npcc` or `:+npcc` or `:-npcc`                |
+| Char Opinion       | `:npco` or `:+npco` or `:-npco`                |
+| Char Impression    | `:npcimp` or `:+npcimp` or `:-npcimp`          |
+| Char Small talk    | `:npctalk` or `:+npctalk` or `:-npctalk`       |
+| Char Truth or dare | `:npctruth` or `:+npctruth` or `:-npctruth`    |
+| Char stereotypes   | `:stereo`                                      |
 
 ## Game Unfolding Machine v2 Keywords
 

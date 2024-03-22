@@ -6,7 +6,7 @@ import shutil
 
 from playbtw_common import PBWDIR
 
-TREV = 1003
+TREV = 1004
 
 
 # Download the master repo zip file and extract it in CONFIG dir using urllib

@@ -794,8 +794,8 @@ matches:
             - --table
             - "pum_nodes_pending_questions"
   # SUM (GM action, intervention)
-  - triggers: [":sum", ":gma", ":gmint"]
-    label: "GM Emulation: Intervention check"
+  - triggers: [":sum", ":sceneint"]
+    label: "Scene emulation: Intervention check"
     replace: "{{output}}"
     vars:
       - name: output
@@ -805,10 +805,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_action
+            - sum_scene_action
   # SUM (GM action, intervention)
-  - triggers: [":sum", ":+gma", ":+gmint"]
-    label: "GM Emulation: Intervention check (unfavorable)"
+  - triggers: [":sum", ":+sceneint"]
+    label: "Scene emulation: Intervention check (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -818,12 +818,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_action
+            - sum_scene_action
             - --mode
             - adv
   # SUM (GM action, intervention)
-  - triggers: [":sum", ":-gma", ":-gmint"]
-    label: "GM Emulation: Intervention check (favorable)"
+  - triggers: [":sum", ":-sceneint"]
+    label: "Scene emulation: Intervention check (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -833,12 +833,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_action
+            - sum_scene_action
             - --mode
             - dis
   # SUM (GM feedback, reaction)
-  - triggers: [":sum", ":gmre"]
-    label: "GM Emulation: Action's reaction"
+  - triggers: [":sum", ":scenereac"]
+    label: "Scene emulation: Action's reaction"
     replace: "{{output}}"
     vars:
       - name: output
@@ -848,10 +848,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_feedback
+            - sum_scene_feedback
   # SUM (GM feedback, reaction)
-  - triggers: [":sum", ":+gmre"]
-    label: "GM Emulation: Action's reaction (unfavorable)"
+  - triggers: [":sum", ":+scenereac"]
+    label: "Scene emulation: Action's reaction (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -861,12 +861,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_feedback
+            - sum_scene_feedback
             - --mode
             - adv
   # SUM (GM feedback, reaction)
-  - triggers: [":sum", ":-gmre"]
-    label: "GM Emulation: Action's reaction (favorable)"
+  - triggers: [":sum", ":-scenereac"]
+    label: "Scene emulation: Action's reaction (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -876,12 +876,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_feedback
+            - sum_scene_feedback
             - --mode
             - dis
-  # SUM (GM World, factions)
-  - triggers: [":sum", ":gmfac"]
-    label: "GM Emulation: Living factions"
+  # SUM (GM World, scene starter)
+  - triggers: [":sum", ":sceneopen"]
+    label: "Scene emulation: Scene opener"
     replace: "{{output}}"
     vars:
       - name: output
@@ -891,10 +891,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_world
-  # SUM (GM World, factions)
-  - triggers: [":sum", ":+gmfac"]
-    label: "GM Emulation: Action's reaction (unfavorable)"
+            - sum_scene_opener
+  # SUM (GM World, scene starter)
+  - triggers: [":sum", ":+sceneopen"]
+    label: "Scene emulation: Scene opener (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -904,12 +904,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_world
+            - sum_scene_opener
             - --mode
             - adv
-  # SUM (GM World, factions)
-  - triggers: [":sum", ":-gmfac"]
-    label: "GM Emulation: Action's reaction (favorable)"
+  # SUM (GM World, scene starter)
+  - triggers: [":sum", ":-sceneopen"]
+    label: "Scene emulation: Scene opener (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -919,12 +919,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_gm_world
+            - sum_scene_opener
             - --mode
             - dis
   # SUM (PC matters)
-  - triggers: [":sum", ":pcmatt"]
-    label: "PC Enrichment: Parallel matters"
+  - triggers: [":sum", ":npcmatt"]
+    label: "Character emulation: Parallel matters"
     replace: "{{output}}"
     vars:
       - name: output
@@ -934,10 +934,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_matters
+            - sum_npc_matters
   # SUM (PC matters)
-  - triggers: [":sum", ":+pcmatt"]
-    label: "PC Enrichment: Parallel matters (unfavorable)"
+  - triggers: [":sum", ":+npcmatt"]
+    label: "Character emulation: Parallel matters (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -947,12 +947,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_matters
+            - sum_npc_matters
             - --mode
             - adv
   # SUM (PC matters)
-  - triggers: [":sum", ":-pcmatt"]
-    label: "PC Enrichment: Parallel matters (favorable)"
+  - triggers: [":sum", ":-npcmatt"]
+    label: "Character emulation: Parallel matters (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -962,12 +962,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_matters
+            - sum_npc_matters
             - --mode
             - dis
   # SUM (PC backstories)
-  - triggers: [":sum", ":pcback"]
-    label: "PC Enrichment: Lingering backstories"
+  - triggers: [":sum", ":npcback"]
+    label: "Character emulation: Lingering backstories"
     replace: "{{output}}"
     vars:
       - name: output
@@ -977,10 +977,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_backs
+            - sum_npc_backs
   # SUM (PC backstories)
-  - triggers: [":sum", ":+pcback"]
-    label: "PC Enrichment: Lingering backstories (unfavorable)"
+  - triggers: [":sum", ":+npcback"]
+    label: "Character emulation: Lingering backstories (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -990,12 +990,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_backs
+            - sum_npc_backs
             - --mode
             - adv
   # SUM (PC backstories)
-  - triggers: [":sum", ":-pcback"]
-    label: "PC Enrichment: Lingering backstories (favorable)"
+  - triggers: [":sum", ":-npcback"]
+    label: "Character emulation: Lingering backstories (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1005,12 +1005,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_backs
+            - sum_npc_backs
             - --mode
             - dis
   # SUM (PC bonding)
-  - triggers: [":sum", ":pcbond"]
-    label: "PC Enrichment: Bonding relations"
+  - triggers: [":sum", ":npcbond"]
+    label: "Character emulation: Bonding relations"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1020,10 +1020,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_bonds
+            - sum_npc_bonds
   # SUM (PC bonding)
-  - triggers: [":sum", ":+pcbond"]
-    label: "PC Enrichment: Bonding relations (unfavorable)"
+  - triggers: [":sum", ":+npcbond"]
+    label: "Character emulation: Bonding relations (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1033,12 +1033,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_bonds
+            - sum_npc_bonds
             - --mode
             - adv
   # SUM (PC bonding)
-  - triggers: [":sum", ":-pcbond"]
-    label: "PC Enrichment: Bonding relations (favorable)"
+  - triggers: [":sum", ":-npcbond"]
+    label: "Character emulation: Bonding relations (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1048,12 +1048,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_pc_bonds
+            - sum_npc_bonds
             - --mode
             - dis
-  # SUM (NPC behavior, attitude)
+  # SUM (NPC behavior, reaction)
   - triggers: [":sum", ":npcatt"]
-    label: "NPC Emulation: Attitude"
+    label: "Character emulation: First reaction"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1063,10 +1063,10 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_npc_attitude
-  # SUM (NPC behavior, attitude)
+            - sum_npc_reaction
+  # SUM (NPC behavior, reaction)
   - triggers: [":sum", ":+npcatt"]
-    label: "NPC Emulation: Attitude (unfavorable)"
+    label: "Character emulation: First reaction (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1076,12 +1076,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_npc_attitude
+            - sum_npc_reaction
             - --mode
             - adv
-  # SUM (NPC behavior, attitude)
+  # SUM (NPC behavior, reaction)
   - triggers: [":sum", ":-npcatt"]
-    label: "NPC Emulation: Attitude (favorable)"
+    label: "Character emulation: First reaction (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1091,12 +1091,12 @@ matches:
             - "%CONFIG%/scripts/playbtw"
             - table
             - --table
-            - sum_npc_attitude
+            - sum_npc_reaction
             - --mode
             - dis
   # SUM (NPC Contribution)
   - triggers: [":sum", ":npcc"]
-    label: "NPC Emulation: Contribution"
+    label: "Character emulation: Plot contribution"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1109,7 +1109,7 @@ matches:
             - sum_npc_contribution
   # SUM (NPC Contribution)
   - triggers: [":sum", ":+npcc"]
-    label: "NPC Emulation: Contribution (unfavorable)"
+    label: "Character emulation: Plot contribution (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1124,7 +1124,7 @@ matches:
             - adv
   # SUM (NPC Contribution)
   - triggers: [":sum", ":-npcc"]
-    label: "NPC Emulation: Contribution (favorable)"
+    label: "Character emulation: Plot contribution (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1139,7 +1139,7 @@ matches:
             - dis
   # SUM (NPC opinion)
   - triggers: [":sum", ":npco"]
-    label: "NPC Emulation: Opinion"
+    label: "Character emulation: Opinion or response"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1152,7 +1152,7 @@ matches:
             - sum_npc_opinion
   # SUM (NPC opinion)
   - triggers: [":sum", ":+npco"]
-    label: "NPC Emulation: Opinion (unfavorable)"
+    label: "Character emulation: Opinion or response (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1167,7 +1167,7 @@ matches:
             - adv
   # SUM (NPC opinion)
   - triggers: [":sum", ":-npco"]
-    label: "NPC Emulation: Opinion (favorable)"
+    label: "Character emulation: Opinion or response (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1182,7 +1182,7 @@ matches:
             - dis
   # SUM (NPC impression)
   - triggers: [":sum", ":npcimp"]
-    label: "NPC Emulation: Outside impression"
+    label: "Character emulation: Outside impression"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1195,7 +1195,7 @@ matches:
             - sum_npc_impression
   # SUM (NPC impression)
   - triggers: [":sum", ":+npcimp"]
-    label: "NPC Emulation: Outside impression (unfavorable)"
+    label: "Character emulation: Outside impression (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1210,7 +1210,7 @@ matches:
             - adv
   # SUM (NPC impression)
   - triggers: [":sum", ":-npcimp"]
-    label: "NPC Emulation: Outside impression (favorable)"
+    label: "Character emulation: Outside impression (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1225,7 +1225,7 @@ matches:
             - dis
   # SUM (NPC talks)
   - triggers: [":sum", ":npctalk"]
-    label: "NPC Emulation: Filler talks"
+    label: "Character emulation: Filler talks"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1238,7 +1238,7 @@ matches:
             - sum_npc_talks
   # SUM (NPC talks)
   - triggers: [":sum", ":+npctalk"]
-    label: "NPC Emulation: Filler talks (unfavorable)"
+    label: "Character emulation: Filler talks (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1253,7 +1253,7 @@ matches:
             - adv
   # SUM (NPC talks)
   - triggers: [":sum", ":-npctalk"]
-    label: "NPC Emulation: Filler talks (favorable)"
+    label: "Character emulation: Filler talks (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1268,7 +1268,7 @@ matches:
             - dis
   # SUM (NPC truth)
   - triggers: [":sum", ":npctruth"]
-    label: "NPC Emulation: Truth or dare"
+    label: "Character emulation: Truth or dare"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1281,7 +1281,7 @@ matches:
             - sum_npc_truth
   # SUM (NPC truth)
   - triggers: [":sum", ":+npctruth"]
-    label: "NPC Emulation: Truth or dare (unfavorable)"
+    label: "Character emulation: Truth or dare (unfavorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1296,7 +1296,7 @@ matches:
             - adv
   # SUM (NPC truth)
   - triggers: [":sum", ":-npctruth"]
-    label: "NPC Emulation: Truth or dare (favorable)"
+    label: "Character emulation: Truth or dare (favorable)"
     replace: "{{output}}"
     vars:
       - name: output
@@ -1307,6 +1307,135 @@ matches:
             - table
             - --table
             - sum_npc_truth
+            - --mode
+            - dis
+  # SUM (NPC personality)
+  - triggers: [":sum", ":npcperson"]
+    label: "Character emulation: Personality type"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_personality
+  # SUM (NPC personality)
+  - triggers: [":sum", ":+npcperson"]
+    label: "Character emulation: Personality type (unfavorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_personality
+            - --mode
+            - adv
+  # SUM (NPC personality)
+  - triggers: [":sum", ":-npcperson"]
+    label: "Character emulation: Personality type (favorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_personality
+            - --mode
+            - dis
+  # SUM (NPC profession)
+  - triggers: [":sum", ":npcprof"]
+    label: "Character emulation: Job or profession"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_profession
+  # SUM (NPC profession)
+  - triggers: [":sum", ":+npcprof"]
+    label: "Character emulation: Job or profession (unfavorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_profession
+            - --mode
+            - adv
+  # SUM (NPC profession)
+  - triggers: [":sum", ":-npcprof"]
+    label: "Character emulation: Job or profession (favorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_profession
+            - --mode
+            - dis
+  # SUM (NPC anecdote)
+  - triggers: [":sum", ":npcanec"]
+    label: "Character emulation: Recent anecdote"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_anecdote
+  # SUM (NPC anecdote)
+  - triggers: [":sum", ":+npcanec"]
+    label: "Character emulation: Recent anecdote (unfavorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_anecdote
+            - --mode
+            - adv
+  # SUM (NPC anecdote)
+  - triggers: [":sum", ":-npcanec"]
+    label: "Character emulation: Recent anecdote (favorable)"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: script
+        params:
+          args:
+            - "%CONFIG%/scripts/playbtw"
+            - table
+            - --table
+            - sum_npc_anecdote
             - --mode
             - dis
   # SUM (Stereotypes)
@@ -1322,55 +1451,3 @@ matches:
             - table
             - --table
             - sum_stereo
-  # SUM (Action)
-  - triggers: [":sum", ":action"]
-    label: "Grand oracle: Action"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw"
-            - table
-            - --table
-            - sum_oracle_action
-  # SUM (Adjective)
-  - triggers: [":sum", ":adjective"]
-    label: "Grand oracle: Adjective"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw"
-            - table
-            - --table
-            - sum_oracle_adjective
-  # SUM (Subject)
-  - triggers: [":sum", ":subject"]
-    label: "Grand oracle: Subject"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw"
-            - table
-            - --table
-            - sum_oracle_subject
-  # SUM (Oracle)
-  - triggers: [":sum", ":grandoracle"]
-    label: "Grand oracle (all)"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: script
-        params:
-          args:
-            - "%CONFIG%/scripts/playbtw"
-            - table
-            - --table
-            - sum_oracle_all

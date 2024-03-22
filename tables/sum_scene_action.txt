@@ -8,7 +8,7 @@ Remains silent, what do characters do? (peaceful)
 Remains silent, what do characters do? (peaceful)
 Remains silent, what do characters do? (peaceful)
 Remains silent, what do characters do? (peaceful)
-Describes an additional element or sensorial detail
+Describes an additional element or sensory detail
 Puts a helpful item like a note, a key, or instructions
 Gives a single character a chance to shine
 Last action or decision was a good idea because...
@@ -41,7 +41,7 @@ Something bad happens, misfortune, of concern
 Change in location conditions interrupts the PCs
 Something breaks, fails, or is damaged around here
 Suddenly puts the PCs in danger, tension, or big risk
-Someone else’s deeds conflict with PCs interests
+Shows deeds of those who want to stop the PCs
 Puts someone who prevents the PCs from advancing
 Reflects bad news triggered by a distant event
 Lays out environmental hazards or dangerous traps
