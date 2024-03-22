@@ -31,10 +31,10 @@ def download_master():
     if update_available:
         # Copy 'tables' directory
         shutil.copytree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'tables'),
-                        os.path.join(os.environ['CONFIG'], 'tables'))
+                        os.path.join(os.environ['CONFIG'], 'tables'), dirs_exist_ok=True)
         # Copy 'match' directory
         shutil.copytree(os.path.join(temp_dir, 'pbtw_files', 'play-by-the-writing-main', 'match'),
-                        os.path.join(os.environ['CONFIG'], 'match'))
+                        os.path.join(os.environ['CONFIG'], 'match'), dirs_exist_ok=True)
         with open(os.path.join(PBWDIR, '.pbtwtrev'), mode='w', encoding='utf-8') as trevlocal:
             trevlocal.write(str(newrev))
         text = 'Updated: ' + update_notes
