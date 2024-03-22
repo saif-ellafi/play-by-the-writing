@@ -1,3 +1,7 @@
+### 3.11
+* UPDATED: SUM v7
+* FIXED: pull command was not working
+
 ### 3.10
 Overview: Performance boosts! PlayBTW now is compiled differently, so it works faster than ever
 NOTE: This update will leave behind files inside espanso/scripts folder that won't be needed anymore. Feel free to cleanup before installing this version.
