@@ -6,3 +6,4 @@
 *.exe
 *.pdf
 /pbtw/
+/venv/
