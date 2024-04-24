@@ -101,10 +101,12 @@ The installer will identify this location automatically, so normally you don't h
 
 1. Make sure Espanso works fine in your system and starts and works correctly (test with `:espanso`)
 2. Download the MacOs zip archive
-3. Unzip and merge the archive `PlayBTW_v3_11_ai_macos.zip` into `~/Library/Application\ Support/espanso`
-You can also run `unzip -o -d ~/Library/Application\ Support/espanso ~/Downloads/PlayBTW_v3_11_ai_macos.zip`
+3. Unzip and merge the archive `PlayBTW_v3_11_ai_macos.zip` into `~/Library/Application\ Support/espanso`. Alternatively, from a terminal,
+you can run `unzip -o -d ~/Library/Application\ Support/espanso ~/Downloads/PlayBTW_v3_11_ai_macos.zip` which will achieve the same result.
 
-If you accidentally replace, and do not merge and get errors, simply restart the Espanso service and all will be fine.
+Note 1: If you get an error saying that Apple cannot check this application for malicious software, we are investigating this issue. For now the only thing that works is if you go to the Open Source code and compile PlayBTW by yourself, this is how MacOS will admit this is safe.
+
+Note 2: If you accidentally replace, and do not merge and get errors, simply restart the Espanso service and all will be fine.
 
 That's it, test an oracle example with `:qq`.
 
