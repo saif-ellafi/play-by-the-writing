@@ -7,3 +7,4 @@
 *.pdf
 /pbtw/
 /venv/
+.DS_STORE
