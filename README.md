@@ -104,7 +104,23 @@ The installer will identify this location automatically, so normally you don't h
 3. Unzip and merge the archive `PlayBTW_v3_11_ai_macos.zip` into `~/Library/Application\ Support/espanso`. Alternatively, from a terminal,
 you can run `unzip -o -d ~/Library/Application\ Support/espanso ~/Downloads/PlayBTW_v3_11_ai_macos.zip` which will achieve the same result.
 
-Note 1: If you get an error saying that Apple cannot check this application for malicious software, we are investigating this issue. For now the only thing that works is if you go to the Open Source code and compile PlayBTW by yourself, this is how MacOS will admit this is safe.
+Note 1: If you get an error saying "Apple cannot check this application for malicious software":
+
+![Error-1](macos-error-1.png)
+
+1. Press OK, then open "Privacy & Security" and scroll down until you see this:
+
+![Error-2](macos-error-2.png)
+
+2. Press "Allow Anyway"
+
+3. Runn a command again like `:qq`. Now you should get this window:
+
+![Error-3](macos-error-3.png)
+
+4. This time press "Open". From now on, all commands should work.
+
+Alternatively, you can build the MacOS version yourself from the GitHub repository's code by yourself, which will also run faster as you can use the standard build instead the fat build. Building it yourself will automatically make MacOS trust this software on your MacBook.
 
 Note 2: If you accidentally replace, and do not merge and get errors, simply restart the Espanso service and all will be fine.
 
