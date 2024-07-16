@@ -1,6 +1,6 @@
 A major detail of the scene is enhanced or somehow worse
 The environment is different
 Unexpected NPCs are present
-Add a SCENE COMPLICATION
-Add a PACING MOVE
-Add a RANDOM EVENT
+Add: {{opse_setscene}}
+Add: {{opse_pacemove}}
+Add: {{opse_eventr}}

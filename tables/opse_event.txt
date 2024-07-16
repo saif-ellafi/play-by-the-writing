@@ -1,6 +1,6 @@
 None
-RANDOM EVENT then SET THE SCENE
-RANDOM EVENT then SET THE SCENE
-RANDOM EVENT then SET THE SCENE
-RANDOM EVENT then SET THE SCENE
-RANDOM EVENT then SET THE SCENE
+None
+None
+None
+{{opse_afocus}} {{opse_tfocus}}, then {{opse_setscene}}
+{{opse_afocus}} {{opse_tfocus}}, then {{opse_setscene}}

@@ -3,4 +3,4 @@ Reveal a New Detail
 An NPC Takes Action
 Advance a Threat
 Advance a Plot
-Add a RANDOM EVENT to the scene
+Add: {{opse_eventr}}
