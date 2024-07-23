@@ -8,3 +8,5 @@
 /pbtw/
 /venv/
 .DS_STORE
+*.pkg
+*.json

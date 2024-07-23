@@ -1,0 +1,27 @@
+#!/bin/bash
+
+ESPANSO_DIR="/Users/$USER/Library/Application Support/espanso"
+
+# Create directories
+mkdir -p "$ESPANSO_DIR/scripts/_internal"
+mkdir -p "$ESPANSO_DIR/match"
+mkdir -p "$ESPANSO_DIR/tables"
+
+# Copy files
+cp /tmp/playbtw_install/Contents/MacOS/playbtw "$ESPANSO_DIR/scripts/"
+cp /tmp/playbtw_install/Contents/Resources/match/* "$ESPANSO_DIR/match/"
+cp /tmp/playbtw_install/Contents/Resources/tables/* "$ESPANSO_DIR/tables/"
+
+# Move files
+mv /tmp/playbtw_install/Contents/Frameworks/* "$ESPANSO_DIR/scripts/_internal/"
+mv /tmp/playbtw_install/Contents/Resources/* "$ESPANSO_DIR/scripts/_internal/"
+
+# Change ownership
+chown -R "$USER" "$ESPANSO_DIR/tables"
+chown -R "$USER" "$ESPANSO_DIR/match"
+chown -R "$USER" "$ESPANSO_DIR/scripts"
+
+# Remove temporary installation directory
+rm -rf /tmp/playbtw_install
+
+exit 0

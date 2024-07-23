@@ -1,0 +1,49 @@
+# https://pyinstaller.org/en/v3.2.1/usage.html
+# https://forums.developer.apple.com/forums/thread/120989
+# https://forums.developer.apple.com/forums/thread/669188
+# https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/customizing_the_notarization_workflow#3087734
+# https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/resolving_common_notarization_issues#3087723
+# https://www.unix.com/man-page/osx/1/pkgbuild/
+# https://community.meraki.com/t5/Mobile-Device-Management/HOWTO-Package-files-scripts-and-apps-together-for-macOS/m-p/187857
+# https://gist.github.com/txoof/0636835d3cc65245c6288b2374799c43
+
+# 1. create a keychain for both Developer AND Installer certificates, register them in the system using Keychain Accessories and in https://developer.apple.com/account/resources/certificates/list
+# 2. Apply them in pyinstaller so they are used for the files (maybe could also sign manually on top file by file?)
+
+# to list identities run
+
+security find-identity 
+
+xcrun notarytool store-credentials "notarytool-password"
+
+# Check for errors, check binaries with (typically the Python binary inside Versions folder needs manual sign)
+
+codesign -vvv --deep --strict path
+
+# sign any issue file with
+
+codesign -f -s "Developer ID Application: Saif Addin Ellafi (4R2BZ2DV4D)" ./dist_playbtw/scripts/playbtw
+
+# package build, test software before packaging
+
+pkgbuild --identifier "com.jeansensmachines.pbtw" --sign "Developer ID Installer: Saif Addin Ellafi (4R2BZ2DV4D)" --timestamp --root ./dist_playbtw/scripts/playbtw_macos_3_11.app --install-location /tmp/playbtw_install/ --script post "Play by the Writing MacOS v3-11.pkg"
+
+# check for errors
+
+pkgutil --check-signature "./Play by the Writing MacOS v3-11.pkg"
+
+# apple-id = leave API key empty, email address, team-id is the team identifier, team name is the full string, use app specific password
+
+xcrun notarytool submit "./Play by the Writing MacOS v3-11.pkg" --keychain-profile "notarytool-password" --wait
+
+# takes long time, can check it out with
+
+xcrun notarytool log <submissionId> --keychain-profile "notarytool-password" developer_log.json
+
+# staple, whatever that means, for the gatekeeper
+
+xcrun stapler staple "./Play by the Writing MacOS v3-11.pkg"
+
+# optional
+
+ditto -c -k --sequesterRsrc "./Play by the Writing MacOS v3-11.pkg" ./playbtw_macos_3_11.zip 
