@@ -8,6 +8,7 @@
 # https://gist.github.com/txoof/0636835d3cc65245c6288b2374799c43
 
 # 1. create a keychain for both Developer AND Installer certificates, register them in the system using Keychain Accessories and in https://developer.apple.com/account/resources/certificates/list
+## Note: Reinstalling or using a new MacBook system requires generating new certificates from Accessories: Certificate Assistant -> Request Certificate from a Certificate Authority
 # 2. Apply them in pyinstaller so they are used for the files (maybe could also sign manually on top file by file?)
 
 # to list identities run
@@ -16,13 +17,13 @@ security find-identity
 
 xcrun notarytool store-credentials "notarytool-password"
 
-# Check for errors, check binaries with (typically the Python binary inside Versions folder needs manual sign)
+# DO NOT RUN UNLESS NEEDED: Manual codesign to check binaries with (typically the Python binary inside Versions folder needs manual sign)
 
 codesign -vvv --deep --strict path
 
-# sign any issue file with
+# DO NOT RUN UNLESS NEEDED: sign any issue MANUALLY file with
 
-codesign -f -s "Developer ID Application: Saif Addin Ellafi (4R2BZ2DV4D)" ./dist_playbtw/scripts/playbtw
+codesign -f -s "Developer ID Application: Saif Addin Ellafi (4R2BZ2DV4D)" ./dist_playbtw/scripts/playbtw_macos_3_11.app/Contents/MacOS/playbtw
 
 # package build, test software before packaging
 

@@ -2,19 +2,40 @@
 
 ESPANSO_DIR="/Users/$USER/Library/Application Support/espanso"
 
+# Cleanup scripts directory
+rm -rf "$ESPANSO_DIR/scripts"
+
 # Create directories
 mkdir -p "$ESPANSO_DIR/scripts/_internal"
 mkdir -p "$ESPANSO_DIR/match"
 mkdir -p "$ESPANSO_DIR/tables"
 
-# Copy files
+# Copy main files
 cp /tmp/playbtw_install/Contents/MacOS/playbtw "$ESPANSO_DIR/scripts/"
 cp /tmp/playbtw_install/Contents/Resources/match/* "$ESPANSO_DIR/match/"
 cp /tmp/playbtw_install/Contents/Resources/tables/* "$ESPANSO_DIR/tables/"
 
-# Move files
-mv /tmp/playbtw_install/Contents/Frameworks/* "$ESPANSO_DIR/scripts/_internal/"
-mv /tmp/playbtw_install/Contents/Resources/* "$ESPANSO_DIR/scripts/_internal/"
+# Copy Frameworks files
+cp -R /tmp/playbtw_install/Contents/Frameworks/jiter "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/lib-dynload "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/pydantic_core "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/Python.framework "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/regex "$ESPANSO_DIR/scripts/_internal/"
+
+cp -R /tmp/playbtw_install/Contents/Frameworks/_brotli.cpython-312-darwin.so "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/libcrypto.3.dylib "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/liblzma.5.dylib "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/libmpdec.4.dylib "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/libssl.3.dylib "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Frameworks/python "$ESPANSO_DIR/scripts/_internal/"
+
+# Copy Resources files
+cp -R /tmp/playbtw_install/Contents/Resources/certifi "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Resources/icon-windowed.icns "$ESPANSO_DIR/scripts/_internal/"
+cp -R /tmp/playbtw_install/Contents/Resources/base_library.zip "$ESPANSO_DIR/scripts/_internal/"
+
+# Copy other files
+cp -R /tmp/playbtw_install/Contents/_CodeSignature "$ESPANSO_DIR/scripts/_internal/"
 
 # Change ownership
 chown -R "$USER" "$ESPANSO_DIR/tables"
